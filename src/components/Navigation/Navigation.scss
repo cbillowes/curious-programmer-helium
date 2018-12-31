@@ -1,0 +1,20 @@
+@import "../../layout/layout.scss";
+
+.navigation {
+  height: 4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $navigation-background;
+  border-bottom: solid 10px $primary;
+  z-index: 999;
+
+  .normal-weight {
+    font-weight: normal;
+  }
+
+  + div {
+    margin-top: 6em;
+  }
+}

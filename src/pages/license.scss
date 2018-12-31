@@ -1,0 +1,25 @@
+@import "../layout/layout.scss";
+
+$margin: 1.5em;
+
+@mixin emphasize() {
+  padding: 1em 3em;
+  background-color: $background-de-emphasis;
+}
+
+.license-container {
+  .license {
+    @include emphasize();
+    display: block;
+
+    .license-icon {
+      margin-top: 2em;
+      margin-bottom: 0em;
+      padding-bottom: 0em;
+    }
+  }
+
+  .emphasize {
+    @include emphasize();
+  }
+}

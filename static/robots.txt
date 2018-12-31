@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: */tags/
+Disallow: */fonts/
+Disallow: */images/
+
+sitemap: https://curiousprogrammer.io/sitemap.xml

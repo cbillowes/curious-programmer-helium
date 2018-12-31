@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a menu icon component should render 1`] = `
+<div
+  className="icon menu active"
+  onClick={[Function]}
+>
+  <i />
+</div>
+`;

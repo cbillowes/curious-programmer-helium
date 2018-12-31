@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a footer social links component should render 1`] = `
+<ul
+  className="social-links-footer"
+>
+  <li
+    className="link"
+  >
+    <a
+      className="github"
+      href="https://github.com/cbillowes"
+      rel="nofollow noopener noreferrer "
+      target="_blank"
+    />
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      className="twitter"
+      href="https://twitter.com/cbillowes"
+      rel="nofollow noopener noreferrer "
+      target="_blank"
+    />
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      className="linkedin"
+      href="https://www.linkedin.com/in/cbouwer/"
+      rel="nofollow noopener noreferrer "
+      target="_blank"
+    />
+  </li>
+</ul>
+`;

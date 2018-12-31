@@ -1,0 +1,38 @@
+@import "../../layout/layout.scss";
+
+.technologies {
+    margin-top: 1.5em;
+    text-align: center;
+
+    li {
+        display: inline;
+    }
+
+    .tag {
+        @include button;
+        margin: 0.5em;
+        
+        .xp {
+            font-size: 0.75em;
+            color: lighten($background, 20%);
+
+            &::before {
+                content: " ";
+            }
+        }
+    }
+
+    .button {
+        @include button;
+        background-color: $foreground-accent;
+        padding-bottom: 3px;
+    }
+
+    .elaborate {
+        display: none;
+    }
+
+    .elaborated {
+        display: block; 
+    }
+}

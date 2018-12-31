@@ -1,0 +1,415 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a tag template should render 1`] = `
+<div>
+  <div
+    className="navigation"
+  >
+    <div
+      className="logo"
+    >
+      <div
+        className="default-logo"
+      >
+        <a
+          aria-current="page"
+          className=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          { 
+          <span
+            className="normal-weight"
+          >
+            curious
+          </span>
+           
+          programmer
+           }
+        </a>
+      </div>
+      <div
+        className="mobile-logo"
+      >
+        <a
+          aria-current="page"
+          className=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          { }
+        </a>
+      </div>
+    </div>
+    <div
+      className="icons"
+    >
+      <div
+        className="icon search "
+        onClick={[Function]}
+      >
+        <i />
+      </div>
+      <div
+        className="icon menu "
+        onClick={[Function]}
+      >
+        <i />
+      </div>
+    </div>
+    <nav
+      className="menubar "
+      onClick={[Function]}
+    >
+      <ul>
+        <li
+          className="menu-item selected"
+        >
+          <a
+            aria-current="page"
+            className=""
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            Blog
+          </a>
+        </li>
+        <li
+          className="menu-item "
+        >
+          <a
+            href="/about"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li
+          className="menu-item "
+        >
+          <a
+            href="/tags"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Tags
+          </a>
+        </li>
+        <li
+          className="menu-item "
+        >
+          <a
+            href="/credits"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Credits
+          </a>
+        </li>
+        <li
+          className="menu-item "
+        >
+          <a
+            href="/privacy-policy"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          className="menu-item "
+        >
+          <a
+            href="/license"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            License
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      className="searchbar "
+    >
+      <input
+        className="search-query"
+        onKeyUp={[Function]}
+        type="text"
+      />
+      <div
+        className="results"
+      >
+        <ul>
+          <li
+            className="empty"
+          >
+            What do you feel like reading today? Search as you type, also, enter works too.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    className="tag-container"
+  >
+    <div
+      className="post-metadata"
+    >
+      <p>
+        posted 
+         
+        <time
+          dateTime={"2019-01-04T09:56:51.503Z"}
+        >
+          a few seconds ago
+        </time>
+         
+         
+        on 
+         
+        <time
+          dateTime={"2019-01-04T09:56:51.510Z"}
+        >
+          Fri, 4 January 2019
+        </time>
+         
+         
+        (Est. 
+         minute read)
+      </p>
+      <span>
+         
+      </span>
+    </div>
+    <div
+      className="posts"
+    >
+      <section>
+        <a
+          href="tags/technical"
+        >
+          <h1>
+            Getting started with Datomic
+          </h1>
+        </a>
+        <p>
+          A simple write up.
+        </p>
+        <div
+          className="post-metadata"
+        >
+          <p>
+            posted 
+             
+            <time
+              dateTime={"2019-01-04T09:56:51.386Z"}
+            >
+              a few seconds ago
+            </time>
+             
+             
+            on 
+             
+            <time
+              dateTime={"2019-01-04T09:56:51.386Z"}
+            >
+              Fri, 4 January 2019
+            </time>
+             
+             
+            (Est. 
+            20
+             minute read)
+          </p>
+          <ul
+            className="tags"
+          >
+            <li>
+              <a
+                className="tag"
+                href="/tags/technical"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                technical
+              </a>
+            </li>
+            <li>
+              <a
+                className="tag"
+                href="/tags/clojure"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                clojure
+              </a>
+            </li>
+            <li>
+              <a
+                className="tag"
+                href="/tags/datomic"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                datomic
+              </a>
+            </li>
+          </ul>
+        </div>
+        <hr />
+      </section>
+    </div>
+  </div>
+  <div
+    className="footer-container not-for-print"
+  >
+    <footer
+      className="footer"
+    >
+      <ul
+        className="social-links-footer"
+      >
+        <li
+          className="link"
+        >
+          <a
+            className="github"
+            href="https://github.com/cbillowes"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          />
+        </li>
+        <li
+          className="link"
+        >
+          <a
+            className="twitter"
+            href="https://twitter.com/cbillowes"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          />
+        </li>
+        <li
+          className="link"
+        >
+          <a
+            className="linkedin"
+            href="https://www.linkedin.com/in/cbouwer/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          />
+        </li>
+      </ul>
+      <div
+        className="copyright-footer"
+      >
+        Copyright © 
+        
+        2019
+         
+        
+        Curious Programmer
+        . 
+        
+        Made with Gatsby v2 and other 
+        
+        <a
+          href="/credits"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          cool stuff
+        </a>
+        .
+      </div>
+      <div
+        className="license-footer"
+      >
+        <span
+          className="license"
+        >
+          <a
+            className="license-icon"
+            href="http://creativecommons.org/licenses/by-sa/4.0/"
+            rel="nofollow noopener noreferrer license"
+            target="_blank"
+          >
+            <img
+              alt="Creative Commons License"
+              src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
+              title="Creative Commons Attribution-ShareAlike 4.0 International License"
+            />
+          </a>
+          <p>
+            <span
+              property="dct:title"
+              xmlns:dct="http://purl.org/dc/terms/"
+            >
+               
+              Curious Programmer
+               content
+               
+            </span>
+             
+            by
+             
+            <a
+              className=""
+              href="https://curiousprogrammer.io"
+              rel="nofollow noopener noreferrer cc:attributionURL"
+              target="_blank"
+            >
+              Clarice Bouwer
+            </a>
+             
+            is licensed under a
+             
+            <a
+              className=""
+              href="http://creativecommons.org/licenses/by-sa/4.0/"
+              rel="nofollow noopener noreferrer license"
+              target="_blank"
+            >
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>
+            .
+          </p>
+        </span>
+         
+         
+        <p>
+          Also, there is a 
+           
+          <a
+            href="/license"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            License
+          </a>
+           for the code 
+          and it's probably a good idea to read the
+           
+          <a
+            href="/privacy-policy"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Privacy Policy
+          </a>
+          .
+        </p>
+      </div>
+    </footer>
+  </div>
+</div>
+`;

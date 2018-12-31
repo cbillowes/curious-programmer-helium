@@ -1,0 +1,183 @@
+@import "../layout/layout.scss";
+
+.cover {
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.post {
+    position: relative;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 2em;
+
+    &.with-cover {
+        padding: 1em 3em;
+        background-color: $background-de-emphasis;
+        opacity: 0.8
+    }
+
+    .serious-highlight {
+        background-color: $background-serious-highlight;
+        color: $foreground-serious-highlight;
+        padding: 0.3em;
+        line-height: 2.5em;
+
+        a {
+            color: $foreground-serious-highlight-anchor;
+
+            &:visited {
+                color: $foreground-serious-highlight-anchor-visited;
+            }
+        }
+    }
+
+    .tags {
+        .tag,
+        &:visited {
+          background-color: $primary;
+          color: $background-accent;
+          text-shadow: 0px 0px 1px $background;
+
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+    }
+
+    a.anchor {
+        svg {
+            border-radius: $border-radius;
+            border: solid 1px $gray-700;
+            fill: $gray-600;
+            float: left;
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            margin-left: -0.5em;
+            margin-top: 0.25em;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    div,
+    span,
+    li {
+        code {
+            padding: 0.5em 0.25em;
+            background-color: $background-accent;
+        }
+    }
+
+    pre code {
+        background-color: transparent;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    pre {
+        code {
+            line-height: 1.75em;
+            padding: 0px;
+        }
+    }
+
+    .gist {
+        overflow-x: auto;
+        border-radius: $border-radius * 2;
+
+        .highlight {
+            border-collapse: collapse;
+            color: #f8f8f2;
+            background: none;
+            text-shadow: 0 1px $background-de-emphasis;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+
+            tr,
+            td {
+                border-style: none;
+                padding: 0px;
+                line-height: 2em;
+                height: 0px;
+                background-color: $background-accent;
+                color: $foreground;
+
+                &:hover {
+                    background-color: $background-accent;
+                    color: $foreground;
+                }
+
+                .js-line-number {
+                    padding-right: 1.5em;
+                }
+            }
+        }
+    }
+
+    .post-footer {
+        .tags {
+            text-align: center;
+            margin: 1.5em 0;
+
+            .tag,
+            &:visited {
+              background-color: $background-accent;
+              color: $foreground;
+              text-shadow: 0px 0px 1px $background;
+            }
+
+            .tag:hover {
+                background-color: $primary;
+                color: $background-accent;
+            }
+        }
+    }
+}
+
+@media print {
+    .navigation {
+        display: none;
+    }
+    .post {
+        blockquote,
+        pre,
+        code {
+            border: none;
+            overflow-wrap: break-word;
+            overflow: visible;
+        }
+
+        .post-navigation,
+        .post-footer,
+        #disqus_thread {
+            display: none;
+        }
+    }
+    .post-navigation.elaborate {
+        display: none;
+    }
+}

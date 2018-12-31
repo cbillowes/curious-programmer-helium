@@ -1,0 +1,21 @@
+@import "../layout/layout.scss";
+
+.credits-container {
+  .credit {
+    margin-bottom: 1.5em;
+
+    a {
+      border-radius: $border-radius;
+      background-color: $primary;
+      color: $background-accent;
+      padding: 0.5em 1em;
+      font-size: 0.8em;
+      margin-left: 1em;
+
+      &:hover {
+        background-color: $background-accent;
+        color: $foreground;
+      }
+    }
+  }
+}

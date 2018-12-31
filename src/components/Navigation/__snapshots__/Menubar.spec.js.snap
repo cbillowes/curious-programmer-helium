@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a menu bar component should render 1`] = `
+<nav
+  className="menubar active"
+  onClick={[Function]}
+>
+  <ul>
+    <li
+      className="menu-item selected"
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Blog
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Tags
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/credits"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Credits
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/privacy-policy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Privacy Policy
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/license"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        License
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`a menu bar component should toggle menubar 1`] = `
+<nav
+  className="menubar active"
+  onClick={[Function]}
+>
+  <ul>
+    <li
+      className="menu-item "
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Blog
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Tags
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/credits"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Credits
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/privacy-policy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Privacy Policy
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/license"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        License
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`a menu bar component should toggle menubar 2`] = `
+<nav
+  className="menubar active"
+  onClick={[Function]}
+>
+  <ul>
+    <li
+      className="menu-item "
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Blog
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Tags
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/credits"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Credits
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/privacy-policy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Privacy Policy
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/license"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        License
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`a menu bar component should toggle menubar 3`] = `
+<nav
+  className="menubar active"
+  onClick={[Function]}
+>
+  <ul>
+    <li
+      className="menu-item "
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Blog
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Tags
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/credits"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Credits
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/privacy-policy"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Privacy Policy
+      </a>
+    </li>
+    <li
+      className="menu-item "
+    >
+      <a
+        href="/license"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        License
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

@@ -1,0 +1,27 @@
+@import "../../layout/layout.scss";
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 15px 0;
+
+    > div {
+        margin: 0.75em;
+    }
+
+    .social-icon {
+        cursor: pointer;
+    }
+
+    .share-count {
+        text-align: center;
+    }
+
+    svg:hover circle {
+        fill: $background-accent;
+    }
+}

@@ -1,0 +1,47 @@
+@import "../../layout/layout.scss";
+
+.posts {
+  section {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 1em;
+
+    &:first-child {
+      max-width: 80%;
+      text-align: center;
+      margin-bottom: 1em;
+      padding:0; 
+
+      &::after {
+        content: "";
+        position: relative;
+      }
+
+      h1 {
+        font-size: 3em;
+        color: $primary;
+      }
+
+      .tags {
+        .tag,
+        &:visited {
+          background-color: $primary;
+          color: $background-accent;
+          text-shadow: 0px 0px 1px $background;
+
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+
+    a {
+      color: $foreground;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}

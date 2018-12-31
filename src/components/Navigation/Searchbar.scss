@@ -1,0 +1,49 @@
+@import "../../layout/layout.scss";
+
+.searchbar {
+  display: none;
+  background-color: $navigation-background;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 4em;
+  z-index: 1;
+  padding: 1em;
+
+  &.active {
+    display: block;
+  }
+
+  .search-query {
+    display: block;
+    width: 96%;
+    padding: 0.5em;
+    margin: 1.5em 2% 0.5em 2%;
+    font-family: $font-family-sans-serif;
+    background-color: $background-accent;
+    border: solid 1px $background-accent;
+    border-radius: $border-radius;
+    padding: 0.5em;
+    color: $foreground;
+    font-size: 1.25em;
+  }
+
+  .results {
+    height: 100vh;
+    overflow-y: auto;
+
+    ul {
+      padding-left: 2%;
+
+      li {
+        list-style: none; 
+        padding-bottom: 0.5em;
+        
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}

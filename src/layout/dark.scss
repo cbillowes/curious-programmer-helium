@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
+
+$background: #181c1f;
+$background-accent: lighten($background, 5%);
+$background-de-emphasis: darken($background, 2%);
+$background-serious-highlight: lighten(#cc0000, 45%);
+$foreground: #bbbbbb;
+$foreground-accent: darken($foreground, 5%);
+$foreground-serious-highlight: #cc0000;
+$foreground-serious-highlight-anchor: $background;
+$foreground-serious-highlight-anchor-visited: lighten($background, 20%);
+
+$primary: #78f552;
+$secondary: #f5f252;
+$accent: rgba(245, 82, 82, 0.8);
+
+$font-size: 1.35rem;
+$line-height: $font-size * 2;
+$font-family-serif: 'Lora', 'Times New Roman', serif;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$navigation-background: $background-de-emphasis;
+$text-shadow: darken($background, 20%);
+$scrollbar-track: lighten($background, 5%);
+$scrollbar-thumb: lighten($background, 15%);
+$visited: lighten($secondary, 10%);
+
+$table-background: darken($background, 5%);
+$table-head-background: darken($background, 7%);
+$table-border: $background;
+$table-hover-text: lighten($background, 5%);
+$table-hover-link: darken($foreground, 40%);
+
+@mixin button() {
+  background-color: $primary;
+  color: $background-de-emphasis;
+  text-shadow: 1px 1px 1px #00000099;
+  padding: 0em 0.5em;
+  display: inline-block;
+  border-radius: 4px;
+  line-height: 1.75em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}

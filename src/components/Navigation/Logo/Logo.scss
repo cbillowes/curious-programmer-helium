@@ -1,0 +1,43 @@
+@import "../../../layout//layout.scss";
+
+.navigation {
+  padding-left: 1em;
+  
+  .logo {
+    max-width: $container-width;
+    margin: 0 auto;
+
+    .mobile-logo {
+      display: none;
+    }
+
+    .default-logo,
+    .mobile-logo {
+      margin-top: 0.5em;
+      font-size: 1.25em;
+      font-weight: 900;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      a {
+        color: $foreground;
+    
+        &:hover {
+          color: $primary;
+        }
+      }
+    } 
+  }
+}
+
+@media (max-width: 640px) {
+  .navigation {
+    .logo {
+      .default-logo {
+        display: none;
+      }
+  
+      .mobile-logo {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,1388 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`companies component should render CloudAfrica 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item community"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Agile Africa 2018
+        </h2>
+        <span>
+          Jan - Oct 2018
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Organizer
+        </h3>
+        <p>
+          As one of the organizers I was responsible for delegate bags, facilitating speakers and guiding delegates to the respective speaker rooms. In the event that something did not go according to plan, quick thinking and immediate action was required.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item book"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="https://www.offerzen.com/blog/debugging-with-chrome-devtools-quick-front-end-fixes"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            OfferZen
+          </a>
+        </h2>
+        <span>
+          20 July 2018
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Debugging with Chrome DevTools: Quick Front End Fixes
+        </h3>
+        <p>
+          I wrote my first article for OfferZen working closely with Anne Gonschorek. I focused on how
+           
+          <span
+            className="tag"
+          >
+            Chrome DevTools
+          </span>
+           can help fix
+           
+          <span
+            className="tag"
+          >
+            JavaScript
+          </span>
+          ,
+          <span
+            className="tag"
+          >
+            HTML
+          </span>
+           &
+           
+          <span
+            className="tag"
+          >
+            CSS
+          </span>
+           bugs fast.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://cloudafrica.net"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            CloudAfrica
+          </a>
+        </h2>
+        <span>
+          1 July 2018 (Current)
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Senior Systems and Web/Fullstack Developer
+        </h3>
+        <p>
+          I moved to 
+          <span
+            className="tag"
+          >
+            Clojure
+          </span>
+           and
+           
+          <span
+            className="tag"
+          >
+            Datomic
+          </span>
+           working in a
+           
+          <span
+            className="tag"
+          >
+            DevOps
+          </span>
+           powered virtualization environment.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item blog"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="https://curiousprogrammer.io"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Curious Programmer
+          </a>
+        </h2>
+        <span>
+          26 June 2018
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          A new blog
+        </h3>
+        <p>
+          I left corporate and changed my brand. I created my new blog using
+          <span
+            className="tag"
+          >
+            Gatsby
+          </span>
+          , a
+           
+          <span
+            className="tag"
+          >
+            React
+          </span>
+           based static site generator and
+           
+          <a
+            href="/credits"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            other
+          </a>
+           technologies.
+        </p>
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`companies component should render DStv 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          DStv Digital Media
+        </h2>
+        <span>
+          Jun 2016 - 30 June 2018
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Senior Software Developer
+        </h3>
+        <p>
+          Appointed to work permanently, I continued my work in a
+           
+          <span
+            className="tag"
+          >
+            SCRUM
+          </span>
+           team working on the
+           
+          <span
+            className="tag"
+          >
+            Video On Demand
+          </span>
+           offering including
+           
+          <span
+            className="tag"
+          >
+            Live Streaming
+          </span>
+           integrating with multiple microservice touch points. I showed exemplary leadership qualities and worked well within the team.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item podcast"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          ZA Dev Chat
+        </h2>
+        <span>
+          28 Aug 2017
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          67 - The Imposter Within with Clarice Bouwer
+        </h3>
+        <p>
+          I shared my views on imposter syndrome, what it is and how to overcome it. I also covered other issues around the often overlooked topics of mental well-being.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item talk"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://www.rubyfuza.org/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Rubyfuza 2017 Conference
+          </a>
+        </h2>
+        <span>
+          3 February 2017
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          The Imposter Within
+        </h3>
+        <p>
+          I spoke about the limiting opportunities and affected growth effects of Imposter Syndrome and how I was personally affected.
+        </p>
+        <p>
+          <span>
+            <a
+              className=""
+              href="https://twitter.com/i/moments/830378337516322816"
+              rel="nofollow noopener noreferrer "
+              target="_blank"
+            >
+              Twitter moments
+            </a>
+          </span>
+           
+           • 
+           
+          <span>
+            <a
+              href="/slides/rubyfuza-2017-the-imposter-within.pdf"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Slides
+            </a>
+          </span>
+           
+           • 
+           
+          <span>
+            <a
+              href="/blog/rubyfuza-2017-conference/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Content
+            </a>
+          </span>
+           
+           • 
+           
+          <span>
+            <a
+              className=""
+              href="https://www.youtube.com/watch?v=fkgAc0DY4s8"
+              rel="nofollow noopener noreferrer "
+              target="_blank"
+            >
+              Video
+            </a>
+          </span>
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item podcast"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://developeronfire.com/podcast/episode-202-clarice-bouwer-leaving-comfort-behind"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Developer On Fire
+          </a>
+        </h2>
+        <span>
+          23 January 2017
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Episode 202 | Clarice Bouwer - Leaving Comfort Behind
+        </h3>
+        <p>
+          I spoke with Dave Rael about collboration, empathy, fear, and being an imposter.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item book"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Corporate Programmer
+        </h2>
+        <span>
+          13 November 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          The Imposter Within
+        </h3>
+        <p>
+          This post sparked some interesting conversation on
+           
+          <a
+            className=""
+            href="https://www.reddit.com/r/programming/comments/5cpaty/ive_had_a_lot_of_problems_with_imposter_syndrome/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Reddit
+          </a>
+          , which accumulated 6,734 unique page views and over 200 votes within a week of posting.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item book"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://alistapart.com/article/finding-opportunities-in-the-mistakes-we-make"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            A List Apart
+          </a>
+        </h2>
+        <span>
+          2 August 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Finding Opportunities in the Mistakes We Make
+        </h3>
+        <p>
+          Collaborating with Rose Weisburd, I wrote about burn out and falling behind in technology. I learned a lot in my career and shared how I found opportunities in the mistakes I made.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item talk"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="https://twitter.com/hashtag/drivenci"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Driven Unconference
+          </a>
+        </h2>
+        <span>
+          30 - 31 July 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Mindfulness
+        </h3>
+        <p>
+          I spoke about how the power of
+           
+          <span
+            className="tag"
+          >
+            mindfulness
+          </span>
+           can be incorporated in everyday use and be applied to the workplace to calm the busy mind and be still and productive in an environmental rush.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item talk"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Jozi-JUG
+        </h2>
+        <span>
+          4 June 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Java 9 and Women in tech Unconference
+        </h3>
+        <p>
+          My first talk ,
+           
+          <a
+            href="/blog/branding-your-identity"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Branding your Identity
+          </a>
+          , shared how software developers can create a name for themselves in the development community.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item blog"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Corporate Programmer
+        </h2>
+        <span>
+          28 Apr 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          A new blog
+        </h3>
+        <p>
+          I started a blog using 
+          <span
+            className="tag"
+          >
+            Jekyll
+          </span>
+           a static site generateor. The goal was to help other software developers who are joining or are working within a corporate environment by sharing my personal experiences.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://www.britehouse.co.za/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Britehouse
+          </a>
+        </h2>
+        <span>
+          Apr 2014 - May 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Senior Software Developer
+        </h3>
+        <p>
+          Britehouse, formerly known as 3Fifteen, placed me at DStv Digital Media. I joined an 
+          <span
+            className="tag"
+          >
+            Agile
+          </span>
+           
+          <span
+            className="tag"
+          >
+            SCRUM
+          </span>
+           team focusing on production based voting solutions such as Idols, Big Brother and Survivor. I later joined the DStv Now team.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item project"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Britehouse
+        </h2>
+        <span>
+          Apr 2016 - May 2018
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          DStv Now
+        </h3>
+        <p>
+          A live streaming and video on-demand digital entertainment solution offering DStv's Catch Up and Live TV offerings.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item project"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Britehouse
+        </h2>
+        <span>
+          Apr 2014 - May 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          DStv Digital Media Original Productions
+        </h3>
+        <ul>
+          <li>
+            Idols South Africa
+          </li>
+          <li>
+            Big Brother Mzansi & Angola
+          </li>
+          <li>
+            Channel-O Music Video Awards
+          </li>
+          <li>
+            Africa Magic Viewers Choice Awards
+          </li>
+        </ul>
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`companies component should render Education 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Computer Training Institute
+        </h2>
+        <span>
+          Oct 2005 - Dec 2005
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Junior Instructor
+        </h3>
+        <p>
+          I was promoted to Junior Instructor. Additional responsibilities included liaising with parents and managing my own class of students while maintaining a low failure rate.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item certificate"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Computer Training Institute
+        </h2>
+        <span>
+          Aug 2005 - Oct 2005
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Certificate
+        </h3>
+        <p>
+          I received a 
+          <span
+            className="tag"
+          >
+            VB.NET
+          </span>
+           certificate for completing all modules. Passed with distinction.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item certificate"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Computer Training Institute
+        </h2>
+        <span>
+          Jan 2005 - Oct 2005
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          National diploma
+        </h3>
+        <p>
+          I received my national diploma in
+          <strong>
+            Information Systems: Software Development
+          </strong>
+           with subjects in 
+          <span
+            className="tag"
+          >
+            SQL Server 2000
+          </span>
+          ,
+          <span
+            className="tag"
+          >
+            C#
+          </span>
+           and
+           
+          <span
+            className="tag"
+          >
+            VB.NET
+          </span>
+          . Passed with distinction.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Computer Training Institute
+        </h2>
+        <span>
+          Jan 2005 - Sept 2005
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Assistant Instructor
+        </h3>
+        <p>
+          I was awarded a bursary to study further while being an Assistant Instructor. I was responsible for developing pre-test materials, hosting workshops and marking projects and exams.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item certificate"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Computer Training Institute
+        </h2>
+        <span>
+          Jan 2004 - Nov 2004
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          National Diploma
+        </h3>
+        <p>
+          I received my national diploma for
+          <strong>
+            Computer Science: Internet Development
+          </strong>
+           with subjects in Standard, Micro and Enterprise
+           
+          <span
+            className="tag"
+          >
+            Java
+          </span>
+           and
+           
+          <span
+            className="tag"
+          >
+            Perl
+          </span>
+          . Passed with distinction.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Freelancer
+        </h2>
+        <span>
+          Between 2002 and 2004
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Freelancer
+        </h3>
+        <p>
+          I was a freelance web designer for local companies including the Springs Advertiser and Elco Steel.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item certificate"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Dr Johan Jurgens High School
+        </h2>
+        <span>
+          Jan 1999 - Dec 2003
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Matriculated
+        </h3>
+        <p>
+          Matriculated with university exemption. All subjects on higher grade: English, Afrikaans, Computer Science, Mathematics, Science and Economics.
+        </p>
+        <ul>
+          <li>
+            Representative of the Student Council (2002-2003)
+          </li>
+          <li>
+            Editor of school newspaper (2003)
+          </li>
+          <li>
+            Layout editor of school newspaper (2001-2002)
+          </li>
+          <li>
+            Photographer for school newspaper (2000)
+          </li>
+          <li>
+            Web Master of IT College (2001 - 2002)
+          </li>
+          <li>
+            Member of the IT College (2000-2002)
+          </li>
+        </ul>
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`companies component should render Globres 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Globres
+        </h2>
+        <span>
+          Jan 2006 - Sept 2006
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Junior Web Developer
+        </h3>
+        <p>
+          I was responsible for developing, enhancing and supporting the internal Global Hotel Reservation web application.
+        </p>
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`companies component should render ITEM 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://www.it-em.co.za"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            IT Event Management
+          </a>
+        </h2>
+        <span>
+          Sept 2006 - Apr 2012
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Lead Senior Web Developer
+        </h3>
+        <p>
+          In 2010 I was promoted from Junior Web Developer to Lead Senior Web Developer.
+        </p>
+        <p>
+          I was responsible for developing, deploying and supporting custom event registration websites in production and mentoring other software developers within our team.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item community"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://stackoverflow.com/users/849986/cbouwer?tab=profile"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            StackOverflow
+          </a>
+        </h2>
+        <span>
+          Jul 2011
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Joined the community
+        </h3>
+        <p>
+          I joined the StackOverflow community, a renowned Q&A platform for software developers.
+        </p>
+        <p>
+          <a
+            className=""
+            href="http://stackexchange.com/users/453154"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            <img
+              alt="Profile for Clarice Bouwer on Stack Exchange, a network of free, community-driven Q&A sites"
+              height="58"
+              src="https://stackexchange.com/users/flair/453154.png"
+              title="Profile for Clarice Bouwer on Stack Exchange, a network of free, community-driven Q&A sites"
+              width="208"
+            />
+          </a>
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item project"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://www.it-em.co.za"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            IT Event Management
+          </a>
+        </h2>
+        <span>
+          Sept 2006 - Apr 2012
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Event Registration Projects
+        </h3>
+        <ul>
+          <li>
+            Microsoft Tech-Ed Africa & Middle East
+          </li>
+          <li>
+            Microsoft Partner Summit
+          </li>
+          <li>
+            Microsoft TechDays
+          </li>
+          <li>
+            Microsoft DevDays
+          </li>
+          <li>
+            Microsoft Bootcamps
+          </li>
+          <li>
+            Microsoft ICT Best Practices
+          </li>
+          <li>
+            Vodacom Business Partners Conference
+          </li>
+        </ul>
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
+exports[`companies component should render Remata 1`] = `
+<ul
+  className="timeline"
+>
+  <li
+    className="item work"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="http://www.remata.co.za/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            Remata Communications
+          </a>
+        </h2>
+        <span>
+          Jul 2012 - Mar 2014
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Senior Software Developer
+        </h3>
+        <p>
+          In the Cross Media Solutions department, I was responsible for the development and maintenance of automated processes and custom development integration with 
+          <span
+            className="tag"
+          >
+            XMPie
+          </span>
+           for on-demand 
+          <span
+            className="tag"
+          >
+            variable data printing
+          </span>
+           
+          solutions.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item community"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          <a
+            className=""
+            href="https://www.meetup.com/DeveloperUG/"
+            rel="nofollow noopener noreferrer "
+            target="_blank"
+          >
+            DeveloperUG
+          </a>
+        </h2>
+        <span>
+          10 Jul 2012
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Developer User Group
+        </h3>
+        <p>
+          Started attending the Developer User Group monthly meetups at Microsoft.
+        </p>
+      </div>
+    </section>
+  </li>
+  <li
+    className="item project"
+  >
+    <section>
+      <div
+        className="meta"
+      >
+        <h2>
+          Remata Communications
+        </h2>
+        <span>
+          Apr 2014 - May 2016
+        </span>
+      </div>
+      <div
+        className="icon"
+      >
+        <span />
+      </div>
+      <div
+        className="description"
+      >
+        <h3>
+          Remata Cross Media Solutions Projects
+        </h3>
+        <ul>
+          <li>
+            Platinum Life variable data print automation service
+          </li>
+          <li>
+            Nashua Mobile business prospective variable data print
+          </li>
+          <li>
+            Photo2Print automation
+          </li>
+          <li>
+            Herbex Daily SMS
+          </li>
+        </ul>
+      </div>
+    </section>
+  </li>
+</ul>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a logo component should render 1`] = `
+<div
+  className="logo"
+>
+  <div
+    className="default-logo"
+  >
+    <a
+      aria-current="page"
+      className=""
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      { 
+      <span
+        className="normal-weight"
+      >
+        curious
+      </span>
+       
+      programmer
+       }
+    </a>
+  </div>
+  <div
+    className="mobile-logo"
+  >
+    <a
+      aria-current="page"
+      className=""
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      { }
+    </a>
+  </div>
+</div>
+`;

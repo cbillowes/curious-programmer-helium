@@ -1,0 +1,14 @@
+@import "../../layout/layout.scss";
+
+.footer-container {
+    background-color: $background;
+    position: relative;
+
+    .footer {
+        font-family: $font-family-serif;
+        margin: 0 auto;
+        padding: 2em;
+        font-weight: 100;
+        text-shadow: none;
+    }
+}

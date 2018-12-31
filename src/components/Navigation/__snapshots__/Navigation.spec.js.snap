@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`a navigation component should render 1`] = `
+<div
+  className="navigation"
+>
+  <div
+    className="logo"
+  >
+    <div
+      className="default-logo"
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        { 
+        <span
+          className="normal-weight"
+        >
+          curious
+        </span>
+         
+        programmer
+         }
+      </a>
+    </div>
+    <div
+      className="mobile-logo"
+    >
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        { }
+      </a>
+    </div>
+  </div>
+  <div
+    className="icons"
+  >
+    <div
+      className="icon search "
+      onClick={[Function]}
+    >
+      <i />
+    </div>
+    <div
+      className="icon menu "
+      onClick={[Function]}
+    >
+      <i />
+    </div>
+  </div>
+  <nav
+    className="menubar "
+    onClick={[Function]}
+  >
+    <ul>
+      <li
+        className="menu-item selected"
+      >
+        <a
+          aria-current="page"
+          className=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        className="menu-item "
+      >
+        <a
+          href="/about"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          About
+        </a>
+      </li>
+      <li
+        className="menu-item "
+      >
+        <a
+          href="/tags"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Tags
+        </a>
+      </li>
+      <li
+        className="menu-item "
+      >
+        <a
+          href="/credits"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Credits
+        </a>
+      </li>
+      <li
+        className="menu-item "
+      >
+        <a
+          href="/privacy-policy"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li
+        className="menu-item "
+      >
+        <a
+          href="/license"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          License
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="searchbar "
+  >
+    <input
+      className="search-query"
+      onKeyUp={[Function]}
+      type="text"
+    />
+    <div
+      className="results"
+    >
+      <ul>
+        <li
+          className="empty"
+        >
+          What do you feel like reading today? Search as you type, also, enter works too.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

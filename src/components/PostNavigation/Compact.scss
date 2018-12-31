@@ -1,0 +1,37 @@
+@import "../../layout/layout.scss";
+
+.post-navigation.compact {
+  font-size: 0.7em;
+  font-family: $font-family-sans-serif;
+  margin-top: 7em;
+
+  a {
+    color: $foreground;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .previous {
+    float: left;
+
+    &::before {
+      content: "↩ ";
+    }
+  }
+
+  .next {
+    float: right;
+
+    &::after {
+      content: " ↪";
+    }
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
