@@ -2,15 +2,13 @@
 
 .posts {
   section {
+    padding: 0em 2.5em;
     max-width: $container-width;
     margin: 0 auto;
-    padding: 1em;
 
     &:first-child {
-      max-width: 80%;
+      padding: 0em 2.5em;
       text-align: center;
-      margin-bottom: 1em;
-      padding:0; 
 
       &::after {
         content: "";
@@ -20,6 +18,11 @@
       h1 {
         font-size: 3em;
         color: $primary;
+
+        @include small-media() {
+          font-size: 2em;
+        }
+
       }
 
       .tags {

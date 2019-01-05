@@ -35,3 +35,14 @@
     display: block;
   }
 }
+
+@include small-media() {
+  .post-navigation.compact {
+    .next,
+    .previous {
+      display: block;
+      float:none;
+      text-align: right;
+    }
+  }
+}

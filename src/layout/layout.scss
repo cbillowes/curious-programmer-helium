@@ -59,6 +59,12 @@ $table-hover-link: darken($foreground, 40%);
   }
 }
 
+@mixin small-media() {
+  @media screen and (max-width: 800px) {
+    @content
+  }
+}
+
 @mixin highlighted-section() {
   background-color: $background-de-emphasis;
   padding: 1em 3em 2em 3em;
@@ -117,13 +123,23 @@ $table-hover-link: darken($foreground, 40%);
   }
   
   h1 { font-size: 2em; }
-  h2 { font-size: 1.7em }
-  h3 { font-size: 1.5rem; margin-top: 1em; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.15rem; }
-  h6 { font-size: 1.05rem; }
+  h2 { font-size: 1.9em }
+  h3 { font-size: 1.8rem; margin-top: 1em; }
+  h4 { font-size: 1.7rem; }
+  h5 { font-size: 1.6rem; }
+  h6 { font-size: 1.5rem; }
   h7 { font-weight: bold; }
-  
+
+  @include small-media() {
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.5em }
+    h3 { font-size: 1.4em; }
+    h4 { font-size: 1.3rem; }
+    h5 { font-size: 1.2rem; }
+    h6 { font-size: 1.1rem; }
+    h7 { font-weight: bold; }
+  } 
+
   a {
     color: $primary;
     -webkit-transition: all 0.3s;

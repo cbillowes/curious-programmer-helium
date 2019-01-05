@@ -67,6 +67,10 @@
     h1 {
         text-align: center;
         font-size: 2.5em;
+
+        @include small-media() {
+            font-size: 2em;
+        }
     }
 
     h1,
