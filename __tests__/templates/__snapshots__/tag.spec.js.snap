@@ -168,7 +168,7 @@ exports[`a tag template should render 1`] = `
         posted 
          
         <time
-          dateTime={"2019-01-04T09:56:51.503Z"}
+          dateTime={"2019-01-05T06:58:03.557Z"}
         >
           a few seconds ago
         </time>
@@ -177,9 +177,9 @@ exports[`a tag template should render 1`] = `
         on 
          
         <time
-          dateTime={"2019-01-04T09:56:51.510Z"}
+          dateTime={"2019-01-05T06:58:03.559Z"}
         >
-          Fri, 4 January 2019
+          Sat, 5 January 2019
         </time>
          
          
@@ -211,7 +211,7 @@ exports[`a tag template should render 1`] = `
             posted 
              
             <time
-              dateTime={"2019-01-04T09:56:51.386Z"}
+              dateTime={"2019-01-05T06:58:03.540Z"}
             >
               a few seconds ago
             </time>
@@ -220,9 +220,9 @@ exports[`a tag template should render 1`] = `
             on 
              
             <time
-              dateTime={"2019-01-04T09:56:51.386Z"}
+              dateTime={"2019-01-05T06:58:03.540Z"}
             >
-              Fri, 4 January 2019
+              Sat, 5 January 2019
             </time>
              
              

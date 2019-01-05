@@ -159,7 +159,15 @@ exports[`a blog post template should render 1`] = `
     </div>
   </div>
   <span
-    className="cover"
+    className="cover blur background"
+    style={
+      Object {
+        "backgroundImage": "url(https://picsum.photos/#157/blurred)",
+      }
+    }
+  />
+  <span
+    className="cover default background"
     style={
       Object {
         "backgroundImage": "url(https://picsum.photos/#/157)",
@@ -200,7 +208,7 @@ exports[`a blog post template should render 1`] = `
           posted 
            
           <time
-            dateTime={"2019-01-04T09:56:51.083Z"}
+            dateTime={"2019-01-05T06:58:04.645Z"}
           >
             a few seconds ago
           </time>
@@ -209,9 +217,9 @@ exports[`a blog post template should render 1`] = `
           on 
            
           <time
-            dateTime={"2019-01-04T09:56:51.085Z"}
+            dateTime={"2019-01-05T06:58:04.647Z"}
           >
-            Fri, 4 January 2019
+            Sat, 5 January 2019
           </time>
            
            
@@ -254,12 +262,14 @@ exports[`a blog post template should render 1`] = `
         </ul>
       </div>
       <div
+        className="body"
         dangerouslySetInnerHTML={
           Object {
-            "__html": undefined,
+            "__html": "",
           }
         }
       />
+      <div />
       <div
         className="post-footer"
       >
@@ -649,7 +659,7 @@ exports[`a blog post template should render 1`] = `
               posted 
                
               <time
-                dateTime={"2019-01-04T09:56:50.907Z"}
+                dateTime={"2019-01-05T06:58:04.549Z"}
               >
                 a few seconds ago
               </time>
@@ -658,9 +668,9 @@ exports[`a blog post template should render 1`] = `
               on 
                
               <time
-                dateTime={"2019-01-04T09:56:50.907Z"}
+                dateTime={"2019-01-05T06:58:04.549Z"}
               >
-                Fri, 4 January 2019
+                Sat, 5 January 2019
               </time>
                
                
@@ -737,7 +747,7 @@ exports[`a blog post template should render 1`] = `
               posted 
                
               <time
-                dateTime={"2019-01-04T09:56:50.907Z"}
+                dateTime={"2019-01-05T06:58:04.556Z"}
               >
                 a few seconds ago
               </time>
@@ -746,9 +756,9 @@ exports[`a blog post template should render 1`] = `
               on 
                
               <time
-                dateTime={"2019-01-04T09:56:50.907Z"}
+                dateTime={"2019-01-05T06:58:04.556Z"}
               >
-                Fri, 4 January 2019
+                Sat, 5 January 2019
               </time>
                
                

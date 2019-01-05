@@ -18,6 +18,7 @@ const prevPost = {
 }
 const currentPost = {
   markdownRemark: {
+    html: "",
     fields: {
       slug: "/getting-started-with-datomic",
       date: new Date()
@@ -25,7 +26,8 @@ const currentPost = {
     frontmatter: {
       tags: ["technical", "clojure", "datomic"],
       title: "Getting started with Datomic Part 2",
-      cover: "https://picsum.photos/#/157"
+      cover: "https://picsum.photos/#/157",
+      blur: "https://picsum.photos/#157/blurred"
     }
   }
 }
@@ -64,12 +66,23 @@ describe("a blog post template", () => {
 
   it("should generate the cover image", () => {
     const component = mount(element)
-    expect(component.html()).toContain(`class="cover" style="background-image: url(${currentPost.markdownRemark.frontmatter.cover});"`)
+    expect(component.html()).toContain(`class="cover default background" style="background-image: url(${currentPost.markdownRemark.frontmatter.cover});"`)
+  })
+
+  it("should generate the blur image", () => {
+    const component = mount(element)
+    expect(component.html()).toContain(`class="cover blur background" style="background-image: url(${currentPost.markdownRemark.frontmatter.blur});"`)
+  })
+
+  it("should use post image for background", () => {
+    currentPost.markdownRemark.frontmatter.post = "";
+    const component = mount(element)
+    expect(component.html().indexOf(`class="cover default background" style="background-image: url(${currentPost.markdownRemark.frontmatter.post});"`)).toEqual(-1)
   })
 
   it("should skip the cover image", () => {
     currentPost.markdownRemark.frontmatter.cover = "";
     const component = mount(element)
-    expect(component.html().indexOf(`class="cover" style="background-image: url(${currentPost.markdownRemark.frontmatter.cover});"`)).toEqual(-1)
+    expect(component.html().indexOf(`style="background-image: url(${currentPost.markdownRemark.frontmatter.cover});"`)).toEqual(-1)
   })
 })
