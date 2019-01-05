@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for curious-programmer-helium/src/templates/post.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">curious-programmer-helium/src/templates</a> post.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.09% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.88% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>15/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../layout"
+import Disqus from "../components/Disqus/Disqus"
+import Accordion from "../components/Accordion/Accordion"
+import Tags from "../components/Tag/Tags"
+import SocialLinks from "../components/Share/Share"
+import PageMetadata from "../components/Metadata/Page/Metadata"
+import PostMetadata from "../components/Metadata/Post/Metadata"
+import CompactNavigation from "../components/PostNavigation/Compact"
+import ElaborateNavigation from "../components/PostNavigation/Elaborate"
+import "./post.scss"
+const $ = require("jquery")
+&nbsp;
+function blurCoverOnScroll() {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof window !== "undefined" &amp;&amp; window.scroll) {
+    const background = $(".cover.default.background")
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (background.length === 1) {
+      let opacity = <span class="cstat-no" title="statement not covered" >1</span>
+      let y = <span class="cstat-no" title="statement not covered" >window.scrollY</span>
+<span class="cstat-no" title="statement not covered" >      window.onscroll = <span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
+<span class="cstat-no" title="statement not covered" >        if (window.scrollY &gt;= $(window).height()) {</span>
+<span class="cstat-no" title="statement not covered" >          opacity = 0</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          opacity = 1</span>
+        }
+<span class="cstat-no" title="statement not covered" >        background</span>
+          .css({
+            "opacity": opacity,
+            "filter": `alpha(opacity=${opacity * 10})`,
+            "transition": "opacity 1s ease-in-out"
+          })
+<span class="cstat-no" title="statement not covered" >        y = window.scrollY</span>
+      }
+    }
+  }
+}
+&nbsp;
+function enableGifPlayback() {
+  $(".gif").each(<span class="fstat-no" title="function not covered" >fu</span>nction () {
+    const gif = <span class="cstat-no" title="statement not covered" >$(this)</span>
+<span class="cstat-no" title="statement not covered" >    gif.css({ "position": "relative" })</span>
+    const spinner = <span class="cstat-no" title="statement not covered" >$(`&lt;div class="loading spinner-border" role="status"&gt;&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;&lt;/div&gt;`)</span>
+<span class="cstat-no" title="statement not covered" >    spinner</span>
+      .css({
+        "position": "absolute",
+        "top": "1em",
+        "left": "1em"
+      })
+<span class="cstat-no" title="statement not covered" >    gif.prepend(spinner)</span>
+&nbsp;
+    const title = <span class="cstat-no" title="statement not covered" >gif.attr("alt")</span>
+    const still = <span class="cstat-no" title="statement not covered" >gif.find(".still")</span>
+<span class="cstat-no" title="statement not covered" >    still</span>
+      .attr("alt", title)
+      .css({ "cursor": "pointer" })
+      .click(<span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >        gif.find(".loading").hide()</span>
+<span class="cstat-no" title="statement not covered" >        gif.find(".still").hide()</span>
+<span class="cstat-no" title="statement not covered" >        gif.find(".animated").show()</span>
+      })
+&nbsp;
+    const animated = <span class="cstat-no" title="statement not covered" >gif.find(".animated")</span>
+<span class="cstat-no" title="statement not covered" >    animated</span>
+      .attr("alt", title)
+      .css({ "cursor": "pointer" })
+      .hide()
+      .click(<span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >        if (gif.hasClass("loading")) <span class="cstat-no" title="statement not covered" >return</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        gif.find(".loading").hide()</span>
+<span class="cstat-no" title="statement not covered" >        gif.find(".animated").hide()</span>
+<span class="cstat-no" title="statement not covered" >        gif.find(".still").show()</span>
+      })
+      .on("load", <span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >        gif.find(".loading").hide()</span>
+      })
+&nbsp;
+    const enlarge = <span class="cstat-no" title="statement not covered" >$(this).find("a")</span>
+<span class="cstat-no" title="statement not covered" >    enlarge</span>
+      .html("&lt;i&gt;Enlarge this gif in a new window&lt;/i&gt;")
+      .attr("target", "_blank")
+      .attr("nofollow")
+  })
+}
+&nbsp;
+export default class PostTemplate extends React.Component {
+  componentDidMount() {
+    blurCoverOnScroll()
+    enableGifPlayback()
+  }
+&nbsp;
+  getPostItem = node =&gt; {
+    return {
+      title: node.frontmatter.title,
+      slug: node.fields.slug,
+      excerpt: node.excerpt,
+      timeToRead: node.timeToRead,
+      cover: node.frontmatter.cover,
+      date: node.fields.date,
+      tags: node.frontmatter.tags
+    }
+  }
+&nbsp;
+  render() {
+    const { slug, next, prev } = this.props.pageContext;
+    const postNode = this.props.data.post
+    const previousPost = this.getPostItem(this.props.data.prev)
+    const nextPost = this.getPostItem(this.props.data.next)
+    const post = postNode.frontmatter
+    const blur = post.blur ? post.blur : <span class="branch-1 cbranch-no" title="branch not covered" >`${post.cover}&amp;blur`</span>
+&nbsp;
+    return (
+      &lt;Layout&gt;
+        {post.cover &amp;&amp; blur ?
+          &lt;span className="cover blur background" style={{ backgroundImage: `url(${blur})` }}&gt;&lt;/span&gt; :
+          &lt;span&gt;&lt;/span&gt;}
+        {post.cover ?
+          &lt;span className="cover default background" style={{ backgroundImage: `url(${post.cover})` }}&gt;&lt;/span&gt; :
+          &lt;span&gt;&lt;/span&gt;}
+        &lt;div className={`post ${post.cover ? "with-cover" : ""}`}&gt;
+          &lt;PageMetadata
+            title={post.title}
+            description={post.excerpt}
+            slug={slug}
+            images={{ cover: post.cover }} /&gt;
+          &lt;div&gt;
+            &lt;CompactNavigation previous={previousPost} next={nextPost} /&gt;
+            &lt;h1&gt;{post.title}&lt;/h1&gt;
+            &lt;PostMetadata tags={post.tags} date={post.date} timeToRead={post.timeToRead} /&gt;
+            &lt;div
+              className="body"
+              dangerouslySetInnerHTML={{ __html: postNode.html }} /&gt;
+            &lt;Accordion content={postNode.html} /&gt;
+            &lt;div className="post-footer"&gt;
+              &lt;hr /&gt;
+              &lt;Tags tags={post.tags} /&gt;
+              &lt;SocialLinks postPath={slug} postNode={postNode} /&gt;
+            &lt;/div&gt;
+            &lt;Disqus postNode={postNode} /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ElaborateNavigation previous={previousPost} next={nextPost} /&gt;
+      &lt;/Layout&gt;
+    )
+  }
+}
+&nbsp;
+/* eslint no-undef: "off"*/
+export const postQuery = graphql`
+  query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      timeToRead
+      frontmatter {
+        title
+        cover
+        blur
+        tags
+      }
+      fields {
+        slug
+        date
+      }
+    }
+&nbsp;
+    prev: markdownRemark(fields: { slug: { eq: $prev } }) {
+      excerpt(pruneLength: 200)
+      timeToRead
+      frontmatter {
+        title
+        cover
+        tags
+      }
+      fields {
+        slug
+        date
+      }
+    }
+&nbsp;
+    next: markdownRemark(fields: { slug: { eq: $next } }) {
+      excerpt(pruneLength: 200)
+      timeToRead
+      frontmatter {
+        title
+        cover
+        tags
+      }
+      fields {
+        slug
+        date
+      }
+    }
+  }
+`</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 10:01:49 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

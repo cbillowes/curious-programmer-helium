@@ -8,7 +8,7 @@ exports[`a post metadata component should render 1`] = `
     posted 
      
     <time
-      dateTime={"2019-01-05T06:58:04.680Z"}
+      dateTime={"2019-01-05T08:01:38.274Z"}
     >
       a few seconds ago
     </time>
@@ -17,7 +17,7 @@ exports[`a post metadata component should render 1`] = `
     on 
      
     <time
-      dateTime={"2019-01-05T06:58:04.680Z"}
+      dateTime={"2019-01-05T08:01:38.275Z"}
     >
       Sat, 5 January 2019
     </time>

@@ -182,7 +182,7 @@ exports[`a license page should render 1`] = `
       <p>
         Copyright © 
         <time
-          dateTime={"2019-01-05T06:58:00.751Z"}
+          dateTime={"2019-01-05T08:01:38.332Z"}
         >
           2019
         </time>

@@ -12,5 +12,11 @@ module.exports = {
     "__PATH_PREFIX__": ""
   },
   "testURL": "http://localhost",
-  "setupFiles": ["<rootDir>/loadershim.js", "<rootDir>/setupTests.js"]
+  "setupFiles": ["<rootDir>/loadershim.js", "<rootDir>/setupTests.js"],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**"
+  ],
+  "coverageDirectory": "__coverage__"
 }

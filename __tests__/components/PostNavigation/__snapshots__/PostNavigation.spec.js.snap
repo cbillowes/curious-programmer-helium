@@ -59,7 +59,7 @@ exports[`post navigation components an elaborate component should render 1`] = `
             posted 
              
             <time
-              dateTime={"2019-01-05T06:57:59.728Z"}
+              dateTime={"2019-01-05T08:01:38.270Z"}
             >
               a few seconds ago
             </time>
@@ -68,7 +68,7 @@ exports[`post navigation components an elaborate component should render 1`] = `
             on 
              
             <time
-              dateTime={"2019-01-05T06:57:59.730Z"}
+              dateTime={"2019-01-05T08:01:38.271Z"}
             >
               Sat, 5 January 2019
             </time>
@@ -127,7 +127,7 @@ exports[`post navigation components an elaborate component should render 1`] = `
             posted 
              
             <time
-              dateTime={"2019-01-05T06:57:59.735Z"}
+              dateTime={"2019-01-05T08:01:38.277Z"}
             >
               a few seconds ago
             </time>
@@ -136,7 +136,7 @@ exports[`post navigation components an elaborate component should render 1`] = `
             on 
              
             <time
-              dateTime={"2019-01-05T06:57:59.736Z"}
+              dateTime={"2019-01-05T08:01:38.277Z"}
             >
               Sat, 5 January 2019
             </time>

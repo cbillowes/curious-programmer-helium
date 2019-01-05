@@ -176,7 +176,7 @@ exports[`a credits page should render 1`] = `
             posted 
              
             <time
-              dateTime={"2019-01-05T06:58:01.210Z"}
+              dateTime={"2019-01-05T08:01:38.460Z"}
             >
               a few seconds ago
             </time>
@@ -185,7 +185,7 @@ exports[`a credits page should render 1`] = `
             on 
              
             <time
-              dateTime={"2019-01-05T06:58:01.220Z"}
+              dateTime={"2019-01-05T08:01:38.461Z"}
             >
               Sat, 5 January 2019
             </time>
