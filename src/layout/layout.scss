@@ -21,7 +21,7 @@ $container-width: 960px;
 $menubar-width: 250px;
 $border-radius: 5px;
 $font-size: 1.35rem;
-$text-shadow: darken($background, 20%);
+$text-shadow: 0px 0px 2px black;
 $line-height: $font-size * 2;
 $font-family-serif: $font-family-base;
 
@@ -47,7 +47,6 @@ $table-hover-link: darken($foreground, 40%);
 @mixin button() {
   background-color: $primary;
   color: $background-de-emphasis;
-  text-shadow: 1px 1px 1px #00000099;
   padding: 0em 0.5em;
   display: inline-block;
   border-radius: 4px;
@@ -102,7 +101,7 @@ $table-hover-link: darken($foreground, 40%);
   
   body {
     background-color: $background;
-    text-shadow: $text-shadow 1px 1px 1px;
+    text-shadow: $text-shadow;
     color: $foreground;
     font-size: $font-size;
     font-family: $font-family-serif;
@@ -120,6 +119,7 @@ $table-hover-link: darken($foreground, 40%);
     font-weight: 800;
     font-family: $font-family-sans-serif;
     line-height: 1.5em;
+    text-shadow: $text-shadow;
   }
   
   h1 { font-size: 2em; }

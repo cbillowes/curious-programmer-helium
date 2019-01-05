@@ -35,7 +35,6 @@ $table-hover-link: darken($foreground, 40%);
 @mixin button() {
   background-color: $primary;
   color: $background-de-emphasis;
-  text-shadow: 1px 1px 1px #00000099;
   padding: 0em 0.5em;
   display: inline-block;
   border-radius: 4px;

@@ -42,7 +42,6 @@
         &:visited {
           background-color: $primary;
           color: $background-accent;
-          text-shadow: 0px 0px 1px $background;
 
           &:hover {
             background-color: $secondary;
@@ -112,7 +111,6 @@
             border-collapse: collapse;
             color: #f8f8f2;
             background: none;
-            text-shadow: 0 1px $background-de-emphasis;
             font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
             text-align: left;
             white-space: pre;
@@ -151,7 +149,6 @@
             &:visited {
               background-color: $background-accent;
               color: $foreground;
-              text-shadow: 0px 0px 1px $background;
             }
 
             .tag:hover {
