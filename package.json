@@ -89,7 +89,7 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "test:watch": "jest --watchAll -u",
-    "test": "jest"
+    "test": "jest -u"
   },
   "remarkConfig": {
     "plugins": [
