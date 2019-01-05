@@ -88,7 +88,8 @@
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write",
-    "test": "jest --watchAll -u"
+    "test:watch": "jest --watchAll -u",
+    "test": "jest"
   },
   "remarkConfig": {
     "plugins": [
