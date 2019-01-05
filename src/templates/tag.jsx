@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout"
-import Metadata from "../components/Metadata/Post/Metadata"
+import Metadata from "../components/Metadata/Page/Metadata"
 import PostListing from "../components/PostListing/PostListing"
 
 export default class TagTemplate extends React.Component {
@@ -12,8 +12,8 @@ export default class TagTemplate extends React.Component {
 
     return (
       <Layout>
+        <Metadata title={title} slug={`/tags/${tag}`} />
         <div className="tag-container">
-          <Metadata title={title} slug={`/tags/${tag}`} />
           <PostListing postEdges={postEdges} />
         </div>
       </Layout>
