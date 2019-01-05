@@ -3,7 +3,7 @@
 </div>
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cbillowes/curious-programmer-oxygen/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/cbillowes/curious-programmer-oxygen.svg?branch=master)](https://travis-ci.org/cbillowes/curious-programmer-oxygen.svg?branch=master)
+[![Build Status](https://travis-ci.com/cbillowes/curious-programmer-helium.svg?branch=master)](https://travis-ci.com/cbillowes/curious-programmer-helium.svg?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/00ba1fed9223c420b5f5/maintainability)](https://codeclimate.com/github/cbillowes/curious-programmer-oxygen/maintainability)
 [![Issue Count](https://codeclimate.com/github/cbillowes/curious-programmer-oxygen/badges/issue_count.svg)](https://codeclimate.com/github/cbillowes/curious-programmer-oxygen)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d020d15c27c4121827612f6fcf19811)](https://www.codacy.com/app/cbillowes/curious-programmer-oxygen?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cbillowes/curious-programmer-oxygen&amp;utm_campaign=Badge_Grade)
