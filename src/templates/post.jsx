@@ -105,7 +105,6 @@ export default class PostTemplate extends React.Component {
   render() {
     const { slug, next, prev } = this.props.pageContext
     const postNode = this.props.data.post
-    console.log(postNode.fields)
     const previousPost = this.getPostItem(this.props.data.prev)
     const nextPost = this.getPostItem(this.props.data.next)
     const post = postNode.frontmatter
