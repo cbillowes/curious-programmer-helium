@@ -5,16 +5,23 @@ import Page from "../src/pages/about"
 import TimelineItem from "../src/components/About/TimelineItem"
 import TimelineLegend from "../src/components/About/TimelineLegend"
 import config from "../data/SiteConfig"
+import metadata from "./data/metadata"
 
 describe("the about page", () => {
-  describe("it fully rendered", () => {
-    it("should have its page title", () => {
-      const component = mount(<Page />)
-      const helmet = Helmet.peek()
-      expect(helmet.title).toEqual(`About | ${config.siteTitle}`)
-    })
+  describe("metadata", () => {
+    mount(<Page />)
+    const helmet = Helmet.peek()
+    const schema = helmet.scriptTags[helmet.scriptTags.length - 1].innerHTML
+    metadata.expect({
+      title: "About",
+      slug: "/about",
+      description: config.siteDescription,
+      image: config.siteLogo
+    }, helmet, schema)
+  })
 
-    it("should have the bio", () => {
+  describe("content", () => {
+    it("bio", () => {
       const component = mount(<Page />)
       expect(component.html()).toContain(`class="about"`)
       expect(component.html()).toContain(`class="profile"`)
@@ -22,7 +29,7 @@ describe("the about page", () => {
       expect(component.html()).toContain(`class="photo"`)
     })
 
-    it("should show technologies", () => {
+    it("technologies", () => {
       const component = mount(<Page />)
       expect(component.html()).toContain(`class="technologies"`)
       expect(component.html()).toContain(`class="tag"`)
@@ -30,7 +37,7 @@ describe("the about page", () => {
       expect(component.html()).toContain(`class="button"`)
     })
 
-    it("should display the timeline", () => {
+    it("timeline", () => {
       const component = mount(<Page />)
       expect(component.html()).toContain(`class="timeline"`)
       expect(component.html()).toContain(`class="legend"`)
@@ -39,27 +46,27 @@ describe("the about page", () => {
   })
 
   describe("timeline item", () => {
-    it("should render the type", () => {
+    it ("category", () => {
       const type = "random"
       const component = mount(<TimelineItem type={type} />)
       expect(component.html()).toContain(`class="item ${type}"`)
     })
 
-    it("should render external company link", () => {
+    it("external company link", () => {
       const name = "Curious Programmer"
       const link = "https://curiousprogrammer.io"
       const component = mount(<TimelineItem company={name} companyLink={link} />)
       expect(component.html()).toContain(`<h2><a href="${link}" class="" target="_blank" rel="nofollow noopener noreferrer ">${name}</a></h2>`)
     })
 
-    it("should render internal company link", () => {
+    it("internal company link", () => {
       const name = "Curious Programmer"
       const link = "/about"
       const component = mount(<TimelineItem company={name} companyLink={link} />)
       expect(component.html()).toContain(`<h2><a href="${link}">${name}</a></h2>`)
     })
 
-    it("should render a normal heading", () => {
+    it("normal heading", () => {
       const name = "Curious Programmer"
       const component = mount(<TimelineItem company={name} />)
       expect(component.html()).toContain(`<h2>${name}</h2>`)
@@ -67,7 +74,7 @@ describe("the about page", () => {
   })
 
   describe("timeline", () => {
-    it("should render all categories", () => {
+    it("all categories", () => {
       const active = {
         education: false,
         work: false,

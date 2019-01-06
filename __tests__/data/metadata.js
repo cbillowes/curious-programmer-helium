@@ -40,20 +40,21 @@ function getImage(image, slug) {
   if (image.startsWith("http")) {
     return image
   }
-  const imageUrl = url(slug, image)
-  console.log(imageUrl)
-  console.log(Path.normalize(imageUrl))
-  return config.siteUrl + Path.normalize(imageUrl)
+  if (image.indexOf(config.siteLogo) === -1) {
+    const imageUrl = url(slug, image)
+    return config.siteUrl + Path.normalize(imageUrl)
+  }
+  return url(config.siteUrl, config.siteLogo)
 }
 
 module.exports = {
-  expect: function (values, helmet, schema) {
+  expect: function (expected, helmet, schema) {
     it("schema types", () => {
       expectSchemaTypes(schema)
     })
 
     it("canonical and urls", () => {
-      const absoluteUrl = url(config.siteUrl, values.slug)
+      const absoluteUrl = url(config.siteUrl, expected.slug)
       const canonical = helmet.linkTags[0]
       expect(getMetadataTagFromHelmet(helmet, "og:url").content).toEqual(absoluteUrl)
       expect(schema.indexOf(`"url":"${absoluteUrl}"`)).toBeGreaterThan(-1)
@@ -61,11 +62,11 @@ module.exports = {
     })
 
     it("title", () => {
-      expectTitle(values.title, helmet, schema)
+      expectTitle(expected.title, helmet, schema)
     })
 
     it("description", () => {
-      expectDescription(values.description, helmet, schema)
+      expectDescription(expected.description, helmet, schema)
     })
 
     it("open graph type", () => {
@@ -79,7 +80,7 @@ module.exports = {
     })
 
     it("image", () => {
-      expectImage(values.image, values.slug, helmet, schema)
+      expectImage(expected.image, expected.slug, helmet, schema)
     })
   },
 
