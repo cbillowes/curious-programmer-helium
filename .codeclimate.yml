@@ -36,7 +36,7 @@ checks:
       threshold: 10
   method-lines:
     config:
-      threshold: 150
+      threshold: 50
   nested-control-flow:
     config:
       threshold: 4
@@ -64,3 +64,4 @@ exclude_paths:
 - "**/*.min.js"
 - __tests__/**/*
 - __coverage__/**/*
+- loadershim.js
