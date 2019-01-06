@@ -90,7 +90,7 @@ $background-static-state: $background;
         background-color: $foreground;
         color: $background-darker;
         font-size: 0.7em;
-        padding: 0em 1em;
+        padding: 0 1em;
 
         &:hover {
           background-color: $secondary;
@@ -118,7 +118,7 @@ $background-static-state: $background;
         max-height: 350px;
 
         .post {
-          padding: 0px;
+          padding: 0;
           
           h1 {
             font-size: 1.25em;

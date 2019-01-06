@@ -21,11 +21,11 @@ ul, ol {
 }
 
 ul li {
-  margin: 0em;
+  margin: 0;
 }
 
 ul li p {
-  margin: 0px;
+  margin: 0;
 }
 
 div.gatsby-highlight {

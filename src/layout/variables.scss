@@ -45,7 +45,7 @@ $table-hover-link: darken($foreground, 40%);
 @mixin button() {
   background-color: $primary;
   color: $background-darker;
-  padding: 0em 0.5em;
+  padding: 0 0.5em;
   display: inline-block;
   border-radius: 4px;
   line-height: 1.75em;

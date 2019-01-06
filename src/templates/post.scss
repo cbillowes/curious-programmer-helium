@@ -99,7 +99,7 @@
     pre {
         code {
             line-height: 1.75em;
-            padding: 0px;
+            padding: 0;
         }
     }
 
@@ -122,9 +122,9 @@
             tr,
             td {
                 border-style: none;
-                padding: 0px;
+                padding: 0;
                 line-height: 2em;
-                height: 0px;
+                height: 0;
                 background-color: $background-lighter;
                 color: $foreground;
 
