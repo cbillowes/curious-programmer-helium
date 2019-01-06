@@ -58,11 +58,29 @@ $table-hover-link: darken($foreground, 40%);
 
 @mixin small-media() {
   @media screen and (max-width: 800px) {
-    @content
+    @content;
   }
 }
 
 @mixin highlighted-section() {
   background-color: $background-darker;
   padding: 1em 3em 2em 3em;
+}
+
+@mixin media-query-sm() {
+  @media screen and (min-width: 0px) and (max-width: 840px) {
+    @content;
+  }
+}
+
+@mixin media-query-md() {
+  @media screen and (min-width: 841px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-query-lg() {
+  @media screen and (min-width: 1201px) {
+    @content;
+  }
 }

@@ -116,6 +116,11 @@ describe("the posts page", () => {
       expect(component.html()).toContain(`class="post-metadata"`)
     })
 
+    it("should have est. reading time", () => {
+      const component = mount(<Page pageContext={context} data={data} />)
+      expect(component.html()).toContain(`(Est. ${data.post.timeToRead} minute read)`)
+    })
+
     it("should have tags", () => {
       const component = mount(<Page pageContext={context} data={data} />)
       expect(component.html()).toContain(`class="tags"`)

@@ -127,7 +127,7 @@ export default class PostTemplate extends React.Component {
           <div>
             <CompactNavigation previous={previousPost} next={nextPost} />
             <h1>{post.title}</h1>
-            <PostMetadata tags={post.tags} date={post.date} timeToRead={post.timeToRead} />
+            <PostMetadata tags={post.tags} date={post.date} timeToRead={postNode.timeToRead} />
             <div
               className="body"
               dangerouslySetInnerHTML={{ __html: postNode.html }} />

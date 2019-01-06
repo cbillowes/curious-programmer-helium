@@ -60,27 +60,27 @@ exports[`post components elaborate navigation 1`] = `
           className="post-metadata"
         >
           <p>
-            posted 
+            posted
              
             <time
-              dateTime={"2019-01-06T08:12:07.460Z"}
+              dateTime={"2019-01-06T12:09:56.737Z"}
             >
               a few seconds ago
             </time>
              
-             
-            on 
+            on
              
             <time
-              dateTime={"2019-01-06T08:12:07.460Z"}
+              dateTime={"2019-01-06T12:09:56.738Z"}
             >
               Sun, 6 January 2019
             </time>
              
-             
-            (Est. 
-            1
-             minute read)
+            <span>
+              (Est. 
+              1
+               minute read)
+            </span>
           </p>
           <span>
              
@@ -116,27 +116,27 @@ exports[`post components elaborate navigation 1`] = `
           className="post-metadata"
         >
           <p>
-            posted 
+            posted
              
             <time
-              dateTime={"2019-01-06T08:12:07.461Z"}
+              dateTime={"2019-01-06T12:09:56.738Z"}
             >
               a few seconds ago
             </time>
              
-             
-            on 
+            on
              
             <time
-              dateTime={"2019-01-06T08:12:07.461Z"}
+              dateTime={"2019-01-06T12:09:56.738Z"}
             >
               Sun, 6 January 2019
             </time>
              
-             
-            (Est. 
-            1
-             minute read)
+            <span>
+              (Est. 
+              1
+               minute read)
+            </span>
           </p>
           <span>
              
@@ -153,27 +153,27 @@ exports[`post components post metadata 1`] = `
   className="post-metadata"
 >
   <p>
-    posted 
+    posted
      
     <time
-      dateTime={"2019-01-06T08:12:07.455Z"}
+      dateTime={"2019-01-06T12:09:56.732Z"}
     >
       a few seconds ago
     </time>
      
-     
-    on 
+    on
      
     <time
-      dateTime={"2019-01-06T08:12:07.455Z"}
+      dateTime={"2019-01-06T12:09:56.732Z"}
     >
       Sun, 6 January 2019
     </time>
      
-     
-    (Est. 
-    10
-     minute read)
+    <span>
+      (Est. 
+      10
+       minute read)
+    </span>
   </p>
   <ul
     className="tags"
@@ -724,26 +724,27 @@ exports[`post components template 1`] = `
         className="post-metadata"
       >
         <p>
-          posted 
+          posted
            
           <time
-            dateTime={"2019-01-06T08:12:07.429Z"}
+            dateTime={"2019-01-06T12:09:56.697Z"}
           >
             a few seconds ago
           </time>
            
-           
-          on 
+          on
            
           <time
-            dateTime={"2019-01-06T08:12:07.429Z"}
+            dateTime={"2019-01-06T12:09:56.698Z"}
           >
             Sun, 6 January 2019
           </time>
            
-           
-          (Est. 
-           minute read)
+          <span>
+            (Est. 
+            1
+             minute read)
+          </span>
         </p>
         <ul
           className="tags"
@@ -1155,27 +1156,27 @@ exports[`post components template 1`] = `
             className="post-metadata"
           >
             <p>
-              posted 
+              posted
                
               <time
-                dateTime={"2019-01-06T08:12:07.434Z"}
+                dateTime={"2019-01-06T12:09:56.703Z"}
               >
                 a few seconds ago
               </time>
                
-               
-              on 
+              on
                
               <time
-                dateTime={"2019-01-06T08:12:07.434Z"}
+                dateTime={"2019-01-06T12:09:56.703Z"}
               >
                 Sun, 6 January 2019
               </time>
                
-               
-              (Est. 
-              1
-               minute read)
+              <span>
+                (Est. 
+                1
+                 minute read)
+              </span>
             </p>
             <ul
               className="tags"
@@ -1234,27 +1235,27 @@ exports[`post components template 1`] = `
             className="post-metadata"
           >
             <p>
-              posted 
+              posted
                
               <time
-                dateTime={"2019-01-06T08:12:07.435Z"}
+                dateTime={"2019-01-06T12:09:56.704Z"}
               >
                 a few seconds ago
               </time>
                
-               
-              on 
+              on
                
               <time
-                dateTime={"2019-01-06T08:12:07.435Z"}
+                dateTime={"2019-01-06T12:09:56.704Z"}
               >
                 Sun, 6 January 2019
               </time>
                
-               
-              (Est. 
-              1
-               minute read)
+              <span>
+                (Est. 
+                1
+                 minute read)
+              </span>
             </p>
             <ul
               className="tags"

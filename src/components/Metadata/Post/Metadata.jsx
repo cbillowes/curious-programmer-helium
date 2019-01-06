@@ -10,11 +10,11 @@ class Metadata extends Component {
     return (
       <div className="post-metadata">
         <p>
-          posted { " " }
-          <Moment date={date} fromNow /> { " " }
-          on { " " }
-          <Moment date={date} format="ddd, D MMMM YYYY" /> { " " }
-          (Est. {timeToRead} minute read)
+          posted{ " " }
+          <Moment date={date} fromNow />{ " " }
+          on{ " " }
+          <Moment date={date} format="ddd, D MMMM YYYY" />{ " " }
+          {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
         </p>
         {(tags) ? <Tags tags={tags} /> : <span> </span>}
       </div>
