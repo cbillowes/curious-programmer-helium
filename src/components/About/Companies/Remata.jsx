@@ -16,7 +16,8 @@ class Remata extends Component {
             In the Cross Media Solutions department, I was responsible for the
             development and maintenance of automated processes and custom
             development integration with <span className="tag">XMPie</span> for
-            on-demand <span className="tag">variable data printing</span>{" "}
+            on-demand <span className="tag">variable data printing</span>
+            {" "}
             solutions.
           </p>
         </TimelineItem>

@@ -7,11 +7,14 @@ class LicenseFooter extends Component {
   render() {
     return (
       <div className="license-footer">
-        <License /> {" "}
+        <License /> 
+        {" "}
         <p>
-          Also, there is a {" "}
+          Also, there is a 
+          {" "}
           <Link to="/license">License</Link>{" for the code "}
-          and it's probably a good idea to read the{" "}
+          and it's probably a good idea to read the
+          {" "}
           <Link to="/privacy-policy">Privacy Policy</Link>
           .
         </p>

@@ -16,7 +16,8 @@ class Overview extends Component {
         <div className="overview">
           <h2>Quick Overview</h2>
           <p>
-            Want to skim through the document quickly? Why not have a look at the {" "}
+            Want to skim through the document quickly? Why not have a look at the 
+            {" "}
             <External to="https://www.iubenda.com/private/privacy-policy/621007?preview=true&amp;ifr=true&amp;height=800&amp;an=no">
               simplified Privacy Policy</External>.</p>
           <p>

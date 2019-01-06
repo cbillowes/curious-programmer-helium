@@ -38,7 +38,8 @@ class Education extends Component {
             I received my national diploma in
             <strong>Information Systems: Software Development</strong> with
             subjects in <span className="tag">SQL Server 2000</span>,
-            <span className="tag">C#</span> and{" "}
+            <span className="tag">C#</span> and
+            {" "}
             <span className="tag">VB.NET</span>. Passed with distinction.
           </p>
         </TimelineItem>
@@ -63,8 +64,10 @@ class Education extends Component {
           <p>
             I received my national diploma for
             <strong>Computer Science: Internet Development</strong> with
-            subjects in Standard, Micro and Enterprise{" "}
-            <span className="tag">Java</span> and{" "}
+            subjects in Standard, Micro and Enterprise
+            {" "}
+            <span className="tag">Java</span> and
+            {" "}
             <span className="tag">Perl</span>. Passed with distinction.
           </p>
         </TimelineItem>

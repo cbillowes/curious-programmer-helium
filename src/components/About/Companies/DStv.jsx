@@ -14,9 +14,12 @@ class DStv extends Component {
           title="Senior Software Developer"
         >
           <p>
-            Appointed to work permanently, I continued my work in a{" "}
-            <span className="tag">SCRUM</span> team working on the{" "}
-            <span className="tag">Video On Demand</span> offering including{" "}
+            Appointed to work permanently, I continued my work in a
+            {" "}
+            <span className="tag">SCRUM</span> team working on the
+            {" "}
+            <span className="tag">Video On Demand</span> offering including
+            {" "}
             <span className="tag">Live Streaming</span> integrating with
             multiple microservice touch points. I showed exemplary leadership
             qualities and worked well within the team.
@@ -52,17 +55,20 @@ class DStv extends Component {
                 Twitter moments
               </External>
             </span>
-            { " " } &bull; { " " }
+            {" "} &bull; 
+            {" "}
             <span>
               <Link to="/slides/rubyfuza-2017-the-imposter-within.pdf">
                 Slides
               </Link>
             </span>
-            { " " } &bull; { " " }
+            {" "} &bull; 
+            {" "}
             <span>
               <Link to="/blog/rubyfuza-2017-conference/">Content</Link>
             </span>
-            { " " } &bull; { " " }
+            {" "} &bull; 
+            {" "}
             <span>
               <External to="https://www.youtube.com/watch?v=fkgAc0DY4s8">
                 Video
@@ -91,7 +97,8 @@ class DStv extends Component {
           titleLink="/blog/the-imposter-within/"
         >
           <p>
-            This post sparked some interesting conversation on{" "}
+            This post sparked some interesting conversation on
+            {" "}
             <External to="https://www.reddit.com/r/programming/comments/5cpaty/ive_had_a_lot_of_problems_with_imposter_syndrome/">
               Reddit
             </External>
@@ -121,7 +128,8 @@ class DStv extends Component {
           title="Mindfulness"
         >
           <p>
-            I spoke about how the power of{" "}
+            I spoke about how the power of
+            {" "}
             <span className="tag">mindfulness</span> can be incorporated in
             everyday use and be applied to the workplace to calm the busy mind
             and be still and productive in an environmental rush.
@@ -134,7 +142,8 @@ class DStv extends Component {
           title="Java 9 and Women in tech Unconference"
         >
           <p>
-            My first talk ,{" "}
+            My first talk ,
+            {" "}
             <Link to="/blog/branding-your-identity">
               Branding your Identity
             </Link>
@@ -164,7 +173,8 @@ class DStv extends Component {
         >
           <p>
             Britehouse, formerly known as 3Fifteen, placed me at DStv Digital
-            Media. I joined an <span className="tag">Agile</span>{" "}
+            Media. I joined an <span className="tag">Agile</span>
+            {" "}
             <span className="tag">SCRUM</span> team focusing on production based
             voting solutions such as Idols, Big Brother and Survivor. I later
             joined the DStv Now team.

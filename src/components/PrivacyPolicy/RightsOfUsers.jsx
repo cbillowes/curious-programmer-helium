@@ -34,13 +34,15 @@ class RightsOfUsers extends Component {
             of their Data. In this case, the Owner will not process their
             Data for any purpose other than storing it.</li>
           <li>
-            <b>Have their Personal Data deleted or otherwise removed.</b>{" "}
+            <b>Have their Personal Data deleted or otherwise removed.</b>
+            {" "}
             Users have the right, under certain circumstances, to obtain the
             erasure of their Data from the Owner.</li>
           <li>
             <b>
               Receive their Data and have it transferred to another
-              controller.</b>{" "}
+              controller.</b>
+              {" "}
             Users have the right to receive their Data in a structured,
             commonly used and machine readable format and, if technically
             feasible, to have it transmitted to another controller without

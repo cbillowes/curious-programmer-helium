@@ -24,9 +24,12 @@ class License extends Component {
         <p>
           <span {...dct} property="dct:title">
             {" "}
-            {config.siteTitle} content{" "}
-          </span>{" "}
-          by{" "}
+            {config.siteTitle} content
+            {" "}
+          </span>
+          {" "}
+          by
+          {" "}
           <ExternalLink
             {...cc}
             to={config.siteUrl}
@@ -34,8 +37,10 @@ class License extends Component {
             rel="cc:attributionURL"
           >
             {config.userName}
-          </ExternalLink>{" "}
-          is licensed under a{" "}
+          </ExternalLink>
+          {" "}
+          is licensed under a
+          {" "}
           <ExternalLink
             rel="license"
             to="http://creativecommons.org/licenses/by-sa/4.0/"

@@ -66,7 +66,8 @@ module.exports = {
             resolve: "gatsby-remark-prismjs",
             options: {
               classPrefix: "language-",
-              showLineNumbers: true
+              showLineNumbers: true,
+              inlineCodeMarker: "±"
             }
           },
           "gatsby-remark-copy-linked-files",

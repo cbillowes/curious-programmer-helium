@@ -29,10 +29,13 @@ class CloudAfrica extends Component {
         >
           <p>
             I wrote my first article for OfferZen working closely with Anne
-            Gonschorek. I focused on how{" "}
-            <span className="tag">Chrome DevTools</span> can help fix{" "}
+            Gonschorek. I focused on how
+            {" "}
+            <span className="tag">Chrome DevTools</span> can help fix
+            {" "}
             <span className="tag">JavaScript</span>,
-            <span className="tag">HTML</span> &amp;{" "}
+            <span className="tag">HTML</span> &amp;
+            {" "}
             <span className="tag">CSS</span> bugs fast.
           </p>
         </TimelineItem>
@@ -44,8 +47,10 @@ class CloudAfrica extends Component {
           title="Senior Systems and Web/Fullstack Developer"
         >
           <p>
-            I moved to <span className="tag">Clojure</span> and{" "}
-            <span className="tag">Datomic</span> working in a{" "}
+            I moved to <span className="tag">Clojure</span> and
+            {" "}
+            <span className="tag">Datomic</span> working in a
+            {" "}
             <span className="tag">DevOps</span> powered virtualization
             environment.
           </p>
@@ -59,8 +64,10 @@ class CloudAfrica extends Component {
         >
           <p>
             I left corporate and changed my brand. I created my new blog using
-            <span className="tag">Gatsby</span>, a{" "}
-            <span className="tag">React</span> based static site generator and{" "}
+            <span className="tag">Gatsby</span>, a
+            {" "}
+            <span className="tag">React</span> based static site generator and
+            {" "}
             <Link to="/credits">other</Link> technologies.
           </p>
         </TimelineItem>

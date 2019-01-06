@@ -85,7 +85,8 @@ class LicensePage extends Component {
               restrict others from doing anything the license permits.
             </p>
             <p className="emphasize">
-              This is just a taste. You'll probably need to read the {" "}
+              This is just a taste. You'll probably need to read the 
+              {" "}
               <External to="https://creativecommons.org/licenses/by-sa/4.0/legalcode">
                 full license
               </External>
@@ -95,9 +96,12 @@ class LicensePage extends Component {
           <section>
             <h2>Photography</h2>
             <p className="emphasize">
-              I use <External to="https://picsum.photos/">Lorem Picsum</External>{" "}
-              which provides backgrounds by{" "}
-              <External to="https://unsplash.com/">Unsplash</External>.{" "}
+              I use <External to="https://picsum.photos/">Lorem Picsum</External>
+              {" "}
+              which provides backgrounds by
+              {" "}
+              <External to="https://unsplash.com/">Unsplash</External>.
+              {" "}
               The <External to="https://unsplash.com/license">License</External> states that all photos 
               can be used for free.
             </p>
