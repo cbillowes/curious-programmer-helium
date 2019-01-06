@@ -7,7 +7,7 @@ const Item = ({ post }) => (
   <aside className="post" style={{ backgroundImage: (post.cover) ? `url(${post.cover})` : "" }}>
     <div className="container">
       <h1>{post.title}</h1>
-      <p dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
+      <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
       <Metadata tags={post.tags} date={post.date} timeToRead={post.timeToRead} />
     </div>
   </aside>

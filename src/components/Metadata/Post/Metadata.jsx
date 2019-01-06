@@ -20,7 +20,7 @@ class Metadata extends Component {
           {" "}
           {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
         </p>
-        {(tags) ? <Tags tags={tags} /> : <span> </span>}
+        {(tags) ? <Tags tags={tags} /> : <span />}
       </div>
     )
   }

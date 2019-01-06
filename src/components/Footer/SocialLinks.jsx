@@ -14,8 +14,7 @@ class License extends Component {
             <li key={`social-links-footer-${item.icon}`} className="link">
               <ExternalLink
                 to={item.href}
-                className={item.icon}>
-              </ExternalLink>
+                className={item.icon} />
             </li>)
         })}
       </ul>

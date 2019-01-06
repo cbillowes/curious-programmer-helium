@@ -63,7 +63,7 @@ exports[`post components elaborate navigation 1`] = `
             posted
              
             <time
-              dateTime={"2019-01-06T19:30:37.061Z"}
+              dateTime={"2019-01-06T19:45:31.860Z"}
             >
               a few seconds ago
             </time>
@@ -71,7 +71,7 @@ exports[`post components elaborate navigation 1`] = `
             on
              
             <time
-              dateTime={"2019-01-06T19:30:37.061Z"}
+              dateTime={"2019-01-06T19:45:31.860Z"}
             >
               Sun, 6 January 2019
             </time>
@@ -82,9 +82,7 @@ exports[`post components elaborate navigation 1`] = `
                minute read)
             </span>
           </p>
-          <span>
-             
-          </span>
+          <span />
         </div>
       </div>
     </aside>
@@ -119,7 +117,7 @@ exports[`post components elaborate navigation 1`] = `
             posted
              
             <time
-              dateTime={"2019-01-06T19:30:37.062Z"}
+              dateTime={"2019-01-06T19:45:31.860Z"}
             >
               a few seconds ago
             </time>
@@ -127,7 +125,7 @@ exports[`post components elaborate navigation 1`] = `
             on
              
             <time
-              dateTime={"2019-01-06T19:30:37.062Z"}
+              dateTime={"2019-01-06T19:45:31.860Z"}
             >
               Sun, 6 January 2019
             </time>
@@ -138,9 +136,7 @@ exports[`post components elaborate navigation 1`] = `
                minute read)
             </span>
           </p>
-          <span>
-             
-          </span>
+          <span />
         </div>
       </div>
     </aside>
@@ -156,7 +152,7 @@ exports[`post components post metadata 1`] = `
     posted
      
     <time
-      dateTime={"2019-01-06T19:30:37.053Z"}
+      dateTime={"2019-01-06T19:45:31.852Z"}
     >
       a few seconds ago
     </time>
@@ -164,7 +160,7 @@ exports[`post components post metadata 1`] = `
     on
      
     <time
-      dateTime={"2019-01-06T19:30:37.053Z"}
+      dateTime={"2019-01-06T19:45:31.852Z"}
     >
       Sun, 6 January 2019
     </time>
@@ -727,7 +723,7 @@ exports[`post components template 1`] = `
           posted
            
           <time
-            dateTime={"2019-01-06T19:30:36.912Z"}
+            dateTime={"2019-01-06T19:45:31.803Z"}
           >
             a few seconds ago
           </time>
@@ -735,7 +731,7 @@ exports[`post components template 1`] = `
           on
            
           <time
-            dateTime={"2019-01-06T19:30:36.915Z"}
+            dateTime={"2019-01-06T19:45:31.804Z"}
           >
             Sun, 6 January 2019
           </time>
@@ -1159,7 +1155,7 @@ exports[`post components template 1`] = `
               posted
                
               <time
-                dateTime={"2019-01-06T19:30:36.939Z"}
+                dateTime={"2019-01-06T19:45:31.812Z"}
               >
                 a few seconds ago
               </time>
@@ -1167,7 +1163,7 @@ exports[`post components template 1`] = `
               on
                
               <time
-                dateTime={"2019-01-06T19:30:36.939Z"}
+                dateTime={"2019-01-06T19:45:31.812Z"}
               >
                 Sun, 6 January 2019
               </time>
@@ -1238,7 +1234,7 @@ exports[`post components template 1`] = `
               posted
                
               <time
-                dateTime={"2019-01-06T19:30:36.949Z"}
+                dateTime={"2019-01-06T19:45:31.813Z"}
               >
                 a few seconds ago
               </time>
@@ -1246,7 +1242,7 @@ exports[`post components template 1`] = `
               on
                
               <time
-                dateTime={"2019-01-06T19:30:36.949Z"}
+                dateTime={"2019-01-06T19:45:31.813Z"}
               >
                 Sun, 6 January 2019
               </time>

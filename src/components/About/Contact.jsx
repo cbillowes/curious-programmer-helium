@@ -12,8 +12,7 @@ class Contact extends Component {
             <Link
               key={`contact-${item.icon}`}
               className={`icon ${item.icon}`}
-              to={item.href}>
-            </Link>
+              to={item.href} />
           )
         })}
       </div>
