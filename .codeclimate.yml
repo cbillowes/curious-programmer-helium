@@ -33,7 +33,7 @@ checks:
       threshold: 20
   method-count:
     config:
-      threshold: 5
+      threshold: 10
   method-lines:
     config:
       threshold: 150
