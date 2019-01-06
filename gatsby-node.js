@@ -143,7 +143,7 @@ exports.createPages = ({ graphql, actions }) => {
               next: next.fields.slug
             }
           })
-          idx++;
+          idx += 1;
         })
 
         const tagSet = new Set()
