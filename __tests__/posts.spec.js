@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { mount } from "enzyme"
+import moment from "moment"
 import Page from "../src/templates/post"
 import metadata from "./data/metadata"
 import url from "url-join"
@@ -114,6 +115,12 @@ describe("the posts page", () => {
     it("should have post metadata", () => {
       const component = mount(<Page pageContext={context} data={data} />)
       expect(component.html()).toContain(`class="post-metadata"`)
+    })
+
+    it("should date time stamp", () => {
+      data.post.fields.date = new Date(2018,11,31)
+      const component = mount(<Page pageContext={context} data={data} />)
+      expect(component.html()).toContain(`${moment("2018-12-31").format("ddd, DD MMMM YYYY")}`)
     })
 
     it("should have est. reading time", () => {

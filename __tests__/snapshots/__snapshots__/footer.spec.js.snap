@@ -117,9 +117,8 @@ exports[`footer components snapshots component 1`] = `
         </p>
       </span>
        
-       
       <p>
-        Also, there is a 
+        Also, there is a
          
         <a
           href="/license"
@@ -225,9 +224,8 @@ exports[`footer components snapshots license 1`] = `
     </p>
   </span>
    
-   
   <p>
-    Also, there is a 
+    Also, there is a
      
     <a
       href="/license"

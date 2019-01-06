@@ -105,6 +105,7 @@ export default class PostTemplate extends React.Component {
   render() {
     const { slug, next, prev } = this.props.pageContext
     const postNode = this.props.data.post
+    console.log(postNode.fields)
     const previousPost = this.getPostItem(this.props.data.prev)
     const nextPost = this.getPostItem(this.props.data.next)
     const post = postNode.frontmatter
@@ -127,7 +128,7 @@ export default class PostTemplate extends React.Component {
           <div>
             <CompactNavigation previous={previousPost} next={nextPost} />
             <h1>{post.title}</h1>
-            <PostMetadata tags={post.tags} date={post.date} timeToRead={postNode.timeToRead} />
+            <PostMetadata tags={post.tags} date={postNode.fields.date} timeToRead={postNode.timeToRead} />
             <div
               className="body"
               dangerouslySetInnerHTML={{ __html: postNode.html }} />
