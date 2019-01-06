@@ -15,7 +15,7 @@ class GooglePlus extends Component {
 
     return (
       <GooglePlusShareButton url={url}>
-        <GooglePlusIcon round size={parseInt(size)} />
+        <GooglePlusIcon round size={size} />
         <GooglePlusShareCount url={url}>
           {count => renderShareCount(count)}
         </GooglePlusShareCount>

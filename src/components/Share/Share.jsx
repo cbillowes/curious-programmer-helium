@@ -13,7 +13,7 @@ class SocialLinks extends Component {
   render() {
     const { slug, title, description } = this.props
     const url = `${config.siteUrl}${config.pathPrefix}${slug}`
-    const size = 70
+    const size = 50
 
     return (
       <div className="social-media">

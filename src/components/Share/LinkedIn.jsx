@@ -20,7 +20,7 @@ class LinkedIn extends Component {
           title={title}
           description={description}
         >
-          <LinkedinIcon round size={parseInt(size)} />
+          <LinkedinIcon round size={size} />
           <LinkedinShareCount url={url}>
             {count => renderShareCount(count)}
           </LinkedinShareCount>

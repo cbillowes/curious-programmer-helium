@@ -11,7 +11,7 @@ class Twitter extends Component {
     return (
       <div className="social-links">
         <TwitterShareButton url={url} title={title}>
-          <TwitterIcon round size={parseInt(size)} />
+          <TwitterIcon round size={size} />
         </TwitterShareButton>
       </div>
     )

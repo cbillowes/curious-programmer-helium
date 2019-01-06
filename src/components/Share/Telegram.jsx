@@ -10,7 +10,7 @@ class Telegram extends Component {
 
     return (
       <TelegramShareButton url={url}>
-        <TelegramIcon round size={parseInt(size)} />
+        <TelegramIcon round size={size} />
       </TelegramShareButton>
     )
   }

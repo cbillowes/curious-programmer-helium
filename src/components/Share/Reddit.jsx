@@ -15,7 +15,7 @@ class SocialLinks extends Component {
 
     return (
       <RedditShareButton url={url} title={title}>
-        <RedditIcon round size={parseInt(size)} />
+        <RedditIcon round size={size} />
         <RedditShareCount url={url}>
           {count => renderShareCount(count)}
         </RedditShareCount>

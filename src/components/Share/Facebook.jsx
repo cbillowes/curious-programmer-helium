@@ -15,7 +15,7 @@ class Facebook extends Component {
 
     return (
       <FacebookShareButton url={url} quote={`${title} | ${description}`}>
-        <FacebookIcon round size={parseInt(size)} />
+        <FacebookIcon round size={size} />
         <FacebookShareCount url={url}>
           {count => renderShareCount(count)}
         </FacebookShareCount>
