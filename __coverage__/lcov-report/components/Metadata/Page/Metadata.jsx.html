@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/Metadata/Page/Metadata.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">components/Metadata/Page</a> Metadata.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/53</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { Component } from "react"</span>
+<span class="cstat-no" title="statement not covered" >import Helmet from "react-helmet"</span>
+import { graphql } from "gatsby";
+<span class="cstat-no" title="statement not covered" >import config from "../../../../data/SiteConfig"</span>
+<span class="cstat-no" title="statement not covered" >import navigation from "../../../../data/Navigation"</span>
+<span class="cstat-no" title="statement not covered" >import Path from "path"</span>
+<span class="cstat-no" title="statement not covered" >import url from "url-join"</span>
+&nbsp;
+class Metadata extends Component {
+<span class="fstat-no" title="function not covered" >  constructor</span>(props) <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    super(props)</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      slug: (this.props.slug) ? this.props.slug : this.getSlug(props)
+    }
+  }
+&nbsp;
+  getSlug = (<span class="fstat-no" title="function not covered" >props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (props.data.slug) {</span>
+<span class="cstat-no" title="statement not covered" >      return edges[0].node.fields.slug</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return "/"</span>
+  }
+&nbsp;
+  getTitle = (<span class="fstat-no" title="function not covered" >title) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (title &amp;&amp; title !== config.siteTitle) {</span>
+<span class="cstat-no" title="statement not covered" >      return `${title} | ${config.siteTitle}`</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!title) {</span>
+      const navigationItem = <span class="cstat-no" title="statement not covered" >getNavigationItem(this.state.slug)</span>
+<span class="cstat-no" title="statement not covered" >      return `${navigationItem.name} | ${config.siteTitle}`</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return config.siteTitle</span>
+  }
+&nbsp;
+  getDescription = <span class="fstat-no" title="function not covered" >description</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (description) {</span>
+<span class="cstat-no" title="statement not covered" >      return description</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return config.siteDescription</span>
+  }
+&nbsp;
+  getImageUrl = <span class="fstat-no" title="function not covered" >images</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (images) {</span>
+      const image = (<span class="cstat-no" title="statement not covered" >images.cover) ? images.cover : config.siteLogo</span>
+<span class="cstat-no" title="statement not covered" >      if (image.startsWith("http")) {</span>
+<span class="cstat-no" title="statement not covered" >        return image</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (image.startsWith("/")) {</span>
+<span class="cstat-no" title="statement not covered" >        return url(config.siteUrl, image)</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return config.siteUrl + Path.normalize(url(this.state.slug, image))</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return url(config.siteUrl, config.siteLogo)</span>
+  }
+&nbsp;
+  getUrl = (<span class="fstat-no" title="function not covered" >slug) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (slug) {</span>
+<span class="cstat-no" title="statement not covered" >      return url(config.siteUrl, slug)</span>
+    }
+    let navigationItem = <span class="cstat-no" title="statement not covered" >getNavigationItem(this.state.slug)</span>
+    let pageUrl = <span class="cstat-no" title="statement not covered" >url(config.siteUrl, navigationItem.url)</span>
+<span class="cstat-no" title="statement not covered" >    return pageUrl</span>
+  }
+&nbsp;
+  getType = <span class="fstat-no" title="function not covered" >slug</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (slug &amp;&amp; slug.indexOf("/blog/")) {</span>
+<span class="cstat-no" title="statement not covered" >      return "article"</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return "website"</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  render</span>() {
+    const { title, description, images, slug } = <span class="cstat-no" title="statement not covered" >this.props</span>
+    const pageTitle = <span class="cstat-no" title="statement not covered" >this.getTitle(title)</span>
+    const pageDescription = <span class="cstat-no" title="statement not covered" >this.getDescription(description)</span>
+    const imageUrl = <span class="cstat-no" title="statement not covered" >this.getImageUrl(images)</span>
+    const pageUrl = <span class="cstat-no" title="statement not covered" >this.getUrl(slug)</span>
+    const pageType = <span class="cstat-no" title="statement not covered" >this.getType(slug)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;Helmet&gt;
+        &lt;title&gt;{pageTitle}&lt;/title&gt;
+        &lt;link rel="canonical" href={pageUrl} /&gt;
+        &lt;link rel="icon" href="/favicon.png" /&gt;
+        &lt;meta name="description" content={pageDescription} /&gt;
+        &lt;meta name="image" content={imageUrl} /&gt;
+&nbsp;
+        &lt;meta name="twitter:card" content="summary_large_image" /&gt;
+        &lt;meta name="twitter:site" content={config.userTwitter} /&gt;
+        &lt;meta name="twitter:creator" content={config.userTwitter} /&gt;
+&nbsp;
+        &lt;meta property="fb:app_id" content={config.siteFBAppID} /&gt;
+        &lt;meta property="og:title" content={pageTitle} /&gt;
+        &lt;meta property="og:description" content={pageDescription} /&gt;
+        &lt;meta property="og:image" content={imageUrl} /&gt;
+        &lt;meta property="og:url" content={pageUrl} /&gt;
+        &lt;meta property="og:type" content={pageType} /&gt;
+&nbsp;
+        &lt;script type="application/ld+json"&gt;
+          {getSchema(pageTitle, pageDescription, pageUrl, imageUrl)}
+        &lt;/script&gt;
+      &lt;/Helmet&gt;
+    );
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getNavigationItem(slug) {</span>
+  let navigationItem = <span class="cstat-no" title="statement not covered" >navigation[0]</span>
+<span class="cstat-no" title="statement not covered" >  navigation.map(<span class="fstat-no" title="function not covered" >item</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (slug.indexOf(item.url) &gt; -1) {</span>
+<span class="cstat-no" title="statement not covered" >      navigationItem = item</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return navigationItem</span>
+  })
+<span class="cstat-no" title="statement not covered" >  return navigationItem</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getSchema(title, description, url, image) {</span>
+  const schema = <span class="cstat-no" title="statement not covered" >[</span>
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      url: url,
+      name: config.siteTitle,
+      alternateName: config.siteTitleAlt
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@id": url,
+            name: title,
+            image: image
+          }
+        }
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      url: url,
+      name: title,
+      alternateName: config.siteTitleAlt,
+      headline: title,
+      image: {
+        "@type": "ImageObject",
+        url: image
+      },
+      description: description
+    }
+  ]
+<span class="cstat-no" title="statement not covered" >  return JSON.stringify(schema)</span>
+}
+&nbsp;
+export default Metadata
+&nbsp;
+export const pageQuery<span class="cstat-no" title="statement not covered" > = graphql`</span>
+  query MetadataComponent($slug: String!) {
+    allMarkdownRemark {
+      edges {
+        node {
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
+    }
+  }
+`</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 06 2019 09:15:22 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

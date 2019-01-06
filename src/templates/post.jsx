@@ -103,7 +103,7 @@ export default class PostTemplate extends React.Component {
   }
 
   render() {
-    const { slug, next, prev } = this.props.pageContext;
+    const { slug, next, prev } = this.props.pageContext
     const postNode = this.props.data.post
     const previousPost = this.getPostItem(this.props.data.prev)
     const nextPost = this.getPostItem(this.props.data.next)
@@ -112,6 +112,11 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
+        <PageMetadata
+          title={post.title}
+          description={postNode.excerpt}
+          slug={slug}
+          images={{ cover: post.cover }} />
         {post.cover && blur ?
           <span className="cover blur background" style={{ backgroundImage: `url(${blur})` }}></span> :
           <span></span>}
@@ -119,11 +124,6 @@ export default class PostTemplate extends React.Component {
           <span className="cover default background" style={{ backgroundImage: `url(${post.cover})` }}></span> :
           <span></span>}
         <div className={`post ${post.cover ? "with-cover" : ""}`}>
-          <PageMetadata
-            title={post.title}
-            description={post.excerpt}
-            slug={slug}
-            images={{ cover: post.cover }} />
           <div>
             <CompactNavigation previous={previousPost} next={nextPost} />
             <h1>{post.title}</h1>
@@ -151,6 +151,7 @@ export const postQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       timeToRead
       frontmatter {
         title

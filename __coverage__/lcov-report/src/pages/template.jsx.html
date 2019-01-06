@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/template.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/pages</a> template.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/3</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { Component } from "react"</span>
+<span class="cstat-no" title="statement not covered" >import Layout from "../layout"</span>
+&nbsp;
+class TemplatePage extends Component {
+<span class="fstat-no" title="function not covered" >  render</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;Layout&gt;
+        &lt;div&gt;
+          &lt;blockquote&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra quis lacus vel finibus. Nam ullamcorper, eros a varius venenatis, nibh ipsum aliquam nibh, vitae lacinia dolor libero eu elit.&lt;/blockquote&gt;
+        &lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Ut massa est&lt;/li&gt;
+          &lt;li&gt;Sit amet blandit felis&lt;/li&gt;
+          &lt;li&gt;Etiamt&lt;/li&gt;
+          &lt;li&gt;Mauris mollis ligulat&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h1&gt;Lorem ipsum dolor&lt;/h1&gt;
+        &lt;p&gt;
+          Lorem ipsum dolor sit amet, &lt;a href="#"&gt;consectetur&lt;/a&gt; adipiscing elit. Maecenas aliquet sem nisi, finibus gravida libero maximus non.&gt;&lt;/p&gt;
+        &lt;h2&gt;Phasellus commodo ex&lt;/h2&gt;
+        &lt;p&gt;
+          Phasellus commodo ex ac pellentesque tincidunt. Praesent consequat purus quis facilisis bibendum. Vivamus quis ultricies velit, ut ultrices diam. Integer consectetur sed tortor nec dignissim. Praesent tempor augue ac augue cursus mattis. Vestibulum condimentum viverra lacus, non vestibulum orci fermentum id. Donec interdum non nulla ac scelerisque. Maecenas condimentum velit semper elit molestie venenatis. Vivamus cursus sapien at tellus porta ultricies.
+        &lt;/p&gt;
+        &lt;h3&gt;Vivamus in risus finibus&lt;/h3&gt;
+        &lt;p&gt;
+          &lt;a href="#"&gt;Vivamus in risus finibus&lt;/a&gt; erat vulputate fringilla eget eu velit. &lt;br /&gt;
+          Nunc viverra dignissim mattis. Etiam rhoncus est metus, a rutrum risus dignissim vel. Suspendisse potenti. Fusce condimentum lectus nec nulla bibendum, eget viverra nunc commodo. Phasellus orci risus, imperdiet sit amet tincidunt nec, imperdiet in ligula. Nam tincidunt arcu purus, porta fermentum quam convallis quis. Suspendisse mattis, nisi non hendrerit luctus, arcu libero pharetra eros, vitae dictum dolor erat sed eros. Morbi aliquam sapien in enim aliquet tristique. Sed mattis neque eu leo fringilla, vel pulvinar augue hendrerit. Quisque eu dolor sed erat sagittis pretium.
+        &lt;/p&gt;
+        &lt;h4&gt;Sit amet blandit&lt;/h4&gt;
+        &lt;p&gt;
+          Sit amet blandit felis ornare. Suspendisse potenti. Praesent non ex efficitur, venenatis sem at, eleifend orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lobortis sodales augue. Nullam eget libero ligula. Nulla hendrerit lectus nisl, at accumsan sem sagittis a.
+        &lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;h5&gt;Ut massa est&lt;/h5&gt;
+        &lt;p&gt;Ut massa est, lacinia eu vehicula nec, condimentum a massa.&lt;/p&gt;
+        &lt;h6&gt;Curabitur at pharetra&lt;/h6&gt;
+        &lt;p&gt;Curabitur at pharetra ex. Fusce a purus dolor. &lt;/p&gt;
+        &lt;h7&gt;Mauris mollis ligula&lt;/h7&gt;
+        &lt;p&gt;Mauris mollis ligula &lt;a href="https://google.com"&gt;Google&lt;/a&gt; sit amet tortor semper.&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Lorem ipsum&lt;/th&gt;
+            &lt;th&gt;Cras rutrum&lt;/th&gt;
+            &lt;th&gt;Ut massa est&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;consectetur adipiscing elit&lt;/td&gt;
+            &lt;td&gt;aecenas condimentum&lt;/td&gt;
+            &lt;td&gt;onec interdum non nulla ac&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;accumsan rutrum&lt;/td&gt;
+            &lt;td&gt;&lt;a href="#"&gt;lorem&lt;/a&gt; consectetur adipiscing elit&lt;/td&gt;
+            &lt;td&gt;uisque eu dolor&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;unc viverra dignissim mattis&lt;/td&gt;
+            &lt;td&gt;uisque eu dolor &lt;a href="#"&gt;rutrum&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;aecenas condimentum&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;onec interdum non nulla ac&lt;/td&gt;
+            &lt;td&gt;unc viverra dignissim mattis&lt;/td&gt;
+            &lt;td&gt;consectetur adipiscing elit&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/Layout&gt;
+    )
+  }
+}
+&nbsp;
+export default TemplatePage
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 06 2019 09:47:38 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

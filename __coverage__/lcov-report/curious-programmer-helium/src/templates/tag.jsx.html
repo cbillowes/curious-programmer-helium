@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>0/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -94,27 +94,19 @@
 49
 50
 51
-52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+52</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,7 +118,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,22 +137,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react"
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from "react"</span>
 import { graphql } from "gatsby"
-import Layout from "../layout"
-import Metadata from "../components/Metadata/Post/Metadata"
-import PostListing from "../components/PostListing/PostListing"
+<span class="cstat-no" title="statement not covered" >import Layout from "../layout"</span>
+<span class="cstat-no" title="statement not covered" >import Metadata from "../components/Metadata/Page/Metadata"</span>
+<span class="cstat-no" title="statement not covered" >import PostListing from "../components/PostListing/PostListing"</span>
 &nbsp;
 export default class TagTemplate extends React.Component {
-  render() {
-    const { tag } = this.props.pageContext
-    const postEdges = this.props.data.allMarkdownRemark.edges
-    const title = `${tag.substring(0, 1).toUpperCase() + tag.substring(1, tag.length)} | Tags`
+<span class="fstat-no" title="function not covered" >  render</span>() {
+    const { tag } = <span class="cstat-no" title="statement not covered" >this.props.pageContext</span>
+    const postEdges = <span class="cstat-no" title="statement not covered" >this.props.data.allMarkdownRemark.edges</span>
+    const title = `<span class="cstat-no" title="statement not covered" >${tag.substring(0, 1).toUpperCase() + tag.substring(1, tag.length)} | Tags`</span>
 &nbsp;
-    return (
+<span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;Layout&gt;
+        &lt;Metadata title={title} slug={`/tags/${tag}`} /&gt;
         &lt;div className="tag-container"&gt;
-          &lt;Metadata title={title} slug={`/tags/${tag}`} /&gt;
           &lt;PostListing postEdges={postEdges} /&gt;
         &lt;/div&gt;
       &lt;/Layout&gt;
@@ -169,7 +169,7 @@ export default class TagTemplate extends React.Component {
 }
 &nbsp;
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
+export const pageQuery<span class="cstat-no" title="statement not covered" > = graphql`</span>
   query TagPage($tag: String) {
     allMarkdownRemark(
       limit: 1000
@@ -202,7 +202,7 @@ export const pageQuery = graphql`
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 10:01:49 GMT+0200 (South Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 22:01:48 GMT+0200 (South Africa Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

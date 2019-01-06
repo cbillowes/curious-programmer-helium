@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for curious-programmer-helium/src/components/PrivacyPolicy/AdditionalInformation.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">curious-programmer-helium/src/components/PrivacyPolicy</a> AdditionalInformation.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from "react"
+&nbsp;
+class AdditionalInformation extends Component {
+  render() {
+    return (
+      &lt;div id="additional-information"&gt;
+        &lt;div&gt;
+          &lt;h2&gt;Additional information about Data collection and processing&lt;/h2&gt;
+          &lt;h3&gt;Legal action&lt;/h3&gt;
+          &lt;p&gt;
+            The User's Personal Data may be used for legal purposes by the
+            Owner in Court or in the stages leading to possible legal action
+            arising from improper use of this Application or the related
+                  Services.&lt;br /&gt;
+            The User declares to be aware that the Owner may be required to
+                  reveal personal data upon request of public authorities.&lt;/p&gt;
+&nbsp;
+          &lt;h3&gt;Additional information about User's Personal Data&lt;/h3&gt;
+          &lt;p&gt;
+            In addition to the information contained in this privacy policy,
+            this Application may provide the User with additional and
+            contextual information concerning particular Services or the
+                  collection and processing of Personal Data upon request.&lt;/p&gt;
+&nbsp;
+          &lt;h3&gt;System logs and maintenance&lt;/h3&gt;
+          &lt;p&gt;
+            For operation and maintenance purposes, this Application and any
+            third-party services may collect files that record interaction
+            with this Application (System logs) use other Personal Data (such
+                  as the IP Address) for this purpose.&lt;/p&gt;
+&nbsp;
+          &lt;h3&gt;Information not contained in this policy&lt;/h3&gt;
+          &lt;p&gt;
+            More details concerning the collection or processing of Personal
+            Data may be requested from the Owner at any time. Please see the
+                  contact information at the beginning of this document.&lt;/p&gt;
+&nbsp;
+          &lt;h3&gt;How “Do Not Track” requests are handled&lt;/h3&gt;
+          &lt;p&gt;
+            This Application does not support “Do Not Track” requests.&lt;br /&gt;
+            To determine whether any of the third-party services it uses honor
+                  the “Do Not Track” requests, please read their privacy policies.&lt;/p&gt;
+&nbsp;
+          &lt;h3&gt;Changes to this privacy policy&lt;/h3&gt;
+          &lt;p&gt;
+            The Owner reserves the right to make changes to this privacy
+            policy at any time by giving notice to its Users on this page and
+            possibly within this Application and/or - as far as technically
+            and legally feasible - sending a notice to Users via any contact
+            information available to the Owner. It is strongly recommended to
+            check this page often, referring to the date of the last
+                  modification listed at the bottom.&lt;br /&gt;&lt;br /&gt;
+            Should the changes affect processing activities performed on the
+            basis of the User’s consent, the Owner shall collect new consent
+                  from the User, where required.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h3&gt;Definitions and legal references&lt;/h3&gt;
+          &lt;div&gt;
+            &lt;h4&gt;Personal Data (or Data)&lt;/h4&gt;
+            &lt;p&gt;
+              Any information that directly, indirectly, or in connection with
+              other information — including a personal identification number —
+              allows for the identification or identifiability of a natural
+                    person.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Usage Data&lt;/h4&gt;
+            &lt;p&gt;
+              Information collected automatically through this Application (or
+              third-party services employed in this Application), which can
+              include: the IP addresses or domain names of the computers
+              utilized by the Users who use this Application, the URI
+              addresses (Uniform Resource Identifier), the time of the
+              request, the method utilized to submit the request to the
+              server, the size of the file received in response, the numerical
+              code indicating the status of the server's answer (successful
+              outcome, error, etc.), the country of origin, the features of
+              the browser and the operating system utilized by the User, the
+              various time details per visit (e.g., the time spent on each
+              page within the Application) and the details about the path
+              followed within the Application with special reference to the
+              sequence of pages visited, and other parameters about the device
+                    operating system and/or the User's IT environment.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;User&lt;/h4&gt;
+            &lt;p&gt;
+              The individual using this Application who, unless otherwise
+                    specified, coincides with the Data Subject.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Data Subject&lt;/h4&gt;
+            &lt;p&gt;The natural person to whom the Personal Data refers.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Data Processor (or Data Supervisor)&lt;/h4&gt;
+            &lt;p&gt;
+              The natural or legal person, public authority, agency or other
+              body which processes Personal Data on behalf of the Controller,
+                    as described in this privacy policy.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Data Controller (or Owner)&lt;/h4&gt;
+            &lt;p&gt;
+              The natural or legal person, public authority, agency or other
+              body which, alone or jointly with others, determines the
+              purposes and means of the processing of Personal Data, including
+              the security measures concerning the operation and use of this
+              Application. The Data Controller, unless otherwise specified, is
+                    the Owner of this Application.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;This Application&lt;/h4&gt;
+            &lt;p&gt;
+              The means by which the Personal Data of the User is collected
+                    and processed.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Service&lt;/h4&gt;
+            &lt;p&gt;
+              The service provided by this Application as described in the
+                    relative terms (if available) and on this site/application.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;European Union (or EU)&lt;/h4&gt;
+            &lt;p&gt;
+              Unless otherwise specified, all references made within this
+              document to the European Union include all current member states
+                    to the European Union and the European Economic Area.&lt;/p&gt;
+&nbsp;
+            &lt;h4&gt;Cookies&lt;/h4&gt;
+            &lt;p&gt;Small piece of data stored in the User's device.&lt;/p&gt;
+&nbsp;
+            &lt;hr /&gt;
+&nbsp;
+            &lt;h4&gt;Legal information&lt;/h4&gt;
+            &lt;p&gt;
+              This privacy statement has been prepared based on provisions of
+              multiple legislations, including Art. 13/14 of Regulation (EU)
+                    2016/679 (General Data Protection Regulation).&lt;/p&gt;
+            &lt;p&gt;
+              This privacy policy relates solely to this Application, if not
+                    stated otherwise within this document.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default AdditionalInformation</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 22:01:48 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

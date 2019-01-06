@@ -249,12 +249,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -276,7 +276,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -325,16 +325,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -342,14 +338,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -541,10 +541,15 @@ export default class PostTemplate extends React.Component {
     const previousPost = this.getPostItem(this.props.data.prev)
     const nextPost = this.getPostItem(this.props.data.next)
     const post = postNode.frontmatter
-    const blur = post.blur ? post.blur : <span class="branch-1 cbranch-no" title="branch not covered" >`${post.cover}&amp;blur`</span>
+    const blur = post.blur ? <span class="branch-0 cbranch-no" title="branch not covered" >post.blur </span>: `${post.cover}&amp;blur`
 &nbsp;
     return (
       &lt;Layout&gt;
+        &lt;PageMetadata
+          title={post.title}
+          description={post.excerpt}
+          slug={slug}
+          images={{ cover: post.cover }} /&gt;
         {post.cover &amp;&amp; blur ?
           &lt;span className="cover blur background" style={{ backgroundImage: `url(${blur})` }}&gt;&lt;/span&gt; :
           &lt;span&gt;&lt;/span&gt;}
@@ -552,11 +557,6 @@ export default class PostTemplate extends React.Component {
           &lt;span className="cover default background" style={{ backgroundImage: `url(${post.cover})` }}&gt;&lt;/span&gt; :
           &lt;span&gt;&lt;/span&gt;}
         &lt;div className={`post ${post.cover ? "with-cover" : ""}`}&gt;
-          &lt;PageMetadata
-            title={post.title}
-            description={post.excerpt}
-            slug={slug}
-            images={{ cover: post.cover }} /&gt;
           &lt;div&gt;
             &lt;CompactNavigation previous={previousPost} next={nextPost} /&gt;
             &lt;h1&gt;{post.title}&lt;/h1&gt;
@@ -631,7 +631,7 @@ export const postQuery = graphql`
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 10:01:49 GMT+0200 (South Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 05 2019 22:01:48 GMT+0200 (South Africa Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

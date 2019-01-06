@@ -3,14 +3,22 @@ import Helmet from "react-helmet"
 import { graphql } from "gatsby";
 import config from "../../../../data/SiteConfig"
 import navigation from "../../../../data/Navigation"
-import Path, { relative } from "path";
+import Path from "path"
+import url from "url-join"
 
 class Metadata extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      slug: (this.props.data) ? this.props.data.slug.edges[0].node.fields.slug : this.props.slug ? this.props.slug : "/"
+      slug: (this.props.slug) ? this.props.slug : this.getSlug(props)
     }
+  }
+
+  getSlug = (props) => {
+    if (props.data.slug) {
+      return edges[0].node.fields.slug
+    }
+    return "/"
   }
 
   getTitle = (title) => {
@@ -35,43 +43,46 @@ class Metadata extends Component {
 
   getImageUrl = images => {
     if (images) {
-      const image = (images.background) ? images.background : (images.post) ? images.post : config.siteLogo
+      const image = (images.cover) ? images.cover : config.siteLogo
       if (image.startsWith("http")) {
         return image
       }
       if (image.startsWith("/")) {
-        return `${config.siteUrl}${image}`
+        return url(config.siteUrl, image)
       }
-      return config.siteUrl + Path.normalize(`${this.state.slug}/${image}`)
+      return config.siteUrl + Path.normalize(url(this.state.slug, image))
     }
-    return `${config.siteUrl}${config.siteLogo}`
+    return url(config.siteUrl, config.siteLogo)
   }
 
-  getUrl = slug => {
+  getUrl = (slug) => {
     if (slug) {
-      return `${config.siteUrl}${slug}`
+      return url(config.siteUrl, slug)
     }
     let navigationItem = getNavigationItem(this.state.slug)
-    let pageUrl = config.siteUrl + navigationItem.url
+    let pageUrl = url(config.siteUrl, navigationItem.url)
     return pageUrl
   }
 
-  getType = type => {
+  getType = slug => {
+    if (slug && slug.indexOf("/blog/")) {
+      return "article"
+    }
     return "website"
   }
 
   render() {
-    const { title, description, images, slug, type } = this.props
+    const { title, description, images, slug } = this.props
     const pageTitle = this.getTitle(title)
     const pageDescription = this.getDescription(description)
     const imageUrl = this.getImageUrl(images)
-    const pageUrl = this.getUrl(slug ? slug : this.state.slug)
-    const pageType = this.getType(type)
+    const pageUrl = this.getUrl(slug)
+    const pageType = this.getType(slug)
 
     return (
       <Helmet>
         <title>{pageTitle}</title>
-        <link rel="canonical" href={config.siteUrl} />
+        <link rel="canonical" href={pageUrl} />
         <link rel="icon" href="/favicon.png" />
         <meta name="description" content={pageDescription} />
         <meta name="image" content={imageUrl} />

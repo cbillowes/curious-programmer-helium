@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/PrivacyPolicy/RightsOfUsers.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/PrivacyPolicy</a> RightsOfUsers.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from "react"
+&nbsp;
+class RightsOfUsers extends Component {
+  render() {
+    return (
+      &lt;div id="rights-of-users"&gt;
+        &lt;h2&gt;The rights of Users&lt;/h2&gt;
+        &lt;p&gt;
+          Users may exercise certain rights regarding their Data processed
+          by the Owner.&lt;/p&gt;
+        &lt;p&gt;In particular, Users have the right to do the following:&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;b&gt;Withdraw their consent at any time.&lt;/b&gt; Users have the right
+            to withdraw consent where they have previously given their
+            consent to the processing of their Personal Data.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Object to processing of their Data.&lt;/b&gt; Users have the right
+            to object to the processing of their Data if the processing is
+            carried out on a legal basis other than consent. Further details
+            are provided in the dedicated section below.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Access their Data.&lt;/b&gt; Users have the right to learn if Data
+            is being processed by the Owner, obtain disclosure regarding
+            certain aspects of the processing and obtain a copy of the Data
+            undergoing processing.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Verify and seek rectification.&lt;/b&gt; Users have the right to
+            verify the accuracy of their Data and ask for it to be updated
+            or corrected.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Restrict the processing of their Data.&lt;/b&gt; Users have the
+            right, under certain circumstances, to restrict the processing
+            of their Data. In this case, the Owner will not process their
+            Data for any purpose other than storing it.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Have their Personal Data deleted or otherwise removed.&lt;/b&gt;{" "}
+            Users have the right, under certain circumstances, to obtain the
+            erasure of their Data from the Owner.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;
+              Receive their Data and have it transferred to another
+              controller.&lt;/b&gt;{" "}
+            Users have the right to receive their Data in a structured,
+            commonly used and machine readable format and, if technically
+            feasible, to have it transmitted to another controller without
+            any hindrance. This provision is applicable provided that the
+            Data is processed by automated means and that the processing is
+            based on the User's consent, on a contract which the User is
+            part of or on pre-contractual obligations thereof.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;b&gt;Lodge a complaint.&lt;/b&gt; Users have the right to bring a claim
+            before their competent data protection authority.&lt;/li&gt;
+        &lt;/ul&gt;
+&nbsp;
+        &lt;h3&gt;Details about the right to object to processing&lt;/h3&gt;
+        &lt;p&gt;
+          Where Personal Data is processed for a public interest, in the
+          exercise of an official authority vested in the Owner or for the
+          purposes of the legitimate interests pursued by the Owner, Users
+          may object to such processing by providing a ground related to
+          their particular situation to justify the objection.&lt;/p&gt;
+        &lt;p&gt;
+          Users must know that, however, should their Personal Data be
+          processed for direct marketing purposes, they can object to that
+          processing at any time without providing any justification. To
+          learn, whether the Owner is processing Personal Data for direct
+          marketing purposes, Users may refer to the relevant sections of
+          this document.&lt;/p&gt;
+&nbsp;
+        &lt;h3&gt;How to exercise these rights&lt;/h3&gt;
+        &lt;p&gt;
+          Any requests to exercise User rights can be directed to the Owner
+          through the contact details provided in this document. These
+          requests can be exercised free of charge and will be addressed by
+          the Owner as early as possible and always within one month.&lt;/p&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default RightsOfUsers</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 06 2019 09:47:38 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

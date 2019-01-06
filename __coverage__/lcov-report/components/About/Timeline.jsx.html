@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/About/Timeline.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">components/About</a> Timeline.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import $ from "jquery"</span>
+<span class="cstat-no" title="statement not covered" >import React, { Component } from "react"</span>
+<span class="cstat-no" title="statement not covered" >import Legend from "./TimelineLegend"</span>
+<span class="cstat-no" title="statement not covered" >import CloudAfrica from "./Companies/CloudAfrica"</span>
+<span class="cstat-no" title="statement not covered" >import DStv from "./Companies/DStv"</span>
+<span class="cstat-no" title="statement not covered" >import Remata from "./Companies/Remata"</span>
+<span class="cstat-no" title="statement not covered" >import ITEM from "./Companies/ITEM"</span>
+<span class="cstat-no" title="statement not covered" >import Globres from "./Companies/Globres"</span>
+<span class="cstat-no" title="statement not covered" >import Education from "./Companies/Education"</span>
+<span class="cstat-no" title="statement not covered" >import "./Timeline.scss"</span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >toggle(className) {</span>
+  let activeElements = <span class="cstat-no" title="statement not covered" >$(`.timeline .legend .${className}.active`).length</span>
+  let element = <span class="cstat-no" title="statement not covered" >$(`.timeline .item.${className}`)</span>
+<span class="cstat-no" title="statement not covered" >  if (activeElements &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    element.show()</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    element.hide()</span>
+  }
+}
+&nbsp;
+class Timeline extends Component {
+<span class="fstat-no" title="function not covered" >  constructor</span>(props) {
+<span class="cstat-no" title="statement not covered" >    super(props)</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      education: false,
+      work: false,
+      podcasts: false,
+      publishing: false,
+      talks: false,
+      blogs: false,
+      projects: false,
+      community: false
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  componentDidUpdate</span>() {
+<span class="cstat-no" title="statement not covered" >    toggle("certificate")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("work")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("podcast")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("book")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("talk")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("blog")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("project")</span>
+<span class="cstat-no" title="statement not covered" >    toggle("community")</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  render</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;section className="timeline" onLoad={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({work: true})}&gt;</span>
+        &lt;Legend
+          active={this.state}
+          onEducationClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ education: !this.state.education })}</span>
+          onWorkClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ work: !this.state.work })}</span>
+          onPodcastsClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ podcasts: !this.state.podcasts })}</span>
+          onPublishingClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ publishing: !this.state.publishing })}</span>
+          onTalksClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ talks: !this.state.talks })}</span>
+          onBlogsClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ blogs: !this.state.blogs })}</span>
+          onProjectsClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ projects: !this.state.projects })}</span>
+          onCommunityClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.setState({ community: !this.state.community })}</span>
+        /&gt;
+        &lt;div className="items"&gt;
+          &lt;CloudAfrica /&gt;
+          &lt;DStv /&gt;
+          &lt;Remata /&gt;
+          &lt;ITEM /&gt;
+          &lt;Globres /&gt;
+          &lt;Education /&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    )
+  }
+}
+&nbsp;
+export default Timeline</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 06 2019 09:15:22 GMT+0200 (South Africa Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
