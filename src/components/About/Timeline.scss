@@ -33,7 +33,7 @@ $community: #52a2f5;
     }
 
     a:hover {
-      color: $foreground-accent;
+      color: $foreground-lighter;
     }
   }
 
@@ -43,7 +43,7 @@ $community: #52a2f5;
       color: $accent;
 
       &:hover {
-        color: $foreground-accent;
+        color: $foreground-lighter;
       }
     }
 
@@ -51,7 +51,7 @@ $community: #52a2f5;
       background-color: lighten($accent, 15%);
       padding: 0.25em 0.5em;
       border-radius: 5px;
-      color:$background-de-emphasis;
+      color:$background-darker;
       margin: 0 0.25em;
     }
   }
@@ -79,7 +79,7 @@ $community: #52a2f5;
   }
 
   .icon span {
-    color: $foreground-accent;
+    color: $foreground-lighter;
   }
 
   &.active .icon span {
@@ -87,9 +87,9 @@ $community: #52a2f5;
     color: $accent;
 
     &:hover {
-      border: solid $btn-border-size $foreground-accent;
-      color: $background-de-emphasis;
-      background-color: $foreground-accent;
+      border: solid $btn-border-size $foreground-lighter;
+      color: $background-darker;
+      background-color: $foreground-lighter;
     }
   }
 }
@@ -127,7 +127,7 @@ $community: #52a2f5;
     .certificate { 
       @include legend-icon($certificate);
       &.active .icon:hover span {
-      color: darken($foreground-accent, 30%);
+      color: darken($foreground-lighter, 30%);
       }
     }
   }
@@ -139,8 +139,8 @@ $community: #52a2f5;
     font-style: none;
 
     span {
-      border: solid $btn-border-size $background-de-emphasis;
-      background-color: $background-de-emphasis;
+      border: solid $btn-border-size $background-darker;
+      background-color: $background-darker;
       display: inline-block;
       border-radius: 50%;
       width: $icon-size;
@@ -253,8 +253,8 @@ $community: #52a2f5;
 // @mixin themed-item($accent) {
 //   .icon {
 //     color: $accent;
-//     background-color: $background-de-emphasis;
-//     border: solid 3px $background-de-emphasis;
+//     background-color: $background-darker;
+//     border: solid 3px $background-darker;
 //     border-radius: 50%;
 //     width: $icon-size;
 //     height: $icon-size;
@@ -294,7 +294,7 @@ $community: #52a2f5;
 
 //   .legend {
 //     li .icon {
-//       color: $foreground-accent;
+//       color: $foreground-lighter;
 //     }
 //   }
 

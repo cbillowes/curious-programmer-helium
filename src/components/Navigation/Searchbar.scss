@@ -2,7 +2,7 @@
 
 .searchbar {
   display: none;
-  background-color: $navigation-background;
+  background-color: $background-darker;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -21,8 +21,8 @@
     padding: 0.5em;
     margin: 1.5em 2% 0.5em 2%;
     font-family: $font-family-sans-serif;
-    background-color: $background-accent;
-    border: solid 1px $background-accent;
+    background-color: $background-lighter;
+    border: solid 1px $background-lighter;
     border-radius: $border-radius;
     padding: 0.5em;
     color: $foreground;

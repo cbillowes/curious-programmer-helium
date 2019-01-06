@@ -18,7 +18,7 @@
 
     &.with-cover {
         padding: 1em 3em;
-        background-color: $background-de-emphasis;
+        background-color: $background-darker;
         opacity: 0.8
     }
 
@@ -41,7 +41,7 @@
         .tag,
         &:visited {
           background-color: $primary;
-          color: $background-accent;
+          color: $background-lighter;
 
           &:hover {
             background-color: $secondary;
@@ -84,7 +84,7 @@
     li {
         code {
             padding: 0.5em 0.25em;
-            background-color: $background-accent;
+            background-color: $background-lighter;
         }
     }
 
@@ -125,11 +125,11 @@
                 padding: 0px;
                 line-height: 2em;
                 height: 0px;
-                background-color: $background-accent;
+                background-color: $background-lighter;
                 color: $foreground;
 
                 &:hover {
-                    background-color: $background-accent;
+                    background-color: $background-lighter;
                     color: $foreground;
                 }
 
@@ -147,13 +147,13 @@
 
             .tag,
             &:visited {
-              background-color: $background-accent;
+              background-color: $background-lighter;
               color: $foreground;
             }
 
             .tag:hover {
                 background-color: $primary;
-                color: $background-accent;
+                color: $background-lighter;
             }
         }
     }

@@ -7,16 +7,16 @@ custom-variables-bootstrap-2019-01-05
 
 
 // Brand Colors
-$blue: #5288f5;
-$indigo: #9452f5;
-$purple: #bd52f5;
-$pink: #f552ca;
-$red: #f55252;
-$orange: #f59852;
-$yellow: #f5f252;
-$green: #78f552;
-$teal: #52f590;
-$cyan: #52bcf5;
+$blue: #6a9fe4;
+$indigo: #846ae4;
+$purple: #c16ae4;
+$pink: #e46aa7;
+$red: #e46a6a;
+$orange: #e4d26a;
+$yellow: #d2e46a;
+$green: #86e46a;
+$teal: #6ee46a;
+$cyan: #6ae4ca;
 $white: #bbbbbb;
 $gray-100: #f8f9fa;
 $gray-200: #bfcbd2;
@@ -366,7 +366,7 @@ $card-border-radius: 0px;
 $card-border-color: $black;
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width});
 $card-cap-bg: rgba($black, 0.03);
-$card-bg: $background-de-emphasis;
+$card-bg: $gray-900;
 $card-img-overlay-padding: 1.25rem;
 $card-deck-margin: ($grid-gutter-width / 2);
 $card-columns-count: 3;

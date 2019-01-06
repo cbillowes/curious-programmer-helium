@@ -45,7 +45,7 @@ $background-static-state: $background;
 
       &:hover {
         &::after {
-          background-color: $background-de-emphasis;
+          background-color: $background-darker;
         }
       }
 
@@ -67,7 +67,7 @@ $background-static-state: $background;
       }
 
       color: $foreground;
-      background-color: $background-de-emphasis;
+      background-color: $background-darker;
       opacity: 1;
       padding: 2em 3em;
 
@@ -88,7 +88,7 @@ $background-static-state: $background;
   
       .tag {
         background-color: $foreground;
-        color: $background-de-emphasis;
+        color: $background-darker;
         font-size: 0.7em;
         padding: 0em 1em;
 

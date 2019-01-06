@@ -1,4 +1,6 @@
-@import "dark.scss";
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
+
 @import "../../third-parties/bootstrap/scss/functions";
 @import "../../third-parties/bootstrap/scss/variables";
 @import "../../third-parties/bootstrap/custom-variables";
@@ -9,65 +11,7 @@
 @import "../../third-parties/bootstrap/scss/spinners";
 @import "../../third-parties/bootstrap/scss/utilities";
 @import "../../third-parties/bootstrap/scss/print";
-
-$background: $black;
-$background-de-emphasis: darken($black, 2%);
-$background-accent: $gray-900;
-$navigation-background: $background-de-emphasis;
-
-$foreground: $white;
-$foreground-accent: $gray-100;
-$container-width: 960px;
-$menubar-width: 250px;
-$border-radius: 5px;
-$font-size: 1.35rem;
-$text-shadow: 0px 0px 1px black;
-$line-height: $font-size * 2;
-$font-family-serif: $font-family-base;
-
-$primary: $green;
-$secondary: $yellow;
-$accent: $red;
-
-$background-serious-highlight: lighten(#cc0000, 45%);
-$foreground-serious-highlight: #cc0000;
-$foreground-serious-highlight-anchor: $background;
-$foreground-serious-highlight-anchor-visited: lighten($background, 20%);
-
-$scrollbar-track: lighten($background, 5%);
-$scrollbar-thumb: lighten($background, 15%);
-$visited: lighten($secondary, 10%);
-
-$table-background: darken($background, 5%);
-$table-head-background: darken($background, 7%);
-$table-border: $background;
-$table-hover-text: lighten($background, 5%);
-$table-hover-link: darken($foreground, 40%);
-
-@mixin button() {
-  background-color: $primary;
-  color: $background-de-emphasis;
-  padding: 0em 0.5em;
-  display: inline-block;
-  border-radius: 4px;
-  line-height: 1.75em;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $secondary;
-  }
-}
-
-@mixin small-media() {
-  @media screen and (max-width: 800px) {
-    @content
-  }
-}
-
-@mixin highlighted-section() {
-  background-color: $background-de-emphasis;
-  padding: 1em 3em 2em 3em;
-}
+@import "./variables";
 
 @media screen {
   *::-webkit-scrollbar {
@@ -196,8 +140,8 @@ $table-hover-link: darken($foreground, 40%);
     
   hr {
     margin-top: 3em;
-    border-top: solid 2px $background-accent;
-    border-bottom: solid 1px $background-de-emphasis;
+    border-top: solid 2px $background-lighter;
+    border-bottom: solid 1px $background-darker;
     border-left: transparent;
     border-right: transparent;
   }
@@ -223,7 +167,7 @@ $table-hover-link: darken($foreground, 40%);
 
       .language {
         border-radius:  0 0 0 $border-radius;
-        background-color: $background-de-emphasis;
+        background-color: $background-darker;
         display: inline-block;
         margin-right: 0.5em;
         padding: 0.25em 0.5em;
@@ -231,7 +175,7 @@ $table-hover-link: darken($foreground, 40%);
 
       .copy {
         border-radius:  0 0 0 $border-radius;
-        background-color: $background-de-emphasis;
+        background-color: $background-darker;
         display: inline-block;
         padding: 0.25em 0.5em;
         cursor: pointer;

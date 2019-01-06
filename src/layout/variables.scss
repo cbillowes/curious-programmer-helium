@@ -1,0 +1,68 @@
+$background: $black;
+$background-darker: darken($black, 2%);
+$background-lighter: $gray-900;
+
+$foreground: $gray-200;
+$foreground-lighter: $gray-100;
+$foreground-darker: $gray-300;
+$container-width: 960px;
+$menubar-width: 250px;
+$border-radius: 5px;
+$font-size: 1.35rem;
+$text-shadow: 1px 1px 1px $background-darker;
+$line-height: $font-size * 2;
+$font-family-serif: $font-family-base;
+
+$font-family-serif: 'Lora', 'Times New Roman', serif;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$primary: $green;
+$secondary: $yellow;
+$accent: $red;
+
+$background-serious-highlight: lighten(#cc0000, 45%);
+
+$background-darker: $background-darker;
+$foreground-serious-highlight: #cc0000;
+$foreground-serious-highlight-anchor: $background;
+$foreground-serious-highlight-anchor-visited: lighten($background, 20%);
+
+$background-serious-highlight: lighten(#cc0000, 45%);
+$foreground-serious-highlight: #cc0000;
+$foreground-serious-highlight-anchor: $background;
+$foreground-serious-highlight-anchor-visited: lighten($background, 20%);
+
+$scrollbar-track: lighten($background, 5%);
+$scrollbar-thumb: lighten($background, 15%);
+$visited: lighten($secondary, 10%);
+
+$table-background: darken($background, 5%);
+$table-head-background: darken($background, 7%);
+$table-border: $background;
+$table-hover-text: lighten($background, 5%);
+$table-hover-link: darken($foreground, 40%);
+
+@mixin button() {
+  background-color: $primary;
+  color: $background-darker;
+  padding: 0em 0.5em;
+  display: inline-block;
+  border-radius: 4px;
+  line-height: 1.75em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+@mixin small-media() {
+  @media screen and (max-width: 800px) {
+    @content
+  }
+}
+
+@mixin highlighted-section() {
+  background-color: $background-darker;
+  padding: 1em 3em 2em 3em;
+}

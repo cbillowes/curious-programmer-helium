@@ -28,7 +28,7 @@
 
 .navigation {
   .menubar {
-    background-color: $navigation-background;
+    background-color: $background-darker;
     position: fixed;
     width: $menubar-width;
     top: 4em;
@@ -51,7 +51,7 @@
         &.selected {
           background-color: $secondary;
           a {
-            color: $navigation-background;
+            color: $background-darker;
           }
         }
 
@@ -63,7 +63,7 @@
 
           &:hover {
             background-color: $primary;
-            color: $background-accent;
+            color: $background-lighter;
           }
         }
       }
