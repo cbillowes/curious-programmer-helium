@@ -55,19 +55,19 @@ class DStv extends Component {
                 Twitter moments
               </External>
             </span>
-            {" "} &bull; 
+            {" "} &bull;
             {" "}
             <span>
               <Link to="/slides/rubyfuza-2017-the-imposter-within.pdf">
                 Slides
               </Link>
             </span>
-            {" "} &bull; 
+            {" "} &bull;
             {" "}
             <span>
               <Link to="/blog/rubyfuza-2017-conference/">Content</Link>
             </span>
-            {" "} &bull; 
+            {" "} &bull;
             {" "}
             <span>
               <External to="https://www.youtube.com/watch?v=fkgAc0DY4s8">
@@ -85,7 +85,7 @@ class DStv extends Component {
           titleLink="http://developeronfire.com/podcast/episode-202-clarice-bouwer-leaving-comfort-behind"
         >
           <p>
-            I spoke with Dave Rael about collboration, empathy, fear, and being
+            I spoke with Dave Rael about collaboration, empathy, fear, and being
             an imposter.
           </p>
         </TimelineItem>
@@ -159,7 +159,7 @@ class DStv extends Component {
         >
           <p>
             I started a blog using <span className="tag">Jekyll</span> a static
-            site generateor. The goal was to help other software developers who
+            site generator. The goal was to help other software developers who
             are joining or are working within a corporate environment by sharing
             my personal experiences.
           </p>
@@ -188,7 +188,7 @@ class DStv extends Component {
         >
           <p>
             A live streaming and video on-demand digital entertainment solution
-            offering DStv's Catch Up and Live TV offerings.
+            offering the DStv Catch Up and Live TV offerings.
           </p>
         </TimelineItem>
         <TimelineItem
