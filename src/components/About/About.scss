@@ -12,7 +12,7 @@
             margin-top: 10px;
             margin-bottom: 0;
         }
-    
+
         .photo {
             width: 300px;
             height: 300px;
@@ -29,6 +29,7 @@
 
         .button {
             @include button;
+
             background-color: $foreground-lighter;
         }
     }
@@ -37,12 +38,15 @@
         display: none;
 
         &.elaborated {
-            display:block;
+            display: block;
         }
     }
+
     .elaborated {
         display: block;
+
         @include highlighted-section;
+
         margin: 1em 2em;
     }
 }

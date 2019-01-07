@@ -1,17 +1,17 @@
 @import "../../layout/layout.scss";
 
 .footer-container {
-  .footer {
-    .license-footer {
-      font-size: 0.7em;
-      font-style: italic;
-      font-family: $font-family-serif;
-      font-weight: 100;
-      line-height: 1.75em;
+    .footer {
+        .license-footer {
+            font-size: 0.7em;
+            font-style: italic;
+            font-family: $font-family-serif;
+            font-weight: 100;
+            line-height: 1.75em;
+        }
+
+        p {
+            margin: 0;
+        }
     }
-  
-    p {
-      margin: 0;
-    }
-  }
 }

@@ -1,72 +1,66 @@
 @import "../../layout/layout.scss";
 
-@mixin flyout() {
-  opacity: 0;
-  -webkit-transform: translate3d(300px, 0, 0);
-  -ms-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0);
-  -webkit-transition:
-      -webkit-transform 0.5s ease,
-      opacity 0.3s ease 0.7s;
-  transition:
-      transform 0.5s ease,
-      opacity 0.3s ease 0.7s; 
+@mixin flyout {
+    opacity: 0;
+    -webkit-transform: translate3d(300px, 0, 0);
+    -ms-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.3s ease 0.7s;
+    transition: transform 0.5s ease, opacity 0.3s ease 0.7s;
 }
 
-@mixin flyin() {
+@mixin flyin {
     opacity: 1;
-    -webkit-transition:
-        -webkit-transform 0.3s ease,
-        opacity 0s ease 0s;
-    transition:
-        transform 0.3s ease,
-        opacity 0s ease 0s;
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0s ease 0s;
+    transition: transform 0.3s ease, opacity 0s ease 0s;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
 .navigation {
-  .menubar {
-    background-color: $background-darker;
-    position: fixed;
-    width: $menubar-width;
-    top: 4em;
-    right: 0;
-    height: 100vh;
-    z-index: 999;
-    @include flyout();
+    .menubar {
+        background-color: $background-darker;
+        position: fixed;
+        width: $menubar-width;
+        top: 4em;
+        right: 0;
+        height: 100vh;
+        z-index: 999;
 
-    &.active {
-      @include flyin();
-    }
+        @include flyout;
 
-    ul {
-      padding-left: 0;
-      margin: 0;
-
-      li.menu-item {
-        list-style: none;
-
-        &.selected {
-          background-color: $secondary;
-          a {
-            color: $background-darker;
-          }
+        &.active {
+            @include flyin;
         }
 
-        a {
-          display: block;
-          padding: 0.25em 2em;
-          font-family: $font-family-sans-serif;
-          color: $foreground;
+        ul {
+            padding-left: 0;
+            margin: 0;
 
-          &:hover {
-            background-color: $primary;
-            color: $background-lighter;
-          }
+            li.menu-item {
+                list-style: none;
+
+                &.selected {
+                    background-color: $secondary;
+
+                    a {
+                        color: $background-darker;
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0.25em 2em;
+                    font-family: $font-family-sans-serif;
+                    color: $foreground;
+
+                    &:hover {
+                        background-color: $primary;
+                        color: $background-lighter;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

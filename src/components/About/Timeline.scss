@@ -1,16 +1,14 @@
 @charset "UTF-8";
+
 @import "../../layout/layout.scss";
 
 /* Made with http://icomoon.io/ */
 @font-face {
-  font-family: "timeline";
-  src: url("/fonts/timeline.eot");
-  src: url("/font/timeline.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/timeline.woff") format("woff"),
-       url("/fonts/timeline.ttf") format("truetype"),
-       url("/fonts/timeline.svg#timeline") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "timeline";
+    src: url("/fonts/timeline.eot");
+    src: url("/font/timeline.eot?#iefix") format("embedded-opentype"), url("/fonts/timeline.woff") format("woff"), url("/fonts/timeline.ttf") format("truetype"), url("/fonts/timeline.svg#timeline") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 $icon-size: 70px;
@@ -25,226 +23,278 @@ $blog: #52f552;
 $community: #52a2f5;
 
 @mixin category-icon($icon, $accent) {
-  .meta {
-    h1,
-    h2,
-    a {
-      color: $accent;
+    .meta {
+        h1,
+        h2,
+        a {
+            color: $accent;
+        }
+
+        a:hover {
+            color: $foreground-lighter;
+        }
     }
 
-    a:hover {
-      color: $foreground-lighter;
-    }
-  }
+    .description {
+        h3,
+        a {
+            color: $accent;
 
-  .description {
-    h3,
-    a {
-      color: $accent;
+            &:hover {
+                color: $foreground-lighter;
+            }
+        }
 
-      &:hover {
-        color: $foreground-lighter;
-      }
+        .tag {
+            background-color: lighten($accent, 15%);
+            padding: 0.25em 0.5em;
+            border-radius: 5px;
+            color: $background-darker;
+            margin: 0 0.25em;
+        }
     }
 
-    .tag {
-      background-color: lighten($accent, 15%);
-      padding: 0.25em 0.5em;
-      border-radius: 5px;
-      color:$background-darker;
-      margin: 0 0.25em;
-    }
-  }
+    .icon {
+        &:hover span,
+        span {
+            cursor: pointer;
+            color: $accent;
 
-  .icon {
-    &:hover span,
-    span {
-      cursor : pointer;
-      color: $accent; 
+            &:hover {
+                border: solid $btn-border-size $accent;
+            }
+        }
 
-      &:hover {
-        border: solid $btn-border-size $accent;
-      }
+        span::before {
+            content: $icon;
+        }
     }
-    span::before {
-      content: $icon;
-    }
-  }
 }
 
 @mixin legend-icon($accent) {
-  .icon {
-    display: inline-block;
-    margin: 0 0.5em;
-  }
-
-  .icon span {
-    color: $foreground-lighter;
-  }
-
-  &.active .icon span {
-    border: solid $btn-border-size $accent;
-    color: $accent;
-
-    &:hover {
-      border: solid $btn-border-size $foreground-lighter;
-      color: $background-darker;
-      background-color: $foreground-lighter;
-    }
-  }
-}
-.timeline {
-  > li {
-    list-style: none;
-  }
-
-  .item {
-    &.podcast .icon span { border: solid $btn-border-size $podcast; }
-    &.talk .icon span { border: solid $btn-border-size $talk; }
-    &.work .icon span { border: solid $btn-border-size $work; }
-    &.book .icon span { border: solid $btn-border-size $book; }
-    &.project  .icon span { border: solid $btn-border-size $project; }
-    &.blog .icon span { border: solid $btn-border-size $blog; }
-    &.community .icon span { border: solid $btn-border-size $community; }
-    &.certificate .icon span { border: solid $btn-border-size $certificate; }
-  }
-  
-  .legend {
-    list-style: none;
-    text-align: center;
-
-    li {
-      display: inline-block;
-    }
-
-    .podcast { @include legend-icon($podcast);}
-    .talk { @include legend-icon($talk);}
-    .work { @include legend-icon($work);}
-    .book { @include legend-icon($book);}
-    .project { @include legend-icon($project);}
-    .blog { @include legend-icon($blog);}
-    .community { @include legend-icon($community);}
-    .certificate { 
-      @include legend-icon($certificate);
-      &.active .icon:hover span {
-      color: darken($foreground-lighter, 30%);
-      }
-    }
-  }
-
-  .icon {
-    width: $icon-size;
-    height: $icon-size;
-    font-weight: normal;
-    font-style: none;
-
-    span {
-      border: solid $btn-border-size $background-darker;
-      background-color: $background-darker;
-      display: inline-block;
-      border-radius: 50%;
-      width: $icon-size;
-      height: $icon-size;
-      position: relative;
-
-      &::before {
-        font-family: timeline;
-        font-size: 1.5em;
-        position: absolute;
-        top: 20%;
-        left: 25%;
-      }
-    }
-  }
-  
-  .item {
-    display: flex;
-    width: 100%;
-
-    .meta {
-      display: inline-block;
-      width: 30em;
-      text-align: right;
-      vertical-align: top;
-
-      h2 {
-        margin-top: 0.5em;
-      }
-    }
     .icon {
-      display: inline-block;
-      width: $icon-size;
-      height: $icon-size;
-      vertical-align: top;
-      margin: 4em 2em; 
+        display: inline-block;
+        margin: 0 0.5em;
     }
-    .description {
-      display: inline-block;
-      width: 35%;
+
+    .icon span {
+        color: $foreground-lighter;
     }
-  }
 
-  .podcast {
-    @include category-icon("\e91c", $podcast);
-  }
+    &.active .icon span {
+        border: solid $btn-border-size $accent;
+        color: $accent;
 
-  .talk {
-    @include category-icon("\e91e", $talk);
-  }
+        &:hover {
+            border: solid $btn-border-size $foreground-lighter;
+            color: $background-darker;
+            background-color: $foreground-lighter;
+        }
+    }
+}
 
-  .work {
-    @include category-icon("\e903", $work);
-  }
+.timeline {
+    > li {
+        list-style: none;
+    }
 
-  .certificate {
-    @include category-icon("\e900", $certificate);
-  }
+    .item {
+        &.podcast .icon span {
+            border: solid $btn-border-size $podcast;
+        }
 
-  .book {
-    @include category-icon("\e91f", $book);
-  }
+        &.talk .icon span {
+            border: solid $btn-border-size $talk;
+        }
 
-  .project {
-    @include category-icon("\e925", $project);
-  }
+        &.work .icon span {
+            border: solid $btn-border-size $work;
+        }
 
-  .blog {
-    @include category-icon("\e908", $blog);
-  }
+        &.book .icon span {
+            border: solid $btn-border-size $book;
+        }
 
-  .community {
-    @include category-icon("\e972", $community);
-  }
+        &.project .icon span {
+            border: solid $btn-border-size $project;
+        }
+
+        &.blog .icon span {
+            border: solid $btn-border-size $blog;
+        }
+
+        &.community .icon span {
+            border: solid $btn-border-size $community;
+        }
+
+        &.certificate .icon span {
+            border: solid $btn-border-size $certificate;
+        }
+    }
+
+    .legend {
+        list-style: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+
+        .podcast {
+            @include legend-icon($podcast);
+        }
+
+        .talk {
+            @include legend-icon($talk);
+        }
+
+        .work {
+            @include legend-icon($work);
+        }
+
+        .book {
+            @include legend-icon($book);
+        }
+
+        .project {
+            @include legend-icon($project);
+        }
+
+        .blog {
+            @include legend-icon($blog);
+        }
+
+        .community {
+            @include legend-icon($community);
+        }
+
+        .certificate {
+            @include legend-icon($certificate);
+
+            &.active .icon:hover span {
+                color: darken($foreground-lighter, 30%);
+            }
+        }
+    }
+
+    .icon {
+        width: $icon-size;
+        height: $icon-size;
+        font-weight: normal;
+        font-style: none;
+
+        span {
+            border: solid $btn-border-size $background-darker;
+            background-color: $background-darker;
+            display: inline-block;
+            border-radius: 50%;
+            width: $icon-size;
+            height: $icon-size;
+            position: relative;
+
+            &::before {
+                font-family: timeline;
+                font-size: 1.5em;
+                position: absolute;
+                top: 20%;
+                left: 25%;
+            }
+        }
+    }
+
+    .item {
+        display: flex;
+        width: 100%;
+
+        .meta {
+            display: inline-block;
+            width: 30em;
+            text-align: right;
+            vertical-align: top;
+
+            h2 {
+                margin-top: 0.5em;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            width: $icon-size;
+            height: $icon-size;
+            vertical-align: top;
+            margin: 4em 2em;
+        }
+
+        .description {
+            display: inline-block;
+            width: 35%;
+        }
+    }
+
+    .podcast {
+        @include category-icon("", $podcast);
+    }
+
+    .talk {
+        @include category-icon("", $talk);
+    }
+
+    .work {
+        @include category-icon("", $work);
+    }
+
+    .certificate {
+        @include category-icon("", $certificate);
+    }
+
+    .book {
+        @include category-icon("", $book);
+    }
+
+    .project {
+        @include category-icon("", $project);
+    }
+
+    .blog {
+        @include category-icon("", $blog);
+    }
+
+    .community {
+        @include category-icon("", $community);
+    }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1300px) {
-  .meta {
-    width: 10em;
-  }
-  .description {
-    width: 50%;
-  }
+    .meta {
+        width: 10em;
+    }
+
+    .description {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 800px) {
-  .timeline {
-    .item {
-      display: flex;
-      position: relative;
+    .timeline {
+        .item {
+            display: flex;
+            position: relative;
 
-      .meta {
-        width: 80%;
-        text-align: left;
-      }
-      .icon {
-        margin: 0;
-        position: absolute;
-        top: 1em;
-        right: 1em;
-      }
-      .description {
-        width: 100%;
-      }
+            .meta {
+                width: 80%;
+                text-align: left;
+            }
+
+            .icon {
+                margin: 0;
+                position: absolute;
+                top: 1em;
+                right: 1em;
+            }
+
+            .description {
+                width: 100%;
+            }
+        }
     }
-  }
 }

@@ -8,9 +8,9 @@
         display: flex;
 
         .icon {
-            display:inline-block;
+            display: inline-block;
             cursor: pointer;
-            margin-left:0.5em;
+            margin-left: 0.5em;
             width: 60px;
             height: 60px;
             border-radius: $border-radius;
@@ -24,7 +24,7 @@
             }
 
             > i {
-                display:inline-block;
+                display: inline-block;
                 background-size: cover;
                 width: 30px;
                 height: 30px;

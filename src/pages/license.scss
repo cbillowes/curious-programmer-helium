@@ -2,24 +2,25 @@
 
 $margin: 1.5em;
 
-@mixin emphasize() {
-  padding: 1em 3em;
-  background-color: $background-darker;
+@mixin emphasize {
+    padding: 1em 3em;
+    background-color: $background-darker;
 }
 
 .license-container {
-  .license {
-    @include emphasize();
-    display: block;
+    .license {
+        @include emphasize;
 
-    .license-icon {
-      margin-top: 2em;
-      margin-bottom: 0;
-      padding-bottom: 0;
+        display: block;
+
+        .license-icon {
+            margin-top: 2em;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
-  }
 
-  .emphasize {
-    @include emphasize();
-  }
+    .emphasize {
+        @include emphasize;
+    }
 }

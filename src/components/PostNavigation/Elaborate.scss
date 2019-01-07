@@ -2,138 +2,139 @@
 
 $background-static-state: $background;
 
-@mixin post() {
-  background-size: cover;
-  background-position: center;
-  background-color: $background;
+@mixin post {
+    background-size: cover;
+    background-position: center;
+    background-color: $background;
 }
 
 .post-navigation.elaborate {
-  display: flex;
+    display: flex;
 
-  .nav {
-    cursor: pointer; 
-    
-    &.previous {
-      @include post();
-      flex: 1;
+    .nav {
+        cursor: pointer;
 
-      .post-metadata p,
-      .tags {
-        text-align: left;
-      }
-    }
+        &.previous {
+            @include post;
 
-    &.next {
-      @include post();
-      flex: 1;
+            flex: 1;
 
-      .post-metadata p,
-      .tags {
-        text-align: right;
-      }
-    }
+            .post-metadata p,
+            .tags {
+                text-align: left;
+            }
+        }
 
-    &::after {
-      content: "";
-      clear: both;
-      display: block;
-    }
+        &.next {
+            @include post;
 
-    .post {
-      position: relative;
+            flex: 1;
 
-      &:hover {
+            .post-metadata p,
+            .tags {
+                text-align: right;
+            }
+        }
+
         &::after {
-          background-color: $background-darker;
+            content: "";
+            clear: both;
+            display: block;
         }
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        background-color: $background-static-state;
-        opacity: 0.7;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .container {
-        z-index: 1;
-        position: absolute;
-      }
-
-      color: $foreground;
-      background-color: $background-darker;
-      opacity: 1;
-      padding: 2em 3em;
-
-      display:block;
-      width: 100%;
-      max-width: 100%;
-      max-height: 500px;
-      height: 100vh;
-      overflow-y: auto;
-
-      h1 {
-        font-size: 1.5em;
-      }
-  
-      a {
-        color: $foreground;
-      }
-  
-      .tag {
-        background-color: $foreground;
-        color: $background-darker;
-        font-size: 0.7em;
-        padding: 0 1em;
-
-        &:hover {
-          background-color: $secondary;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 841px) and (max-width: 1300px) {
-    & {
-      display :block;
-
-      .nav.next {
-        text-align: right;
-      }
-    }
-  }
-
-  @media screen and (max-width: 840px) {
-    & {
-      display: block;
-
-      .nav {
-        overflow: hidden;
-        max-height: 350px;
 
         .post {
-          padding: 0;
-          
-          h1 {
-            font-size: 1.25em;
-          }
+            position: relative;
 
-          h1 + p {
-            display: none;
-          }
+            &:hover {
+                &::after {
+                    background-color: $background-darker;
+                }
+            }
 
-          .post-metadata p,
-          .post-metadata .tags {
-            text-align: center;
-          }
+            &::after {
+                content: "";
+                display: block;
+                background-color: $background-static-state;
+                opacity: 0.7;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            .container {
+                z-index: 1;
+                position: absolute;
+            }
+
+            color: $foreground;
+            background-color: $background-darker;
+            opacity: 1;
+            padding: 2em 3em;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            max-height: 500px;
+            height: 100vh;
+            overflow-y: auto;
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            a {
+                color: $foreground;
+            }
+
+            .tag {
+                background-color: $foreground;
+                color: $background-darker;
+                font-size: 0.7em;
+                padding: 0 1em;
+
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
         }
-      }
     }
-  }
+
+    @media screen and (min-width: 841px) and (max-width: 1300px) {
+        & {
+            display: block;
+
+            .nav.next {
+                text-align: right;
+            }
+        }
+    }
+
+    @media screen and (max-width: 840px) {
+        & {
+            display: block;
+
+            .nav {
+                overflow: hidden;
+                max-height: 350px;
+
+                .post {
+                    padding: 0;
+
+                    h1 {
+                        font-size: 1.25em;
+                    }
+
+                    h1 + p {
+                        display: none;
+                    }
+
+                    .post-metadata p,
+                    .post-metadata .tags {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }

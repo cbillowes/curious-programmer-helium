@@ -1,27 +1,26 @@
-
 @import "../../layout/layout.scss";
 
 .tags {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  li {
-    list-style: none;
-    display: inline;
-  }
-
-  .tag,
-  &:visited {
-    background-color: $background-lighter;
-    border-radius: $border-radius;
-    color: $foreground;
-    margin: 0.25em;
-    padding: 0.25em 1em;
-    display: inline-block;
-
-    &:hover {
-      background-color: $secondary;
-      color: $background-lighter;
+    li {
+        list-style: none;
+        display: inline;
     }
-  }
+
+    .tag,
+    &:visited {
+        background-color: $background-lighter;
+        border-radius: $border-radius;
+        color: $foreground;
+        margin: 0.25em;
+        padding: 0.25em 1em;
+        display: inline-block;
+
+        &:hover {
+            background-color: $secondary;
+            color: $background-lighter;
+        }
+    }
 }

@@ -19,7 +19,7 @@
     &.with-cover {
         padding: 1em 3em;
         background-color: $background-darker;
-        opacity: 0.8
+        opacity: 0.8;
     }
 
     .serious-highlight {
@@ -40,12 +40,12 @@
     .tags {
         .tag,
         &:visited {
-          background-color: $primary;
-          color: $background-lighter;
+            background-color: $primary;
+            color: $background-lighter;
 
-          &:hover {
-            background-color: $secondary;
-          }
+            &:hover {
+                background-color: $secondary;
+            }
         }
     }
 
@@ -67,7 +67,7 @@
         text-align: center;
         font-size: 2.5em;
 
-        @include small-media() {
+        @include small-media {
             font-size: 2em;
         }
     }
@@ -147,8 +147,8 @@
 
             .tag,
             &:visited {
-              background-color: $background-lighter;
-              color: $foreground;
+                background-color: $background-lighter;
+                color: $foreground;
             }
 
             .tag:hover {
@@ -163,6 +163,7 @@
     .navigation {
         display: none;
     }
+
     .post {
         blockquote,
         pre,
@@ -178,6 +179,7 @@
             display: none;
         }
     }
+
     .post-navigation.elaborate {
         display: none;
     }

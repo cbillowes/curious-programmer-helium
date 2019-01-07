@@ -10,8 +10,9 @@
 
     .tag {
         @include button;
+
         margin: 0.5em;
-        
+
         .xp {
             font-size: 0.75em;
             color: lighten($background, 20%);
@@ -24,6 +25,7 @@
 
     .button {
         @include button;
+
         background-color: $foreground-lighter;
         padding-bottom: 3px;
     }
@@ -33,6 +35,6 @@
     }
 
     .elaborated {
-        display: block; 
+        display: block;
     }
 }

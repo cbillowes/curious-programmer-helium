@@ -1,49 +1,48 @@
 @import "../../layout/layout.scss";
 
 .posts {
-  section {
-    padding: 0 2.5em;
-    max-width: $container-width;
-    margin: 0 auto;
+    section {
+        padding: 0 2.5em;
+        max-width: $container-width;
+        margin: 0 auto;
 
-    &:first-child {
-      padding: 0 2.5em;
-      text-align: center;
+        &:first-child {
+            padding: 0 2.5em;
+            text-align: center;
 
-      &::after {
-        content: "";
-        position: relative;
-      }
+            &::after {
+                content: "";
+                position: relative;
+            }
 
-      h1 {
-        font-size: 3em;
-        color: $primary;
+            h1 {
+                font-size: 3em;
+                color: $primary;
 
-        @include small-media() {
-          font-size: 2em;
+                @include small-media {
+                    font-size: 2em;
+                }
+            }
+
+            .tags {
+                .tag,
+                &:visited {
+                    background-color: $primary;
+                    color: $background-lighter;
+
+                    &:hover {
+                        background-color: $secondary;
+                    }
+                }
+            }
         }
 
-      }
+        a {
+            color: $foreground;
 
-      .tags {
-        .tag,
-        &:visited {
-          background-color: $primary;
-          color: $background-lighter;
-
-          &:hover {
-            background-color: $secondary;
-          }
+            &:hover {
+                color: $secondary;
+            }
         }
-      }
     }
-
-    a {
-      color: $foreground;
-
-      &:hover {
-        color: $secondary;
-      }
-    }
-  }
 }

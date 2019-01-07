@@ -1,48 +1,48 @@
 @import "../../layout/layout.scss";
 
 .post-navigation.compact {
-  font-size: 0.7em;
-  font-family: $font-family-sans-serif;
-  margin-top: 7em;
+    font-size: 0.7em;
+    font-family: $font-family-sans-serif;
+    margin-top: 7em;
 
-  a {
-    color: $foreground;
+    a {
+        color: $foreground;
 
-    &:hover {
-      color: $secondary;
+        &:hover {
+            color: $secondary;
+        }
     }
-  }
 
-  .previous {
-    float: left;
+    .previous {
+        float: left;
 
-    &::before {
-      content: "↩ ";
+        &::before {
+            content: "↩ ";
+        }
     }
-  }
 
-  .next {
-    float: right;
+    .next {
+        float: right;
+
+        &::after {
+            content: " ↪";
+        }
+    }
 
     &::after {
-      content: " ↪";
+        content: "";
+        clear: both;
+        display: block;
     }
-  }
-
-  &::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
 }
 
-@include small-media() {
-  .post-navigation.compact {
-    .next,
-    .previous {
-      display: block;
-      float:none;
-      text-align: right;
+@include small-media {
+    .post-navigation.compact {
+        .next,
+        .previous {
+            display: block;
+            float: none;
+            text-align: right;
+        }
     }
-  }
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
 
 @import "../../third-parties/bootstrap/scss/functions";
@@ -14,181 +15,225 @@
 @import "./variables";
 
 @media screen {
-  *::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  *::-webkit-scrollbar:horizontal {
-    height: 20px;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background-color: $scrollbar-track;
-  }
-  
-  *::-webkit-scrollbar-corner {
-    background-color: $scrollbar-track;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-thumb;
-    min-height: 25px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-    background-color: $background;
-    text-shadow: $text-shadow;
-    color: $foreground;
-    font-size: $font-size;
-    font-family: $font-family-serif;
-    line-height: $line-height;
-    padding: 0;
-    margin: 0;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 800;
-    font-family: $font-family-sans-serif;
-    line-height: 1.5em;
-    text-shadow: $text-shadow;
-  }
-  
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.9em }
-  h3 { font-size: 1.8rem; margin-top: 1em; }
-  h4 { font-size: 1.7rem; }
-  h5 { font-size: 1.6rem; }
-  h6 { font-size: 1.5rem; }
-  h7 { font-weight: bold; }
-
-  @include small-media() {
-    h1 { font-size: 1.6em; }
-    h2 { font-size: 1.5em }
-    h3 { font-size: 1.4em; }
-    h4 { font-size: 1.3rem; }
-    h5 { font-size: 1.2rem; }
-    h6 { font-size: 1.1rem; }
-    h7 { font-weight: bold; }
-  } 
-
-  a {
-    color: $primary;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    text-decoration: none;
-  
-    &:hover,
-    &:visited:hover {
-      color: $secondary;
+    *::-webkit-scrollbar {
+        width: 20px;
     }
-  
-    &:visited {
-      color: $visited;
+
+    *::-webkit-scrollbar:horizontal {
+        height: 20px;
     }
-  }
-  
-  blockquote {
-    border-left: solid 10px $accent;
-    font-style: italic;
-    padding-left: 1.5em;
-  }
-  
-  table {
-    width: 100%;
-    background-color: $table-background;
-  
-    tr {
-      th {
-        padding: 0.75em;
-        background-color: $table-head-background;
-      }
-  
-      td {
-        border-bottom: solid 1px $table-border;
-        padding: 0.75em;
-      }
-  
-      &:hover {
-        td {
-          background-color: $primary;
-          color: $table-hover-text;
+
+    *::-webkit-scrollbar-track {
+        background-color: $scrollbar-track;
+    }
+
+    *::-webkit-scrollbar-corner {
+        background-color: $scrollbar-track;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-thumb;
+        min-height: 25px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-color: $background;
+        text-shadow: $text-shadow;
+        color: $foreground;
+        font-size: $font-size;
+        font-family: $font-family-serif;
+        line-height: $line-height;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 800;
+        font-family: $font-family-sans-serif;
+        line-height: 1.5em;
+        text-shadow: $text-shadow;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.9em;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin-top: 1em;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+
+    h7 {
+        font-weight: bold;
+    }
+
+    @include small-media {
+        h1 {
+            font-size: 1.6em;
         }
-        a {
-          color: $table-hover-link;
-  
-          &:hover {
-            text-decoration: underline;
-          }
+
+        h2 {
+            font-size: 1.5em;
         }
-      }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        h6 {
+            font-size: 1.1rem;
+        }
+
+        h7 {
+            font-weight: bold;
+        }
     }
-  }
-    
-  hr {
-    margin-top: 3em;
-    border-top: solid 2px $background-lighter;
-    border-bottom: solid 1px $background-darker;
-    border-left: transparent;
-    border-right: transparent;
-  }
 
-  .container {
-    max-width: $container-width;
-    margin: 0 auto;
-    padding: 0 1.5em;
-  }
 
-  .for-print {
-    display: none;
-  }
+    a {
+        color: $primary;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        text-decoration: none;
 
-  pre[class*="language-"] {
-    position: relative;
-    padding-top: 3em;
+        &:hover,
+        &:visited:hover {
+            color: $secondary;
+        }
 
-    .stuff {
-      position: absolute; 
-      top: 0;
-      right: 0;
-
-      .language {
-        border-radius:  0 0 0 $border-radius;
-        background-color: $background-darker;
-        display: inline-block;
-        margin-right: 0.5em;
-        padding: 0.25em 0.5em;
-      }
-
-      .copy {
-        border-radius:  0 0 0 $border-radius;
-        background-color: $background-darker;
-        display: inline-block;
-        padding: 0.25em 0.5em;
-        cursor: pointer;
-      }
+        &:visited {
+            color: $visited;
+        }
     }
-  }
+
+    blockquote {
+        border-left: solid 10px $accent;
+        font-style: italic;
+        padding-left: 1.5em;
+    }
+
+    table {
+        width: 100%;
+        background-color: $table-background;
+
+        tr {
+            th {
+                padding: 0.75em;
+                background-color: $table-head-background;
+            }
+
+            td {
+                border-bottom: solid 1px $table-border;
+                padding: 0.75em;
+            }
+
+            &:hover {
+                td {
+                    background-color: $primary;
+                    color: $table-hover-text;
+                }
+
+                a {
+                    color: $table-hover-link;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        margin-top: 3em;
+        border-top: solid 2px $background-lighter;
+        border-bottom: solid 1px $background-darker;
+        border-left: transparent;
+        border-right: transparent;
+    }
+
+    .container {
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 0 1.5em;
+    }
+
+    .for-print {
+        display: none;
+    }
+
+    pre[class*="language-"] {
+        position: relative;
+        padding-top: 3em;
+
+        .stuff {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .language {
+                border-radius: 0 0 0 $border-radius;
+                background-color: $background-darker;
+                display: inline-block;
+                margin-right: 0.5em;
+                padding: 0.25em 0.5em;
+            }
+
+            .copy {
+                border-radius: 0 0 0 $border-radius;
+                background-color: $background-darker;
+                display: inline-block;
+                padding: 0.25em 0.5em;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 @media print {
-  body {
-    line-height: 1.5em;
-  }
-  .not-for-print {
-    display: none;
-  }
+    body {
+        line-height: 1.5em;
+    }
+
+    .not-for-print {
+        display: none;
+    }
 }

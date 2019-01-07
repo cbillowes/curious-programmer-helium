@@ -1,21 +1,21 @@
 @import "../layout/layout.scss";
 
 .credits-container {
-  .credit {
-    margin-bottom: 1.5em;
+    .credit {
+        margin-bottom: 1.5em;
 
-    a {
-      border-radius: $border-radius;
-      background-color: $primary;
-      color: $background-lighter;
-      padding: 0.5em 1em;
-      font-size: 0.8em;
-      margin-left: 1em;
+        a {
+            border-radius: $border-radius;
+            background-color: $primary;
+            color: $background-lighter;
+            padding: 0.5em 1em;
+            font-size: 0.8em;
+            margin-left: 1em;
 
-      &:hover {
-        background-color: $background-lighter;
-        color: $foreground;
-      }
+            &:hover {
+                background-color: $background-lighter;
+                color: $foreground;
+            }
+        }
     }
-  }
 }
