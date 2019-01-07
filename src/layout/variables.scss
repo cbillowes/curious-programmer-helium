@@ -13,8 +13,8 @@ $text-shadow: 1px 1px 1px $background-darker;
 $line-height: $font-size * 2;
 $font-family-serif: $font-family-base;
 
-$font-family-serif: 'Lora', 'Times New Roman', serif;
-$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: "Lora", "Times New Roman", serif;
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $primary: $green;
 $secondary: $yellow;
@@ -42,45 +42,45 @@ $table-border: $background;
 $table-hover-text: lighten($background, 5%);
 $table-hover-link: darken($foreground, 40%);
 
-@mixin button() {
-  background-color: $primary;
-  color: $background-darker;
-  padding: 0 0.5em;
-  display: inline-block;
-  border-radius: 4px;
-  line-height: 1.75em;
-  cursor: pointer;
+@mixin button {
+    background-color: $primary;
+    color: $background-darker;
+    padding: 0 0.5em;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 1.75em;
+    cursor: pointer;
 
-  &:hover {
-    background-color: $secondary;
-  }
+    &:hover {
+        background-color: $secondary;
+    }
 }
 
-@mixin small-media() {
-  @media screen and (max-width: 800px) {
-    @content;
-  }
+@mixin small-media {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
 }
 
-@mixin highlighted-section() {
-  background-color: $background-darker;
-  padding: 1em 3em 2em 3em;
+@mixin highlighted-section {
+    background-color: $background-darker;
+    padding: 1em 3em 2em 3em;
 }
 
-@mixin media-query-sm() {
-  @media screen and (min-width: 0px) and (max-width: 840px) {
-    @content;
-  }
+@mixin media-query-sm {
+    @media screen and (min-width: 0px) and (max-width: 840px) {
+        @content;
+    }
 }
 
-@mixin media-query-md() {
-  @media screen and (min-width: 841px) and (max-width: 1200px) {
-    @content;
-  }
+@mixin media-query-md {
+    @media screen and (min-width: 841px) and (max-width: 1200px) {
+        @content;
+    }
 }
 
-@mixin media-query-lg() {
-  @media screen and (min-width: 1201px) {
-    @content;
-  }
+@mixin media-query-lg {
+    @media screen and (min-width: 1201px) {
+        @content;
+    }
 }
