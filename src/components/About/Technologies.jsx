@@ -55,7 +55,7 @@ class Technologies extends Component {
 
     return (
       <div className="technologies">
-        {toptal.map(item => (
+        {toptal.map((item) => (
           <span key={`technologies-${_.kebabCase(item.name.toLowerCase())}`} className={`tag ${item.current ? "current" : ""}`}>
             {item.name}
             <span className="xp">{this.getXP(item.xp, item.start)}</span>
@@ -67,7 +67,7 @@ class Technologies extends Component {
         <div
           className={`elaborate ${this.isElaborate() ? "elaborated" : ""}`}
         >
-          {hidden.map(item => (
+          {hidden.map((item) => (
             <span key={`technologies-${_.kebabCase(item.name.toLowerCase())}`} className={`tag ${item.current ? "current" : ""}`}>
               {item.name}
               <span className="xp">{this.getXP(item.xp, item.start)}</span>

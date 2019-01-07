@@ -25,7 +25,7 @@ class Accordion extends Component {
     let accordion = document.getElementById("accordion")
     accordion.appendChild(nodes.introduction)
 
-    nodes.cards.forEach(node => {
+    nodes.cards.forEach((node) => {
       let card = document.createElement("div")
       let heading = document.createElement("div")
       let cardContainer = document.createElement("div")
@@ -46,7 +46,7 @@ class Accordion extends Component {
     })
     this.removeAnchors()
 
-    document.querySelectorAll("#accordion h2").forEach(element => {
+    document.querySelectorAll("#accordion h2").forEach((element) => {
       element.onclick = function() {
         let card = element.parentElement.parentElement
         let collapse = card.children[1]

@@ -34,14 +34,14 @@ class Metadata extends Component {
     return config.siteTitle
   }
 
-  getDescription = description => {
+  getDescription = (description) => {
     if (description) {
       return description
     }
     return config.siteDescription
   }
 
-  getImageUrl = images => {
+  getImageUrl = (images) => {
     if (images) {
       const image = (images.cover) ? images.cover : config.siteLogo
       if (image.startsWith("http")) {
@@ -64,7 +64,7 @@ class Metadata extends Component {
     return pageUrl
   }
 
-  getType = slug => {
+  getType = (slug) => {
     if (slug && slug.indexOf("/blog/")) {
       return "article"
     }
@@ -108,7 +108,7 @@ class Metadata extends Component {
 
 function getNavigationItem(slug) {
   let navigationItem = navigation[0]
-  navigation.map(item => {
+  navigation.map((item) => {
     if (slug.indexOf(item.url) > -1) {
       navigationItem = item
     }

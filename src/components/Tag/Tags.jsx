@@ -9,7 +9,7 @@ class Tags extends Component {
 
     return (
       <ul className="tags">
-        {tags.map(tag => {
+        {tags.map((tag) => {
           return <li key={`tags-${_.kebabCase(tag)}`}>
             <Tag to={`/tags/${_.kebabCase(tag)}`}>{tag}</Tag>
           </li>

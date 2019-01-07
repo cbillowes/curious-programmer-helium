@@ -8,8 +8,8 @@ import {
 class GooglePlus extends Component {
   render() {
     const { url, size } = this.props
-    const filter = count => (count > 0 ? count : "")
-    const renderShareCount = count => (
+    const filter = (count) => (count > 0 ? count : "")
+    const renderShareCount = (count) => (
       <div className="share-count">{filter(count)}</div>
     )
 

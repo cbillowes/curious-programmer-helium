@@ -16,8 +16,8 @@ class TagsPage extends Component {
 
   getTags = () => {
     let data = this.props.data.allMarkdownRemark.edges
-      .map(item => item.node.frontmatter)
-      .map(item => item.tags)
+      .map((item) => item.node.frontmatter)
+      .map((item) => item.tags)
     let tagCollection = data.map(item => (!item ? [] : item))
     let tags = []
     for (let i = 0; i < tagCollection.length; i++) {

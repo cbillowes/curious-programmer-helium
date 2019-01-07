@@ -7,7 +7,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
-        {socialLinks.contact.map(item => {
+        {socialLinks.contact.map((item) => {
           return (
             <Link
               key={`contact-${item.icon}`}

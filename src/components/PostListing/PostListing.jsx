@@ -5,7 +5,7 @@ import "./PostListing.scss"
 class PostListing extends React.Component {
   getPostList() {
     const postList = []
-    this.props.postEdges.forEach(postEdge => {
+    this.props.postEdges.forEach((postEdge) => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -22,7 +22,7 @@ class PostListing extends React.Component {
     const list = this.getPostList()
     return (
       <div className="posts">
-        {list.map(post => {
+        {list.map((post) => {
           return (
             <section key={`post-${post.path}`}>
               <a href={post.path}>

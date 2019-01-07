@@ -90,7 +90,7 @@ export default class PostTemplate extends React.Component {
     enableGifPlayback()
   }
 
-  getPostItem = node => {
+  getPostItem = (node) => {
     return {
       title: node.frontmatter.title,
       slug: node.fields.slug,

@@ -59,7 +59,7 @@ class SearchBar extends Component {
     }
   }
 
-  query = e => {
+  query = (e) => {
     let query = this.searchQuery.current.value
     if (query.length > 4 || e.keyCode === 13) {
       if (query !== this.state.query) {
@@ -72,15 +72,15 @@ class SearchBar extends Component {
     }
   }
 
-  search = query => {
+  search = (query) => {
     fetch(
       `https://curiousprogrammer.tk/solr/oxygen/select?q=text:${encodeURIComponent(
         query
       )}&fl=url,title&rows=20&wt=json`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        result => {
+        (result) => {
           let results = []
           if (result.response) {
             results = result.response.docs
@@ -91,7 +91,7 @@ class SearchBar extends Component {
             results: results
           })
         },
-        error => {
+        (error) => {
           this.setState({
             loaded: true,
             error: error

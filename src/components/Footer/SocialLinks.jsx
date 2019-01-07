@@ -9,7 +9,7 @@ class License extends Component {
 
     return (
       <ul className="social-links-footer">
-        {links.map(item => {
+        {links.map((item) => {
           return (
             <li key={`social-links-footer-${item.icon}`} className="link">
               <ExternalLink

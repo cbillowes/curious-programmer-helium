@@ -23,7 +23,7 @@ class Menubar extends Component {
     }
   }
 
-  isSelected = url => {
+  isSelected = (url) => {
     return this.getRootUrl() === url ? "selected" : ""
   }
 
@@ -34,7 +34,7 @@ class Menubar extends Component {
         onClick={this.props.toggle.bind(this)}
       >
         <ul>
-          {navigation.map(item => {
+          {navigation.map((item) => {
             return (
               <li
                 key={`menubar-${item.url}`}

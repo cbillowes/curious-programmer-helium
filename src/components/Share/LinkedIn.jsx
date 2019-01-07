@@ -8,8 +8,8 @@ import {
 class LinkedIn extends Component {
   render() {
     const { url, title, description, size } = this.props
-    const filter = count => (count > 0 ? count : "")
-    const renderShareCount = count => (
+    const filter = (count) => (count > 0 ? count : "")
+    const renderShareCount = (count) => (
       <div className="share-count">{filter(count)}</div>
     )
 
