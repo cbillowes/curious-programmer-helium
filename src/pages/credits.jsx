@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "gatsby-link"
 import Layout from "../layout";
 import Metadata from "../components/Metadata/Page/Metadata";
 import External from "../components/Link/ExternalLink"
@@ -79,6 +80,8 @@ class CreditsPage extends Component {
           <section>
             <h1>Icons</h1>
 
+            <h2>Menu bar icons</h2>
+
             <Credit
               to="https://www.flaticon.com/free-icon/musica-searcher_70376"
               title="Egor Rumyantsev"
@@ -92,49 +95,29 @@ class CreditsPage extends Component {
             >
               Menu free icon
             </Credit>
+            <p>
+              Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
+              <br />
+              Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
 
-            <Credit
-              to="https://www.flaticon.com/free-icon/github_1051275"
-              title="Freepik"
-            >
-              Github free icon
-            </Credit>
+            <h2>Contact me icons</h2>
 
+            <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
             <Credit
-              to="https://www.flaticon.com/free-icon/twitter_185961"
-              title="Freepik"
+              to="https://www.flaticon.com"
+              title="flaticon"
             >
-              Twitter free icon
-            </Credit>
-
-            <Credit
-              to="https://www.flaticon.com/free-icon/linkedin_185964"
-              title="Freepik"
-            >
-              LinkedIn free icon
+              Pixel perfect icons
             </Credit>
 
-            <Credit
-              to="https://www.flaticon.com/free-icon/gmail_270021"
-              title="Freepik"
-            >
-              Gmail free icon
-            </Credit>
-            <Credit
-              to="https://www.svgrepo.com/svg/95294/rss"
-              title="SVG Repo"
-            >
-              Rss SVG Vector 
-            </Credit>
-            <Credit
-              to="https://www.iconfinder.com/icons/287623/stackoverflow_icon"
-              title="Icon Finder"
-            >
-              Stackoverflow icon based on <External to="https://www.iconfinder.com/iconsets/miu-gloss-social">Miu Gloss Social</External> set
-            </Credit>
-            <div>Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>
-            <div>Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>
-            <div>Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>
+            <ul>
+              <li><Link to="https://www.flaticon.com/free-icon/gmail_732200">Gmail</Link></li>
+              <li><Link to="https://www.flaticon.com/free-icon/rss_733569">RSS</Link></li>
+              <li><Link to="https://www.flaticon.com/free-icon/twitter_733579">Twitter</Link></li>
+              <li><Link to="https://www.flaticon.com/free-icon/overflowing_732248">StackOverflow</Link></li>
+              <li><Link to="https://www.flaticon.com/free-icon/github_733609">GitHub</Link></li>
+              <li><Link to="https://www.flaticon.com/free-icon/linkedin_733561">LinkedIn</Link></li>
+            </ul>
           </section>
           <section>
             <h1>Photography</h1>
@@ -160,7 +143,7 @@ class CreditsPage extends Component {
               Convert your images to Base64.
             </Credit>
             <Credit to="http://vectorpaint.yaks.co.nz/" title="Vector Paint">
-              SVG editor: Create unique artwork with shapes, color gradients and layers. Use Vector Paint for posters, web graphics or diagrams. 
+              SVG editor: Create unique artwork with shapes, color gradients and layers. Use Vector Paint for posters, web graphics or diagrams.
             </Credit>
             <Credit to="https://editor.method.ac" title="Method draw">
               SVG editor: Edit and save images.
