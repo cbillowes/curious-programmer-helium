@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Link from "gatsby-link"
 import Layout from "../layout";
 import Metadata from "../components/Metadata/Page/Metadata";
-import External from "../components/Link/ExternalLink"
 import Credit from "../components/Credit/Credit"
 import "./credits.scss"
 
@@ -74,13 +73,19 @@ class CreditsPage extends Component {
               to="https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/"
               title="gatsby-remark-embed-youtube"
             >
-              Embed a Youtube Videos in markdown.
+              Embed a YouTube Videos in markdown.
+            </Credit>
+            <Credit
+              to="https://gist.github.com/oliveratgithub/0bf11a9aff0d6da7b46f1490f86a71eb"
+              title="oliveratgithub/emojis.json"
+            >
+              Emoji-list with emojis, names, shortcodes, unicode and html entities [massive list]
             </Credit>
           </section>
           <section>
             <h1>Icons</h1>
 
-            <h2>Menu bar icons</h2>
+            <h2>Menu bar</h2>
 
             <Credit
               to="https://www.flaticon.com/free-icon/musica-searcher_70376"
@@ -100,7 +105,7 @@ class CreditsPage extends Component {
               <br />
               Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
 
-            <h2>Contact me icons</h2>
+            <h2>Contact me</h2>
 
             <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
             <Credit
