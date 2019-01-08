@@ -4,6 +4,8 @@ socialCover: images/social-covers/2018-10-20-shell.png
 date:   2018-10-20 18:30:03 +0200
 tags:
     - Technical
+    - Fedora
+    - Linux
 ---
 
 I had to [re-install](/blog/setting-up-my-environment-in-fedora) so I documented my process.
@@ -14,16 +16,16 @@ In this post, I focus on configuring my shell for a personalized experience.
 ## Install Oh My Zsh
 
 zsh is an interactive shell with many [features](https://github.com/hmml/awesome-zsh)
-that improve the command line experience. Oh My Zsh is a very popular plugin framework for zsh 
+that improve the command line experience. Oh My Zsh is a very popular plugin framework for zsh
 which comes with its own set of plugins and themes.
 
-zsh installation [instructions](https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e) are simple. 
+zsh installation [instructions](https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e) are simple.
 Below are the Red Hat-based linux system instructions.
 
 ```bash
 sudo yum upgrade
 sudo yum install zsh
-zsh --version 
+zsh --version
 which zsh
 ```
 
@@ -37,7 +39,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 ## Install the `powerlevel9k` theme
 
-I love this [theme](https://github.com/bhilburn/powerlevel9k). All you have to do is clone the repo 
+I love this [theme](https://github.com/bhilburn/powerlevel9k). All you have to do is clone the repo
 to your `.oh-my-zsh` custom themes directory and edit the `~/.zshrc` file.
 
 ```bash
@@ -73,13 +75,13 @@ fc-cache -fv ~/.fonts
 ```
 
 ```bash
-vim config/10-symbols.conf 
-# PragmataPro => choose a filename from the .build directory. 
+vim config/10-symbols.conf
+# PragmataPro => choose a filename from the .build directory.
 # I chose fontawesome-regular.
 ```
 
 ```bash
-cp config/10-symbols.conf ~/.config/fontconfig/conf.d 
+cp config/10-symbols.conf ~/.config/fontconfig/conf.d
 # You may need to create this directory
 ```
 

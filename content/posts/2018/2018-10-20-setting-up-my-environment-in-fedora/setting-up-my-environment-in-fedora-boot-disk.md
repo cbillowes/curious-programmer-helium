@@ -4,6 +4,7 @@ socialCover: 2018-10-20-usb-flash-drive.png
 date:   2018-10-20 18:30:02 +0200
 tags:
     - Technical
+    - Linux
     - Fedora
 ---
 
@@ -14,7 +15,7 @@ so that I can begin the installation process.
 ---
 
 **Note:** I am using a Lenovo Ideapad 330. When the logo appears on boot I need to enter the BIOS
-using the `F2` key. In order to boot from USB I need to enable legacy boot and move the 
+using the `F2` key. In order to boot from USB I need to enable legacy boot and move the
 USB boot option to the top of the list.
 
 I used the `dd` command to convert and copy the ISO to the USB drive.
@@ -44,6 +45,6 @@ dd if=/path/to/Fedora-Workstation-Live-x86_64-28-1.1.iso of=/dev/sdc
 * **if = input file** - read from file instead of stdin
 * **of = output file** - write to file instead of stdin
 
-Note that there are other methods to create live installation images in the 
-[terminal](http://www.linux-databook.info/?page_id=4074) and the 
+Note that there are other methods to create live installation images in the
+[terminal](http://www.linux-databook.info/?page_id=4074) and the
 [GUI](https://fedoramagazine.org/make-fedora-usb-stick/).

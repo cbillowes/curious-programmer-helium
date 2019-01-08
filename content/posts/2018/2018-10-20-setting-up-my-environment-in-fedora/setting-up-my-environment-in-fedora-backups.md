@@ -4,19 +4,20 @@ socialCover: images/social-covers/2018-10-20-backups.png
 date:   2018-10-20 18:30:01 +0200
 tags:
     - Technical
+    - Linux
     - Fedora
 ---
 
 I had to [re-install](/blog/setting-up-my-environment-in-fedora) so I documented my process.
-In this post, I focus on getting my data backed up so that I can restore it after the 
+In this post, I focus on getting my data backed up so that I can restore it after the
 installation.
 
 ---
 
 Whatever isn't in git gets archived. This is mainly my home directory.
-I want it backed up to my VM at [CloudAfrica](https://www.cloudafrica.net/) 
-and to my external HDD. If I have learned anything in this process it is that my SSH keys are 
-the most vital piece of bits that I own and that I need one copy in a *safe* location. 
+I want it backed up to my VM at [CloudAfrica](https://www.cloudafrica.net/)
+and to my external HDD. If I have learned anything in this process it is that my SSH keys are
+the most vital piece of bits that I own and that I need one copy in a *safe* location.
 *Whatever safe means in this world.*
 
 ## Archive
@@ -42,7 +43,7 @@ rsync -avzh <username>@<host>:/path/to/copy/to/<archive>.tar.gz /path/to/copy/fr
 * -z, --compress
 * -h, --human-readable
 
-*I had a few permissions hiccups trying to tar my home directory so I took extra 
+*I had a few permissions hiccups trying to tar my home directory so I took extra
 [steps](/blog/setting-up-my-environment-in-fedora) to tackle these problems.*
 
 ## Remote Git Repository
@@ -52,7 +53,7 @@ I followed these [instructions](https://git-scm.com/book/en/v2/Git-on-the-Server
 to get set up.
 
 Create a `git` user and allow `ssh` access to authorized users. On the local machine copy the public key
-`cat ~/.ssh/id_rsa.pub` (or whichever public key you use) and paste it into `.ssh/authorized_keys` after it 
+`cat ~/.ssh/id_rsa.pub` (or whichever public key you use) and paste it into `.ssh/authorized_keys` after it
 has been created.
 
 ```bash
@@ -83,14 +84,14 @@ git remote add origin git@<host>:/srv/git/project.git
 git push origin master
 ```
 
-*If you have problems pushing, check that the directory permissions are not assigned to root `ls -lah`. 
+*If you have problems pushing, check that the directory permissions are not assigned to root `ls -lah`.
 Assign the files and folders to git using `sudo chown git *`*
 
 ## Global save-to-git script
 
-Let's take a practical example: I want to store my [Gnote](https://wiki.gnome.org/Apps/Gnote) notes to my remote repository. 
+Let's take a practical example: I want to store my [Gnote](https://wiki.gnome.org/Apps/Gnote) notes to my remote repository.
 
-1. Create a bash script `save-gnote` and add it to git. Make it add all 
+1. Create a bash script `save-gnote` and add it to git. Make it add all
 unstaged files in the gnote directory and commit them using a timestamp in the commit message then push to origin.
 
 ```bash

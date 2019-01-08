@@ -4,6 +4,8 @@ socialCover: images/social-covers/2018-10-20-apps.png
 date:   2018-10-20 18:30:04 +0200
 tags:
     - Technical
+    - Fedora
+    - Linux
 ---
 
 I had to [re-install](/blog/setting-up-my-environment-in-fedora) so I documented my process.
@@ -13,8 +15,8 @@ In this post, I focus on the installation of my most used apps.
 
 ## Get `dnf` ready
 
-`dnf` is [Dandified YUM](https://en.wikipedia.org/wiki/DNF_(software)), a `.rpm`-based distribution package manager. 
-To speed up the upgrade download times, try using 
+`dnf` is [Dandified YUM](https://en.wikipedia.org/wiki/DNF_(software)), a `.rpm`-based distribution package manager.
+To speed up the upgrade download times, try using
 [fastest mirror](https://ask.fedoraproject.org/en/question/7960/how-to-choose-a-specific-mirror-source/?answer=16346#post-id-16346).
 
 ```bash
@@ -57,7 +59,7 @@ And don't forget to restart your IDE.
 
 #### No nREPL ack received
 
-The REPL is taking too long to connect and the timeout set in IntelliJ might be too low. 
+The REPL is taking too long to connect and the timeout set in IntelliJ might be too low.
 
 `Settings -> Languages & Frameworks -> Clojure -> REPL startup timeout`
 
@@ -87,13 +89,13 @@ To get the latest version of nodejs (v.10.x):
 sudo dnf remove nodejs
 curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum -y install nodejs
-node --version 
-which node 
+node --version
+which node
 ```
 
 ### Leiningen
 
-[Leiningen](https://leiningen.org/) is the easiest way to use Clojure. 
+[Leiningen](https://leiningen.org/) is the easiest way to use Clojure.
 Leiningen and Clojure rquire Java. OpenJDK version 8 is recommended at this time.
 
 ```bash
@@ -105,7 +107,7 @@ lein
 
 ### Gatsby
 
-I use Gatsby for my blog so I need to install it to build, test and deploy my website. 
+I use Gatsby for my blog so I need to install it to build, test and deploy my website.
 
 ```bash
 sudo npm install --global gatsby-cli
