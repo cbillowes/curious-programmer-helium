@@ -52,7 +52,6 @@
     a.anchor {
         svg {
             border-radius: $border-radius;
-            border: solid 1px $gray-700;
             fill: $gray-600;
             float: left;
             height: 1em;
@@ -83,8 +82,10 @@
     span,
     li {
         code {
+            margin-bottom: 10px;
             padding: 0.5em 0.25em;
             background-color: $background-lighter;
+            display: inline-block;
         }
     }
 
