@@ -68,12 +68,12 @@ $background-static-state: $background;
             .container {
                 z-index: 1;
                 position: absolute;
+                padding: 2em 3em;
             }
 
             color: $foreground;
             background-color: $background-darker;
             opacity: 1;
-            padding: 2em 3em;
             display: block;
             width: 100%;
             max-width: 100%;
@@ -96,7 +96,7 @@ $background-static-state: $background;
                 padding: 0 1em;
 
                 &:hover {
-                    background-color: $secondary;
+                    background-color: $primary;
                 }
             }
         }
