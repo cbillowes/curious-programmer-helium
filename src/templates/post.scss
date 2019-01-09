@@ -37,6 +37,7 @@
         }
     }
 
+    //TODO: there is duplication with the tag styles. fix them
     .tags {
         .tag,
         &:visited {
@@ -44,7 +45,8 @@
             color: $background-lighter;
 
             &:hover {
-                background-color: $secondary;
+                background-color: $background-lighter;
+                color: $foreground;
             }
         }
     }

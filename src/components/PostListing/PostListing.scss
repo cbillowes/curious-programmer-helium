@@ -17,10 +17,13 @@
 
             h1 {
                 font-size: 3em;
-                color: $primary;
 
                 @include small-media {
                     font-size: 2em;
+                }
+
+                &:hover {
+                    color: $primary;
                 }
             }
 
@@ -31,7 +34,8 @@
                     color: $background-lighter;
 
                     &:hover {
-                        background-color: $secondary;
+                        background-color: $background-lighter;
+                        color: $foreground;
                     }
                 }
             }
