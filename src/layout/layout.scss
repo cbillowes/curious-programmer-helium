@@ -33,6 +33,22 @@
     *::-webkit-scrollbar-thumb {
         background-color: $scrollbar-thumb;
         min-height: 25px;
+        border: solid 3px darken($blue, 20%);
+        border-radius: 25px;
+   }
+
+    *::-webkit-scrollbar-thumb:horizontal {
+        background: -moz-linear-gradient(top, $blue 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(top, $blue 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, $blue 0%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr='#00000000',GradientType=0 );
+    }
+
+    *::-webkit-scrollbar-thumb:vertical {
+        background: -moz-linear-gradient(left, $blue 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(left, $blue 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to right, $blue 0%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr='#00000000',GradientType=1 );
     }
 
     * {

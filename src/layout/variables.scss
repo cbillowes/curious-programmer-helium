@@ -32,8 +32,8 @@ $foreground-serious-highlight: #cc0000;
 $foreground-serious-highlight-anchor: $background;
 $foreground-serious-highlight-anchor-visited: lighten($background, 20%);
 
-$scrollbar-track: lighten($background, 5%);
-$scrollbar-thumb: lighten($background, 15%);
+$scrollbar-track: lighten($background, 15%);
+$scrollbar-thumb: $blue;
 $visited: lighten($secondary, 10%);
 
 $table-background: darken($background, 5%);
