@@ -151,11 +151,11 @@
 
         &:hover,
         &:visited:hover {
-            color: $secondary;
+            color: $blue;
         }
 
         &:visited {
-            color: $visited;
+            color: darken($primary, 10%);
         }
     }
 
