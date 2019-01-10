@@ -78,7 +78,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "develop": "npm run clean && gatsby develop --port 8002",
+    "develop": "npm run clean && gatsby develop --verbose --port 8002 --host localhost",
     "dev": "npm run develop",
     "serve": "gatsby serve",
     "build": "gatsby build",
