@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "Curious Programmer", // Site title.
   siteTitleShort: "{}", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Curious Programmer", // Alternative site title for SEO.
-  siteLogo: "/logos/64x64.png", // Logo used for SEO and manifest.
+  siteLogo: "/logos/logo.png", // Logo used for SEO and manifest.
   siteUrl: "https://curiousprogrammer.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   blogPostDir: "posts", // The name of directory that contains your posts.
