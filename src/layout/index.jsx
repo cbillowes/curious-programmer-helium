@@ -9,27 +9,33 @@ export default class MainLayout extends React.Component {
     $("pre").each(function () {
       let stuff = $("<div />").addClass("stuff")
       const language = $("<div />").addClass("language")
-      const copy = $("<div />").addClass("copy").text("Copy")
-      stuff.append(language).append(copy)
+      const copy = $("<div />").addClass("copy").text("copy")
 
       const element = $(this)
       const lang = element.attr("class").replace(/language\-/i, "")
-      element.append(stuff)
-      element.find(".language").text(lang)
-      element.find(".copy").click(function () {
-        const text = $(this).parent().parent().text()
-        const copy = $(this)
-        copyToClipboard(text, lang)
-        copy.text("Copied!")
-        setTimeout(function() {
-          copy.text("Copy")
-        }, 2500)
-      })
+      if (lang === "extract" || lang === "example") {
+        stuff.append(language)
+        element.append(stuff)
+        element.find(".language").text(lang)
+      } else {
+        language.text(lang)
+        stuff.addClass("stuff").append(language).append(copy)
+        element.append(stuff)
+        element.find(".copy").click(function () {
+          const text = $(this).parent().parent().text()
+          const copy = $(this)
+          copyToClipboard(text, lang)
+          copy.text("copied!")
+          setTimeout(function() {
+            copy.text("copy")
+          }, 2500)
+        })
+      }
     })
 
     const copyToClipboard = (str, language) => {
       const el = document.createElement("textarea")
-      el.value = str.replace(/<br\/>/gi, "\n").replace(/Copied!/gi, "").replace(language, "")
+      el.value = str.replace(/<br\/>/gi, "\n").replace(/copied!/gi, "").replace(language, "")
       document.body.appendChild(el)
       el.select()
       document.execCommand("copy")
