@@ -35,7 +35,11 @@ export default class MainLayout extends React.Component {
 
     const copyToClipboard = (str, language) => {
       const el = document.createElement("textarea")
-      el.value = str.replace(/<br\/>/gi, "\n").replace(/copied!/gi, "").replace(language, "")
+      el.value = str
+        .replace(/<br\/>/gi, "\n")
+        .replace(/copied!/gi, "")
+        .replace(/copy/gi, "")
+        .replace(language, "")
       document.body.appendChild(el)
       el.select()
       document.execCommand("copy")
