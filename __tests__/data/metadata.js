@@ -28,23 +28,11 @@ function expectDescription(description, helmet, schema) {
   expect(schema.indexOf(`"description":"${description}"`)).toBeGreaterThan(-1)
 }
 
-function expectImage(image, slug, helmet, schema) {
-  const imageUrl = getImage(image, slug)
-  expect(getMetadataTagFromHelmet(helmet, "image").content).toEqual(imageUrl)
-  expect(getMetadataTagFromHelmet(helmet, "og:image").content).toEqual(imageUrl)
-  expect(schema.indexOf(`"image":"${imageUrl}"`)).toBeGreaterThan(-1)
-  expect(schema.indexOf(`"@type":"ImageObject","url":"${imageUrl}"`)).toBeGreaterThan(-1)
-}
-
-function getImage(image, slug) {
-  if (image.startsWith("http")) {
-    return image
-  }
-  if (image.indexOf(config.siteLogo) === -1) {
-    const imageUrl = url(slug, image)
-    return config.siteUrl + Path.normalize(imageUrl)
-  }
-  return url(config.siteUrl, config.siteLogo)
+function expectImage(image, helmet, schema) {
+  expect(getMetadataTagFromHelmet(helmet, "image").content).toEqual(image)
+  expect(getMetadataTagFromHelmet(helmet, "og:image").content).toEqual(image)
+  expect(schema.indexOf(`"image":"${image}"`)).toBeGreaterThan(-1)
+  expect(schema.indexOf(`"@type":"ImageObject","url":"${image}"`)).toBeGreaterThan(-1)
 }
 
 module.exports = {
@@ -80,15 +68,11 @@ module.exports = {
     })
 
     it("image", () => {
-      expectImage(expected.image, expected.slug, helmet, schema)
+      expectImage(expected.image, helmet, schema)
     })
   },
 
-  expectImage: function (image, slug, helmet, schema) {
-    expectImage(image, slug, helmet, schema)
-  },
-
-  getImage: function (image, slug) {
-    return getImage(image, slug)
+  expectImage: function (image, helmet, schema) {
+    expectImage(image, helmet, schema)
   }
 }

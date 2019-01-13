@@ -1,6 +1,6 @@
 ---
 title: "Logging to Graylog in Clojure"
-socialCover: images/social-covers/2018-11-30-graylog.png
+ogImage: images/og-images/2018-11-30-graylog.png
 date:   2018-11-30 21:30:00 +0200
 tags:
     - Technical
@@ -15,7 +15,7 @@ Here's what I did to complete my mission.
 
 ## Graylog
 Go to **System > Inputs > Gelf UDP / TCP > Launch new input**.
-By default that input will be created on port **12201**. 
+By default that input will be created on port **12201**.
 
 ## Using Timbre
 Add `[com.taoensso/timbre "4.10.0"]` to your project file.
@@ -41,7 +41,7 @@ In the middleware or where you configure your logging on startup, add this confi
        :appenders    {:println (appenders/println-appender)
                       :spit    (appenders/spit-appender {:fname "log/wildfire.log" :append? true})
                       :gelf    (gelf/gelf-appender "graylog.example.com" 12201 :udp)}})))
-```                      
+```
 
 ## Using Logstash Gelf
 
@@ -49,7 +49,7 @@ I chose to give [mp911de/logstash-gelf](https://github.com/mp911de/logstash-gelf
 
 Add a Gelf dependency to your project file `[biz.paluch.logging/logstash-gelf "1.12.0"]`
 
-Edit the configuration file: **env > [dev | prod] > resources > logback.xml** with the configuration for 
+Edit the configuration file: **env > [dev | prod] > resources > logback.xml** with the configuration for
 that Gelf dependency.
 
 ```xml
@@ -74,18 +74,18 @@ that Gelf dependency.
 
 ## Things that went wrong
 
-* **I was using the wrong Graylog input**: 
+* **I was using the wrong Graylog input**:
   I had setup a Syslog input on port **1514**.
   I was connecting to that instead of a Gelf input configured in Graylog.
 
 * **The Gelf reference did not exist in my project**:
   With Timbre working, I knew I was on the right track. Something was wrong with logback.
-  An old appender existed in the configuration file and the namespace for that class was not 
+  An old appender existed in the configuration file and the namespace for that class was not
   referenced in the project. I found [mp911de/logstash-gelf](https://github.com/mp911de/logstash-gelf),
   updated my project.clj and it still didn't work.
 
 * **The configuration was invalid**:
   RTFM! I updated the configuration to use the properties defined in the spec and it worked.
 
-I am so new to configuring logging in Clojure that I confused myself silly. At least I now have a 
+I am so new to configuring logging in Clojure that I confused myself silly. At least I now have a
 working implementation that makes me happy.

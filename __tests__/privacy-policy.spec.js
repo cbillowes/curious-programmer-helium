@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { mount } from "enzyme"
+import url from "url-join"
 import Page from "../src/pages/privacy-policy"
 import config from "../data/SiteConfig"
 import metadata from "./data/metadata"
@@ -14,7 +15,7 @@ describe("the privacy policy page", () => {
       title: "Privacy Policy",
       slug: "/privacy-policy",
       description: config.siteDescription,
-      image: config.siteLogo
+      image: url(config.siteUrl, config.siteLogo)
     }, helmet, schema)
   })
 

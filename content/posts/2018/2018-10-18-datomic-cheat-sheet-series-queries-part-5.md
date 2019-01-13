@@ -1,6 +1,6 @@
 ---
 title: "Datomic Cheat Sheet Series - Queries (Part 5) - Transactions"
-socialCover: images/social-covers/2018-09-06-datomic.png
+ogImage: images/og-images/2018-09-06-datomic.png
 date:   2018-10-18 04:54:00 +0200
 tags:
     - Technical
@@ -59,7 +59,7 @@ Create a database connection as a function
 You can specify an entity id in three ways by using a:
 
 * **a temporary id for a new entity being added to the database**
-  
+
   ```clojure
   [[:db/add "jdoe" :person/first "Jan"]
    [:db/add "jdoe" :person/last "Doe"]]
@@ -77,11 +77,11 @@ You can specify an entity id in three ways by using a:
   ```
 
   If the entity id returned by the query is 17592186046416, the following transaction data will set the entity's customer status:
-  
+
   ```clojure
   {:db/id 17592186046416
    :customer/status :active}
-  ``` 
+  ```
 
   If the entity in question has a unique identifier, you can specify the entity id by using a lookup ref. Rather than querying the database, you can provide the unique attribute, value pair corresponding to the entity you want to assert or retract a fact for. Note that a lookup ref specified in a transaction will be resolved by the transactor.
 
@@ -149,7 +149,7 @@ You can specify an entity id in three ways by using a:
 
 ## Compare and swap transactions
 
-The following example transaction data sets entity 42's `:account/balance` to 110, 
+The following example transaction data sets entity 42's `:account/balance` to 110,
 if and only if `:account/balance` is 100 at the time the transaction executes:
 
 ```clojure

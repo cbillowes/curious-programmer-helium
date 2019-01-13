@@ -116,7 +116,7 @@ export default class PostTemplate extends React.Component {
           title={post.title}
           description={postNode.excerpt}
           slug={slug}
-          images={{ cover: post.cover }} />
+          images={{ cover: post.cover, ogImage: post.ogImage }} />
         {post.cover && blur ?
           <span className="cover blur background" style={{ backgroundImage: `url(${blur})` }}></span> :
           <span></span>}
@@ -156,6 +156,7 @@ export const postQuery = graphql`
       frontmatter {
         title
         cover
+        ogImage
         blur
         tags
       }

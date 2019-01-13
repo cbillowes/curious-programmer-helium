@@ -1,6 +1,6 @@
 ---
 title: "Setting up my environment in Fedora"
-socialCover: images/social-covers/2018-10-20-fedora.png
+ogImage: images/og-images/2018-10-20-fedora.png
 date:   2018-10-20 18:30:00 +0200
 tags:
     - Technical

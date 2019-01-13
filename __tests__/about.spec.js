@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { mount } from "enzyme"
+import url from "url-join"
 import Page from "../src/pages/about"
 import TimelineItem from "../src/components/About/TimelineItem"
 import TimelineLegend from "../src/components/About/TimelineLegend"
@@ -16,7 +17,7 @@ describe("the about page", () => {
       title: "About",
       slug: "/about",
       description: config.siteDescription,
-      image: config.siteLogo
+      image: url(config.siteUrl, config.siteLogo)
     }, helmet, schema)
   })
 

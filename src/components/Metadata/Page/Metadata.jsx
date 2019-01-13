@@ -41,18 +41,28 @@ class Metadata extends Component {
     return config.siteDescription
   }
 
-  getImageUrl = (images) => {
+  getImageUrl = (images, slug) => {
     if (images) {
-      const image = (images.cover) ? images.cover : config.siteLogo
+      let image
+      if (images.ogImage) {
+        image = images.ogImage
+      } else if (images.cover) {
+        image = images.cover
+      } else if (config.defaultOgImage) {
+        image = config.defaultOgImage
+      } else {
+        image = config.siteLogo
+      }
+
       if (image.startsWith("http")) {
         return image
       }
       if (image.startsWith("/")) {
-        return url(config.siteUrl, image)
+        return config.siteUrl + Path.resolve(slug, image)
       }
-      return config.siteUrl + Path.normalize(url(this.state.slug, image))
+      return config.siteUrl + Path.resolve(slug, image)
     }
-    return url(config.siteUrl, config.siteLogo)
+    return config.siteUrl + Path.resolve(slug, config.siteLogo)
   }
 
   getUrl = (slug) => {
@@ -75,7 +85,7 @@ class Metadata extends Component {
     const { title, description, images, slug } = this.props
     const pageTitle = this.getTitle(title)
     const pageDescription = this.getDescription(description)
-    const imageUrl = this.getImageUrl(images)
+    const imageUrl = this.getImageUrl(images, slug)
     const pageUrl = this.getUrl(slug)
     const pageType = this.getType(slug)
 

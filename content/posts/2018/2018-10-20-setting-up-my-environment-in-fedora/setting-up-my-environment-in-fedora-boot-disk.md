@@ -1,6 +1,6 @@
 ---
 title: "Setting up my environment in Fedora - Creating a boot disk"
-socialCover: 2018-10-20-usb-flash-drive.png
+ogImage: 2018-10-20-usb-flash-drive.png
 date:   2018-10-20 18:30:02 +0200
 tags:
     - Technical
