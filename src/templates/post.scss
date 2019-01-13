@@ -64,9 +64,18 @@
         }
     }
 
-    h2 {
+    h2,
+    h3,
+    h4 {
         a.anchor {
-            margin-left: -0.45em;
+            display: inline-block;
+            margin-left:-1em;
+            margin-right: 0;
+
+            svg {
+                width: 2em;
+                margin-left: -0.75em;
+            }
         }
     }
 
