@@ -45,7 +45,7 @@ module.exports = {
               active : true,
               class  : 'emoji-icon',
               // Select the size (available size: 16, 24, 32, 64)
-              size   : 16,
+              size   : 32,
               // Add custom styles
               styles : {
                 display      : 'inline',
