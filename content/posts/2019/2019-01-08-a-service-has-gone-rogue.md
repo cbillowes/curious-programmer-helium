@@ -5,6 +5,7 @@ tags:
     - Technical
     - Linux
     - Fedora
+    - Intermediate
 ---
 
 Once I installed a development service on port **3000** and I forgot about it. When I ran my project I couldn't start it because the port
