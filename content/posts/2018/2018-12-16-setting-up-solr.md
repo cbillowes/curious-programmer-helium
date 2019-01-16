@@ -6,6 +6,7 @@ tags:
     - Solr
     - Nginx
     - Let's Encrypt
+    - Advanced
 ---
 
 I want to enable search on my blog. I started looking into different solutions. I started with
