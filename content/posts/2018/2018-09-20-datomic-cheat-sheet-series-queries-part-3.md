@@ -6,6 +6,7 @@ tags:
     - Technical
     - Datomic
     - Database
+    - Cheat sheet
 ---
 
 In this post I work through the creation of rules using the [Datomic MusicBrainz](https://github.com/Datomic/mbrainz-sample) sample database. The example queries are grabbed from the [Datomic Docs](https://docs.datomic.com/on-prem/query.html) and the [Datomic mbrainz sample](https://github.com/Datomic/mbrainz-sample/wiki/Queries) GitHub pages. *If you want to get started with Datomic, check out the [first post](/blog/datomic-cheat-sheet-series-getting-started) in the series. If you want to see other queries, then check out [part 1](/blog/datomic-cheat-sheet-series-queries-part-1) and [part 2](/blog/datomic-cheat-sheet-series-queries-part-2).*

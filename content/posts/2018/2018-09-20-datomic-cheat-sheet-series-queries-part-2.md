@@ -6,6 +6,7 @@ tags:
     - Technical
     - Datomic
     - Database
+    - Cheat sheet
 ---
 
 <div id="accordion"></div>

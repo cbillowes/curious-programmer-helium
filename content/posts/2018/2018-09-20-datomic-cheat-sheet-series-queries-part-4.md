@@ -6,6 +6,7 @@ tags:
     - Technical
     - Datomic
     - Database
+    - Cheat sheet
 ---
 
 In this post I work through pull expressions using the [Datomic MusicBrainz](https://github.com/Datomic/mbrainz-sample) sample database. The example queries are grabbed from the [Datomic Docs](https://docs.datomic.com/on-prem/query.html). *If you want to get started with Datomic, check out the [first post](/blog/datomic-cheat-sheet-series-getting-started) in the series. If you want to see other queries, then check out [part 1](/blog/datomic-cheat-sheet-series-queries-part-1) and [part 2](/blog/datomic-cheat-sheet-series-queries-part-2). If you want to set up query rules then check out [part 3](/blog/datomic-cheat-sheet-series-queries-part-3).*
