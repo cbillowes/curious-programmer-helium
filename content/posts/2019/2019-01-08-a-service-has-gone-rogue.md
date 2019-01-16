@@ -63,6 +63,13 @@ investigate sockets.
 
 `bash±sudo ss -lptn 'sport = :3000'`
 
+## Just stop the service for now
+
+```bash
+sudo systemctl stop [servicename]
+sudo systemctl disable [servicename]
+```
+
 ## Killing processes
 
 Once I have a pid for the process I want to shut down, I can kill it.
@@ -77,12 +84,12 @@ doesn't want to play along in which case I need to force it,
 If I am adamant that the service should not exist, I can uninstall it.
 
 ```bash
-systemctl stop [servicename]
-systemctl disable [servicename]
-rm /etc/systemd/system/[servicename]
-rm /etc/systemd/system/[servicename] #symlinks that might be related
-systemctl daemon-reload
-systemctl reset-failed
+sudo systemctl stop [servicename]
+sudo systemctl disable [servicename]
+sudo rm /etc/systemd/system/[servicename]
+sudo rm /etc/systemd/system/[servicename] #symlinks that might be related
+sudo systemctl daemon-reload
+sudo systemctl reset-failed
 ```
 
 ## Summary
