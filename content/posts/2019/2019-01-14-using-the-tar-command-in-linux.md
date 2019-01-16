@@ -37,12 +37,13 @@ running Fedora release 28 (Twenty Eight) and Zsh.**
 
 ---
 
-* [](/#)
-* [](/#)
-* [](/#)
-* [](/#)
-* [](/#)
-* [](/#)
+* [List stuff](#listing-the-contents-of-an-archive)
+* [Create](#creating-a-new-archive)
+* [Update](#updating-an-archive)
+* [Extract](#extracting-data)
+* [Compare to changes on the file system](#comparing-against-the-file-system)
+* [Using zip](#using-zip)
+* [Cheat sheet](#cheat-sheet)
 
 As far as I understand, `bash±tar` files typically have the **tar** or **tar.gz**
 extensions. `bash±tar` is the archive that can preserve permissions and directory
