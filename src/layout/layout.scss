@@ -1,17 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
 
-@import "../../third-parties/bootstrap/scss/functions";
-@import "../../third-parties/bootstrap/scss/variables";
-@import "../../third-parties/bootstrap/custom-variables";
-@import "../../third-parties/bootstrap/scss/mixins";
+@import "./variables";
 @import "../../third-parties/bootstrap/scss/root";
 @import "../../third-parties/bootstrap/scss/transitions";
 @import "../../third-parties/bootstrap/scss/card";
 @import "../../third-parties/bootstrap/scss/spinners";
 @import "../../third-parties/bootstrap/scss/utilities";
 @import "../../third-parties/bootstrap/scss/print";
-@import "./variables";
 
 @media screen {
     *::-webkit-scrollbar {

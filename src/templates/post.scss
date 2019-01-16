@@ -1,4 +1,4 @@
-@import "../layout/layout.scss";
+@import "../layout/variables.scss";
 
 .cover {
     background-size: cover;
@@ -11,15 +11,40 @@
 }
 
 .post {
-    position: relative;
-    max-width: $container-width;
-    margin: 0 auto;
-    padding: 0 2em;
 
-    &.with-cover {
+    &.with-cover .body {
         padding: 1em 3em;
         background-color: $background-darker;
         opacity: 0.8;
+    }
+
+    .compact-navigation {
+        position: relative;
+        background-color: $background;
+        display: block;
+        margin-top: 4em;
+
+        .post-navigation {
+            max-width: $container-width;
+            margin: 0 auto;
+        }
+    }
+
+    .container {
+        position: relative;
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 0 2em;
+    }
+
+    .wild-container {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 3em;
+        }
     }
 
     .serious-highlight {
