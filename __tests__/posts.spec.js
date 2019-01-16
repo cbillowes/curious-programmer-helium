@@ -186,19 +186,6 @@ describe("the posts page", () => {
       expect(component.html()).toContain(">Yesterday</time>")
     })
 
-    // Typical, this test fails although it is actually working
-    // The test comes back saying of 10 days ago</time> instead of last [day]
-    // mmmmmmmmm....
-    itx("should say it was posted a week ago", () => {
-      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-      let date = new Date()
-      date = date.setDate(date.getDate() - 10)
-      data.post.fields.date = date
-
-      const component = mount(<Page pageContext={context} data={data} />)
-      expect(component.html()).toContain(`>${moment(date).format("[last] dddd")}</time>`)
-    })
-
     it("should say it was posted something ago", () => {
       let date = new Date()
       date = date.setDate(date.getDate() - (365 * 3))
