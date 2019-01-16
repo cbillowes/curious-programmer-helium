@@ -27,21 +27,21 @@ describe("the posts page", () => {
 
     describe("check out those metadata image urls", () => {
       it("prefers the og:image over any other", () => {
-        let slug = "/2019"
+        let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
-        newData.post.frontmatter.ogImage = "og-image.png"
+        newData.post.frontmatter.ogImage = "/images/og-image.png"
         newData.post.frontmatter.cover = "cover.png"
         newContext.slug = slug
 
         mount(<Page pageContext={newContext} data={newData} />)
         const newHelmet = Helmet.peek()
         const newSchema = newHelmet.scriptTags[newHelmet.scriptTags.length - 1].innerHTML
-        metadata.expectImage(`${config.siteUrl}/2019/og-image.png`, newHelmet, newSchema)
+        metadata.expectImage(`${config.siteUrl}/images/og-image.png`, newHelmet, newSchema)
       })
 
       it("falls back to cover when og:image is not set", () => {
-        let slug = "/2019"
+        let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
         newData.post.frontmatter.ogImage = ""
@@ -51,11 +51,11 @@ describe("the posts page", () => {
         mount(<Page pageContext={newContext} data={newData} />)
         const newHelmet = Helmet.peek()
         const newSchema = newHelmet.scriptTags[newHelmet.scriptTags.length - 1].innerHTML
-        metadata.expectImage(`${config.siteUrl}/2019/cover.png`, newHelmet, newSchema)
+        metadata.expectImage(`${config.siteUrl}${slug}/cover.png`, newHelmet, newSchema)
       })
 
       it("it uses the default og:image when neither og:image nor over is set", () => {
-        let slug = "/2019"
+        let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
         newData.post.frontmatter.ogImage = ""
@@ -69,7 +69,7 @@ describe("the posts page", () => {
       })
 
       it("defaults to site logo when all else fails", () => {
-        let slug = "/2019"
+        let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
         config.defaultOgImage = ""

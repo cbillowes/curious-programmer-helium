@@ -15,7 +15,7 @@ describe("the privacy policy page", () => {
       title: "Privacy Policy",
       slug: "/privacy-policy",
       description: config.siteDescription,
-      image: url(config.siteUrl, config.siteLogo)
+      image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
 

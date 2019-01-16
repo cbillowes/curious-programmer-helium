@@ -113,6 +113,7 @@ exports.createPages = ({ graphql, actions }) => {
                     tags
                     title
                     cover
+                    ogImage
                   }
                   fields {
                     slug

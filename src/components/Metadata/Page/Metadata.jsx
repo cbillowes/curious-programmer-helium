@@ -6,6 +6,10 @@ import navigation from "../../../../data/Navigation"
 import Path from "path"
 import url from "url-join"
 
+function getImageLocation(slug, image) {
+
+}
+
 class Metadata extends Component {
   constructor(props) {
     super(props)
@@ -58,11 +62,11 @@ class Metadata extends Component {
         return image
       }
       if (image.startsWith("/")) {
-        return config.siteUrl + Path.resolve(slug, image)
+        return config.siteUrl + image
       }
       return config.siteUrl + Path.resolve(slug, image)
     }
-    return config.siteUrl + Path.resolve(slug, config.siteLogo)
+    return config.siteUrl + config.defaultOgImage
   }
 
   getUrl = (slug) => {

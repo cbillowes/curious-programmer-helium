@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: "https://curiousprogrammer.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   blogPostDir: "posts", // The name of directory that contains your posts.
-  defaultOgImage: "../images/og-images/default-og-image.jpg",
+  defaultOgImage: "/images/og-images/default-og-image.jpg",
   siteDescription: "Sharing my curiosity for software development.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/feed.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights

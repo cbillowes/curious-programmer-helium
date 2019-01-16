@@ -17,7 +17,7 @@ describe("the about page", () => {
       title: "About",
       slug: "/about",
       description: config.siteDescription,
-      image: url(config.siteUrl, config.siteLogo)
+      image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
 
