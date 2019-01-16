@@ -1,6 +1,6 @@
 ---
 title: "How To Craft Your Changes Into Small Atomic Commits Using Git"
-ogImage: images/og-images/ADDDDDDDDDDDDD
+ogImage: /og-images/2019-01-15-git.png
 date:   2019-01-15 22:30:00 +0200
 tags:
     - Technical
