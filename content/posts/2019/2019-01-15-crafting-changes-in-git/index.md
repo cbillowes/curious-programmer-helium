@@ -125,7 +125,7 @@ Stage this hunk [y,n,q,a,d,s,e,?]?
 ```
 Ahoy matey, there be options:
 
-```sample
+```example
 y - stage this hunk
 n - do not stage this hunk
 q - quit; do not stage this hunk or any of the remaining ones
@@ -138,7 +138,7 @@ e - manually edit the current hunk
 
 Press `s` to split that hunk into baby hunks. Now there are more options
 
-```sample
+```example
 Stage this hunk [y,n,q,a,d,K,g,/,e,?]?
 ...
 g - select a hunk to go to
