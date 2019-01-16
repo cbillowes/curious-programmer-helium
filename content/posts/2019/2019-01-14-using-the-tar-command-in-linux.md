@@ -1,10 +1,11 @@
 ---
 title: "Using the tar Command in Linux"
-date:   2019-01-09 21:40:00 +0200
+date:   2019-01-14 21:40:00 +0200
 tags:
     - Technical
     - Linux
     - Terminal
+    - Beginner
 ---
 
 I used to right-click on a zipped file and manage the archive using the
@@ -30,6 +31,18 @@ running Fedora release 28 (Twenty Eight) and Zsh.**
 > or write a comment below. :smile:
 
 ---
+
+**Original post:** 9 Jan 2019
+**Update:** Covers the extraction of files without extracting the entire `tar`
+
+---
+
+* [](/#)
+* [](/#)
+* [](/#)
+* [](/#)
+* [](/#)
+* [](/#)
 
 As far as I understand, `bash±tar` files typically have the **tar** or **tar.gz**
 extensions. `bash±tar` is the archive that can preserve permissions and directory
@@ -150,6 +163,25 @@ Extract a compressed archive to another directory
 * **C | --directory**: change to directory
 * **f | --file**: specifies the file of the archive you want to extract. *(This must always be the last flag
   as it precedes the filename in the command)*
+
+### Extracting specific files
+
+You don't have to extract the entire file. If you have a `tar` file but are only interested in
+a few files then grab them out of the tar file:
+
+1. List the contents of the tar file `bash±tar -ztvf archive.tar.gz | grep filename` and
+   look for the file name(s) you are interested in.
+
+2. Extract the file `bash±tar -zxvf archive.tar.gz ./awesome.clj` or directory
+  `bash±tar --extract --file=archive.tar.gz src`
+
+### Extracting wildcards
+
+If you can't use a rigid file name or directory then you can use wildcards (globbing patterns)
+`bash±tar -xf archive.tar --wildcards --no-anchored "*.clj"`
+
+`--wildcards` tells `tar` to accept globbing patterns while `--no-anchored` tells it that
+the pattern applies to the member names after any / delimiter.
 
 ## Comparing against the file system
 
@@ -287,3 +319,4 @@ unzip archive.zip
  \- How-To Geek
 * [How to Zip and Unzip in Linux: The Zip and Unzip Linux Commands](https://www.hacksparrow.com/how-to-zip-and-unzip-in-linux-the-zip-and-unzip-linux-commands.html)
  \- Hack Sparrow
+* [Tar Extract a Single File(s) From a Large Tarball](https://www.cyberciti.biz/faq/linux-unix-extracting-specific-files/)
