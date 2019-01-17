@@ -44,6 +44,10 @@
 
         h1 {
             font-size: 3em;
+
+            @media screen and (max-width: 800px) {
+                font-size: 1.9em;
+            }
         }
     }
 
