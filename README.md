@@ -1,22 +1,22 @@
 <div align="center">
-    <img src="codename.png" alt="Curious Programmer blog code named Helium" />
-</div>
+    <img src="codename.png" alt="Curious Programmer blog code named Helium" style="height: 100px; display:block; margin-bottom: 1.5em;" />
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d2bffdb911f485183f59559461fdb08)](https://app.codacy.com/app/cbillowes/curious-programmer-helium?utm_source=github.com&utm_medium=referral&utm_content=cbillowes/curious-programmer-helium&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cbillowes/curious-programmer-oxygen/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/cbillowes/curious-programmer-helium.svg?branch=master)](https://travis-ci.com/cbillowes/curious-programmer-helium.svg?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e5ea530e2243393ab460/maintainability)](https://codeclimate.com/github/cbillowes/curious-programmer-helium/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/e5ea530e2243393ab460/test_coverage)](https://codeclimate.com/github/cbillowes/curious-programmer-helium/test_coverage)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Twitter Follow](https://img.shields.io/twitter/follow/cbillowes.svg?style=social)](https://twitter.com/cbillowes)
 
-# Curious Programmer 
+</div>
 
-* **v 1.0 - Code named Oxygen**: the birth of the curious programmer from corporate programmer.
+## History
 
-* **v 2.0 - Code named Helium**: the migration from Gatsby v1 to v2 and implementing a dark theme.
+* **corporate programmer**: my original blog written in Jekyll.
 
-* **Migration**: From Jekyll to Gatsby v1 to Gatsby v2.
+* **oxygen - v1**: migration of corporate programmer to my new blog written in Gatsby v1.
+
+* **helium - v2**: the migration from Gatsby v1 to v2, a change in theme and a refactor across all components on the site.
 
 ## Getting Started
 
