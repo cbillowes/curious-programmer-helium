@@ -16,21 +16,38 @@ function blurCoverOnScroll() {
   if (typeof window !== "undefined" && window.scroll) {
     const background = $(".cover.default.background")
     if (background.length === 1) {
+      const blurFrom = 150;
       let opacity = 1
-      let y = window.scrollY
       window.onscroll = function () {
-        if (window.scrollY >= $(window).height()) {
+        if (window.scrollY >= blurFrom) {
+          console.log("blur")
           opacity = 0
         } else {
+          console.log("s")
           opacity = 1
         }
-        background
-          .css({
-            "opacity": opacity,
-            "filter": `alpha(opacity=${opacity * 10})`,
-            "transition": "opacity 1s ease-in-out"
-          })
-        y = window.scrollY
+
+        if (opacity === 1 && !background.hasClass("opacity")) {
+          background
+            .addClass("opacity")
+            .removeClass("no-opacity")
+            .css({
+              "opacity": opacity,
+              "filter": `alpha(opacity=${opacity * 10})`,
+              "transition": "opacity 1s ease-in-out"
+            })
+        }
+
+        if (opacity === 0 && !background.hasClass("no-opacity")) {
+          background
+            .addClass("no-opacity")
+            .removeClass("opacity")
+            .css({
+              "opacity": opacity,
+              "filter": `alpha(opacity=${opacity * 10})`,
+              "transition": "opacity 1s ease-in-out"
+            })
+        }
       }
     }
   }
