@@ -79,9 +79,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "develop": "npm run clean && gatsby develop --verbose --port 8002 --host localhost",
+    "develop": "npm run clean && gatsby develop --verbose --port 8001 --host localhost",
     "dev": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "npm run build && gatsby serve",
     "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
