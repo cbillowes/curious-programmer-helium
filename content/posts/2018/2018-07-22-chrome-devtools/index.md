@@ -24,7 +24,11 @@ I got published on Offerzen with my article titled Quick front end bug-fixes. It
 ## What's new?
 Chrome releases major updates automatically about every six weeks. As much as I love exploring and discovering on my own, Chrome offers a quick and easy way to get up to speed. They release a video with articles and these highlights are accessible directly within the tool. The **What's New** panel shows these highlights and I know of three ways to access it.
 
-<img class="gif" src="/images/gifs/chrome-devtools/whats-new-1-still.gif" data-src="/images/gifs/chrome-devtools/whats-new-1.gif" alt="How to find out what is new in the Chrome DevTools" />
+<div class="gif" alt="How to find out what is new in the Chrome DevTools">
+    <img class="still" src="/images/gifs/chrome-devtools/whats-new-1-still.gif" />
+    <img class="animated" src="/images/gifs/chrome-devtools/whats-new-1.gif" />
+    <a href="/images/gifs/chrome-devtools/whats-new-1.gif">
+</div>
 
 <a href="/images/gifs/chrome-devtools/whats-new.gif" target="_blank" nofollow><i>Open this gif in a new window</i></a>
 
