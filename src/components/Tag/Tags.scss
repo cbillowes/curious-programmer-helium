@@ -20,6 +20,8 @@
         margin: 0.25em;
         padding: 0 1em;
         display: inline-block;
+        text-shadow: none;
+        font-weight: 600;
 
         &:hover {
             background-color: $primary;
