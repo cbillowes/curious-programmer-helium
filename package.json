@@ -6,8 +6,8 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "clipboard": "^2.0.4",
-    "gatsby": "^2.0.79",
-    "gatsby-image": "2.0.19",
+    "gatsby": "^2.0.91",
+    "gatsby-image": "2.0.26",
     "gatsby-plugin-catch-links": "2.0.6",
     "gatsby-plugin-feed": "2.0.9",
     "gatsby-plugin-google-analytics": "2.0.7",
