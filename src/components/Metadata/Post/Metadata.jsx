@@ -5,6 +5,22 @@ import "./Metadata.scss"
 const moment = require("moment")
 
 class Metadata extends Component {
+  renderMoment = (date) => {
+    var now = moment()
+    var then = moment(date)
+    var diff = now.diff(then, 'days')
+
+    if (diff > 7) {
+      return (
+        <Moment date={date} format="ddd, D MMMM YYYY" />
+      )
+    } else {
+      return (
+        <Moment date={date} format="D MMMM YYYY" />
+      )
+    }
+  }
+
   render() {
     const { tags, date, timeToRead } = this.props
     var fromNow = moment(date).fromNow();
@@ -26,7 +42,7 @@ class Metadata extends Component {
           {" "}
           on
           {" "}
-          <Moment date={date} format="ddd, D MMMM YYYY" />
+          {this.renderMoment(date)}
           {" "}
           {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
         </p>
