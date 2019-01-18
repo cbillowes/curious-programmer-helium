@@ -8,7 +8,7 @@ describe("the footer component", () => {
   let component
 
   beforeAll(() => {
-    component = mount(<Footer />)  
+    component = mount(<Footer />)
   })
 
   it("should render the component", () => {
@@ -18,8 +18,10 @@ describe("the footer component", () => {
 
   it("should render the copyright", () => {
     let footerText = `Made with Gatsby v2 and other <a href="/credits">cool stuff</a>.`
-    let expected = `Copyright © ${new Date().getFullYear()} ${config.siteTitle}. ${footerText}`
-    expect(component.html()).toContain(expected)
+    expect(component.html()).toContain(`Copyright © ${new Date().getFullYear()}`)
+    expect(component.html()).toContain(`${config.siteTitle}`)
+    expect(component.html()).toContain(`${footerText}`)
+    expect(component.html()).toContain(`class="github"`)
   })
 
   it("should render social links", () => {
