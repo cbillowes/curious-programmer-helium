@@ -55,9 +55,22 @@
                     font-family: $font-family-sans-serif;
                     color: $foreground;
 
+                    .github {
+                        margin-top: 0.5em;
+                        margin-left: 0.5em;
+
+                        path {
+                            fill: $foreground;
+                        }
+                    }
+
                     &:hover {
                         background-color: $primary;
                         color: $background-lighter;
+
+                        .github path {
+                            fill: $background;
+                        }
                     }
                 }
             }
