@@ -124,13 +124,13 @@ export default class PostTemplate extends React.Component {
           <span className="cover default background" style={{ backgroundImage: `url(${post.cover})` }}></span> :
           <span></span>}
         <div className={`post ${post.cover ? "with-cover" : ""}`}>
-          <div class="compact-navigation">
+          <div className="compact-navigation">
             <CompactNavigation previous={previousPost} next={nextPost} />
           </div>
-          <div class="wild-container">
+          <div className="wild-container">
             <h1>{post.title}</h1>
           </div>
-          <div class="container body">
+          <div className="container body">
             <PostMetadata tags={post.tags} date={postNode.fields.date} timeToRead={postNode.timeToRead} />
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <Accordion content={postNode.html} />
