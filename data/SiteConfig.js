@@ -1,13 +1,13 @@
 module.exports = {
   siteTitle: "Curious Programmer", // Site title.
-  siteTitleShort: "{}", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleShort: "{ curious }", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Curious Programmer", // Alternative site title for SEO.
   siteLogo: "/logos/logo.png", // Logo used for SEO and manifest.
   siteUrl: "https://curiousprogrammer.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   blogPostDir: "posts", // The name of directory that contains your posts.
   defaultOgImage: "/images/og-images/default-og-image.jpg",
-  siteDescription: "Sharing my curiosity for software development.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A curious place for a curious mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/feed.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "UA-77127562-2", // GA tracking ID.
