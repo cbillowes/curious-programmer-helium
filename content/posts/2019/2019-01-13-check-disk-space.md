@@ -5,6 +5,7 @@ date:   2019-01-13 07:30:00 +0200
 tags:
     - Technical
     - Linux
+    - Terminal
     - Cheat Sheet
     - Beginner
 ---

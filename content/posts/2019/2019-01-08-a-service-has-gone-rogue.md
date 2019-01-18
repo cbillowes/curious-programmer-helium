@@ -5,6 +5,7 @@ tags:
     - Technical
     - Linux
     - Fedora
+    - Cheat Sheet
     - Intermediate
 ---
 

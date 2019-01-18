@@ -6,6 +6,7 @@ tags:
     - Technical
     - Git
     - Terminal
+    - Cheat Sheet
     - Advanced
 ---
 

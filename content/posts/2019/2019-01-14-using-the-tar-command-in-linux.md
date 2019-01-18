@@ -5,6 +5,7 @@ tags:
     - Technical
     - Linux
     - Terminal
+    - Cheat Sheet
     - Beginner
 ---
 
