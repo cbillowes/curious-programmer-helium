@@ -27,6 +27,7 @@
         right: 0;
         height: 100vh;
         z-index: 999;
+        text-shadow: none;
 
         @include flyout;
 

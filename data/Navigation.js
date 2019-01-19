@@ -8,6 +8,10 @@ module.exports = [
     name: "About"
   },
   {
+    url: "/archives",
+    name: "Archives"
+  },
+  {
     url: "/tags",
     name: "Tags"
   },

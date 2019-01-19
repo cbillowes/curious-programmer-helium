@@ -1,0 +1,13 @@
+@import "../../layout/variables.scss";
+
+a.button {
+    @include button();
+    background-color: $primary;
+    display: inline-block;
+    padding: 0.5em 1.25em;
+
+    &:hover {
+        background-color: $blue;
+        color:  $foreground;
+    }
+}

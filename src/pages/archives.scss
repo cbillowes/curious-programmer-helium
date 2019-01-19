@@ -1,0 +1,53 @@
+@import "../layout/variables.scss";
+
+.posts-container {
+    .posts {
+        position: relative;
+        max-width: $container-width;
+        margin: 0 auto;
+
+        .filter {
+            padding: 0.5em;
+            font-size: 1em;
+            background-color: $background-darker;
+            border: solid 1px $background-darker;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: $foreground;
+        }
+
+        .empty {
+          display: none;
+        }
+
+        .item {
+            margin-bottom: 2em;
+            padding-left: 1em;
+
+            > a {
+                font-weight: 800;
+                font-size: 1.25em;
+            }
+        }
+
+        .post-metadata {
+            display: inline;
+
+            p {
+                padding-left: 0.5em;
+                display: inline;
+                font-style: italic;
+                text-align: left;
+                font-size: 0.8em;
+            }
+
+            .tags {
+                padding-left: 0.5em;
+                display: inline;
+                text-align: right;
+            }
+        }
+    }
+}

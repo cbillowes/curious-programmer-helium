@@ -12,6 +12,7 @@ class BlogPage extends Component {
         <div className="blog-container">
           <Metadata slug="/blog" />
           <PostListing postEdges={postEdges} />
+          <MoreButton to="/archives" />
         </div>
       </Layout>
     )
