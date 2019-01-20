@@ -12,7 +12,10 @@ export default class TagTemplate extends React.Component {
 
     return (
       <Layout>
-        <Metadata title={title} slug={`/tags/${tag}`} />
+        <Metadata
+          title={title}
+          slug={`/tags/${tag}`}
+          description={`Look at all posts related to ${tag}`} />
         <div className="tag-container">
           <PostListing postEdges={postEdges} />
         </div>
