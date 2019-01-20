@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Logo from "./Logo/Logo"
 import Icons from "./Icons/Icons"
-import Menubar from "./Menubar"
+import Menubar from "../Menubar/Menubar"
 import Searchbar from "../Search/Searchbar"
 import "./Navigation.scss"
 
@@ -44,9 +44,11 @@ class Navigation extends Component {
           onSearchClick={{ toggle: this.toggleSearch, active: this.state.search }}
         />
         <Menubar
-          toggle={this.toggleMenu} active={this.state.menu} />
+          toggle={this.toggleMenu}
+          active={this.state.menu} />
         <Searchbar
-          toggle={this.toggleSearch} active={this.state.search} />
+          toggle={this.toggleSearch}
+          active={this.state.search} />
       </div>
     )
   }
