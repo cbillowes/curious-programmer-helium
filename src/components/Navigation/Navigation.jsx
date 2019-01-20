@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Logo from "./Logo/Logo"
 import Icons from "./Icons/Icons"
 import Menubar from "./Menubar"
-import Searchbar from "./Searchbar"
+import Searchbar from "../Search/Searchbar"
 import "./Navigation.scss"
 
 class Navigation extends Component {
@@ -28,16 +28,25 @@ class Navigation extends Component {
     })
   }
 
+  collapseAll = () => {
+    this.setState({
+      menu: false,
+      search: false
+    })
+  }
+
   render() {
     return (
       <div className="navigation">
-        <Logo onClick={() => this.setState({ menu: false, search: false })} />
+        <Logo onLogoClick={this.collapseAll} />
         <Icons
           onMenuClick={{ toggle: this.toggleMenu, active: this.state.menu }}
           onSearchClick={{ toggle: this.toggleSearch, active: this.state.search }}
         />
-        <Menubar toggle={this.toggleMenu} active={this.state.menu} />
-        <Searchbar toggle={this.toggleSearch} active={this.state.search} />
+        <Menubar
+          toggle={this.toggleMenu} active={this.state.menu} />
+        <Searchbar
+          toggle={this.toggleSearch} active={this.state.search} />
       </div>
     )
   }

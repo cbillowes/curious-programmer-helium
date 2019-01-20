@@ -11,7 +11,7 @@ class Logo extends Component {
     const right = splitTitle[1]
 
     return (
-      <div className="logo">
+      <div className="logo" onClick={this.props.onLogoClick.bind(this)}>
         <div className="default-logo">
           <Link to="/">
             &#123; <span className="normal-weight">{left}</span> {right} &#125;
