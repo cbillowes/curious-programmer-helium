@@ -13,9 +13,7 @@ class BlogPage extends Component {
       <Layout>
         <div className="blog-container">
           <Metadata
-            description={`From Linux to Datomic to Clojure to Git, and more.
-            These are some of the things I write about. Take a look around,
-            let me know what you think. ${config.siteDescription}`}
+            description={`${config.siteDescription} Read posts about Linux or Datomic or Clojure or Git and much more.`}
             slug="/blog" />
           <PostListing postEdges={postEdges} />
           <MoreButton to="/archives" />
