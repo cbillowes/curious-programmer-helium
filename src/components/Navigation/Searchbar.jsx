@@ -1,3 +1,4 @@
+import $ from "jquery"
 import React, { Component } from "react"
 import "./Searchbar.scss"
 
@@ -10,6 +11,10 @@ class SearchBar extends Component {
       results: []
     }
     this.searchQuery = React.createRef()
+  }
+
+  componentDidUpdate = () => {
+    this.searchQuery.current.focus()
   }
 
   generateResults = () => {
