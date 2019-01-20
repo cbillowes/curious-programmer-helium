@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Link from "gatsby-link"
 import "./Searchbar.scss"
 
 class SearchBar extends Component {
@@ -48,7 +49,7 @@ class SearchBar extends Component {
           .replace(/https:\/\/curiousprogrammer.io/gi, "")
         results.push(
           <li key={`searchbar-${i}`} onClick={this.props.toggle.bind(this)}>
-            <a href={url}>{title}</a>
+            <Link to={url}>{title}</Link>
           </li>
         )
       }
