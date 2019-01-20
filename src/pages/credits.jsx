@@ -10,7 +10,10 @@ class CreditsPage extends Component {
     return (
       <Layout>
         <div className="credits-container container">
-          <Metadata slug="/credits" />
+          <Metadata
+            description="Find out more about the technologies and resources I use
+            to make this site look and act the way it does."
+            slug="/credits" />
           <h1>Credits</h1>
           <section>
             <h1>Hosting</h1>
