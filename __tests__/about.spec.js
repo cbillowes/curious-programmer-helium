@@ -16,7 +16,7 @@ describe("the about page", () => {
     metadata.expect({
       title: "About",
       slug: "/about",
-      description: "I write code as a hobby and get paid for it. Trending now is Clojure and Gatsby. My blog's my pet project & notebook. It is a curious place for a curious mind. Learn more about me.",
+      description: `I write code as a hobby and get paid for it. My blog. ${config.siteDescription}`,
       image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
