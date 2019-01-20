@@ -13,5 +13,21 @@
         p {
             margin: 0;
         }
+
+        .baby {
+            display: none;
+        }
+
+        // TODO: Get this 900px monstor into a variable,
+        // better yet, the entire media query into a mixin
+        @media screen and (max-width: 900px) {
+            .baby {
+                display: block;
+            }
+
+            .grand {
+                display: none;
+            }
+        }
     }
 }
