@@ -23,7 +23,9 @@ class Metadata extends Component {
 
   render() {
     const { tags, date, timeToRead } = this.props
-    var fromNow = moment(date).fromNow();
+    moment.updateLocale("en")
+    let theDate = new Date(date)
+    var fromNow = moment([theDate.getFullYear(), theDate.getMonth(), theDate.getDate()]).fromNow();
     const calendarStrings = {
       lastDay: '[Yesterday]',
       sameDay: '[Today]',
@@ -31,18 +33,18 @@ class Metadata extends Component {
       lastWeek: '[last] dddd',
       nextWeek: 'dddd',
       sameElse: `[${fromNow}]`
-    };
+    }
 
     return (
       <div className="post-metadata">
         <p>
           posted
           {" "}
-          <Moment date={date} calendar={calendarStrings} />
+          <Moment date={theDate} calendar={calendarStrings} />
           {" "}
           on
           {" "}
-          {this.renderMoment(date)}
+          {this.renderMoment(theDate)}
           {" "}
           {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
         </p>
