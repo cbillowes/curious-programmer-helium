@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Layout from "../layout"
 import Metadata from "../components/Metadata/Page/Metadata"
 import PrivacyPolicy from "../components/PrivacyPolicy/PrivacyPolicy"
-import External from "../components/Link/ExternalLink"
 import "./privacy-policy.scss"
 
 class PrivacyPolicyPage extends Component {
@@ -10,7 +9,10 @@ class PrivacyPolicyPage extends Component {
     return (
       <Layout>
         <div className="privacy-policy-container container">
-          <Metadata slug="/privacy-policy" />
+          <Metadata
+          description="This blog collects some personal data from its users. It is
+          important to know what and how it is used."
+          slug="/privacy-policy" />
           <PrivacyPolicy />
         </div>
       </Layout>

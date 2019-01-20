@@ -14,7 +14,7 @@ describe("the privacy policy page", () => {
     metadata.expect({
       title: "Privacy Policy",
       slug: "/privacy-policy",
-      description: config.siteDescription,
+      description: "This blog collects some personal data from its users. It is important to know what and how it is used.",
       image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
