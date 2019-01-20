@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout"
+import MoreButton from "../components/Button/MoreButton"
 import Metadata from "../components/Metadata/Page/Metadata"
 import PostListing from "../components/PostListing/PostListing"
 import config from "../../data/SiteConfig"
