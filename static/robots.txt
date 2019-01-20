@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: */fonts/
-Disallow: */images/
 
 sitemap: https://curiousprogrammer.io/sitemap.xml
