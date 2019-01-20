@@ -15,7 +15,7 @@ describe("the credits page", () => {
     metadata.expect({
       title: "Credits",
       slug: "/credits",
-      description: "Find out more about the technologies and resources I use to make this site look and act the way it does.",
+      description: "Get an idea of the tech and resources I use to make this site look and act the way it does.",
       image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
