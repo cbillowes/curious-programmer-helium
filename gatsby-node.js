@@ -81,15 +81,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         })
       }
     }
-    let tags = node.frontmatter.tags
     createNodeField({ node, name: "slug", value: slug })
     node.frontmatter.title = _.startCase(_.toLower(node.frontmatter.title))
-    node.frontmatter.tags = []
-    tags.map((tag) => {
-      node.frontmatter.tags.push(_.toLower(tag))
-    })
-    console.log(node.frontmatter.tags)
-    postNodes.push(node)
+
+    if (node.frontmatter.tags) {
+      let tags = node.frontmatter.tags
+      node.frontmatter.tags = []
+      tags.forEach(tag => {
+        if (tag) node.frontmatter.tags.push(_.toLower(tag))
+      })
+      postNodes.push(node)
+    }
   }
 }
 
