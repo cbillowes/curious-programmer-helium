@@ -20,10 +20,8 @@ function blurCoverOnScroll() {
       let opacity = 1
       window.onscroll = function () {
         if (window.scrollY >= blurFrom) {
-          console.log("blur")
           opacity = 0
         } else {
-          console.log("s")
           opacity = 1
         }
 
