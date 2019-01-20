@@ -8,7 +8,7 @@ tags:
     - Linux
 ---
 
-I needed to format my HDD because ... reasons. 🙄 For a change, I decided to play around with Fedora
+I needed to format my HDD because ... reasons. :grin: For a change, I decided to play around with Fedora
 instead of Ubuntu. The installation was painless and the user experience is much like what I am used to.
 
 I had a few hiccups on this journey mainly due to my ignorance in the Linux domain.
