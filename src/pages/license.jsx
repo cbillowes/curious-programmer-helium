@@ -13,12 +13,15 @@ class LicensePage extends Component {
     return (
       <Layout>
         <div className="license-container container">
-          <Metadata slug="/license" />
+          <Metadata
+            description="The source code is licensed under MIT and the content
+            under CC BY-SA 4.0."
+            slug="/license" />
           <h1>License</h1>
           <section>
             <h2>The Code</h2>
             <p className="emphasize">
-              <strong>Applies to</strong> all code written explicitly by Clarice Bouwer. 
+              <strong>Applies to</strong> all code written explicitly by Clarice Bouwer.
               It does not include third-party libraries nor code snippets exempt from this license.
               Such snippets will be explicitly referenced in a link to this document.
             </p>
@@ -85,7 +88,7 @@ class LicensePage extends Component {
               restrict others from doing anything the license permits.
             </p>
             <p className="emphasize">
-              This is just a taste. You'll probably need to read the 
+              This is just a taste. You'll probably need to read the
               {" "}
               <External to="https://creativecommons.org/licenses/by-sa/4.0/legalcode">
                 full license
@@ -102,7 +105,7 @@ class LicensePage extends Component {
               {" "}
               <External to="https://unsplash.com/">Unsplash</External>.
               {" "}
-              The <External to="https://unsplash.com/license">License</External> states that all photos 
+              The <External to="https://unsplash.com/license">License</External> states that all photos
               can be used for free.
             </p>
             <p>
