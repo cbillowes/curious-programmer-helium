@@ -33,7 +33,10 @@ class TagsPage extends Component {
     return (
       <Layout>
         <div className="tags-container container">
-          <Metadata slug="/tags" />
+          <Metadata
+            description="From Fedora to Datomic to Communication to Cheat Sheets and more.
+            The content is tagged and can be filtered by each one."
+            slug="/tags" />
           <h1>Tags</h1>
           <Tags tags={this.state.tags} />
         </div>
