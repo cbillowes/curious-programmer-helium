@@ -11,7 +11,9 @@ class AboutPage extends Component {
     return (
       <Layout>
         <div className="about-container">
-          <Metadata slug="/about" />
+          <Metadata
+            slug="/about"
+            description={`I write code as a hobby and get paid for it. Trending now is Clojure and Gatsby. My blog's my pet project & notebook. It is a curious place for a curious mind. Learn more about me.`} />
           <Contact />
           <About />
           <Technologies />
