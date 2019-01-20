@@ -7,7 +7,7 @@ module.exports = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   blogPostDir: "posts", // The name of directory that contains your posts.
   defaultOgImage: "/images/og-images/default-og-image.jpg",
-  siteDescription: "It's a curious place for a curious mind.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A curious place for a curious mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/feed.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "UA-77127562-2", // GA tracking ID.
