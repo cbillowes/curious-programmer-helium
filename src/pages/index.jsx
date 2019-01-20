@@ -15,9 +15,7 @@ class Index extends React.Component {
       <Layout>
         <div className="index-container">
           <Metadata
-            description={`From Linux to Datomic to Clojure to Git, and more.
-            These are some of the things I write about. Take a look around,
-            let me know what you think. ${config.siteDescription}`}
+            description={`${config.siteDescription} I write about what I learn, then share it.`}
             slug="/" />
           <PostListing postEdges={postEdges} />
           <MoreButton to="/archives" />
