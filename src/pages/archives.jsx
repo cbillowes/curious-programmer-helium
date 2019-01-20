@@ -5,6 +5,7 @@ import Link from "gatsby-link"
 import Layout from "../layout"
 import PostMeta from "../components/Metadata/Post/Metadata"
 import Metadata from "../components/Metadata/Page/Metadata"
+import config from "../../data/SiteConfig"
 import "./archives.scss"
 
 class Index extends React.Component {
@@ -37,7 +38,7 @@ class Index extends React.Component {
           <Metadata
             title="Archives"
             slug="/archives"
-            description="From Comfort Zones to Communication to Clojure and Git. These are some of the things I write about. In this section you will get a full list of my posts dated back from 2016." />
+            description={`My blog. ${config.siteDescription} All posts dated back from 2016.`} />
           <div className="posts">
             <h1>Archives</h1>
             <input

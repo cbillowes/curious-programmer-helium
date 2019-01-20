@@ -46,7 +46,7 @@ describe("the archives page", () => {
     metadata.expect({
       title: "Archives",
       slug: "/archives",
-      description: "From Comfort Zones to Communication to Clojure and Git. These are some of the things I write about. In this section you will get a full list of my posts dated back from 2016.",
+      description: `My blog. ${config.siteDescription} All posts dated back from 2016.`,
       image: url(config.siteUrl, config.defaultOgImage)
     }, helmet, schema)
   })
