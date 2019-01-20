@@ -82,6 +82,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
     createNodeField({ node, name: "slug", value: slug })
+    node.frontmatter.title = _.startCase(_.toLower(node.frontmatter.title))
     postNodes.push(node)
   }
 }
@@ -132,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         let idx = 0;
         postNodes.map(node => {
-          let previous = idx - 1 < 0 ? postNodes[postNodes.length - 1]: postNodes[idx - 1]
+          let previous = idx - 1 < 0 ? postNodes[postNodes.length - 1] : postNodes[idx - 1]
           let next = idx + 1 >= postNodes.length ? postNodes[0] : postNodes[idx + 1]
 
           createPage({
