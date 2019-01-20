@@ -28,6 +28,19 @@
         font-size: 1.25em;
     }
 
+    .error {
+        .message {
+            color: $red;
+            font-weight: 800;
+        }
+
+        .contact-me {
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
     .results {
         height: 100vh;
         overflow-y: auto;

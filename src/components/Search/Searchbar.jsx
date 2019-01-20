@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
+import External from "../Link/ExternalLink"
 import "./Searchbar.scss"
 
 class SearchBar extends Component {
@@ -20,10 +21,16 @@ class SearchBar extends Component {
   generateResults = () => {
     if (this.state.error) {
       return (
-        <li key="searchbar-empty" className="empty">
+        <li key="searchbar-empty" className="error">
           Sorry, but something strange is going on. Search does not want to
           behave appropriately. Perhaps try again a little later. Drop me a line
           if it persists.
+          <p className="message">{`[${this.state.error}]`}</p>
+          <p className="contact-me">
+            Create an issue on <External to="https://github.com/cbillowes/curious-programmer-helium/issues">GitHub</External><br/>
+            Send me a <External to="https://twitter.com/cbillowes">tweet</External><br />
+            Email me at <External to="mailto:curiousprogrammer.io@gmail.com">curiousprogrammer.io@gmail.com</External><br />
+          </p>
         </li>
       )
     }
@@ -93,7 +100,8 @@ class SearchBar extends Component {
           this.setState({
             query: query,
             loaded: true,
-            results: results
+            results: results,
+            error: false
           })
         },
         (error) => {
