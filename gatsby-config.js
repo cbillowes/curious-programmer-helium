@@ -110,30 +110,6 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: "minimal-ui",
-        icons: [
-          {
-            src: "/images/logos/128x128.png",
-            sizes: "128x128",
-            type: "image/png"
-          },
-          {
-            src: "/images/logos/512x512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      }
-    },
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-feed",
@@ -204,6 +180,42 @@ module.exports = {
             output: config.siteRss
           }
         ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: "minimal-ui",
+        icons: [
+          {
+            src: "/images/logos/128x128.png",
+            sizes: "128x128",
+            type: "image/png"
+          },
+          {
+            src: "/images/logos/512x512.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true // boolean to turn off automatic creation of redirect rules for client only paths
       }
     }
   ]
