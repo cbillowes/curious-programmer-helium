@@ -1,6 +1,6 @@
 ---
 title: "Checking Disk Usage in Linux"
-ogImage: images/og-images/2019-01-13-disk-usage.png
+ogImage: images/og/2019-01-13-disk-usage.png
 date:   2019-01-13 07:30:00 +0200
 tags:
     - Technical

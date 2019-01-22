@@ -1,6 +1,6 @@
 ---
 title: "Datomic Cheat Sheet Series - Getting Started"
-ogImage: images/og-images/2018-09-06-datomic.png
+ogImage: images/og/2018-09-06-datomic.png
 date:   2018-09-06 06:00:00 +0200
 tags:
     - Technical

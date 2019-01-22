@@ -3,7 +3,7 @@ title: "Learning Linux"
 cover: "../../images/backgrounds/bionic-cover.png"
 blur:  "../../images/backgrounds/bionic-cover-blur.png"
 custom: Image from Ubuntu 18.04 LTS
-ogImage: images/og-images/2018-07-26-ubuntu-linux.png
+ogImage: images/og/2018-07-26-ubuntu-linux.png
 date: "2018-07-27 07:00"
 tags:
     - Technical

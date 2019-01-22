@@ -1,6 +1,6 @@
 ---
 title: "Datomic Cheat Sheet Series - Queries (Part 3) - Rules"
-ogImage: images/og-images/2018-09-06-datomic.png
+ogImage: images/og/2018-09-06-datomic.png
 date:   2018-09-20 06:00:00 +0200
 tags:
     - Technical

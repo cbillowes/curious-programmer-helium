@@ -1,6 +1,6 @@
 ---
 title: "Logging to Graylog in Clojure"
-ogImage: images/og-images/2018-11-30-graylog.png
+ogImage: images/og/2018-11-30-graylog.png
 date:   2018-11-30 21:30:00 +0200
 tags:
     - Technical

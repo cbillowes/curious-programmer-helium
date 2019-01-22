@@ -1,6 +1,6 @@
 ---
 title: "Setting up my environment in Fedora - Customizing my shell"
-ogImage: images/og-images/2018-10-20-shell.png
+ogImage: images/og/2018-10-20-shell.png
 date:   2018-10-20 18:30:03 +0200
 tags:
     - Technical
