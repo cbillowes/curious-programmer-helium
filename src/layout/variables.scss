@@ -1,8 +1,7 @@
-
-@import "../../third-parties/bootstrap/scss/functions";
-@import "../../third-parties/bootstrap/scss/variables";
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
 @import "../../third-parties/bootstrap/custom-variables";
-@import "../../third-parties/bootstrap/scss/mixins";
+@import "../../third-parties/bootstrap/scss/print";
 
 $background: $black;
 $background-darker: darken($black, 2%);
@@ -22,24 +21,20 @@ $font-family-serif: $font-family-base;
 $font-family-serif: "Lora", "Times New Roman", serif;
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$primary: $green;
-$secondary: $gray-600;
-$accent: $red;
-
-$background-serious-highlight: lighten(#cc0000, 45%);
+$background-serious-highlight: lighten($accent, 45%);
 
 $background-darker: $background-darker;
-$foreground-serious-highlight: $orange;
+$foreground-serious-highlight: $accent;
 $foreground-serious-highlight-anchor: $background;
 $foreground-serious-highlight-anchor-visited: lighten($background, 20%);
 
-$background-serious-highlight: lighten(#cc0000, 45%);
+$background-serious-highlight: lighten($accent, 45%);
 $foreground-serious-highlight: #cc0000;
 $foreground-serious-highlight-anchor: $background;
 $foreground-serious-highlight-anchor-visited: lighten($background, 20%);
 
 $scrollbar-track: lighten($background, 15%);
-$scrollbar-thumb: $blue;
+$scrollbar-thumb: $secondary;
 $visited: lighten($secondary, 10%);
 
 $table-background: darken($background, 5%);

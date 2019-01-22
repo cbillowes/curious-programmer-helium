@@ -1,4 +1,9 @@
 @import "../layout/variables.scss";
+@import "../../third-parties/bootstrap/scss/root";
+@import "../../third-parties/bootstrap/scss/transitions";
+@import "../../third-parties/bootstrap/scss/card";
+@import "../../third-parties/bootstrap/scss/spinners";
+@import "../../third-parties/bootstrap/scss/utilities";
 
 .cover {
     background-size: cover;
@@ -79,7 +84,7 @@
             color: $background-lighter;
 
             &:hover {
-                background-color: $blue;
+                background-color: $secondary;
                 color: $white;
             }
         }

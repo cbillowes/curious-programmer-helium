@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
-
 @import "./variables";
-@import "../../third-parties/bootstrap/scss/root";
-@import "../../third-parties/bootstrap/scss/transitions";
-@import "../../third-parties/bootstrap/scss/card";
-@import "../../third-parties/bootstrap/scss/spinners";
-@import "../../third-parties/bootstrap/scss/utilities";
-@import "../../third-parties/bootstrap/scss/print";
 
 @media screen {
     *::-webkit-scrollbar {
@@ -29,22 +20,22 @@
     *::-webkit-scrollbar-thumb {
         background-color: $scrollbar-thumb;
         min-height: 25px;
-        border: solid 3px darken($blue, 20%);
+        border: solid 3px darken($secondary, 20%);
         border-radius: 25px;
    }
 
     *::-webkit-scrollbar-thumb:horizontal {
-        background: -moz-linear-gradient(top, $blue 0%, rgba(0,0,0,0) 100%);
-        background: -webkit-linear-gradient(top, $blue 0%,rgba(0,0,0,0) 100%);
-        background: linear-gradient(to bottom, $blue 0%,rgba(0,0,0,0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr='#00000000',GradientType=0 );
+        background: -moz-linear-gradient(top, $secondary 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(top, $secondary 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, $secondary 0%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr='#00000000',GradientType=0 );
     }
 
     *::-webkit-scrollbar-thumb:vertical {
-        background: -moz-linear-gradient(left, $blue 0%, rgba(0,0,0,0) 100%);
-        background: -webkit-linear-gradient(left, $blue 0%,rgba(0,0,0,0) 100%);
-        background: linear-gradient(to right, $blue 0%,rgba(0,0,0,0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr='#00000000',GradientType=1 );
+        background: -moz-linear-gradient(left, $secondary 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(left, $secondary 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to right, $secondary 0%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr='#00000000',GradientType=1 );
     }
 
     * {
@@ -147,7 +138,7 @@
 
         &:hover,
         &:visited:hover {
-            color: $blue;
+            color: $secondary;
         }
 
         &:visited {
