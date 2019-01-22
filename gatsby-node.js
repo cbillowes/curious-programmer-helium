@@ -5,7 +5,6 @@ const siteConfig = require("./data/SiteConfig")
 
 const postNodes = []
 function addSiblingNodes(createNodeField) {
-
   postNodes.sort(
     ({ frontmatter: { date: date1 } }, { frontmatter: { date: date2 } }) => {
       const dateA = moment(date1, siteConfig.dateFromFormat)
@@ -139,10 +138,12 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        let idx = 0;
+        let idx = 0
         postNodes.map(node => {
-          let previous = idx - 1 < 0 ? postNodes[postNodes.length - 1] : postNodes[idx - 1]
-          let next = idx + 1 >= postNodes.length ? postNodes[0] : postNodes[idx + 1]
+          let previous =
+            idx - 1 < 0 ? postNodes[postNodes.length - 1] : postNodes[idx - 1]
+          let next =
+            idx + 1 >= postNodes.length ? postNodes[0] : postNodes[idx + 1]
 
           createPage({
             path: node.fields.slug,
@@ -153,7 +154,7 @@ exports.createPages = ({ graphql, actions }) => {
               next: next.fields.slug
             }
           })
-          idx += 1;
+          idx += 1
         })
 
         const tagSet = new Set()

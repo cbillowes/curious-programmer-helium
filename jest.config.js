@@ -1,21 +1,28 @@
 module.exports = {
-  "transform": {
+  transform: {
     "^.+\\.jsx?$": "<rootDir>/jest.preprocess.js"
   },
-  "moduleNameMapper": {
+  moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/__mocks__/fileMock.js"
   },
-  "testPathIgnorePatterns": ["node_modules", ".cache", "__tests__/data", "third-parties", "content"],
-  "watchPathIgnorePatterns": ["content"],
-  "transformIgnorePatterns": ["node_modules/(?!(gatsby)/)"],
-  "globals": {
-    "__PATH_PREFIX__": ""
+  testPathIgnorePatterns: [
+    "node_modules",
+    ".cache",
+    "__tests__/data",
+    "third-parties",
+    "content"
+  ],
+  watchPathIgnorePatterns: ["content"],
+  transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
+  globals: {
+    __PATH_PREFIX__: ""
   },
-  "testURL": "http://localhost",
-  "setupFiles": ["<rootDir>/loadershim.js", "<rootDir>/setupTests.js"],
-  "collectCoverage": true,
-  "collectCoverageFrom": [
+  testURL: "http://localhost",
+  setupFiles: ["<rootDir>/loadershim.js", "<rootDir>/setupTests.js"],
+  collectCoverage: true,
+  collectCoverageFrom: [
     "**/*.{js,jsx}",
     "!**/node_modules/**",
     "!**/.cache/**",
@@ -24,5 +31,5 @@ module.exports = {
     "!**/third-parties/**",
     "!(gatsby|jest|loadershim|setupTests)*.js"
   ],
-  "coverageDirectory": "__coverage__"
+  coverageDirectory: "__coverage__"
 }

@@ -40,20 +40,20 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-emojis',
+            resolve: "gatsby-remark-emojis",
             options: {
-              active : true,
-              class  : 'emoji-icon',
+              active: true,
+              class: "emoji-icon",
               // Select the size (available size: 16, 24, 32, 64)
-              size   : 32,
+              size: 32,
               // Add custom styles
-              styles : {
-                display      : 'inline',
-                margin       : '0',
-                'margin-top' : '1px',
-                position     : 'relative',
-                top          : '5px',
-                width        : '25px'
+              styles: {
+                display: "inline",
+                margin: "0",
+                "margin-top": "1px",
+                position: "relative",
+                top: "5px",
+                width: "25px"
               }
             }
           },
