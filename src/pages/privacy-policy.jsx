@@ -8,7 +8,7 @@ class PrivacyPolicyPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="privacy-policy-container container">
+        <div className="privacy-policy container">
           <Metadata
           description="This blog collects some personal data from its users. It is
           important to know what and how it is used."

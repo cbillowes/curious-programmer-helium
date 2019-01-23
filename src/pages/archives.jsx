@@ -45,7 +45,7 @@ class Index extends React.Component {
               id="filter"
               className="filter"
               onKeyUp={this.onFilter}
-              placeholder="Search for title" />
+              placeholder="Search for anything in the title" />
             <div className="empty">Nothing to see here. Try searching for a different title.</div>
             <ol>
               {edges.map((edge) => {

@@ -1,21 +1,39 @@
-// @import "../layout/variables.scss";
+@import "../layout/variables.scss";
 
-// .credits-container {
-//     .credit {
-//         margin-bottom: 1.5em;
+.credits-container {
+    @include gutter;
 
-//         a {
-//             border-radius: $border-radius;
-//             background-color: $primary;
-//             color: $background-lighter;
-//             padding: 0.5em 1em;
-//             font-size: 0.8em;
-//             margin-left: 1em;
+    section {
+        h1 {
+            font-size: $font-size * 1.3;
+        }
 
-//             &:hover {
-//                 background-color: $background-lighter;
-//                 color: $foreground;
-//             }
-//         }
-//     }
-// }
+        h2 {
+            font-size: $font-size * 1.15;
+        }
+    }
+
+    .credit {
+        margin-bottom: 1.5em;
+        font-size: $font-size;
+
+        a {
+            font-family: $font-family-sans-serif;
+            line-height: 2em;
+            font-size: 0.8em;
+            background-color: $background-lighter;
+            border-radius: $border-radius;
+            color: $foreground;
+            margin: 0.25em;
+            padding: 0 1em;
+            display: inline-block;
+            text-shadow: none;
+            font-weight: $font-family-sans-serif-light;
+
+            &:hover {
+                background-color: $primary;
+                color: $background-lighter;
+            }
+        }
+    }
+}

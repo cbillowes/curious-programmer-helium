@@ -32,6 +32,7 @@ $background-static-state: $background;
             flex: 1;
 
             h1,
+            p,
             .post-metadata p,
             .tags {
                 text-align: right;
@@ -68,7 +69,7 @@ $background-static-state: $background;
             .container {
                 z-index: 1;
                 position: absolute;
-                padding: 2em 3em;
+                @include gutter;
             }
 
             color: $foreground;
@@ -82,7 +83,12 @@ $background-static-state: $background;
             overflow-y: auto;
 
             h1 {
-                font-size: 1.5em;
+                font-size: $font-size + 0.5;
+            }
+
+            p {
+                font-size: $font-size - 0.25;
+                line-height: $line-height - 1;
             }
 
             a {
@@ -124,11 +130,15 @@ $background-static-state: $background;
                     padding: 0;
 
                     h1 {
-                        font-size: 1.25em;
+                        font-size: $font-size;
                     }
 
                     h1 + p {
                         display: none;
+                    }
+
+                    .post-metadata p {
+                        font-size: $font-size - 0.5;
                     }
 
                     .post-metadata p,

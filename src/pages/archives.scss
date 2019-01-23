@@ -5,17 +5,21 @@
         position: relative;
         max-width: $container-width;
         margin: 0 auto;
+        @include gutter;
 
         .filter {
+            font-family: $font-family-sans-serif;
             padding: 0.5em;
             font-size: 1em;
             background-color: $background-darker;
             border: solid 1px $background-darker;
             border-radius: 5px;
-            position: absolute;
-            right: 0;
-            top: 0;
             color: $foreground;
+            width: 100%;
+
+            &::placeholder {
+                font-style: italic;
+            }
         }
 
         .empty {
@@ -44,9 +48,7 @@
             }
 
             .tags {
-                padding-left: 0.5em;
-                display: inline;
-                text-align: right;
+                text-align: left;
             }
         }
     }

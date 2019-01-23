@@ -1,58 +1,40 @@
 @import "../../layout/variables.scss";
 
 .posts {
+    @include gutter;
+
     section {
-        padding: 0 2.5em;
-        max-width: $container-width;
-        margin: 0 auto;
-
         &:first-child {
-            max-width: 100%;
-            padding: 0 2.5em;
-            text-align: center;
-
-            &::after {
-                content: "";
-                position: relative;
-            }
-
             h1 {
-                font-size: 3em;
+                font-size: $font-size + 3.5;
 
                 @include small-media {
-                    font-size: 2em;
-                }
-
-                &:hover {
-                    color: $primary;
+                    font-size: $font-size + 1.5;
                 }
             }
 
             p {
-                max-width: $container-width;
-                margin: 0 auto;
-                padding: 1em;
+                font-size: $font-size + 0.5;
             }
+        }
 
-            .tags {
-                .tag,
-                &:visited {
-                    background-color: $primary;
-                    color: $background-lighter;
+        h1 {
+            text-align: center;
+            margin: 0 1em;
+        }
 
-                    &:hover {
-                        background-color: $secondary;
-                        color: $foreground;
-                    }
-                }
-            }
+        p {
+            padding-top: 1em;
+            max-width: $container-width;
+            margin: 0 auto;
+            line-height: 2em;
         }
 
         a {
             color: $foreground;
 
             &:hover {
-                color: $secondary;
+                color: $primary;
             }
         }
     }

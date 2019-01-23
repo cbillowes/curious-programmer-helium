@@ -6,6 +6,8 @@
     .logo {
         max-width: $container-width;
         margin: 0 auto;
+        font-size: 1.5rem;
+        padding-top: 5px;
 
         .mobile-logo {
             display: none;
@@ -13,7 +15,7 @@
 
         .default-logo,
         .mobile-logo {
-            margin-top: 0.5em;
+            margin-bottom: 0.5em;
             font-size: 1.25em;
             font-weight: $font-family-sans-serif-heavy;
             font-family: $font-family-sans-serif;

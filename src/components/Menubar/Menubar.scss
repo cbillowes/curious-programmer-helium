@@ -23,11 +23,12 @@
         background-color: $background-darker;
         position: fixed;
         width: $menubar-width;
-        top: 4em;
+        top: 5.1em;
         right: 0;
         height: 100vh;
         z-index: 999;
         text-shadow: none;
+        font-size: $font-size - 0.75;
 
         @include flyout;
 

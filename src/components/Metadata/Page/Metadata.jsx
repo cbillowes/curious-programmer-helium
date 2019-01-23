@@ -6,10 +6,6 @@ import navigation from "../../../../data/Navigation"
 import Path from "path"
 import url from "url-join"
 
-function getImageLocation(slug, image) {
-
-}
-
 class Metadata extends Component {
   constructor(props) {
     super(props)
@@ -96,8 +92,11 @@ class Metadata extends Component {
     return (
       <Helmet>
         <title>{pageTitle}</title>
+
         <link rel="canonical" href={pageUrl} />
         <link rel="icon" href="/favicon.png" />
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Open+Sans:400,800" />
+
         <meta name="description" content={pageDescription} />
         <meta name="image" content={imageUrl} />
 
@@ -115,6 +114,11 @@ class Metadata extends Component {
         <script type="application/ld+json">
           {getSchema(pageTitle, pageDescription, pageUrl, imageUrl)}
         </script>
+        <noscript>
+          {`
+            <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Open+Sans:400,800" rel="stylesheet" type="text/css" />
+          `}
+        </noscript>
       </Helmet>
     );
   }

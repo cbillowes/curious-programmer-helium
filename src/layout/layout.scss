@@ -25,17 +25,13 @@
    }
 
     *::-webkit-scrollbar-thumb:horizontal {
-        background: -moz-linear-gradient(top, $secondary 0%, rgba(0,0,0,0) 100%);
-        background: -webkit-linear-gradient(top, $secondary 0%,rgba(0,0,0,0) 100%);
-        background: linear-gradient(to bottom, $secondary 0%,rgba(0,0,0,0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr='#00000000',GradientType=0 );
+        background-color: $secondary;
+        border-bottom: solid 10px darken($secondary, 20%);
     }
 
     *::-webkit-scrollbar-thumb:vertical {
-        background: -moz-linear-gradient(left, $secondary 0%, rgba(0,0,0,0) 100%);
-        background: -webkit-linear-gradient(left, $secondary 0%,rgba(0,0,0,0) 100%);
-        background: linear-gradient(to right, $secondary 0%,rgba(0,0,0,0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr='#00000000',GradientType=1 );
+        background-color: $secondary;
+        border-right: solid 10px darken($secondary, 20%);
     }
 
     * {
@@ -50,11 +46,11 @@
         background-color: $background;
         text-shadow: $text-shadow;
         color: $foreground;
-        font-size: $font-size;
         font-family: $font-family-serif;
-        line-height: $line-height;
         padding: 0;
         margin: 0;
+        font-size: $font-size;
+        line-height: 2em;
     }
 
     h1,
@@ -70,67 +66,46 @@
     }
 
     h1 {
-        font-size: 2em;
+        font-size: $font-size + 1.5;
         font-weight: $font-family-sans-serif-heavy;
     }
 
     h2 {
-        font-size: 1.9em;
+        font-size: $font-size + 1.25;
     }
 
     h3 {
-        font-size: 1.8rem;
+        font-size: $font-size + 0.75;
         margin-top: 1em;
     }
 
-    h4 {
-        font-size: 1.6rem;
-    }
-
-    h5 {
-        font-size: 1.4rem;
-    }
-
+    h4,
+    h5,
     h6 {
-        font-size: 1.2rem;
-    }
-
-    h7 {
-        font-weight: $font-family-sans-serif-light;
-    }
-
-    p {
-        font-size: $font-size * 1.25;
-        line-height: 1.75em;
+        font-size: $font-size + 0.25;
     }
 
     @include small-media {
+        body {
+            font-size: $font-size-mobile;
+        }
+
         h1 {
-            font-size: 1.6em;
+            font-size: $font-size-mobile * 1.85;
         }
 
         h2 {
-            font-size: 1.5em;
+            font-size: $font-size-mobile * 1.35;
         }
 
         h3 {
-            font-size: 1.4em;
+            font-size: $font-size-mobile * 1.15;
         }
 
-        h4 {
-            font-size: 1.3rem;
-        }
-
-        h5 {
-            font-size: 1.2rem;
-        }
-
+        h4,
+        h5,
         h6 {
-            font-size: 1.1rem;
-        }
-
-        h7 {
-            font-weight: $font-family-sans-serif-light;
+            font-size: $font-size-mobile;
         }
     }
 

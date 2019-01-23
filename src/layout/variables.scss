@@ -1,6 +1,11 @@
 @import "../../third-parties/bootstrap/custom-variables";
 @import "../../third-parties/bootstrap/scss/print";
 
+@mixin gutter() {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 $background: $black;
 $background-darker: darken($black, 2%);
 $background-lighter: $gray-900;
@@ -11,14 +16,15 @@ $foreground-darker: $gray-300;
 $container-width: 960px;
 $menubar-width: 250px;
 $border-radius: 5px;
-$font-size: 1.35rem;
-$text-shadow: 1px 1px 1px $background-darker;
+$font-size: 1.86rem;
+$font-size-mobile: 1.7rem;
+$text-shadow: $background-darker 3px 3px;
 $line-height: $font-size * 2;
 $font-family-serif: $font-family-base;
 
 $font-family-serif: "Crimson Text", "Times New Roman", serif;
-$font-family-sans-serif: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-sans-serif-heavy: 700;
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif-heavy: 800;
 $font-family-sans-serif-light: 400;
 $font-family-serif-heavy: 700;
 $font-family-serif-light: 400;
@@ -46,7 +52,7 @@ $table-hover-text: lighten($background, 5%);
 $table-hover-link: darken($foreground, 40%);
 
 @mixin button {
-    font-weight: $font-family-sans-serif-heavy;
+    font-weight: $font-family-sans-serif-light;
     font-family: $font-family-sans-serif;
     text-shadow: none;
     background-color: $primary;

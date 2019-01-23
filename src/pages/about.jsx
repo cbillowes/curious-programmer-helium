@@ -7,6 +7,8 @@ import Contact from "../components/About/Contact"
 import Timeline from "../components/About/Timeline"
 import config from "../../data/SiteConfig"
 
+import "./about.scss"
+
 class AboutPage extends Component {
   render() {
     return (

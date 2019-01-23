@@ -1,7 +1,7 @@
 @import "../../layout/variables.scss";
 
 .navigation {
-    height: 4em;
+    height: 4.6em;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,7 @@
     background-color: $background-darker;
     border-bottom: solid 10px $primary;
     z-index: 999;
+    font-size: $font-size / 1.5;
 
     .normal-weight {
         font-weight: normal;

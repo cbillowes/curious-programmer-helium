@@ -52,14 +52,6 @@ export default class MainLayout extends React.Component {
     const { children } = this.props
     return (
       <div>
-        <Helmet>
-          <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Roboto+Slab:400,700" />
-          <noscript>
-            {`
-            <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Roboto+Slab:400,700" rel="stylesheet" type="text/css" />
-            `}
-          </noscript>
-        </Helmet>
         <Navigation />
         {children}
         <Footer />
