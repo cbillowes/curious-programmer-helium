@@ -1,8 +1,10 @@
+@import "../../../layout/variables.scss";
+
 .post-metadata {
     p {
         font-style: italic;
         text-align: right;
-        font-size: 0.8em;
+        font-size: $font-size / 1.1;
     }
 
     .tags {

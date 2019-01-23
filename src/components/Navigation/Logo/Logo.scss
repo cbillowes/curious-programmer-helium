@@ -15,8 +15,8 @@
         .mobile-logo {
             margin-top: 0.5em;
             font-size: 1.25em;
-            font-weight: 900;
-            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: $font-family-sans-serif-heavy;
+            font-family: $font-family-sans-serif;
 
             a {
                 color: $foreground;

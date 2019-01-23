@@ -27,7 +27,7 @@ export default class MainLayout extends React.Component {
           const copy = $(this)
           copyToClipboard(text, lang)
           copy.text("copied!")
-          setTimeout(function() {
+          setTimeout(function () {
             copy.text("copy")
           }, 2500)
         })
@@ -53,8 +53,12 @@ export default class MainLayout extends React.Component {
     return (
       <div>
         <Helmet>
-          <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+          <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Roboto+Slab:400,700" />
+          <noscript>
+            {`
+            <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Roboto+Slab:400,700" rel="stylesheet" type="text/css" />
+            `}
+          </noscript>
         </Helmet>
         <Navigation />
         {children}

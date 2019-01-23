@@ -63,7 +63,7 @@
     h4,
     h5,
     h6 {
-        font-weight: 800;
+        font-weight: $font-family-sans-serif-heavy;
         font-family: $font-family-sans-serif;
         line-height: 1.5em;
         text-shadow: $text-shadow;
@@ -71,6 +71,7 @@
 
     h1 {
         font-size: 2em;
+        font-weight: $font-family-sans-serif-heavy;
     }
 
     h2 {
@@ -95,7 +96,12 @@
     }
 
     h7 {
-        font-weight: bold;
+        font-weight: $font-family-sans-serif-light;
+    }
+
+    p {
+        font-size: $font-size * 1.25;
+        line-height: 1.75em;
     }
 
     @include small-media {
@@ -124,7 +130,7 @@
         }
 
         h7 {
-            font-weight: bold;
+            font-weight: $font-family-sans-serif-light;
         }
     }
 

@@ -16,8 +16,12 @@ $text-shadow: 1px 1px 1px $background-darker;
 $line-height: $font-size * 2;
 $font-family-serif: $font-family-base;
 
-$font-family-serif: "Lora", "Times New Roman", serif;
-$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "Crimson Text", "Times New Roman", serif;
+$font-family-sans-serif: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif-heavy: 700;
+$font-family-sans-serif-light: 400;
+$font-family-serif-heavy: 700;
+$font-family-serif-light: 400;
 
 $background-serious-highlight: lighten($accent, 45%);
 
@@ -42,7 +46,7 @@ $table-hover-text: lighten($background, 5%);
 $table-hover-link: darken($foreground, 40%);
 
 @mixin button {
-    font-weight: 600;
+    font-weight: $font-family-sans-serif-heavy;
     font-family: $font-family-sans-serif;
     text-shadow: none;
     background-color: $primary;
