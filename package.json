@@ -82,7 +82,7 @@
   "scripts": {
     "clean": "rm -rf public && rm -rf .cache",
     "clean:hardcore": "rm -rf node-modules && rm -f packages.json.lock && rm -rf public && rm -rf .cache",
-    "build": "./build.sh",
+    "build": "gatsby build",
     "develop": "npm run clean && gatsby develop --verbose --port 8001 --host localhost",
     "serve": "npm run clean && npm run build && gatsby serve",
     "build:pp": "gatsby build --prefix-paths",
