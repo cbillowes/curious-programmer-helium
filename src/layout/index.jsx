@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet"
 import Navigation from "../components/Navigation/Navigation"
 import Footer from "../components/Footer/Footer"
 import "./layout.scss"
@@ -51,6 +52,10 @@ export default class MainLayout extends React.Component {
     const { children } = this.props
     return (
       <div>
+        <Helmet>
+          <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        </Helmet>
         <Navigation />
         {children}
         <Footer />
