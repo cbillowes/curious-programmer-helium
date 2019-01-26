@@ -16,20 +16,39 @@
     .previous {
         float: left;
         margin-right: 1em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 350px;
+
+        .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 350px;
+            display: inline-block;
+
+            &:before {
+                content: "🡠";
+                margin-right: 0.5rem;
+            }
+        }
     }
 
     .next {
         float: right;
         margin-left: 1em;
         text-align: right;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 350px;
+
+        .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 350px;
+            display: inline-block;
+        }
+
+        &:after {
+            content: " 🡢";
+            float: right;
+            margin-left: 0.5rem;
+        }
     }
 
     &::after {

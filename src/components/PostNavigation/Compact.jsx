@@ -8,8 +8,8 @@ class CompactPostNavigation extends Component {
 
     return (
       <div className="post-navigation compact">
-        <Link className="previous" to={previous.slug}>{previous.title}</Link>
-        <Link className="next" to={next.slug}>{next.title}</Link>
+        <Link className="previous" to={previous.slug}><span className="title">{previous.title}</span></Link>
+        <Link className="next" to={next.slug}><span className="title">{next.title}</span></Link>
       </div>
     )
   }
