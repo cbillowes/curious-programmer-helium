@@ -9,22 +9,8 @@
         display: inline;
     }
 
-    .tag,
-    &:visited {
-        font-family: $font-family-sans-serif;
-        line-height: 2em;
-        background-color: $background-lighter;
-        border-radius: $border-radius;
-        color: $foreground;
+    .tag {
+        @include button;
         margin: 0.25em;
-        padding: 0 1em;
-        display: inline-block;
-        text-shadow: none;
-        font-weight: $font-family-sans-serif-light;
-
-        &:hover {
-            background-color: $primary;
-            color: $background-lighter;
-        }
     }
 }

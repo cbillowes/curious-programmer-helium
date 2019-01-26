@@ -96,10 +96,9 @@ $background-static-state: $background;
             }
 
             .tag {
-                background-color: $foreground;
-                color: $background-darker;
-                font-size: 0.7em;
-                padding: 0 1em;
+                @include button;
+                background-color: $gray-500;
+                color: $gray-900;
 
                 &:hover {
                     background-color: $primary;

@@ -46,12 +46,8 @@ $community: #52a2f5;
         }
 
         .tag {
-            font-size: $font-size-base - 0.5;
+            @include button;
             background-color: lighten($accent, 15%);
-            padding: 0.25em 0.5em;
-            border-radius: 5px;
-            color: $background-darker;
-            margin: 0 0.25em;
         }
     }
 
@@ -206,9 +202,7 @@ $community: #52a2f5;
         width: 100%;
 
         .tag {
-            font-family: $font-family-sans-serif;
-            text-shadow: none;
-            font-size: $font-size-base;
+            @include button;
         }
 
         .meta {
@@ -277,10 +271,6 @@ $community: #52a2f5;
 
             .description {
                 font-size: $font-size-medium;
-
-                .tag {
-                    font-size: $font-size-medium - 0.5;
-                }
             }
 
             .meta {
@@ -307,10 +297,6 @@ $community: #52a2f5;
         .item {
             .description {
                 font-size: $font-size-small;
-
-                .tag {
-                    font-size: $font-size-small - 0.5;
-                }
             }
 
             display: flex;

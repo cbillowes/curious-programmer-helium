@@ -83,8 +83,14 @@ $table-hover-link: darken($foreground, 40%);
     cursor: pointer;
     font-size: $font-size-base - 0.5;
 
-    &:hover {
+    &:hover,
+    &:visited:hover {
+        color: $background;
         background-color: $secondary;
+    }
+
+    @include medium-media {
+        font-size: $font-size-medium - 0.5;
     }
 
     @include small-media {

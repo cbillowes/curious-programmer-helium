@@ -8,13 +8,18 @@ class Tag extends Component {
 
     if (to) {
       return (
-        <Link key={`tag-${_.uniqueId()}-${to}`} className="tag" to={to}>
+        <Link
+          key={`tag-${_.uniqueId()}-${to}`}
+          className="tag"
+          to={to}>
           {this.props.children}
         </Link>
       )
     } else {
       return (
-        <span key={`tag-${_.uniqueId()}-${_.random(9999)}`} className="tag">{this.props.children}</span>
+        <span
+          key={`tag-${_.uniqueId()}-${_.random(9999)}`}
+          className="tag">{this.props.children}</span>
       )
     }
   }
