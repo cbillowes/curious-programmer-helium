@@ -46,6 +46,8 @@ class Metadata extends Component {
           {" "}
           {this.renderMoment(theDate)}
           {" "}
+          by Clarice Bouwer
+          {" "}
           {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
         </p>
         {(tags) ? <Tags tags={tags} /> : <span />}
