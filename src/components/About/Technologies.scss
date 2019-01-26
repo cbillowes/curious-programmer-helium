@@ -10,16 +10,19 @@
 
     .tag {
         @include button;
-
         margin: 0.5em;
 
         .xp {
             font-size: 0.75em;
-            color: lighten($background, 20%);
 
             &::before {
                 content: " ";
             }
+        }
+
+        &:hover {
+            cursor: default;
+            background-color: $primary;
         }
     }
 
@@ -36,5 +39,9 @@
 
     .elaborated {
         display: block;
+
+        .tag {
+            background-color: $foreground;
+        }
     }
 }

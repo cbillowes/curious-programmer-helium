@@ -1,16 +1,49 @@
 @import "../../layout/variables.scss";
 
+$profile-size: 300px;
+
 .about {
     text-align: center;
+
+    @include medium-media {
+        text-align: left;
+    }
+
+
+    @include small-media {
+        text-align: left;
+    }
+
 
     .profile {
         max-width: $container-width;
         margin: 0 auto;
 
+        @include medium-media {
+            margin-left: 4em;
+        }
+
+
+        @include small-media {
+            margin-left: 4em;
+        }
+
+
         h1 {
-            font-size: 3.5em;
+            font-size: $font-size-lg-h1 + 1;
             margin-top: 10px;
             margin-bottom: 0;
+
+            @include medium-media {
+                font-size: $font-size-md-h1 + 0.75;
+                text-align: center;
+            }
+
+
+            @include small-media {
+                font-size: $font-size-sm-h1 + 0.5;
+                text-align: center;
+            }
         }
 
         .photo {
@@ -21,6 +54,12 @@
             background-position: center;
             background-size: 300px;
             margin: 0 auto;
+
+            @include small-media {
+                width: $profile-size / 2;
+                height: $profile-size / 2;
+                background-size: $profile-size / 2;
+            }
         }
     }
 
@@ -44,10 +83,22 @@
 
     .elaborated {
         display: block;
-
-        @include highlighted-section;
-
         margin: 1em 2em;
+
+        @media screen and (min-width: 801px) {
+            @include highlighted-section;
+        }
+
+        @include medium-media {
+            margin: 0.5em;
+            text-align: left;
+        }
+
+
+        @include small-media {
+            text-align: left;
+            margin: 0.5em;
+        }
     }
 }
 
