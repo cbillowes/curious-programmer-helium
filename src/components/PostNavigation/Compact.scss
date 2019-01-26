@@ -4,6 +4,12 @@
     font-size: 0.7em;
     font-family: $font-family-sans-serif;
     margin-top: 7em;
+    height: 2.5em;
+
+    @include small-media {
+        line-height: $font-size-medium;
+        height: 3.5em;
+    }
 
     a {
         color: $foreground;
@@ -17,16 +23,24 @@
         float: left;
         margin-right: 1em;
 
+        @include small-media {
+            margin-top: 1em;
+        }
+
         .title {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 350px;
+            max-width: 450px;
             display: inline-block;
 
             &:before {
                 content: "🡠";
                 margin-right: 0.5rem;
+            }
+
+            @include medium-media {
+                mex-width: 250px;
             }
         }
     }
@@ -36,12 +50,20 @@
         margin-left: 1em;
         text-align: right;
 
+        @include small-media {
+            margin-top: 1em;
+        }
+
         .title {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 350px;
+            max-width: 450px;
             display: inline-block;
+
+            @include medium-media {
+                max-width: 250px;
+            }
         }
 
         &:after {
