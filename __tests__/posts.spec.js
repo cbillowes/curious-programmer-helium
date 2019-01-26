@@ -1,6 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { mount } from "enzyme"
+import { mount, render } from "enzyme"
 import moment from "moment"
 import Path from "path"
 import Page from "../src/templates/post"
@@ -82,8 +82,8 @@ describe("the posts page", () => {
       })
     })
 
-    describe("there are different ways of building absolute urls", () => {
-      it("those that are relative to a folder", () => {
+    describe("the absolute image urls", () => {
+      it("that are relative to a folder", () => {
         let newContext = context
         let newData = data
         newData.post.fields.slug = ""
@@ -96,7 +96,7 @@ describe("the posts page", () => {
         metadata.expectImage(`${config.siteUrl}/path/to/some/or/other/post/background.png`, newHelmet, newSchema)
       })
 
-      it("those that are just relative to a path", () => {
+      it("that are just relative to a path", () => {
         let newContext = context
         let newData = data
         newData.post.fields.slug = ""
@@ -109,7 +109,7 @@ describe("the posts page", () => {
         metadata.expectImage(`${config.siteUrl}/path/to/some/background.png`, newHelmet, newSchema)
       })
 
-      it("then an external url", () => {
+      it("that are external urls", () => {
         let newContext = context
         let newData = data
         newData.post.frontmatter.cover = "https://picsum.photos/#/54654"
@@ -212,6 +212,36 @@ describe("the posts page", () => {
     it("should have disqus", () => {
       const component = mount(<Page pageContext={context} data={data} />)
       expect(component.html()).toContain(`id="disqus_thread"`)
+    })
+
+    describe("should be able to navigate to previous and next posts", () => {
+      it("has a navigation bar at the top of the post", () => {
+        const component = render(<Page pageContext={context} data={data} />)
+        expect(component.find(".compact").find(".previous").length).toEqual(1)
+        expect(component.find(".compact").find(".next").length).toEqual(1)
+      })
+
+      it("has a navigation bar at the bottom of the post", () => {
+        const component = render(<Page pageContext={context} data={data} />)
+        expect(component.find(".elaborate").find(".previous").length).toEqual(1)
+        expect(component.find(".elaborate").find(".next").length).toEqual(1)
+      })
+
+      it("can navigate to the previous post", () => {
+        const component = render(<Page pageContext={context} data={data} />)
+        const previous = `<a class="previous" href="/path/to/previous/post"><span class="title">Previous post</span></a>`
+        const next = `<a class="next" href="/path/to/next/post"><span class="title">Next post</span></a>`
+        expect(component.find(".compact").html()).toContain(previous)
+        expect(component.find(".compact").html()).toContain(next)
+      })
+
+      it("can navigate to the next post", () => {
+        const component = render(<Page pageContext={context} data={data} />)
+        const previous = `<h1>Previous post</h1>`
+        const next = `<h1>Next post</h1>`
+        expect(component.find(".elaborate").html()).toContain(previous)
+        expect(component.find(".elaborate").html()).toContain(next)
+      })
     })
   })
 })
