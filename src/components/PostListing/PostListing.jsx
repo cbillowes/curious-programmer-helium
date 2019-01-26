@@ -25,9 +25,11 @@ class PostListing extends React.Component {
         {list.map((post) => {
           return (
             <section key={`post-${post.path}`}>
-              <a href={post.path}>
-                <h1>{post.title}</h1>
-              </a>
+              <h1>
+                <a href={post.path}>
+                  {post.title}
+                </a>
+              </h1>
               <p>{post.excerpt}</p>
               <Metadata tags={post.tags} date={post.date} timeToRead={post.timeToRead} />
               <hr />

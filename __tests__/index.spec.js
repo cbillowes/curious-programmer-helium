@@ -54,8 +54,8 @@ describe("the index page", () => {
   describe("content", () => {
     it("expected", () => {
       const component = mount(<Page data={posts} />)
-      expect(component.html()).toContain(`<section><a href="hello-world"><h1>Hello World</h1></a>`)
-      expect(component.html()).toContain(`<section><a href="hello-galaxy"><h1>Hello Galaxy</h1></a>`)
+      expect(component.html()).toContain(`<section><h1><a href="hello-world">Hello World</a></h1>`)
+      expect(component.html()).toContain(`<section><h1><a href="hello-galaxy">Hello Galaxy</a></h1>`)
     })
   })
 })
