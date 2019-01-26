@@ -6,6 +6,7 @@ tags:
     - Technical
     - Terminal
     - Git
+    - CLI
 ---
 
 I
@@ -33,16 +34,15 @@ Let's say I do a refactor but I also update a few features and add new
 features.
 
 In an atomic commit, I will commit the refactor and each feature change
-separately. Not each line or method.
+separately.
 
 I don't know what the official definition is but to me an atomic commit is a **commit that is focused
-on one context and one context only**. Sometimes this is tricky. I do this to the best of
+on one context and one context only**. Granted, this is tricky. I do this to the best of
 my abilities but I don't always get it right.
 
-> The **context** means a single topic: a feature, bug fix, refactor, task...
-> **So to reiterate:** I don't commit each single line or function change
-> separately, it's the feature in its entirety because that is what I would
-> want to revert if things go south.
+> **Disclaimer:** I don't intend that I commit each and every single line
+> or function. By context I mean a single topic: a feature, bug fix,
+> refactor, upgrade, task...
 
 ## A monolithic commit
 Again. Let's say I do a refactor but I also update a few features and add new
@@ -61,28 +61,22 @@ my own doing), read, review and revert.
 ## Why go atomic?
 
 Atomic commits are easer to:
-* **track** - I know exactly where in the history it is and what exists or was deployed
-  before and after it. I can find all changes with a particular commit message or
-  partial message if I am looking for multiple commits.
+* **track** - I know where they are in the history. `git log --oneline`
+  shows me all commits. `git log --grep <pattern>` lets me find a commit based
+  on a partial message. `git log <commit>` will jump to that commit and
+  show previous commits.
 
-  `git log --oneline`
-  `git log --grep <pattern>`
-* **understand** - I've documented the change with a commit message or explained
-  it further with a more detailed message.
+* **understand** - I document each change with a commit message and elaborate
+  with an explanation if I need to.
 
-  `git show -s --format=%B <commit>`
-* **read** - it's a change focused on a single context making it smaller, simpler
-  and easier to read.
+* **read**: it's a change focused on a single context which makes it smaller,
+  simpler and easier to read the patch `git show <commit>` or `git log <commit> -p`
 
-  `git show <commit>`
-* **review** - as it is a small, focused, documented change, a reviewer should
-  easily be able to follow the code and keep their sanity.
-* **revert** - reverting an atomic change will not revert unrelated changes.
-  *Just be aware of any dependant changes that also need to be rolled back.*
+* **review**: as it is a small, focused, documented change, a reviewer should
+  easily be able to follow the code changes and keep their sanity.
 
-  `git revert <commit>`
-
----
+* **revert** - reverting `git revert <commit>` an atomic commit will not revert
+  unrelated changes like a monolithic commit would.
 
 ## What do I do?
 
@@ -112,5 +106,5 @@ Atomic commits are easer to:
 
 > The goal of creating atomic commits is not to create "100 commits" but
 > rather **pragmatically** craft relevant changes for a better history,
-> cognitive load and an easier means of rollback changes.
+> cognitive load and an easier means to rollback changes.
 
