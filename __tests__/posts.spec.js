@@ -26,7 +26,7 @@ describe("the posts page", () => {
     }, helmet, schema)
 
     describe("check out those metadata image urls", () => {
-      it("prefers the og:image over any other", () => {
+      it("prefers the og:image over any other specified image", () => {
         let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
@@ -40,7 +40,7 @@ describe("the posts page", () => {
         metadata.expectImage(`${config.siteUrl}/images/og-image.png`, newHelmet, newSchema)
       })
 
-      it("falls back to cover when og:image is not set", () => {
+      it("falls back to the cover image when the og:image is not set", () => {
         let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context
@@ -54,7 +54,7 @@ describe("the posts page", () => {
         metadata.expectImage(`${config.siteUrl}${slug}/cover.png`, newHelmet, newSchema)
       })
 
-      it("it uses the default og:image when neither og:image nor over is set", () => {
+      it("it uses the default site og:image when neither og:image nor cover image is set", () => {
         let slug = "/2019-01-01/this-is-a-really-awesome-post"
         let newData = data
         let newContext = context

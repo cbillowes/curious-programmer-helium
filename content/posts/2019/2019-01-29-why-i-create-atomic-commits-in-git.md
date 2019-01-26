@@ -1,6 +1,6 @@
 ---
 title: "Why I Create Atomic Commits In Git"
-ogImage: /og/2019-01-15-git.png
+ogImage: /images/og/2019-01-15-git.png
 date:   2019-01-26 11:00:00 +0200
 tags:
     - Technical
