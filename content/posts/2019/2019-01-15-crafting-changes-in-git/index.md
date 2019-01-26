@@ -32,15 +32,9 @@ by WetDynamics that "atomic commits sound nice in theory but in
 practice you end up with 100 commits of "extracted foo into a
 method" or "refactored bar to make it more readable". Does it
 really make your git history easier to grok than a single commit
-focused on a feature?"
-
-They are right. My wording is wrong. If you do a refactor, that
-entire refactor should be one commit. I've experienced issues
-before where a refactor goes in alongside other unrelated changes
-that do not depend on the refactor and either needs to be rolled
-back. The entire commit goes and you loose both changes. I guess
-the idea is not to get 100 atomic commits for the refactor and
-feature but to rather get **pragmatic feature commits**.
+focused on a feature?" So I
+[wrote](/blog/why-i-create-atomic-commits-in-git)
+about it.
 
 ## Stop!
 Know what you are doing. If you make a mistake by omitting a file
