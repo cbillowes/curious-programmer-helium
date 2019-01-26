@@ -56,7 +56,7 @@ changes to the file and commit it. Put your changes back for the
 next commit. No more stone age processes. :smile:
 
 **The Git way**
-1. You can use the interactive rebase approach to add the files you
+1. You can use the interactive mode approach to add the files you
 want and choose parts of the files you are interested in committing.
 2. You can use the patch approach directly.
 
@@ -89,7 +89,7 @@ This is the meat of what I want to share with you. I am going to
 show you how to stage files and parts of files to craft your
 commits. :sunglasses:
 
-### The interactive rebase way
+### The interactive mode way
 Get started with `git add -i` or `git add --interactive` See a
 status screen which is like `git status` on steroids.
 
@@ -111,7 +111,7 @@ staged then it will display **nothing**.
 
 You are presented with a bunch of options that will aid you on
 your journey. Let's take a look at them:
-![Git interactive rebase options](./git-interactive.png "Git interactive rebase options")
+![Git interactive mode options](./git-interactive.png "Git interactive mode options")
 
 `What now>` is the base prompt patiently awaiting your commands.
 Type in any of the numbers or letters below:
