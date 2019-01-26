@@ -16,7 +16,7 @@ class CreditsPage extends Component {
             slug="/credits" />
           <h1>Credits</h1>
           <section>
-            <h1>Hosting</h1>
+            <h2>Hosting</h2>
             <Credit
               to="https://www.cloudafrica.net/"
               title="CloudAfrica"
@@ -33,7 +33,7 @@ class CreditsPage extends Component {
             </Credit>
           </section>
           <section>
-            <h1>Continuous Integration</h1>
+            <h2>Continuous Integration</h2>
             <Credit
               to="https://travis-ci.org"
               title="Travis CI"
@@ -50,7 +50,7 @@ class CreditsPage extends Component {
             </Credit>
           </section>
           <section>
-            <h1>Code</h1>
+            <h2>Code</h2>
             <Credit to="https://www.gatsbyjs.org/" title="gatsbyjs.org">
               Gatsby lets you build blazing fast sites with your data, whatever
               the source. Liberate your sites from legacy CMSs and fly into the
@@ -86,9 +86,9 @@ class CreditsPage extends Component {
             </Credit>
           </section>
           <section>
-            <h1>Icons</h1>
+            <h2>Icons</h2>
 
-            <h2>Menu bar</h2>
+            <h3>Menu bar</h3>
 
             <Credit
               to="https://www.flaticon.com/free-icon/musica-searcher_70376"
@@ -108,7 +108,7 @@ class CreditsPage extends Component {
               <br />
               Icons made by <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev">Egor Rumyantsev</a> from <a target="_blank" rel="nofollow noopenner noreferrer" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a target="_blank" rel="nofollow noopenner noreferrer" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
 
-            <h2>Contact me</h2>
+            <h3>Contact me</h3>
 
             <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
             <Credit
@@ -128,13 +128,13 @@ class CreditsPage extends Component {
             </ul>
           </section>
           <section>
-            <h1>Photography</h1>
+            <h2>Photography</h2>
             <Credit to="https://picsum.photos" title="picsum.photos">
               Lorem Ipsum... but for photos.
             </Credit>
           </section>
           <section>
-            <h1>Tools</h1>
+            <h2>Tools</h2>
             <Credit to="https://code.visualstudio.com/" title="Microsoft Visual Studio Code">
               Visual Studio Code is an open-source and free source code editor developed
               by Microsoft for Windows, Linux and macOS. It includes support for debugging,
@@ -158,7 +158,7 @@ class CreditsPage extends Component {
             </Credit>
           </section>
           <section>
-            <h1>Privacy Policy</h1>
+            <h2>Privacy Policy</h2>
             <Credit to="https://www.iubenda.com" title="iubenda">
               Attorney-level solutions to make your websites and apps compliant
               with the law across multiple countries and legislations.

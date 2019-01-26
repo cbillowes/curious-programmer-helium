@@ -16,10 +16,28 @@ $foreground-darker: $gray-300;
 $container-width: 960px;
 $menubar-width: 250px;
 $border-radius: 5px;
-$font-size: 1.86rem;
-$font-size-mobile: 1.7rem;
+
+$font-size-base: 1.86rem;
+$font-size-medium: $font-size-base - 0.15;
+$font-size-small: $font-size-base - 0.25;
+
+$font-size-lg-h1: $font-size-base + 1.5;
+$font-size-lg-h2: $font-size-base + 1;
+$font-size-lg-h3: $font-size-base + 0.25;
+$font-size-lg-rest: $font-size-base + 0;
+
+$font-size-md-h1: $font-size-medium + 1.5;
+$font-size-md-h2: $font-size-medium + 1;
+$font-size-md-h3: $font-size-medium + 0.25;
+$font-size-md-rest: $font-size-medium + 0;
+
+$font-size-sm-h1: $font-size-small + 1;
+$font-size-sm-h2: $font-size-small + 0.5;
+$font-size-sm-h3: $font-size-small + 0.15;
+$font-size-sm-rest: $font-size-small + 0;
+
 $text-shadow: $background-darker 3px 3px;
-$line-height: $font-size * 2;
+$line-height: $font-size-base * 2;
 $font-family-serif: $font-family-base;
 
 $font-family-serif: "Crimson Text", "Times New Roman", serif;
@@ -62,9 +80,20 @@ $table-hover-link: darken($foreground, 40%);
     border-radius: 4px;
     line-height: 1.75em;
     cursor: pointer;
+    font-size: $font-size-base - 0.5;
 
     &:hover {
         background-color: $secondary;
+    }
+
+    @include small-media {
+        font-size: $font-size-small - 0.5;
+    }
+}
+
+@mixin medium-media {
+    @media screen and (min-width: 800px + 1) and (max-width: 1024px) {
+        @content;
     }
 }
 

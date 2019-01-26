@@ -1,10 +1,12 @@
 @import "../layout/variables.scss";
 
 .posts-container {
+    max-width: $container-width;
+    margin: 0 auto;
+
     .posts {
         position: relative;
-        max-width: $container-width;
-        margin: 0 auto;
+
         @include gutter;
 
         .filter {
@@ -23,7 +25,7 @@
         }
 
         .empty {
-          display: none;
+            display: none;
         }
 
         .item {

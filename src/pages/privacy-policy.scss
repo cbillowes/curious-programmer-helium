@@ -2,4 +2,6 @@
 
 .privacy-policy.container {
     @include gutter;
+    max-width: $container-width;
+    margin: 0 auto;
 }

@@ -1,26 +1,62 @@
 @import "../../layout/variables.scss";
 
+$accent: #ffffffdd;
+$hover: $primary;
+
 .posts {
     @include gutter;
 
     section {
         &:first-child {
             h1 {
-                font-size: $font-size + 3.5;
+                margin-top: 0;
+                color: $accent;
+                font-size: $font-size-lg-h1 + 0.35;
+
+                a {
+                    color: $accent;
+
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+
+                @include medium-media {
+                    font-size: $font-size-md-h1 + 0.175;
+                }
+
 
                 @include small-media {
-                    font-size: $font-size + 1.5;
+                    font-size: $font-size-sm-h1;
                 }
             }
 
             p {
-                font-size: $font-size + 0.5;
+                color: $accent;
+                font-size: $font-size-base + 0.3;
+
+                @include medium-media {
+                    font-size: $font-size-medium + 0.175;
+                }
+
+
+                @include small-media {
+                    font-size: $font-size-small + 0.175;
+                }
             }
         }
 
         h1 {
             text-align: center;
-            margin: 0 1em;
+            margin: 2em 1em 0.25em 1em;
+
+            a {
+                color: $foreground;
+
+                &:hover {
+                    color: $hover;
+                }
+            }
         }
 
         p {
@@ -30,11 +66,15 @@
             line-height: 2em;
         }
 
-        a {
-            color: $foreground;
+        .post-metadata p {
+            font-size: $font-size-base - 0.35;
+            color: darken($accent, 50%);
+            margin-bottom: 0.5em;
+        }
 
-            &:hover {
-                color: $primary;
+        @include small-media {
+            .post-metadata p {
+                font-size: $font-size-small - 0.25;
             }
         }
     }

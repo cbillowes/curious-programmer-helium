@@ -28,7 +28,7 @@
         height: 100vh;
         z-index: 999;
         text-shadow: none;
-        font-size: $font-size - 0.75;
+        font-size: $font-size-base - 0.75;
 
         @include flyout;
 

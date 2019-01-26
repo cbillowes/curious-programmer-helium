@@ -2,7 +2,7 @@
 @import "../../third-parties/bootstrap/scss/mixins";
 
 // Brand Colors
-$primary: #9A9C16;
+$primary: lighten(#9A9C16, 10%);
 $secondary: #097ACF;
 $accent: #cc0000;
 $shade: #525a61;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "./variables";
 
 @media screen {
@@ -49,7 +50,7 @@
         font-family: $font-family-serif;
         padding: 0;
         margin: 0;
-        font-size: $font-size;
+        font-size: $font-size-base;
         line-height: 2em;
     }
 
@@ -66,46 +67,80 @@
     }
 
     h1 {
-        font-size: $font-size + 1.5;
+        font-size: $font-size-lg-h1;
         font-weight: $font-family-sans-serif-heavy;
     }
 
     h2 {
-        font-size: $font-size + 1.25;
+        font-size: $font-size-lg-h2;
     }
 
     h3 {
-        font-size: $font-size + 0.75;
+        font-size: $font-size-lg-h3;
         margin-top: 1em;
     }
 
     h4,
     h5,
     h6 {
-        font-size: $font-size + 0.25;
+        font-size: $font-size-lg-rest;
     }
 
-    @include small-media {
+    .gatsby-highlight,
+    code {
+        font-size: $font-size-base - 0.75;
+    }
+
+    @include medium-media {
         body {
-            font-size: $font-size-mobile;
+            font-size: $font-size-medium;
         }
 
         h1 {
-            font-size: $font-size-mobile * 1.85;
+            font-size: $font-size-md-h1;
         }
 
         h2 {
-            font-size: $font-size-mobile * 1.35;
+            font-size: $font-size-md-h2;
         }
 
         h3 {
-            font-size: $font-size-mobile * 1.15;
+            font-size: $font-size-md-h3;
         }
 
         h4,
         h5,
         h6 {
-            font-size: $font-size-mobile;
+            font-size: $font-size-md-rest;
+        }
+    }
+
+    @include small-media {
+        body {
+            font-size: $font-size-small;
+        }
+
+        h1 {
+            font-size: $font-size-sm-h1;
+        }
+
+        h2 {
+            font-size: $font-size-sm-h2;
+        }
+
+        h3 {
+            font-size: $font-size-sm-h3;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: $font-size-sm-rest;
+        }
+
+        .gatsby-highlight,
+        code {
+            font-size: $font-size-small - 0.5;
         }
     }
 
