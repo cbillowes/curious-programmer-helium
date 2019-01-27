@@ -22,3 +22,17 @@ for f in .*; do if [[ -f $f ]]; then ln -s /home/me/$f /home/me/working/director
 ```
 
 I execute this from my source directory.
+
+I can verify that my symlinks exist in my target directory
+
+```bash
+cd /home/me/working/directory
+ls -lah
+```
+
+I should see a few lines that look like this:
+
+```example
+lrwxrwxrwx. 1 me me   26 Jan 27 10:49 .zsh_history -> /home/me/.zsh_history
+lrwxrwxrwx. 1 me me   20 Jan 27 10:49 .zshrc -> /home/me/.zshrc
+```
