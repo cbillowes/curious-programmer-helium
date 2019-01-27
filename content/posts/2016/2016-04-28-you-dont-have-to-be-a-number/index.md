@@ -19,17 +19,17 @@ I heard - and believed. The game involves a lot of players and you need to play
 or quit while you are ahead.
 
 What does it mean to be a number anyway? Is it someone who's opinions go
-unheard? Is it someone who just completes boring tasks to get a paycheck at the
+unheard? Is it someone who completes boring tasks to get a paycheck at the
 end of the month? I don't know the answer to this.
 
 I have opinions and ideas that I like sharing with others and skills that I
-can contribute to different areas in the software development lifecycle. I
+can contribute to different areas in the software development life cycle. I
 don't want to settle. I want to contribute.
 
-When I joined a corporate I was overwhelmed. This world has so many people,
-a vast set of technologies, integration points, business rules, data and
-processes. It was daunting to say the least. How can you avoid to be just a
-number in this vast corporate ocean?
+When I joined a corporate I found it overwhelming. There's a lot of people,
+technologies, integration points, business rules, data and
+processes. I found it daunting. How can you avoid to be a
+number in this corporate ocean?
 
 ## Create your identity
 
@@ -40,9 +40,9 @@ Let me throw names out there: [Jeff Atwood](http://blog.codinghorror.com/),
 [Robert MacLean](http://www.sadev.co.za/).
 
 These people are a small fraction in the global software development community
-and are sometimes seen as celebrities. They simply take the time to share their
+and are sometimes seen as celebrities. They take the time to share their
 findings with others **consistently**. They blog, tweet, speak at
-events, write books and really get involved in the development community.
+events, write books and get involved in the development community.
 They have created an online identity - or brand - for themselves.
 
 Imagine if you were a software celebrity starting at a corporate. You would
@@ -65,7 +65,7 @@ Dependencies can be like a large spider web and not everyone is aware of the
 bigger picture. It often feels like trying to find a gold needle in a tower of
 silver needles - painful and almost impossible.
 
-It is important to start speaking to the right people. With time and some
+It's important to start speaking to the right people. With time and some
 personal investment you can start building relationships in all parts of the
 organization. Figure out what people do and why they are doing it. If you are
 friendly and helpful, people treat you the same way.
@@ -76,8 +76,7 @@ This is about working with people and learning from them.
 ## Sketch the bigger picture
 
 If you stay confined to your immediate environment you have little exposure.
-As you start building your relationships and understanding what and why things
-are being done, you get exposure to the bigger picture.
+As you start building your relationships and understand what and why it's getting done, you get exposure to the bigger picture.
 
 When something goes wrong with a dependency our team uses, I go to that team,
 show them the problem and work with them to help solve it. This gets easier the
@@ -85,8 +84,8 @@ more I learn about the company and its people who make it a success.
 
 ## My final thoughts
 
-If you consider joining a corporate and are worried about being a number,
-just remember that you have control. If you want to be a number, you will
+If you consider joining a corporate and think you will be a number,
+remember that you have control. If you want to be a number, you will
 be. If you don't, get out of your comfort zone and start talking.
-Build your identity and relationships. You learn so much just by talking to
-other people and corporates tend to have a lot of people.
+Build your identity and relationships. You learn so much by talking to
+other people and corporates tend to have a lot of them.
