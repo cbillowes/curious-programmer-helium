@@ -7,7 +7,6 @@ tags:
     - Linux
     - Terminal
     - Cheat Sheet
-    - Beginner
 ---
 
 I had to find out  much free space was available

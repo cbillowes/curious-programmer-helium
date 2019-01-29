@@ -6,29 +6,28 @@ tags:
     - Solr
     - Nginx
     - Let's Encrypt
-    - Advanced
 ---
 
 I want to enable search on my blog. I started looking into different solutions. I started with
-ElasticSearch but came across too many issues to get it setup that I paused on that and moved on 
+ElasticSearch but came across too many issues to get it setup that I paused on that and moved on
 to Solr. I fully intend on working with ElasticSearch and Kibana soon.
 
-Setting up Solr comes with its own set of challenges, some blatantly obvious mistakes that I made 
+Setting up Solr comes with its own set of challenges, some blatantly obvious mistakes that I made
 and others that required a little bit of digging.
 
 > I configured my solution on a virtual server running Fedora 25.
 
 ## Install Solr
 
-> Solr is an open source enterprise search platform, written in Java, from the Apache Lucene project. 
-> Its major features include full-text search, hit highlighting, faceted search, real-time indexing, 
+> Solr is an open source enterprise search platform, written in Java, from the Apache Lucene project.
+> Its major features include full-text search, hit highlighting, faceted search, real-time indexing,
 > dynamic clustering, database integration, NoSQL features and rich document handling.
 
-### Missing dependency 
-The [Solr installation guide](https://lucene.apache.org/solr/guide/7_0/taking-solr-to-production.html#taking-solr-to-production) 
-is quite straightforward but I got an error because of a missing dependency. 
+### Missing dependency
+The [Solr installation guide](https://lucene.apache.org/solr/guide/7_0/taking-solr-to-production.html#taking-solr-to-production)
+is quite straightforward but I got an error because of a missing dependency.
 
-It wanted the `lsof` package which "lists open files". It can get a list of all open files and the processes 
+It wanted the `lsof` package which "lists open files". It can get a list of all open files and the processes
 that opened them. `sudo dnf install lsof`
 
 ### Install package
@@ -39,7 +38,7 @@ curl http://mirror.za.web4africa.net/apache/lucene/solr/7.6.0/solr-7.6.0-src.tgz
 
 tar xzf solr-7.6.0.tgz solr-7.6.0/bin/install_solr_service.sh --strip-components=2
 
-./install_solr_service.sh solr-7.6.0.tgz 
+./install_solr_service.sh solr-7.6.0.tgz
 ```
 
 The **solr** user will be created by the installation script which will own `/opt/solr` and `/var/solr`.
@@ -50,13 +49,13 @@ sudo service solr status
 ```
 
 ### Open firewall
-I temporarily opened port `8983` while I was working on the project. I had to open the port on my 
+I temporarily opened port `8983` while I was working on the project. I had to open the port on my
 server's firewall and through my hosting provider's firewall done through their admin interface.
 
 First, I need to ensure that the firewall is enabled on my server:
 
 ```bash
-sudo firewall-cmd --state 
+sudo firewall-cmd --state
 ```
 
 I need to add the Solr port to the firewall:
@@ -84,15 +83,15 @@ Test it remotely by accessing it with your public IP address.
 ### Reflection
 
 My connections were timing out and I had double checked my configuration. After Googling, the obvious answer hit me: firewall.
-I had made the changes but forgot to reload the firewall for the change to take effect. 
+I had made the changes but forgot to reload the firewall for the change to take effect.
 
 ## Add a Solr core
 
-> A Solr Core is a running instance of a Lucene index that contains all the Solr configuration files required to use it. 
-> We need to create a Solr Core to perform operations like indexing and analyzing. 
+> A Solr Core is a running instance of a Lucene index that contains all the Solr configuration files required to use it.
+> We need to create a Solr Core to perform operations like indexing and analyzing.
 > A Solr application may contain one or multiple cores.
 
-Using the `solr` user created during the installation, I 
+Using the `solr` user created during the installation, I
 [create a new core](https://lucene.apache.org/solr/guide/7_0/installing-solr.html#create-a-core).
 
 ```bash
@@ -105,8 +104,8 @@ See the core now available in the web interface ready to index some data: http:/
 
 **Side note:** You can delete a core using the delete command `./solr delete -c collection_name`
 
-**Curve ball:** I received a warning about my 
-[ulimit settings](https://lucene.apache.org/solr/guide/7_3/taking-solr-to-production.html#file-handles-and-processes-ulimit-settings) 
+**Curve ball:** I received a warning about my
+[ulimit settings](https://lucene.apache.org/solr/guide/7_3/taking-solr-to-production.html#file-handles-and-processes-ulimit-settings)
 
 ```bash
 *** [WARN] *** Your open file limit is currently 1024.
@@ -121,21 +120,21 @@ ulimit -n 65000
 ```
 
 ### Reflection
-Don't be scared of creating, deleting and recreating things, especially in the beginning, while learning. 
+Don't be scared of creating, deleting and recreating things, especially in the beginning, while learning.
 Break it, fix it, understand it, learn it.
 
 ## Scrape Solr
 
-Solr needed some data and I found a really useful python 
+Solr needed some data and I found a really useful python
 [tutorial](https://lucidworks.com/2013/06/13/indexing-web-sites-in-solr-with-python/) to create a crawler for my blog
-which will be hosted on my Fedora server, a server not hosting my blog. 
+which will be hosted on my Fedora server, a server not hosting my blog.
 
 ### Missing dependencies
 While setting up I came across the following missing dependencies
 
 > `sudo dnf install python-devel` :The libraries and header files needed for Python development
 
-> `pip install twisted`: An extensible framework for Python programming, with special focus on 
+> `pip install twisted`: An extensible framework for Python programming, with special focus on
 > event-based network programming and multiprotocol integration.
 
 ### Install Scrapy
@@ -152,7 +151,7 @@ pip install scrapy
 ```
 
 Create a Scrapy application:
-   
+
 ```bash
 scrapy startproject blog
 cd blog
@@ -216,15 +215,15 @@ Crawl the blog. An `items.json` file is generated. It will be appended to each t
 scrapy crawl blog -o items.json -t json
 ```
 
-The tutorial showcases a index python script using `pysolr` but it didn't work for me. 
+The tutorial showcases a index python script using `pysolr` but it didn't work for me.
 I indexed it directly through the Solr API using curl.
 
 ```bash
 curl "http://localhost:8983/solr/collection_name/update/json/docs?commit=true" -H "Content-type:application/json" --data-binary @items.json
 ```
 
-I set up a daily cronjob to index data using 
-[crontab](https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/) 
+I set up a daily cronjob to index data using
+[crontab](https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/)
 through `vim ~/projects/scrapy/blog/crawl-and-index`:
 
 ```bash
@@ -244,7 +243,7 @@ source ../scrapyenv/bin/activate
 echo "Start crawling your blog..."
 scrapy crawl blog -o items.json -t json
 
-echo "Index Solr with crawled database" 
+echo "Index Solr with crawled database"
 curl "http://localhost:8983/solr/oxygen/update/json/docs?commit=true" -H "Content-type:application/json" --data-binary @items.json
 
 echo "Bye!"
@@ -256,8 +255,8 @@ crontab -e
 ```
 
 ## Setup your hosting environment
-I no longer wanted to access the Solr API publically using the port. To achieve this, I had to configure a reverse 
-proxy. A great benefit to using this approach is the usage  of SSL. For me to get SSL to work, I had to start 
+I no longer wanted to access the Solr API publically using the port. To achieve this, I had to configure a reverse
+proxy. A great benefit to using this approach is the usage  of SSL. For me to get SSL to work, I had to start
 by getting a domain name.
 
 ### Get a domain name
@@ -291,8 +290,8 @@ nameserver 8.8.8.8 #Google
 ```
 
 ### Create a webserver with Nginx
-> NGINX is a high-performance HTTP server and reverse proxy, as well as an 
-> IMAP/POP3 proxy server. NGINX is known for its high performance, stability, 
+> NGINX is a high-performance HTTP server and reverse proxy, as well as an
+> IMAP/POP3 proxy server. NGINX is known for its high performance, stability,
 > rich feature set, simple configuration, and low resource consumption.
 
 ```bash
@@ -355,7 +354,7 @@ server {
 }
 ```
 
-Then add hosted applications underneath the last location statement. In this case I am directing 
+Then add hosted applications underneath the last location statement. In this case I am directing
 all incoming `/solr` traffic to `localhost:8983` so that I can run Solr on HTTPS.
 
 ```nginx
@@ -376,11 +375,11 @@ error_page 500 502 503 504 /50x.html;
 }
 ```
 
-Test this in a browser or by running a `curl` command. If connections time out, double check the 
+Test this in a browser or by running a `curl` command. If connections time out, double check the
 firewall rules, this time making sure 443 is open on host and hosting provider and that the firewall has been reloaded.
 
 ### Dropping access to ports
-I no longer need to expose Solr's port so I can drop it from the firewall. 
+I no longer need to expose Solr's port so I can drop it from the firewall.
 
 ```bash
 sudo firewall-cmd --zone=public --permanent --remove-port=8983/tcp
@@ -390,23 +389,23 @@ sudo firewall-cmd --zone=public --list-ports
 
 ## Consume the API
 When ready to consume the API using a JavaScript application, it is highly likely that you encounter a
-Cross-Origin Resource Sharing error when trying to make calls to the remote server. The reverse proxy and the 
+Cross-Origin Resource Sharing error when trying to make calls to the remote server. The reverse proxy and the
 Solr application haven't been explicitly told to give you the resources you are requesting.
 
 > [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-> is a mechanism that uses additional HTTP headers to 
-> tell a browser to let a web application running at one origin (domain) have permission to 
-> access selected resources from a server at a different origin. A web application makes a 
-> cross-origin HTTP request when it requests a resource that has a different origin (domain, 
+> is a mechanism that uses additional HTTP headers to
+> tell a browser to let a web application running at one origin (domain) have permission to
+> access selected resources from a server at a different origin. A web application makes a
+> cross-origin HTTP request when it requests a resource that has a different origin (domain,
 > protocol, and port) than its own origin.
 
-The error goes along the lines of  <span class="serious-highlight">Access to XMLHttpRequest at 'https://example.com/solr/collection_name/select' 
-from origin 'http://localhost:8081' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' 
+The error goes along the lines of  <span class="serious-highlight">Access to XMLHttpRequest at 'https://example.com/solr/collection_name/select'
+from origin 'http://localhost:8081' has been blocked by CORS policy: No 'Access-Control-Allow-Origin'
 header is present on the requested resource.</span>
 
 ### Reverse proxy
 
-To enable CORS on the reverse proxy we need to edit the `/etc/nginx/nginx.conf` file. In this example 
+To enable CORS on the reverse proxy we need to edit the `/etc/nginx/nginx.conf` file. In this example
 I [configure Nginx CORS](https://gist.github.com/Stanback/7145487) to support the reverse proxied Solr API.
 
 ```nginx
@@ -439,8 +438,8 @@ location /solr {
 ```
 
 ### Application layer
-It can also be applied on the 
-[Solr application layer](https://opensourceconnections.com/blog/2015/03/26/going-cross-origin-with-solr/) 
+It can also be applied on the
+[Solr application layer](https://opensourceconnections.com/blog/2015/03/26/going-cross-origin-with-solr/)
 as it ships with the Jetty servlet engine.
 
 ```bash
@@ -493,14 +492,14 @@ presented to you, even if some of them might not seem related. Something might s
 If you don't have error messages, spit ball with terms you do know that you are working with and problems you think
 you may be experiencing.
 
-Most importantly, **make notes of what you are doing.** You never know when you might need it again. You could also 
+Most importantly, **make notes of what you are doing.** You never know when you might need it again. You could also
 just jot it down and blog about it to help you and others experiencing the same challenges that you are facing
 regardless of how large or small.
 
 ---
 
 With regards to Solr, it's early days. Looking back at the actual steps I had to take to install it, the setup and installation
-is really simple. It was finding that information that was the tricky part for me because there is a lot of 
+is really simple. It was finding that information that was the tricky part for me because there is a lot of
 information out there.
 
 The blog crawler was an interesting find and I am glad that it is in Python because it's a language I feel worthwhile learning.
@@ -509,11 +508,11 @@ The crawler does a dandy job and exactly what I need it to do for now.
 I enjoy working with Nginx as I am now accustomed to it and Let's Encrypt was fairly straightforward to configure
 once the domain name was correctly configured.
 
-Next is actually configuring this solution into a React component on my Gatsby website. A tale for another day. 
+Next is actually configuring this solution into a React component on my Gatsby website. A tale for another day.
 
 ## References
 
-### Solr 
+### Solr
 * [Taking Solr to Production](https://lucene.apache.org/solr/guide/7_0/taking-solr-to-production.html#taking-solr-to-production)
 * [Create a Core](https://lucene.apache.org/solr/guide/7_0/installing-solr.html#create-a-core)
 * [File Handles and Processes (ulimit settings)](https://lucene.apache.org/solr/guide/7_3/taking-solr-to-production.html#file-handles-and-processes-ulimit-settings)

@@ -7,7 +7,6 @@ tags:
     - Git
     - Terminal
     - Cheat Sheet
-    - Advanced
 ---
 
 Small, atomic commits makes it easier for code reviews, browsing

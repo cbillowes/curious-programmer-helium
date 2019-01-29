@@ -7,7 +7,6 @@ tags:
     - Clojure
     - Graylog
     - Logging
-    - Intermediate
 ---
 
 It's simple. I wanted to log to Graylog from my Clojure application.

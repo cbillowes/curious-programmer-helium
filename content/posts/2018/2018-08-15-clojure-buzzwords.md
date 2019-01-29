@@ -6,7 +6,6 @@ tags:
     - Technical
     - Comfort Zone
     - Clojure
-    - Beginner
 ---
 
 <div id="accordion"></div>

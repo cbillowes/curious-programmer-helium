@@ -7,7 +7,6 @@ date:   2018-07-12 22:12:00 +0200
 tags:
     - Technical
     - Hardware
-    - Beginner
 ---
 
 There is a page that we want to monitor. It has a lot of valuable information on it and fits nicely on a 4K screen. A ROCK64 device will power this display.

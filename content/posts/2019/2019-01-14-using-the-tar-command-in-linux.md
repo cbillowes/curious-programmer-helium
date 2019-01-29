@@ -6,7 +6,6 @@ tags:
     - Linux
     - Terminal
     - Cheat Sheet
-    - Beginner
 ---
 
 I used to right-click on a zipped file and manage the archive using the
