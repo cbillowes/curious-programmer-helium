@@ -35,6 +35,7 @@
     "gatsby-transformer-sharp": "2.1.8",
     "jquery": "^3.3.1",
     "lodash": "^4.17.4",
+    "markdown-spellcheck": "^1.3.1",
     "moment": "^2.22.2",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
@@ -90,6 +91,7 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
+    "spell-check": "mdspell -n -a --en-US content/posts/**/*.md",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "test:watch": "jest --watchAll -u",
     "test": "jest -u"
