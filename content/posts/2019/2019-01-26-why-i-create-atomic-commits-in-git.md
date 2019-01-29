@@ -24,20 +24,20 @@ commits in Git.
 > really make your git history easier to grok than a single commit
 > focused on a feature?"
 
-If I understand it correctly, I think we are on the same
-page. I feel as though my intent was not clear in my
+I think we are on the same page. I feel as though my intent was not
+clear in my
 [previous](/blog/how-to-craft-your-changes-into-small-atomic-commits-using-git)
 post.
 
 ## An atomic commit
-Let's say I do a refactor but I also update a few features and add new
-features.
+Let's say I do a refactor but I also update a some features and add new
+ones.
 
 In an atomic commit, I will commit the refactor and each feature change
 separately.
 
-I don't know what the official definition is but to me an atomic commit is a **commit that is focused
-on one context and one context only**. Granted, this is tricky. I do this to the best of
+I don't know what the official definition is but to me an atomic commit is a **commit that focuses
+on one context and one context alone**. Granted, this is tricky. I do this to the best of
 my abilities but I don't always get it right.
 
 > **Disclaimer:** I don't intend that I commit each and every single line
@@ -45,17 +45,16 @@ my abilities but I don't always get it right.
 > refactor, upgrade, task...
 
 ## A monolithic commit
-Again. Let's say I do a refactor but I also update a few features and add new
-features.
+Again. Let's say I do a refactor but I also update a some features and add new ones.
 
-In a monolithic commit, **everything** is committed at once.
+The **entire changeset** gets committed in a monolithic commit.
 
-Granted, it doesn't have to be a large commit. It's just a commit with changes
+Granted, it doesn't have to be a large commit. It's a commit with changes
 tightly coupled into a single commit. Like a tangled or
 spaghetti commit.
 
 The larger the commit, the more brittle and error prone it becomes because it
-becomes harder to understand (even if it is well documented - I know this from
+becomes harder to understand (even if it's well documented - I know this from
 my own doing), read, review and revert.
 
 ## Why go atomic?
@@ -72,8 +71,8 @@ Atomic commits are easier to:
 * **read** - it's a change focused on a single context which makes it smaller,
   simpler and easier to read the patch `git show <commit>` or `git log <commit> -p`
 
-* **review** - as it is a small, focused, documented change, a reviewer should
-  easily be able to follow the code changes and keep their sanity.
+* **review** - as it's a small, focused, documented change, a reviewer should
+  be able to follow the code changes and keep their sanity.
 
 * **revert** - reverting `git revert <commit>` an atomic commit will not revert
   unrelated changes like a monolithic commit would.
