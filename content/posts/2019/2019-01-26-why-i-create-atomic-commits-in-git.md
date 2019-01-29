@@ -60,7 +60,7 @@ my own doing), read, review and revert.
 
 ## Why go atomic?
 
-Atomic commits are easer to:
+Atomic commits are easier to:
 * **track** - I know where they are in the history. `git log --oneline`
   shows me all commits. `git log --grep <pattern>` lets me find a commit based
   on a partial message. `git log <commit>` will jump to that commit and
@@ -69,10 +69,10 @@ Atomic commits are easer to:
 * **understand** - I document each change with a commit message and elaborate
   with an explanation if I need to.
 
-* **read**: it's a change focused on a single context which makes it smaller,
+* **read** - it's a change focused on a single context which makes it smaller,
   simpler and easier to read the patch `git show <commit>` or `git log <commit> -p`
 
-* **review**: as it is a small, focused, documented change, a reviewer should
+* **review** - as it is a small, focused, documented change, a reviewer should
   easily be able to follow the code changes and keep their sanity.
 
 * **revert** - reverting `git revert <commit>` an atomic commit will not revert
