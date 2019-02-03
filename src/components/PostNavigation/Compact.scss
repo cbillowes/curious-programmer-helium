@@ -20,7 +20,7 @@
     }
 
     .previous {
-        float: left;
+        float: right;
         margin-right: 1em;
 
         @include small-media {
@@ -34,9 +34,9 @@
             max-width: 450px;
             display: inline-block;
 
-            &:before {
-                content: "🡠";
-                margin-right: 0.5rem;
+            &:after {
+                content: ">";
+                margin-left: 0.5rem;
             }
 
             @include medium-media {
@@ -46,7 +46,7 @@
     }
 
     .next {
-        float: right;
+        float: left;
         margin-left: 1em;
         text-align: right;
 
@@ -66,10 +66,10 @@
             }
         }
 
-        &:after {
-            content: " 🡢";
-            float: right;
-            margin-left: 0.5rem;
+        &:before {
+            content: " <";
+            float: left;
+            margin-right: 0.5rem;
         }
     }
 

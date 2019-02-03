@@ -5,6 +5,7 @@ import "./Elaborate.scss"
 
 const Item = ({ post }) => (
   <aside className="post" style={{ backgroundImage: (post.cover) ? `url(${post.cover})` : "" }}>
+    <div class="overlay"></div>
     <div className="container">
       <h1>{post.title}</h1>
       <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
@@ -19,7 +20,7 @@ class ElaboratePostNavigation extends Component {
 
     return (
       <div className="post-navigation elaborate">
-        <div className="nav previous" onClick={() => navigate(previous.slug) }>
+        <div className="nav previous" onClick={() => navigate(previous.slug)}>
           <Item post={previous} />
         </div>
         <div className="nav next" onClick={() => navigate(next.slug)}>
