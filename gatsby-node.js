@@ -81,7 +81,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
     createNodeField({ node, name: "slug", value: slug })
-    node.frontmatter.title = _.startCase(_.toLower(node.frontmatter.title))
+    node.frontmatter.title = _.startCase(node.frontmatter.title)
 
     if (node.frontmatter.tags) {
       let tags = node.frontmatter.tags
