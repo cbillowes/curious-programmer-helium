@@ -84,7 +84,7 @@
     "clean": "rm -rf public && rm -rf .cache",
     "clean:hardcore": "rm -rf node-modules && rm -f packages.json.lock && rm -rf public && rm -rf .cache",
     "build": "./build.sh",
-    "develop": "npm run clean && gatsby develop --verbose --port 8000 --host localhost",
+    "develop": "npm run clean && mkdir -p public/images/logos && gatsby develop --verbose --port 8000 --host localhost",
     "serve": "npm run clean && npm run build && gatsby serve",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
