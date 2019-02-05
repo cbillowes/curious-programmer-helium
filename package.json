@@ -91,6 +91,7 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
+    "write-good:file": "write-good $1",
     "spell-check": "mdspell -n -a --en-us content/posts/**/*.md",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "test:watch": "jest --watchAll -u",
