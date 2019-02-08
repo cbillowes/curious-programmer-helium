@@ -40,17 +40,17 @@ class Metadata extends Component {
         <p>
           posted
           {" "}
-          <Moment date={theDate} calendar={calendarStrings} />
+          <Moment className="moment" date={theDate} calendar={calendarStrings} />
           {" "}
           on
           {" "}
-          {this.renderMoment(theDate)}
+          <span className="date">{this.renderMoment(theDate)}</span>
           {" "}
           by Clarice Bouwer
           {" "}
-          {timeToRead && <span>(Est. {timeToRead} minute read)</span>}
+          {<span className="timeToRead">timeToRead</span> && <span>(Est. {timeToRead} minute read)</span>}
         </p>
-        {(tags) ? <Tags tags={tags} /> : <span />}
+        {(tags) ? <Tags className="tags" tags={tags} /> : <span />}
       </div>
     )
   }

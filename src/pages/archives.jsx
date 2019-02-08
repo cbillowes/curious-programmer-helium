@@ -47,7 +47,7 @@ class Index extends React.Component {
               onKeyUp={this.onFilter}
               placeholder="Search for anything in the title" />
             <div className="empty">Nothing to see here. Try searching for a different title.</div>
-            <ol>
+            <ol id="archives">
               {edges.map((edge) => {
                 const slug = edge.node.fields.slug
                 const title = edge.node.frontmatter.title
@@ -62,7 +62,7 @@ class Index extends React.Component {
                     className="item"
                     key={`list-${value}`}
                     keywords={title.split(" ")}>
-                    <Link to={slug}>{title}</Link>
+                    <Link className="title" to={slug}>{title}</Link>
                     <PostMeta date={date} timeToRead={timeToRead} tags={tags} />
                   </li>
                 )
