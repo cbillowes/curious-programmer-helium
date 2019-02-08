@@ -143,11 +143,11 @@ export default class PostTemplate extends React.Component {
             <CompactNavigation previous={previousPost} next={nextPost} />
           </div>
           <div className="wild-container">
-            <h1>{post.title}</h1>
+            <h1 id="title">{post.title}</h1>
           </div>
           <div className="container body">
             <PostMetadata tags={post.tags} date={postNode.fields.date} timeToRead={postNode.timeToRead} />
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="container-post" dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <Accordion content={postNode.html} />
             <div className="post-footer">
               <hr />
