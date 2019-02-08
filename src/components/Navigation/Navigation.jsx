@@ -46,9 +46,9 @@ class Navigation extends Component {
         <Menubar
           toggle={this.toggleMenu}
           active={this.state.menu} />
-        <Searchbar
+        {/* <Searchbar
           toggle={this.toggleSearch}
-          active={this.state.search} />
+          active={this.state.search} /> */}
       </div>
     )
   }
