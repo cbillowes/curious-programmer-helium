@@ -9,10 +9,10 @@ class Icons extends Component {
 
     return (
       <div className="icons">
-        {/* <Search
+        <Search
           active={onSearchClick.active}
           toggle={onSearchClick.toggle.bind(this)}
-        /> */}
+        />
         <Menu
           active={onMenuClick.active}
           toggle={onMenuClick.toggle.bind(this)}

@@ -86,7 +86,7 @@ class SearchBar extends Component {
 
   search = (query) => {
     fetch(
-      `https://curiousprogrammer.tk/solr/oxygen/select?q=text:${encodeURIComponent(
+      `https://curiousprogrammer.tk/solr/?q=text:${encodeURIComponent(
         query
       )}&fl=url,title&rows=20&wt=json`
     )
