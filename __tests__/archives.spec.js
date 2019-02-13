@@ -19,7 +19,7 @@ describe("the archives page", () => {
             },
             frontmatter: {
               title: "Hello World",
-              date: new Date()
+              date: new Date(2018, 9, 30)
             }
           }
         },
@@ -31,7 +31,7 @@ describe("the archives page", () => {
             },
             frontmatter: {
               title: "Hello Galaxy",
-              date: new Date()
+              date: new Date(2018, 11, 29)
             }
           }
         }
@@ -54,8 +54,15 @@ describe("the archives page", () => {
   describe("content", () => {
     it("expected", () => {
       const component = mount(<Page data={posts} />)
-      expect(component.html()).toContain(`<li value="2" class="item" keywords="Hello,World"><a href="/hello-world">Hello World</a>`)
-      expect(component.html()).toContain(`<li value="1" class="item" keywords="Hello,Galaxy"><a href="/hello-galaxy">Hello Galaxy</a>`)
+      const elements = component.getDOMNode().getElementsByClassName("item")
+
+      expect(elements.length).toEqual(2)
+
+      expect(elements[0].outerHTML).toContain(`<li value=\"2\" class=\"item\" keywords=\"Hello,World\"><a class=\"title\" href=\"/hello-world\">Hello World</a><div class=\"post-metadata\"><p><span>posted`)
+      expect(elements[0].outerHTML).toContain(`30 October 2018</time></span></span> by Clarice Bouwer <span><span>(Est. 20 min minute read)</span></span></p><span></span></div></li>`)
+
+      expect(elements[1].outerHTML).toContain(`<li value=\"1\" class=\"item\" keywords=\"Hello,Galaxy\"><a class=\"title\" href=\"/hello-galaxy\">Hello Galaxy</a><div class=\"post-metadata\"><p><span>posted`)
+      expect(elements[1].outerHTML).toContain(`29 December 2018</time></span></span> by Clarice Bouwer <span><span>(Est. 10 min minute read)</span></span></p><span></span></div></li>`)
     })
   })
 })
