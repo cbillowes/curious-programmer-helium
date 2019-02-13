@@ -21,6 +21,33 @@ class Metadata extends Component {
     }
   }
 
+  renderDate = (date, calendarStrings) => {
+    if (date) {
+      return (
+        <span>
+          posted
+          {" "}
+          <Moment className="moment" date={date} calendar={calendarStrings} />
+          {" "}
+          on
+          {" "}
+          <span className="date">{this.renderMoment(date)}</span>
+        </span>
+      )
+    }
+    return (<span />)
+  }
+
+  renderTimeToRead = (timeToRead) => {
+    if (timeToRead) {
+      return (
+        <span>
+          {<span className="timeToRead">timeToRead</span> && <span>(Est. {timeToRead} minute read)</span>}
+        </span>
+      )
+    }
+  }
+
   render() {
     const { tags, date, timeToRead } = this.props
     moment.updateLocale("en")
@@ -38,17 +65,11 @@ class Metadata extends Component {
     return (
       <div className="post-metadata">
         <p>
-          posted
-          {" "}
-          <Moment className="moment" date={theDate} calendar={calendarStrings} />
-          {" "}
-          on
-          {" "}
-          <span className="date">{this.renderMoment(theDate)}</span>
+          {this.renderDate(theDate, calendarStrings)}
           {" "}
           by Clarice Bouwer
           {" "}
-          {<span className="timeToRead">timeToRead</span> && <span>(Est. {timeToRead} minute read)</span>}
+          {this.renderTimeToRead(timeToRead)}
         </p>
         {(tags) ? <Tags className="tags" tags={tags} /> : <span />}
       </div>
