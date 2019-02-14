@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 10.15.0
+dist: trusty
+sudo: false
 before_script:
   - npm install gatsby-cli
 script:
@@ -9,11 +11,6 @@ script:
 git:
   depth: 3
 after_success:
-  - git config --local user.name "Travis CI"
-  - git config --local user.email "builds@travis-ci.com"
-  - export GIT_TAG=build-1.$TRAVIS_BUILD_NUMBER
-  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
-  - git push origin $GIT_TAG
-branches:
-  except:
-    - /^build-[0-9a-z\-]*/
+  - "cp .travis-automerge.sh /tmp/travis-automerge"
+  - "chmod a+x /tmp/travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='^feature/' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=cbillowes/curious-programmer-helium /tmp/travis-automerge"
