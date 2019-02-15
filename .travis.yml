@@ -8,6 +8,5 @@ script:
 git:
   depth: 3
 after_success:
-  - "cp .travis-automerge.sh /tmp/travis-automerge"
-  - "chmod a+x /tmp/travis-automerge"
-  - "/tmp/travis-automerge"
+  - "chmod a+x .travis-automerge.sh"
+  - "./.travis-automerge.sh"
