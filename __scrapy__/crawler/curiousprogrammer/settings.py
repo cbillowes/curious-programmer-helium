@@ -15,20 +15,6 @@ SPIDER_MODULES = [
     'curiousprogrammer.spiders'
 ]
 NEWSPIDER_MODULE = 'curiousprogrammer.spiders'
-ITEM_PIPELINES = {
-    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline' : 200,
-}
-ELASTICSEARCH_SERVER = 'localhost'
-ELASTICSEARCH_PORT = 9200
-ELASTICSEARCH_INDEX = 'search'
-ELASTICSEARCH_TYPE = 'search'
-ELASTICSEARCH_UNIQ_KEY = 'link'
-
-# The Elasticsearch module doesn't use bulk indexing but indexes
-# each item by itself.
-# If you have a very large amount of data this could be a problem
-# but should be totally fine for most uses.
-
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'curiousprogrammer (+http://www.yourdomain.com)'
