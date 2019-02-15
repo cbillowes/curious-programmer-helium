@@ -35,8 +35,11 @@ push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 printf push_uri
 
 # Redirect to /dev/null to avoid secret leakage
-git push --tags "$push_uri" "$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1
-git push --tags "$push_uri" :"$TRAVIS_BRANCH" >/dev/null 2>&1
+printf "\ngit push --tags "$push_uri" "origin/$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1"
+git push --tags "$push_uri" "origin/$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1
+
+printf "\ngit push --tags "$push_uri" "origin/$TRAVIS_BRANCH" >/dev/null 2>&1"
+git push --tags "$push_uri" "origin/$TRAVIS_BRANCH" >/dev/null 2>&1
 
 printf "\nCleanup house > Delete temp directory\n"
 rm -rf $repo_temp
