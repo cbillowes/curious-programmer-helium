@@ -6,7 +6,9 @@ sudo: false
 script:
   - npm run test
 git:
-  depth: 3
+  depth: 3branches:
+except:
+  - /^build.[0-9]/
 after_success:
   - "chmod a+x .travis-automerge.sh"
   - "./.travis-automerge.sh"
