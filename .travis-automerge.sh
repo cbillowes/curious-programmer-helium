@@ -1,4 +1,5 @@
 #!/bin/bash -e
+printf "Inititating Travis Automerge..."
 
 : "${BRANCHES_TO_MERGE_REGEX?}" "${BRANCH_TO_MERGE_INTO?}"
 : "${GITHUB_SECRET_TOKEN?}" "${GITHUB_REPO?}"
@@ -12,6 +13,7 @@ if ! grep -q "$BRANCHES_TO_MERGE_REGEX" <<< "$TRAVIS_BRANCH"; then
     exit 0
 fi
 
+printf "I'm about to clone the repository"
 # Since Travis does a partial checkout, we need to get the whole thing
 repo_temp=$(mktemp -d)
 git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
@@ -22,16 +24,16 @@ cd "$repo_temp"
 printf 'Checking out %s\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout "$BRANCH_TO_MERGE_INTO"
 
-printf 'Tagging branch %s\nbuild.' "$TRAVIS_BUILD_NUMBER"
-git tag 'build.' "$TRAVIS_BUILD_NUMBER" -a -m 'Generated tag from TravisCI build' "$TRAVIS_BUILD_NUMBER"
+printf 'Tagging branch %s\n' "$TRAVIS_BUILD_NUMBER"
+git tag "$TRAVIS_BUILD_NUMBER" -a -m 'Generated tag from TravisCI build' "$TRAVIS_BUILD_NUMBER"
 
 printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
 git merge --ff-only "$TRAVIS_COMMIT"
 
 printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
-
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
+printf push_uri
 # Redirect to /dev/null to avoid secret leakage
 git push --tags "$push_uri" "$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1
 git push --tags "$push_uri" :"$TRAVIS_BRANCH" >/dev/null 2>&1
