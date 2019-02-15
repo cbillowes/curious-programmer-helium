@@ -7,7 +7,7 @@ if ! grep -q "$BRANCHES_TO_MERGE_REGEX" <<< "$TRAVIS_BRANCH"; then
     exit 0
 fi
 
-export $TAG = "build.$TRAVIS_BUILD_NUMBER"
+export TAG='build.$TRAVIS_BUILD_NUMBER'
 
 printf "\nI'm about to clone the repository\n"
 # Since Travis does a partial checkout, we need to get the whole thing
