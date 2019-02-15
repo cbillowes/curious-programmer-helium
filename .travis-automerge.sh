@@ -1,5 +1,5 @@
 #!/bin/bash -e
-printf "Inititating Travis Automerge..."
+printf "Inititating Travis Automerge...\n"
 
 : "${BRANCHES_TO_MERGE_REGEX?}" "${BRANCH_TO_MERGE_INTO?}"
 : "${GITHUB_SECRET_TOKEN?}" "${GITHUB_REPO?}"
@@ -13,13 +13,16 @@ if ! grep -q "$BRANCHES_TO_MERGE_REGEX" <<< "$TRAVIS_BRANCH"; then
     exit 0
 fi
 
-printf "I'm about to clone the repository"
+printf "I'm about to clone the repository\n"
 # Since Travis does a partial checkout, we need to get the whole thing
 repo_temp=$(mktemp -d)
 git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 
 # shellcheck disable=SC2164
 cd "$repo_temp"
+
+printf "Let's see what branch I'm on\n"
+git branch
 
 printf 'Checking out %s\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout "$BRANCH_TO_MERGE_INTO"
