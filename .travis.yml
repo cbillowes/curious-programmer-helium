@@ -3,14 +3,11 @@ node_js:
   - 10.15.0
 dist: trusty
 sudo: false
-before_script:
-  - npm install gatsby-cli
 script:
-  - npm run build
   - npm run test
 git:
   depth: 3
 after_success:
-  - "cp .travis-automerge.sh /tmp/travis-automerge"
+  - "cp .travis-automerge.sh /tmp/automerge"
   - "chmod a+x /tmp/travis-automerge"
-  - "BRANCHES_TO_MERGE_REGEX='^feature/' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=cbillowes/curious-programmer-helium /tmp/travis-automerge"
+  - "/tmp/travis-automerge"
