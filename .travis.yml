@@ -11,6 +11,6 @@ script:
 git:
   depth: 3
 after_success:
-  - "cp .travis-automerge.sh /tmp/travis-automerge"
+  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cbillowes/curious-programmer-helium/master/.travis-automerge.sh"
   - "chmod a+x /tmp/travis-automerge"
   - "BRANCHES_TO_MERGE_REGEX='^feature/' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=cbillowes/curious-programmer-helium /tmp/travis-automerge"
