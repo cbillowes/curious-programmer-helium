@@ -36,7 +36,7 @@ push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
 # Redirect to /dev/null to avoid secret leakage
 printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO\n"
-git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG >/dev/null 2>&1
+git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
 
 printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG\n"
 git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG >/dev/null 2>&1
@@ -48,6 +48,3 @@ else
     printf "\nWell this is a disaster o_O"
     (exit 1)
 fi
-
-printf "\nCleanup house\n- Delete temp directory\n"
-rm -rf $repo_temp
