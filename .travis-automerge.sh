@@ -11,10 +11,10 @@ export TAG="build.$TRAVIS_BUILD_NUMBER"
 
 # Since Travis does a partial checkout, we need to get the whole thing
 repo_temp=$(mktemp -d)
+repo_temp=/tmp/tmp.4QtDc2bR3J
 
 printf "\nGetting the repo at https://github.com/$GITHUB_REPO\n"
-git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
-ret_clone=$?
+#git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 
 printf "\n"
 # shellcheck disable=SC2164
@@ -22,29 +22,24 @@ cd "$repo_temp"
 git checkout "$TRAVIS_BRANCH"
 git fetch --all
 git branch
-ret_checkout=$?
 
 printf "\nMerge %s into %s\n" "$TRAVIS_BRANCH" "$BRANCH_TO_MERGE_INTO"
 git checkout "$BRANCH_TO_MERGE_INTO"
 git merge $TRAVIS_BRANCH
-ret_merge=$?
 
 printf '\nTagging branch with "%s"\n' "$TAG"
-git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
-ret_tag=$?
+#git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 printf '\nPushing to %s\n' "$push_uri" >&2
 # Redirect to /dev/null to avoid secret leakage
-if [[ git push $push_uri $BRANCH_TO_MERGE_WITH $TAG != 0 ]]; then
+if git push $push_uri $BRANCH_TO_MERGE_WITH $TAG; then
+    printf "\nJust throw a fucking party!"
+    (exit 0)
+else
     printf "\nWell this is a disaster o_O"
     (exit 1)
 fi
 
 printf "\nCleanup house\n- Delete temp directory\n"
-rm -rf $repo_temp
-ret_cleanup=$?
-
-if [[ ls != 0 ]]; then
-    echo "WTF"
-fi
+#rm -rf $repo_temp
