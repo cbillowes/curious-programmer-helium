@@ -33,9 +33,14 @@ printf "\nPeak into the history. Is there a difference after the merge?\n"
 git log $BRANCH_TO_MERGE_INTO..$TRAVIS_BRANCH --oneline
 
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
-printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG\n"
+
 # Redirect to /dev/null to avoid secret leakage
-git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG
+printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO\n"
+git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG >/dev/null 2>&1
+
+printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG\n"
+git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG >/dev/null 2>&1
+
 if [ $? -eq 0 ]; then
     printf "\nJust throw a fucking party!"
     (exit 0)
