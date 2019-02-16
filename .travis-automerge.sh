@@ -36,10 +36,10 @@ push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
 # Redirect to /dev/null to avoid secret leakage
 printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO\n"
-git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO
 
 printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG\n"
-git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG >/dev/null 2>&1
+git push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG
 
 if [ $? -eq 0 ]; then
     printf "\nJust throw a fucking party!"
