@@ -33,17 +33,15 @@ printf '\nTagging branch with "%s"\n' "$TAG"
 git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 ret_tag=$?
 
-printf '\nPushing to %s\n' "$GITHUB_REPO" >&2
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
+printf '\nPushing to %s\n' "$push_uri" >&2
 # Redirect to /dev/null to avoid secret leakage
-git push $push_uri $BRANCH_TO_MERGE_WITH $TAG >/dev/null 2>&1
-ret_push=$?
-
-printf "\nCleanup house > Delete temp directory\n"
-rm -rf $repo_temp
-ret_cleanup=$?
-
-if [[ $ret_clone != 0 || $ret_checkout != 0 || $ret_merge != 0 || $ret_tag != 0 || $ret_push != 0  || $ret_cleanup != 0 ]];then
+if [[ git push $push_uri $BRANCH_TO_MERGE_WITH $TAG >/dev/null 2>&1 != 0 ]]; then
     printf "\nWell this is a disaster o_O"
     (exit 1)
 fi
+
+printf "\nCleanup house\n- Delete temp directory\n"
+rm -rf $repo_temp
+ret_cleanup=$?
+
