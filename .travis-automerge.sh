@@ -30,9 +30,9 @@ printf '\nTagging branch with "%s"\n' "$TAG"
 git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
-printf "\ngit push $push_uri $BRANCH_TO_MERGE_WITH $TAG"
+printf "\ngit push $push_uri origin $BRANCH_TO_MERGE_WITH $TAG"
 # Redirect to /dev/null to avoid secret leakage
-git push $push_uri $BRANCH_TO_MERGE_WITH $TAG
+git push $push_uri origin $BRANCH_TO_MERGE_WITH $TAG
 if [ $? -eq 0 ]; then
     printf "\nJust throw a fucking party!"
     (exit 0)
