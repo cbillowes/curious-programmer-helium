@@ -34,7 +34,14 @@ printf '\nPushing to %s\n' "$GITHUB_REPO" >&2
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
 # Redirect to /dev/null to avoid secret leakage
-git push $push_uri $BRANCH_TO_MERGE_WITH $TAG
+if git push $push_uri $BRANCH_TO_MERGE_WITH $TAG ; then
 
-printf "\nCleanup house > Delete temp directory\n"
-rm -rf $repo_temp
+    printf "\nCleanup house > Delete temp directory\n"
+    rm -rf $repo_temp
+
+else
+
+    echo "\nWell this is a disaster o_O"
+    exit 1
+
+fi
