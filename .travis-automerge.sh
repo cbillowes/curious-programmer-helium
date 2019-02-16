@@ -11,10 +11,9 @@ export TAG="build.$TRAVIS_BUILD_NUMBER"
 
 # Since Travis does a partial checkout, we need to get the whole thing
 repo_temp=$(mktemp -d)
-repo_temp=/tmp/tmp.4QtDc2bR3J
 
 printf "\nGetting the repo at https://github.com/$GITHUB_REPO\n"
-#git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
+git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 
 printf "\n"
 # shellcheck disable=SC2164
@@ -28,7 +27,7 @@ git checkout "$BRANCH_TO_MERGE_INTO"
 git merge $TRAVIS_BRANCH
 
 printf '\nTagging branch with "%s"\n' "$TAG"
-#git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
+git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 printf '\nPushing to %s\n' "$push_uri" >&2
@@ -42,4 +41,4 @@ else
 fi
 
 printf "\nCleanup house\n- Delete temp directory\n"
-#rm -rf $repo_temp
+rm -rf $repo_temp
