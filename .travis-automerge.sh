@@ -29,8 +29,8 @@ git merge $TRAVIS_BRANCH
 printf '\nTagging branch with "%s"\n' "$TAG"
 git tag -a $TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 
-printf "\nPeak into the history\n"
-git log -10 --oneline
+printf "\nPeak into the history. Is there a difference after the merge?\n"
+git log $BRANCH_TO_MERGE_INTO..$TRAVIS_BRANCH --oneline
 
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 printf "\ngit push -u $push_uri origin/$BRANCH_TO_MERGE_INTO $TAG\n"
