@@ -4,21 +4,16 @@ node_js:
 dist: trusty
 sudo: false
 before_install:
-  - sudo apt-get install chromium-browser xvfb npm
+  - sudo apt-get install npm
   - sudo npm install -g lighthouse
   - sudo npm install -g psi
 install:
   - npm install
 script:
   - npm run test
-  - npm run build
-  -"xvfb-run --server-args='-screen 0, 1024x768x16' \
-    chromium-browser --user-data-dir=public/
-    --start-maximized \
-    --no-first-run \
-    --remote-debugging-port=9222 'about:blank'
-  - lighthouse http://localhost:9222 --chrome-flag '--headless'
-  - psi http://localhost:9222 --strategy=mobile --threshold=90
+  - npm run serve
+  - lighthouse http://localhost:9000 --chrome-flag '--headless'
+  - psi http://localhost:9000 --strategy=mobile --threshold=90
 git:
   depth: 3
 branches:
