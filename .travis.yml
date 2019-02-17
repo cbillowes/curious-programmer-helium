@@ -4,6 +4,7 @@ node_js:
 dist: trusty
 sudo: false
 before_install:
+  - npm config set strict-ssl false
   - sudo apt-get install npm
   - sudo npm install -g lighthouse
   - sudo npm install -g psi
