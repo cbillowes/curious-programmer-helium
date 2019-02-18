@@ -6,10 +6,10 @@ sudo: false
 before_install:
   - npm config set strict-ssl false
   - sudo apt-get install node npm
-  - sudo npm install -g lighthouse
   - sudo npm install -g psi
 install:
   - npm install
+  - npm install --save-dev lighthouse
 script:
   - npm run test
   - npm run serve
