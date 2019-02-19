@@ -35,7 +35,6 @@
     "gatsby-transformer-remark": "^2.1.11",
     "gatsby-transformer-sharp": "2.1.8",
     "jquery": "^3.3.1",
-    "lighthouse": "^4.1.0",
     "lodash": "^4.17.4",
     "markdown-spellcheck": "^1.3.1",
     "moment": "^2.22.2",
@@ -68,6 +67,7 @@
     "gh-pages": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
     "prettier": "^1.14.3",
     "react-test-renderer": "^16.7.0",
     "remark-cli": "^6.0.0",
@@ -85,9 +85,9 @@
   "scripts": {
     "clean": "rm -rf public && rm -rf .cache",
     "clean:hardcore": "rm -rf node-modules && rm -f packages.json.lock && rm -rf public && rm -rf .cache",
-    "build": "./build.sh",
+    "build": "./.npm-build.sh",
     "develop": "npm run clean && mkdir -p public/images/logos && gatsby develop --verbose --port 8000 --host localhost",
-    "serve": "npm run clean && npm run build && gatsby serve",
+    "serve": "npm run build && gatsby serve",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "lint:js": "eslint --ext .js,.jsx .",
@@ -97,6 +97,7 @@
     "spell-check": "mdspell -n -a --en-us content/posts/**/*.md",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "test:watch": "jest --watchAll -u",
+    "test:page-speed": "./.npm-page-speed.sh",
     "test": "jest -u"
   },
   "remarkConfig": {
