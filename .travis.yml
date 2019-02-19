@@ -11,6 +11,5 @@ branches:
 script:
   - npm run test
 after_success:
-  - chmod a+x .travis-automerge.sh
-  - ./.travis-automerge.sh
   - npm run test:page-speed
+  - ./.travis-automerge.sh
