@@ -12,6 +12,7 @@ fi
 if [ $? -eq 0 ] ; then
   echo "Format"
   echo "-------------------------------------------------------------------------"
+  echo "Currently disabled"
   #npm run format:js
   #npm run write-good
 fi
@@ -19,6 +20,7 @@ fi
 if [ $? -eq 0 ] ; then
   echo "Lint"
   echo "-------------------------------------------------------------------------"
+  echo "Currently disabled"
   #npm run lint:js
   #npm run lint:md
 fi
