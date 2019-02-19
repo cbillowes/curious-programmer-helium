@@ -3,23 +3,14 @@ node_js:
   - 10.15.0
 dist: trusty
 sudo: false
-before_install:
-  - npm config set strict-ssl false
-  - sudo apt-get install node npm
-  - sudo npm install -g psi
-install:
-  - npm install
-  - npm install --save-dev lighthouse
-script:
-  - npm run test
-  - npm run serve
-  - lighthouse http://localhost:9000 --chrome-flag '--headless'
-  - psi http://localhost:9000 --strategy=mobile --threshold=90
 git:
   depth: 3
 branches:
   except:
     - /^build.[0-9]/
+script:
+  - npm run test
 after_success:
-  - "chmod a+x .travis-automerge.sh"
-  - "./.travis-automerge.sh"
+  - chmod a+x .travis-automerge.sh
+  - ./.travis-automerge.sh
+  - npm run test:page-speed
