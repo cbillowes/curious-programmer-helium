@@ -10,9 +10,7 @@ branches:
     - master
     - develop
 script:
-  - if: branch = develop
-    - npm run test
-  - if: branch = master
-    - gatsby build
+  - if: branch = develop npm run test
+  - if: branch = master gatsby build
 after_success:
   - git request-pull build.$TRAVIS_BUILD_NUMBER https://github.com/cbillowes/curious-programmer-helium master:develop
