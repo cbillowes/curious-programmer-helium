@@ -8,11 +8,14 @@ module.exports = {
       "<rootDir>/__mocks__/fileMock.js"
   },
   testPathIgnorePatterns: [
-    "node_modules",
-    ".cache",
+    "__coverage__",
     "__tests__/data",
-    "third-parties",
-    "content"
+    ".cache",
+    "content",
+    "data",
+    "node_modules",
+    "public",
+    "third-parties"
   ],
   watchPathIgnorePatterns: ["content"],
   transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
