@@ -12,10 +12,6 @@ branches:
 script:
   - npm run build
   - npm run test
-after_success:
-  on:
-    branch: develop
-  script: git request-pull build.$TRAVIS_BUILD_NUMBER https://github.com/cbillowes/curious-programmer-helium master:develop
 deploy:
   on:
     branch: develop
