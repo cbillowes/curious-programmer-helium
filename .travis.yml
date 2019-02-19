@@ -6,10 +6,13 @@ sudo: false
 git:
   depth: 3
 branches:
-  except:
-    - /^build.[0-9]/
+  only:
+    - master
+    - develop
 script:
-  - npm run test
+  - if: branch = develop
+    - npm run test
+  - if: branch = master
+    - gatsby build
 after_success:
-  - npm run test:page-speed
-  - ./.travis-automerge.sh
+  - git request-pull build.$TRAVIS_BUILD_NUMBER https://github.com/cbillowes/curious-programmer-helium master:develop
