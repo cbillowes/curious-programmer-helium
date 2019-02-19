@@ -1,9 +1,9 @@
 #!/bin/bash -e
 printf "Inititating TravisCI Automerge...\n"
 
-if ! grep -q "$BRANCHES_TO_MERGE_REGEX" <<< "$TRAVIS_BRANCH"; then
+if ! grep -q "$BRANCH_TO_MERGE_FROM" <<< "$TRAVIS_BRANCH"; then
     printf "Current branch %s doesn't match regex %s, exiting\\n" \
-        "$TRAVIS_BRANCH" "$BRANCHES_TO_MERGE_REGEX" >&2
+        "$TRAVIS_BRANCH" "$BRANCH_TO_MERGE_FROM" >&2
     exit 0
 fi
 
