@@ -23,13 +23,7 @@ module.exports = {
   setupFiles: ["<rootDir>/loadershim.js", "<rootDir>/setupTests.js"],
   collectCoverage: true,
   collectCoverageFrom: [
-    "**/*.{js,jsx}",
-    "!**/node_modules/**",
-    "!**/.cache/**",
-    "!**/__coverage__/**",
-    "!**/__tests__/**",
-    "!**/third-parties/**",
-    "!(gatsby|jest|loadershim|setupTests)*.js"
+    "**/src/*.{js,jsx}"
   ],
   coverageDirectory: "__coverage__"
 }
