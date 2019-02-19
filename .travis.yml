@@ -9,6 +9,10 @@ branches:
   only:
     - master
     - develop
+before_script:
+  on:
+    branch: develop
+  - npm install -g netlify-cli
 script:
   - npm run build
   - npm run test
