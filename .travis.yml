@@ -10,10 +10,9 @@ branches:
     - master
     - develop
 script:
-  - if: branch = develop:
-    - npm run test
-  - if: branch = master:
-    - gatsby build
-after_success:
-  - if: branch = develop:
-    - git request-pull build.$TRAVIS_BUILD_NUMBER https://github.com/cbillowes/curious-programmer-helium master:develop
+  - npm run build
+  - npm run test
+deploy:
+  on:
+    branch: develop
+  script: netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_AUTH_TOKEN -d /public -p -m "Triggered build.$TRAVIS_BUILD_NUMBER by TravisCI"
