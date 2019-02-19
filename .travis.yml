@@ -9,14 +9,11 @@ branches:
   only:
     - master
     - develop
-before_script:
-  on:
-    branch: develop
-  script: npm install -g netlify-cli
 script:
   - npm run build
   - npm run test
-deploy:
-  on:
-    branch: develop
-  script: netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_AUTH_TOKEN -d /public -p -m "Triggered build.$TRAVIS_BUILD_NUMBER by TravisCI"
+after_success:
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo build.$TRAVIS_BRANCH ; fi`
+  - echo "Test Success - Branch($TRAVIS_BRANCH) Pull Request($TRAVIS_PULL_REQUEST) Tag($TRAVIS_TAG)"
+  - git tag -a $TAG -m "TravisCI tag for $COMMIT"
+  - git push $GITHUB_REPO:PR origin $TRAVIS_BRANCH $TAG
