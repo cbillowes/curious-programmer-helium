@@ -1,28 +1,28 @@
 #!/bin/bash -e
 
+echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
 export REPO="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
-echo "Cloning repository"
-git clone https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO $TRAVIS_BRANCH
+echo "Getting the source code"
+git clone https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO
 git branch
 git checkout $TRAVIS_BRANCH
 git fetch
-git status
 
-echo "Tagging the build $TAG"
-echo "Working on $TRAVIS_BRANCH"
-
-echo "Creating git tag"
+echo "Tagging branch"
+echo "git tag -a $TAG -m \"Tagged by TravisCI for $TRAVIS_COMMIT\""
 git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
 
 if [ "$TRAVIS_BRANCH" == "develop" ]; then
-    echo "Creating pull request for $TRAVIS_COMMIT on $TAG on develop branch"
+    echo "Creating pull request"
+    echo hub pull-request -h $TRAVIS_BRANCH -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
     hub pull-request -h $TRAVIS_BRANCH -m "Create PR for $TRAVIS_COMMIT on $TAG"
 fi
 
 echo "Pushing to GitHub"
-git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin $TRAVIS_BRANCH $TAG > /dev/null 2>&1
+echo "git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
+git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
     echo "Just throw a fucking party!"
