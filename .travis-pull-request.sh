@@ -5,7 +5,7 @@ export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "
 export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
 
 function did_it_go_smooth() {
-    if [ $? -nq 0 ]; then
+    if [ $? != 0 ]; then
         echo "Well this is a disaster o_O"
         (exit 1)
     fi
