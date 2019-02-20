@@ -6,12 +6,13 @@ export REPO="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 echo "Cloning repository"
 git clone https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO $TRAVIS_BRANCH
 git fetch
+git branch
 
 echo "Tagging the build $TAG"
 echo "Working on $TRAVIS_BRANCH"
 
 echo "Creating git tag"
-git tag -a $TAG -m "Tagged by TravisCI for $COMMIT"
+git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
 
 if [ "$TRAVIS_BRANCH" == "develop" ]; then
     echo "Creating pull request for $TRAVIS_COMMIT on $TAG on develop branch"
@@ -19,6 +20,7 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
 fi
 
 echo "Pushing to GitHub"
+git status
 git push -u https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin $TRAVIS_BRANCH $TAG
 
 if [ $? -eq 0 ]; then
