@@ -3,10 +3,6 @@
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
 export REPO="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
-echo "Get GitHub hub for Ubuntu"
-sudo apt install snapd
-sudo snap install hub --classic
-
 echo "Tagging the build $TAG"
 echo "Working on $TRAVIS_BRANCH: Pull request: $TRAVIS_PULL_REQUEST"
 
