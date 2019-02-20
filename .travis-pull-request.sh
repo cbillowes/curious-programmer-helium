@@ -22,7 +22,7 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
 fi
 
 echo "Pushing to GitHub"
-git push -u https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin $TRAVIS_BRANCH $TAG
+git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin $TRAVIS_BRANCH $TAG > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
     echo "Just throw a fucking party!"
