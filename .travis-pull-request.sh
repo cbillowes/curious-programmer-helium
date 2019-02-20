@@ -8,16 +8,18 @@ git clone https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO $TRAVIS_BRANCH
 git fetch
 
 echo "Tagging the build $TAG"
-echo "Working on $TRAVIS_BRANCH: Pull request: $TRAVIS_PULL_REQUEST"
+echo "Working on $TRAVIS_BRANCH"
 
 echo "Creating git tag"
 git tag -a $TAG -m "Tagged by TravisCI for $COMMIT"
 
-echo "Creating pull request for $COMMIT on $TAG"
-hub pull-request -m "Create PR for $COMMIT on $TAG"
+if [ "$TRAVIS_BRANCH" == "develop" ]; then
+    echo "Creating pull request for $TRAVIS_COMMIT on $TAG on develop branch"
+    hub pull-request -h $TRAVIS_BRANCH -m "Create PR for $TRAVIS_COMMIT on $TAG"
+fi
 
 echo "Pushing to GitHub"
-git push -u https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG
+git push -u https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin $TRAVIS_BRANCH $TAG
 
 if [ $? -eq 0 ]; then
     echo "Just throw a fucking party!"
