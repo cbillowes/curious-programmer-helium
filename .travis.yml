@@ -11,7 +11,7 @@ branches:
     - develop
 addons:
   snaps:
-    - hub
+    - hub --classic
 script:
   - npm run build
   - npm run test
