@@ -1,25 +1,23 @@
 #!/bin/bash -e
 
-export TRAVIS_PULL_REQUEST=true
-export TAG=if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi
+export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
 export REPO="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
-echo "Get hub"
-curl https://github.com/github/hub/releases/download/v2.9.0/hub-linux-amd64-2.9.0.tgz -o hub-linux-amd64-2.9.0.tgz
-tar xvzf hub-linux-amd64-2.9.0.tgz -C ./
+echo "Get GitHub hub for Ubuntu"
+sudo apt install snapd
+sudo snap install hub --classic
 
 echo "Tagging the build $TAG"
-echo "$TRAVIS_BRANCH is a pull request: $TRAVIS_PULL_REQUEST"
+echo "Working on $TRAVIS_BRANCH: Pull request: $TRAVIS_PULL_REQUEST"
 
 echo "Creating git tag"
 git tag -a $TAG -m "Tagged by TravisCI for $COMMIT"
 
-echo "Pushing to GitHub"
-git push -u $REPO origin/$TRAVIS_BRANCH $TAG
-
 echo "Create pull request"
-./hub pr checkout PR.$TAG
-git push -u $REPO origin/PR.$TAG
+hub pull-request -m "Create PR for $COMMIT on $TAG"
+
+echo "Pushing to GitHub"
+git push -u https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG
 
 if [ $? -eq 0 ]; then
     echo "Just throw a fucking party!"
