@@ -16,8 +16,8 @@ git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
 
 if [ "$TRAVIS_BRANCH" == "develop" ]; then
     echo "Creating pull request"
-    echo hub pull-request -h $TRAVIS_BRANCH -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
-    hub pull-request -h $TRAVIS_BRANCH -m "Create PR for $TRAVIS_COMMIT on $TAG"
+    echo hub pull-request -p -b $TRAVIS_BRANCH -h $COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
+    hub pull-request -p -b $TRAVIS_BRANCH -h $COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
 fi
 
 echo "Pushing to GitHub"
