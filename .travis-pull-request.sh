@@ -2,10 +2,10 @@
 
 echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
-export REPO="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
+export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
 
 echo "Getting the source code"
-git clone https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO
+git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPO
 git branch
 git checkout $TRAVIS_BRANCH
 git fetch
@@ -21,8 +21,8 @@ if [ "$TRAVIS_BRANCH" == "develop" ]; then
 fi
 
 echo "Pushing to GitHub"
-echo "git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
-git push https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
+echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
+git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
     echo "Just throw a fucking party!"
