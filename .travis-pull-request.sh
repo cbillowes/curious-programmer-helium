@@ -35,8 +35,11 @@ function create_pull_request() {
     if [ $TRAP == 0 ]; then
         if [ "$TRAVIS_BRANCH" == "develop" ]; then
             echo "Creating pull request"
-            echo hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
-            hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
+            #echo hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
+            #hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
+
+            echo "git request-pull $TAG https://$GITHUB_TOKEN@github.com/$GITHUB_REPO develop"
+            git request-pull $TAG https://$GITHUB_TOKEN@github.com/$GITHUB_REPO develop
             TRAP=$?
         fi
     else
