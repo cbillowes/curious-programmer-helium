@@ -2,6 +2,7 @@
 set -ev
 
 # TODO: Get rid of $?
+# https://docs.travis-ci.com/user/job-lifecycle/#note-on-
 
 echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
@@ -53,9 +54,6 @@ function push() {
         echo "Skip pushing to GitHub"
     fi
 }
-
-# Just fail the process
-TRAP=1
 
 if [ $TRAVIS_BRANCH == "develop" ]; then
     get_source_code
