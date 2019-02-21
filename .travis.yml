@@ -16,4 +16,4 @@ script:
   - npm run build
   - npm run test
 after_success:
-  - .travis-pull-request.sh
+  - ./.travis-pull-request.sh
