@@ -15,7 +15,7 @@ function get_source_code() {
         git branch
         git checkout $TRAVIS_BRANCH
         git fetch
-        TRAP=$?
+        $TRAP=$?
     fi
 }
 
@@ -24,7 +24,7 @@ function tag_branch() {
         echo "Tagging branch"
         echo "git tag -a $TAG -m \"Tagged by TravisCI for $TRAVIS_COMMIT\""
         git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
-        TRAP=$?
+        $TRAP=$?
     else
         echo "Skip tagging branch"
     fi
@@ -36,7 +36,7 @@ function create_pull_request() {
             echo "Creating pull request"
             echo hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
             hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
-            TRAP=$?
+            $TRAP=$?
         fi
     else
         echo "Skip creating pull request"
@@ -48,14 +48,14 @@ function push() {
         echo "Pushing to GitHub"
         echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
         git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
-        TRAP=$?
+        $TRAP=$?
     else
         echo "Skip pushing to GitHub"
     fi
 }
 
 # Just fail the process
-TRAP = 1
+$TRAP = 1
 
 if [ $TRAVIS_BRANCH == "develop" ]; then
     get_source_code
