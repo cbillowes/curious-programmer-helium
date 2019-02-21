@@ -66,7 +66,7 @@ function create_pull_request() {
 if [ $TRAVIS_BRANCH == "develop" ]; then
     get_source_code
     tag_branch
-    push_tags
+    #push_tags
     create_pull_request
 fi
 
