@@ -1,23 +1,12 @@
 #!/bin/bash
+set -ev
+
+# TODO: Get rid of $?
 
 echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
 export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
 export TRAP=0
-
-function failing_step() {
-    echo "This command should fail the build"
-    git clone https://something.somewhere.github.com
-    TRAP=$?
-}
-
-function passing_step() {
-    echo $TRAP
-    if [ $TRAP == 0 ]; then
-        echo "Passing step"
-        TRAP=$?
-    fi
-}
 
 function get_source_code() {
     if [ $TRAP == 0 ]; then
@@ -65,16 +54,22 @@ function push() {
     fi
 }
 
-get_source_code
-tag_branch
-create_pull_request
-push
+# Just fail the process
+TRAP = 1
 
-if [ $TRAP == 0 ]; then
-    echo "Just throw a fucking party!"
-else
-    echo "Well now, this is a disaster! o_O"
+if [ $TRAVIS_BRANCH == "develop" ]; then
+    get_source_code
+    tag_branch
+    create_pull_request
+    push
+
+    if [ $TRAP == 0 ]; then
+        echo "Just throw a fucking party!"
+    else
+        echo "Well now, this is a disaster! o_O"
+    fi
+
+    echo "Script will exit with code $TRAP"
 fi
 
-echo "Script will exit with code $TRAP"
 (exit $TRAP)

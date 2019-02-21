@@ -15,8 +15,4 @@ addons:
 script:
   - npm run build
   - npm run test
-deploy:
-  provider: script
-  script: bash .travis-pull-request.sh
-  on:
-    branch: develop
+  - if [ "${TRAVIS_BRANCH}" = "develop" ]; then bash .travis-pull-request.sh fi
