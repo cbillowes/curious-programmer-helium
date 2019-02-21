@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
@@ -6,6 +6,7 @@ export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
 export TRAP=0
 
 function did_it_go_smooth() {
+    echo "Step exited with code $?"
     if [ $? != 0 ]; then
         echo "Well this is a disaster o_O"
         $TRAP=1
