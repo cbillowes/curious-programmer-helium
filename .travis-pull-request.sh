@@ -8,17 +8,25 @@ export TRAP=0
 function did_it_go_smooth() {
     echo "Step exited with code $?"
     if [ $? != 0 ]; then
-        TRAP=$?
+        export TRAP=$?
     fi
 }
 
-function get_source_code() {
-    echo "Getting the source code"
-    git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPO
-    git branch
-    git checkout $TRAVIS_BRANCH
-    git fetch
+function failing_step() {
+    echo "This command should fail the build"
+    git clone https://something.somewhere.github.com
     did_it_go_smooth
+}
+
+function get_source_code() {
+    if [ $TRAP == 0 ]; then
+        echo "Getting the source code"
+        git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPO
+        git branch
+        git checkout $TRAVIS_BRANCH
+        git fetch
+        did_it_go_smooth
+    fi
 }
 
 function tag_branch() {
@@ -56,6 +64,7 @@ function push() {
     fi
 }
 
+failing_step
 get_source_code
 tag_branch
 create_pull_request
