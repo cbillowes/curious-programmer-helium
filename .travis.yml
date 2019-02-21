@@ -15,5 +15,5 @@ addons:
 script:
   - npm run build
   - npm run test
-deploy:
-  script: bash .travis-pull-request.sh
+after_success:
+  - .travis-pull-request.sh
