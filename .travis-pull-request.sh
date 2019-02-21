@@ -11,7 +11,10 @@ export TRAP=0
 
 function get_source_code() {
     if [ $TRAP == 0 ]; then
+        echo "---------------------------------------------------------"
         echo "Getting the source code"
+        echo "---------------------------------------------------------"
+
         git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPO
         git branch
         git checkout $TRAVIS_BRANCH
@@ -22,19 +25,34 @@ function get_source_code() {
 
 function tag_branch() {
     if [ $TRAP == 0 ]; then
+        echo "---------------------------------------------------------"
         echo "Tagging branch"
+        echo "---------------------------------------------------------"
+
         echo "git tag -a $TAG -m \"Tagged by TravisCI for $TRAVIS_COMMIT\""
         git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
         TRAP=$?
-    else
-        echo "Skip tagging branch"
+    fi
+}
+
+function push_tags() {
+    if [ $TRAP == 0 ]; then
+        echo "---------------------------------------------------------"
+        echo "Pushing tags to GitHub"
+        echo "---------------------------------------------------------"
+
+        echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG"
+        git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG
+        TRAP=$?
     fi
 }
 
 function create_pull_request() {
     if [ $TRAP == 0 ]; then
         if [ "$TRAVIS_BRANCH" == "develop" ]; then
+            echo "---------------------------------------------------------"
             echo "Creating pull request"
+            echo "---------------------------------------------------------"
             #echo hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
             #hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
 
@@ -42,35 +60,14 @@ function create_pull_request() {
             git request-pull $TAG https://$GITHUB_TOKEN@github.com/$GITHUB_REPO develop
             TRAP=$?
         fi
-    else
-        echo "Skip creating pull request"
-    fi
-}
-
-function push() {
-    if [ $TRAP == 0 ]; then
-        echo "Pushing to GitHub"
-        echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
-        git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
-        TRAP=$?
-    else
-        echo "Skip pushing to GitHub"
     fi
 }
 
 if [ $TRAVIS_BRANCH == "develop" ]; then
     get_source_code
     tag_branch
+    push_tags
     create_pull_request
-    push
-
-    if [ $TRAP == 0 ]; then
-        echo "Just throw a fucking party!"
-    else
-        echo "Well now, this is a disaster! o_O"
-    fi
-
-    echo "Script will exit with code $TRAP"
 fi
 
 (exit $TRAP)
