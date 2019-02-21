@@ -8,8 +8,7 @@ export TRAP=0
 function did_it_go_smooth() {
     echo "Step exited with code $?"
     if [ $? != 0 ]; then
-        echo "Well this is a disaster o_O"
-        $TRAP=1
+        TRAP=1
     fi
 }
 
