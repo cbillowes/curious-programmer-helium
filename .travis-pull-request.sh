@@ -18,7 +18,7 @@ function get_source_code() {
         git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPO
         git branch
         git checkout $TRAVIS_BRANCH
-        git fetch
+        git fetch origin $TRAVIS_BRANCH
         TRAP=$?
     fi
 }
@@ -41,8 +41,6 @@ function push_tags() {
         echo "Pushing tags to GitHub"
         echo "---------------------------------------------------------"
 
-        echo "Pulling if necessary. Shouldn't be necessary."
-        git pull
         echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG"
         git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG
         TRAP=$?
