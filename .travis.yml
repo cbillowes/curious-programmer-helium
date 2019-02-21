@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 10.15.0
-dist: xenial
+dist: trusty
 sudo: false
 git:
   depth: 3
@@ -9,9 +9,6 @@ branches:
   only:
     - master
     - develop
-addons:
-  snaps:
-    - hub --classic
 script:
   - npm run build
   - npm run test
