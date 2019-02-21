@@ -8,7 +8,7 @@ export TRAP=0
 function did_it_go_smooth() {
     echo "Step exited with code $?"
     if [ $? != 0 ]; then
-        TRAP=1
+        TRAP=$?
     fi
 }
 
@@ -67,4 +67,5 @@ else
     echo "Well now, this is a disaster! o_O"
 fi
 
+echo "Script will exit with code $TRAP"
 (exit $TRAP)
