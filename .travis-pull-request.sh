@@ -5,17 +5,18 @@ export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "
 export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
 export TRAP=0
 
-function did_it_go_smooth() {
-    echo "Step exited with code $?"
-    if [ $? != 0 ]; then
-        export TRAP=$?
-    fi
-}
-
 function failing_step() {
     echo "This command should fail the build"
     git clone https://something.somewhere.github.com
-    did_it_go_smooth
+    TRAP=$?
+}
+
+function passing_step() {
+    echo $TRAP
+    if [ $TRAP == 0 ]; then
+        echo "Passing step"
+        TRAP=$?
+    fi
 }
 
 function get_source_code() {
@@ -25,7 +26,7 @@ function get_source_code() {
         git branch
         git checkout $TRAVIS_BRANCH
         git fetch
-        did_it_go_smooth
+        TRAP=$?
     fi
 }
 
@@ -34,7 +35,7 @@ function tag_branch() {
         echo "Tagging branch"
         echo "git tag -a $TAG -m \"Tagged by TravisCI for $TRAVIS_COMMIT\""
         git tag -a $TAG -m "Tagged by TravisCI for $TRAVIS_COMMIT"
-        did_it_go_smooth
+        TRAP=$?
     else
         echo "Skip tagging branch"
     fi
@@ -46,7 +47,7 @@ function create_pull_request() {
             echo "Creating pull request"
             echo hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m \"Create PR for $TRAVIS_COMMIT on $TAG"\""
             hub pull-request -p -b $TRAVIS_BRANCH -h $TRAVIS_COMMIT -m "Create PR for $TRAVIS_COMMIT on $TAG"
-            did_it_go_smooth
+            TRAP=$?
         fi
     else
         echo "Skip creating pull request"
@@ -58,13 +59,12 @@ function push() {
         echo "Pushing to GitHub"
         echo "git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1"
         git push https://$GITHUB_TOKEN@github.com/$GITHUB_REPO origin/$TRAVIS_BRANCH $TAG > /dev/null 2>&1
-        did_it_go_smooth
+        TRAP=$?
     else
         echo "Skip pushing to GitHub"
     fi
 }
 
-failing_step
 get_source_code
 tag_branch
 create_pull_request
