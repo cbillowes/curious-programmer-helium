@@ -6,7 +6,7 @@ set -ev
 echo "Creating variables"
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo "build.$TRAVIS_BUILD_NUMBER"; fi`
 export REPO="https://$GITHUB_TOKEN@github.com/$GITHUB_REPO"
-TRAP=0
+export TRAP=0
 
 function get_source_code() {
     if [ $TRAP == 0 ]; then
@@ -55,7 +55,7 @@ function push() {
 }
 
 # Just fail the process
-TRAP = 1
+TRAP=1
 
 if [ $TRAVIS_BRANCH == "develop" ]; then
     get_source_code
