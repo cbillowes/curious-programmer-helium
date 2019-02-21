@@ -17,6 +17,6 @@ script:
   - npm run test
 deploy:
   provider: script
-  script: bash ./.travis-pull-request.sh
+  script: bash .travis-pull-request.sh
   on:
     branch: develop
