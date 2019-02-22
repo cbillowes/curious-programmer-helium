@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -n "${TRAVIS_TAG// }" ] #TAG is not empty
+if [ "$TRAVIS_BRANCH" == "develop" ] #TAG is not empty
 then
   #sorts the tags and picks the latest
   #sort -V does not work on the travis machine
@@ -12,7 +12,7 @@ then
   echo $LATEST_TAG
 fi
 
-if [ "$TRAVIS_PULL_REQUEST" != "false" ]
+if [ "$TRAVIS_PULL_REQUEST" == "false" ]
 then
     # Using the Issues api instead of the PR api
     # Done so because every PR is an issue, and the issues api allows to post general comments,
