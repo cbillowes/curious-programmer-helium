@@ -15,7 +15,7 @@ describe("the archives page", () => {
           node: {
             timeToRead: "20 min",
             fields: {
-              slug: "hello-world"
+              slug: "/hello-world"
             },
             frontmatter: {
               title: "Hello World",
@@ -27,7 +27,7 @@ describe("the archives page", () => {
           node: {
             timeToRead: "10 min",
             fields: {
-              slug: "hello-galaxy"
+              slug: "/hello-galaxy"
             },
             frontmatter: {
               title: "Hello Galaxy",

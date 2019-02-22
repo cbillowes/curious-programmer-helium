@@ -15,7 +15,7 @@ describe("the blog page", () => {
           node: {
             timeToRead: "20 min",
             fields: {
-              slug: "hello-world"
+              slug: "/hello-world"
             },
             frontmatter: {
               title: "Hello World",
@@ -27,7 +27,7 @@ describe("the blog page", () => {
           node: {
             timeToRead: "10 min",
             fields: {
-              slug: "hello-galaxy"
+              slug: "/hello-galaxy"
             },
             frontmatter: {
               title: "Hello Galaxy",
@@ -54,8 +54,8 @@ describe("the blog page", () => {
   describe("content", () => {
     it("expected", () => {
       const component = mount(<Page data={posts} />)
-      expect(component.html()).toContain(`<section><h1><a href="hello-world">Hello World</a></h1>`)
-      expect(component.html()).toContain(`<section><h1><a href="hello-galaxy">Hello Galaxy</a></h1>`)
+      expect(component.html()).toContain(`<section><h1><a href="/hello-world">Hello World</a></h1>`)
+      expect(component.html()).toContain(`<section><h1><a href="/hello-galaxy">Hello Galaxy</a></h1>`)
     })
   })
 })
