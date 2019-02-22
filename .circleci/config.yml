@@ -2,14 +2,14 @@ version: 2
 jobs:
   integration:
     docker:
-      - image:
+      - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
       - npm run build
       - npm run test
   page_speed:
     docker:
-      - image:
+      - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
       - run: echo "Deploy to Netlify"
