@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Link from "gatsby-link"
+import ExternalLink from "../Link/ExternalLink"
 import socialLinks from "../../../data/SocialLinks"
 import "./Contact.scss"
 
@@ -9,7 +9,7 @@ class Contact extends Component {
       <div className="contact">
         {socialLinks.contact.map((item) => {
           return (
-            <Link
+            <ExternalLink
               key={`contact-${item.icon}`}
               className={`icon ${item.icon}`}
               to={item.href} />

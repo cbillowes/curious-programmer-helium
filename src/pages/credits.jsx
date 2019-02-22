@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "gatsby-link"
+import ExternalLink from "../components/Link/ExternalLink";
 import Layout from "../layout";
 import Metadata from "../components/Metadata/Page/Metadata";
 import Credit from "../components/Credit/Credit"
@@ -119,12 +120,12 @@ class CreditsPage extends Component {
             </Credit>
 
             <ul>
-              <li><Link to="https://www.flaticon.com/free-icon/gmail_732200">Gmail</Link></li>
-              <li><Link to="https://www.flaticon.com/free-icon/rss_733569">RSS</Link></li>
-              <li><Link to="https://www.flaticon.com/free-icon/twitter_733579">Twitter</Link></li>
-              <li><Link to="https://www.flaticon.com/free-icon/overflowing_732248">StackOverflow</Link></li>
-              <li><Link to="https://www.flaticon.com/free-icon/github_733609">GitHub</Link></li>
-              <li><Link to="https://www.flaticon.com/free-icon/linkedin_733561">LinkedIn</Link></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/gmail_732200">Gmail</ExternalLink></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/rss_733569">RSS</ExternalLink></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/twitter_733579">Twitter</ExternalLink></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/overflowing_732248">StackOverflow</ExternalLink></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/github_733609">GitHub</ExternalLink></li>
+              <li><ExternalLink to="https://www.flaticon.com/free-icon/linkedin_733561">LinkedIn</ExternalLink></li>
             </ul>
           </section>
           <section>
