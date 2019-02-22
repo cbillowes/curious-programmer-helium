@@ -13,4 +13,5 @@ script:
   - npm run build
   - npm run test
 after_success:
+  - chmod a+x .travis-pull-request.sh
   - ./.travis-pull-request.sh
