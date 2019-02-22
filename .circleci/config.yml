@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  integration:
+    docker:
+      - image:
+    steps:
+      - checkout
+      - npm run build
+      - npm run test
+  page_speed:
+    docker:
+      - image:
+    steps:
+      - checkout
+      - run: echo "Deploy to Netlify"
+      - run: echo "Execute lighthouse page speed tests on build"
+workflows:
+  version: 2
+  ci_cd:
+    jobs:
+      - integration
+      - page_speed
