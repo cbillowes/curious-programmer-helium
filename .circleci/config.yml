@@ -26,6 +26,20 @@ jobs:
       - run: echo "Making sure it won't take years"
       - run: echo "* Deploy to Netlify"
       - run: echo "* Execute lighthouse page speed tests on build"
+  release:
+    docker:
+      - image: circleci/node:10.15.1-jessie
+    steps:
+      - checkout
+      - run:
+          name: "Publish release on GitHub"
+          command: |
+            VERSION="v1.${CIRCLE_BUILD_NUM}"
+            POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/pulls"
+            curl -H \
+              "Authorization: token ${GITHUB_TOKEN}" \
+              --request POST ${POST_TO} \
+              --data '{"title":"Automated release 👏 '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
 workflows:
   version: 2
   integration:
@@ -37,3 +51,7 @@ workflows:
       - page_speed:
           requires:
             - build
+      - release:
+          requires:
+            - test
+            - page_speed
