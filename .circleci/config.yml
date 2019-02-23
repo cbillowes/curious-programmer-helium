@@ -5,17 +5,15 @@ jobs:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
-      - run: echo "Chopping onions without the tears"
-      - run: npm run build
+      - run: sudo chmod a+x .run-build.sh
+      - run: sudo ./.run-build.sh
   test:
     docker:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
-      - run: echo "Making soup and drinking beers"
-      - run: sudo npm install -g jest-cli
-      - run: npm install
-      - run: npm run test
+      - run: sudo chmod a+x .run-test.sh
+      - run: sudo ./.run-test.sh
   page_speed:
     docker:
       - image: circleci/node:chakracore-8-browsers-legacy
