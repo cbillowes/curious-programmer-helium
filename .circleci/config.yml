@@ -54,7 +54,6 @@ jobs:
               "Authorization: token ${GITHUB_TOKEN}" \
               --request POST ${POST_TO} \
               --data '{"tag":"'${VERSION}'", "message":"Automated release 👏 '${VERSION}'", "object":"'${CIRCLE_SHA1}'","type":"commit"}'
-
 workflows:
   version: 2
   integration:
