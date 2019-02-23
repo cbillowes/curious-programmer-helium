@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.1-jessie
+    branches:
+      only:
+        - integrate
     steps:
       - checkout
       - run: sudo chmod a+x .run-build.sh
@@ -22,6 +25,23 @@ jobs:
       - run: echo "Making sure it won't take years"
       - run: echo "* Deploy to Netlify"
       - run: echo "* Execute lighthouse page speed tests on build"
+  release:
+    docker:
+      - image: circleci/ubuntu:bionic
+    steps:
+      - checkout
+      - run: sudo apt-get install git
+      - run:
+          name: "Publish release on GitHub"
+          command: |
+            echo "circle repository url ${CIRCLE_REPOSITORY_URL}"
+            VERSION=if [ "${CIRCLE_BRANCH}" == "master" ]; then echo "release.${CIRCLE_BUILD_NUM}" else echo "latest" fi
+            POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/pulls"
+            curl -H \
+              "Authorization: token ${GITHUB_TOKEN}" \
+              --request POST \
+              --data='{"title":"Automated deployment ${VERSION}", "base":"master", "head":"${CIRCLE_BRANCH}"}'
+
 workflows:
   version: 2
   integration:
@@ -32,4 +52,8 @@ workflows:
             - build
       - page_speed:
           requires:
+            - build
+      - release:
+          requires:
             - test
+            - page_speed
