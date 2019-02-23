@@ -35,8 +35,7 @@ jobs:
       - run:
           name: "Publish release on GitHub"
           command: |
-            echo "circle repository url ${CIRCLE_REPOSITORY_URL}"
-            VERSION=if [ "${CIRCLE_BRANCH}" == "master" ]; then echo "release.${CIRCLE_BUILD_NUM}"; else echo "latest"; fi
+            VERSION="release.${CIRCLE_BUILD_NUM}"
             POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/pulls"
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
