@@ -14,7 +14,7 @@ jobs:
       - checkout
       - run: echo "Making soup and drinking beers"
       - run: npm run test
-  verify:
+  page_speed:
     docker:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
@@ -24,13 +24,12 @@ jobs:
       - run: echo "* Execute lighthouse page speed tests on build"
 workflows:
   version: 2
-  build_accept_verify:
+  integration:
     jobs:
       - build
       - test:
           requires:
-            build
-      - verify:
-          requires:
             - build
+      - page_speed:
+          requires:
             - test
