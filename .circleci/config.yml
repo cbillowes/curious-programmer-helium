@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
-      - run: "Chopping onions without the tears"
+      - run: echo "Chopping onions without the tears"
       - run: npm run build
   test:
     docker:
