@@ -28,7 +28,7 @@ jobs:
       - run: echo "* Execute lighthouse page speed tests on build"
   release:
     docker:
-      - image: circleci/ubuntu:trusty
+      - image: circleci/node:10.15.1-jessie
     steps:
       - checkout
       - run: sudo apt-get install git
