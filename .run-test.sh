@@ -13,25 +13,25 @@ echo "Updating npm"
 echo "-------------------------------------------------------------------------"
 sudo npm update
 
-if [[ $? -eq 0 ]] ; then
+if [ $? -eq 0 ] ; then
   echo "Installing missing or upgraded node modules"
   echo "-------------------------------------------------------------------------"
   sudo npm install
 fi
 
-if [[ $? -eq 0 ]] ; then
+if [ $? -eq 0 ] ; then
   echo "Cleaning house"
   echo "-------------------------------------------------------------------------"
   sudo npm run clean
 fi
 
-if [[ $? -eq 0 ]] ; then
+if [ $? -eq 0 ] ; then
   echo "Installing the jest CLI"
   echo "-------------------------------------------------------------------------"
   sudo npm install -g jest-cli
 fi
 
-if [[ $? -eq 0 ]] ; then
+if [ $? -eq 0 ] ; then
   echo "All good! ◉}<|="
   exit 0
 else
