@@ -59,7 +59,7 @@ if [ $? -eq 0 ] ; then
 fi
 
 if [ $? -eq 0 ] ; then
-  echo "Jobs done! ◉}<|="
+  echo "Whoohoo! ◉}<|="
   exit 0
 else
   echo "Well now... this is a disaster! o_O"
