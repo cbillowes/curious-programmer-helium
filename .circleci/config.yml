@@ -2,21 +2,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:chakracore-8-browsers-legacy
+      - image: circleci/node:10.15.1-jessie
     steps:
       - checkout
       - run: sudo chmod a+x .run-build.sh
       - run: sudo ./.run-build.sh
   test:
     docker:
-      - image: circleci/node:chakracore-8-browsers-legacy
+      - image: circleci/node:10.15.1-jessie
     steps:
       - checkout
       - run: sudo chmod a+x .run-test.sh
       - run: sudo ./.run-test.sh
   page_speed:
     docker:
-      - image: circleci/node:chakracore-8-browsers-legacy
+      - image: circleci/node:10.15.1-jessie
     steps:
       - checkout
       - run: echo "Making sure it won't take years"
