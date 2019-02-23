@@ -30,6 +30,8 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 sysctl --system
 ```
 
+**A brand new project**
+
 Install a gatsby starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
 
 ```sh
