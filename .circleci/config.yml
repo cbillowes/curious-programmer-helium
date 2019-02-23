@@ -13,6 +13,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Making soup and drinking beers"
+      - run: npm install -g jest-cli
       - run: npm run test
   page_speed:
     docker:
