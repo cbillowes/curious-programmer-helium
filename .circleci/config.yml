@@ -39,21 +39,22 @@ jobs:
             POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/pulls"
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
-              --request POST \
+              --request POST ${POST_TO} \
               --data '{"title":"Travis automatic deployment: '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
 
 workflows:
   version: 2
   integration:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
-      - page_speed:
-          requires:
-            - build
-      - release:
-          requires:
-            - test
-            - page_speed
+      - release
+      # - build
+      # - test:
+      #     requires:
+      #       - build
+      # - page_speed:
+      #     requires:
+      #       - build
+      # - release:
+      #     requires:
+      #       - test
+      #       - page_speed
