@@ -40,7 +40,7 @@ jobs:
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
               --request POST \
-              --data='{"title":"Automated deployment ${VERSION}", "base":"master", "head":"${CIRCLE_BRANCH}"}'
+              --data '{"title":"Travis automatic deployment: '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
 
 workflows:
   version: 2
