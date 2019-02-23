@@ -28,7 +28,7 @@ jobs:
       - run: echo "* Execute lighthouse page speed tests on build"
   release:
     docker:
-      - image: circleci/ubuntu:bionic
+      - image: circleci/ubuntu:trusty
     steps:
       - checkout
       - run: sudo apt-get install git
