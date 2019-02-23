@@ -11,8 +11,29 @@ jobs:
       - checkout
       - run: sudo chmod a+x .run-build.sh
       - run: sudo ./.run-build.sh
+  test:
+    docker:
+      - image: circleci/node:10.15.1-jessie
+    steps:
+      - checkout
+      - run: sudo chmod a+x .run-test.sh
+      - run: sudo ./.run-test.sh
+  page_speed:
+    docker:
+      - image: circleci/node:10.15.1-jessie
+    steps:
+      - checkout
+      - run: echo "Making sure it won't take years"
+      - run: echo "* Deploy to Netlify"
+      - run: echo "* Execute lighthouse page speed tests on build"
 workflows:
   version: 2
   integration:
     jobs:
       - build
+      - test:
+          requires:
+            - build
+      - page_speed:
+          requires:
+            - build
