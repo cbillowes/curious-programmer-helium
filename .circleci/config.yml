@@ -40,6 +40,20 @@ jobs:
               "Authorization: token ${GITHUB_TOKEN}" \
               --request POST ${POST_TO} \
               --data '{"title":"Automated release \u1F44F '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
+  tag:
+    docker:
+      - image: circleci/node:10.15.1-jessie
+    steps:
+      - checkout
+      - run:
+          name: "Tag build"
+          command: |
+            VERSION="v1.${CIRCLE_BUILD_NUM}"
+            POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/tags"
+            curl -H \
+              "Authorization: token ${GITHUB_TOKEN}" \
+              --request POST ${POST_TO} \
+              --data '{"tag":"'${VERSION}'", "message":"Automated release \u1F44F '${VERSION}'", "object":"'${CIRCLE_SHA1}'","type":"commit"}'
 workflows:
   version: 2
   integration:
@@ -52,6 +66,10 @@ workflows:
           requires:
             - build
       - release:
+          requires:
+            - test
+            - page_speed
+      - tag:
           requires:
             - test
             - page_speed
