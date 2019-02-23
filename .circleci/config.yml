@@ -1,22 +1,36 @@
 version: 2
 jobs:
-  integration:
+  build:
     docker:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
-      - npm run build
-      - npm run test
-  page_speed:
+      - run: "Chopping onions without the tears"
+      - run: npm run build
+  test:
     docker:
       - image: circleci/node:chakracore-8-browsers-legacy
     steps:
       - checkout
-      - run: echo "Deploy to Netlify"
-      - run: echo "Execute lighthouse page speed tests on build"
+      - run: echo "Making soup and drinking beers"
+      - run: npm run test
+  verify:
+    docker:
+      - image: circleci/node:chakracore-8-browsers-legacy
+    steps:
+      - checkout
+      - run: echo "Making sure it won't take years"
+      - run: echo "* Deploy to Netlify"
+      - run: echo "* Execute lighthouse page speed tests on build"
 workflows:
   version: 2
-  ci_cd:
+  build_accept_verify:
     jobs:
-      - integration
-      - page_speed
+      - build
+      - test:
+          requires:
+            build
+      - verify:
+          requires:
+            - build
+            - test
