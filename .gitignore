@@ -1,4 +1,5 @@
 __drafts__/
+.circleci/run.sh
 
 ### Node ###
 # Logs

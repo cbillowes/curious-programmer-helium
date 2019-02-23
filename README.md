@@ -55,6 +55,54 @@ npm run develop # or gatsby develop
 
 Edit the export object in `data/SiteConfig` and the `robots.txt`.
 
+## CirclCI
+I don't want to push micro-commits to check if CircleCI is happy with my config.
+It's tedious and litters the crap out of my repo. Luckily I can test this
+locally. Detailed information [here](https://circleci.com/docs/2.0/local-cli/) and
+[here](https://circleci.com/docs/2.0/examples/#section=configuration).
+
+#### Using the CircleCI CLI
+
+```bash
+curl -fLSs https://circle.ci/cli | sudo bash
+```
+
+Navigate to root project directory and execute:
+
+```bash
+circleci config validate
+# Config file at .circleci/config.yml is valid ◉}<|= or not o_O
+```
+
+#### Using cURL
+
+**./run.sh**, this is a helper script to pass in variables that I don't want
+in Git ESPECIALLY the CircleCI token.
+```bash
+#!/usr/bin/env bash
+
+chmod a+x verify.sh
+export CIRCLE_TOKEN=<TOKEN_HIDDEN_OUTSIDE_VCS>
+export SHA=<COMMIT_HASH_FROM_WHICH_TO_BUILD>
+./verify.sh
+```
+
+**./verify.sh**, this script will only be executed locally
+```bash
+#!/usr/bin/env bash
+
+export SOURCE="github"
+export USERNAME="cbillowes"
+export PROJECT="curious-programmer-helium"
+export BRANCH="master"
+curl --user ${CIRCLE_TOKEN}: \
+     --request POST \
+     --form revision=${SHA}\
+     --form config=@config.yml \
+     --form notify=false \
+         https://circleci.com/api/v1.1/project/${SOURCE}/${USERNAME}/${PROJECT}/tree/${BRANCH}
+```
+
 ## Licenses
 
 ### Content
