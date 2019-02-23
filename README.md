@@ -12,10 +12,9 @@
 ## History
 
 * **corporate programmer**: my original blog written in Jekyll.
-
-* **oxygen - v1**: migration of corporate programmer to my new blog written in Gatsby v1.
-
-* **helium - v2**: the migration from Gatsby v1 to v2, a change in theme and a refactor across all components on the site.
+* **curious programmer**:
+  * **v1: oxygen**: migration of corporate programmer to my new blog written in Gatsby v1.
+  * **v2: helium**: the migration from Gatsby v1 to v2, a change in theme and a refactor across all components on the site.
 
 ## Getting Started
 
