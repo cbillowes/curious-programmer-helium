@@ -52,7 +52,7 @@ jobs:
             POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/tags"
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
-              --request POST ${POST_TO} \
+              --request PUT ${POST_TO} \
               --data '{"tag":"'${VERSION}'", "message":"Automated release \uD83D\uDC4F '${VERSION}'", "object":"'${CIRCLE_SHA1}'","type":"commit"}'
 workflows:
   version: 2
