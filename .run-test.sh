@@ -6,12 +6,13 @@ echo " | |   \___|\__,_|_|  |_|\___/ \__,_|___/  | | "
 echo "  \_\                                     /_/  "
 echo ""
 echo "-------------------------------------------------------------------------"
-echo "Making soup and drinking beers"
+echo "🎵 Making soup and drinking beers"
 echo "-------------------------------------------------------------------------"
 
-echo "Updating npm"
+echo "Showing versions"
 echo "-------------------------------------------------------------------------"
-sudo npm update
+node -v
+npm -v
 
 if [ $? -eq 0 ] ; then
   echo "Installing missing or upgraded node modules"
@@ -32,7 +33,13 @@ if [ $? -eq 0 ] ; then
 fi
 
 if [ $? -eq 0 ] ; then
-  echo "All good! ◉}<|="
+  echo "🎵 Eliminating all the gory fears"
+  echo "-------------------------------------------------------------------------"
+  npm run test
+fi
+
+if [ $? -eq 0 ] ; then
+  echo "Jobs done! ◉}<|="
   exit 0
 else
   echo "Well now... this is a disaster! o_O"

@@ -6,12 +6,13 @@ echo " | |   \___|\__,_|_|  |_|\___/ \__,_|___/  | | "
 echo "  \_\                                     /_/  "
 echo ""
 echo "-------------------------------------------------------------------------"
-echo "Chopping onions without the tears"
+echo "🎵 Chopping onions without the tears"
 echo "-------------------------------------------------------------------------"
 
-echo "Updating npm"
+echo "Showing versions"
 echo "-------------------------------------------------------------------------"
-sudo npm update
+node -v
+npm -v
 
 if [ $? -eq 0 ] ; then
   echo "Installing missing or upgraded node modules"
@@ -23,6 +24,12 @@ if [ $? -eq 0 ] ; then
   echo "Cleaning house"
   echo "-------------------------------------------------------------------------"
   sudo npm run clean
+fi
+
+if [ $? -eq 0 ] ; then
+  echo "Installing the gatsby CLI"
+  echo "-------------------------------------------------------------------------"
+  sudo npm install -g gatsby-cli
 fi
 
 if [ $? -eq 0 ] ; then
@@ -46,13 +53,13 @@ if [ $? -eq 0 ] ; then
 fi
 
 if [ $? -eq 0 ] ; then
-  echo "Building"
+  echo "🎵 Chiseling a masterpiece is all they hear"
   echo "-------------------------------------------------------------------------"
   gatsby build
 fi
 
 if [ $? -eq 0 ] ; then
-  echo "All good! ◉}<|="
+  echo "Jobs done! ◉}<|="
   exit 0
 else
   echo "Well now... this is a disaster! o_O"
