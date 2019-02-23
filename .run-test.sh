@@ -11,18 +11,18 @@ echo "-------------------------------------------------------------------------"
 
 echo "Updating npm"
 echo "-------------------------------------------------------------------------"
-npm update
+sudo npm update
 
 if [[ $? -eq 0 ]] ; then
   echo "Installing missing or upgraded node modules"
   echo "-------------------------------------------------------------------------"
-  npm install
+  sudo npm install
 fi
 
 if [[ $? -eq 0 ]] ; then
   echo "Cleaning house"
   echo "-------------------------------------------------------------------------"
-  npm run clean
+  sudo npm run clean
 fi
 
 if [[ $? -eq 0 ]] ; then
