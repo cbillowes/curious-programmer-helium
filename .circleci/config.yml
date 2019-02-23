@@ -39,7 +39,7 @@ jobs:
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
               --request POST ${POST_TO} \
-              --data '{"title":"Automated release 👏 '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
+              --data '{"title":"Automated release \u1F44F '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
 workflows:
   version: 2
   integration:
