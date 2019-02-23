@@ -3,9 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.1-jessie
-    branches:
-      only:
-        - integrate
+    filters:
+      branches:
+        only:
+          - integrate
     steps:
       - checkout
       - run: sudo chmod a+x .run-build.sh
