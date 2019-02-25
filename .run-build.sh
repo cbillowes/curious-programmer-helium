@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "   __                  _                  __   "
 echo "  / /   ___ _   _ _ __(_) ___  _   _ ___  \ \  "
 echo " | |   / __| | | | '__| |/ _ \| | | / __|  | | "
@@ -8,11 +10,6 @@ echo ""
 echo "-------------------------------------------------------------------------"
 echo "🎵 Chopping onions without the tears"
 echo "-------------------------------------------------------------------------"
-
-echo "Showing versions"
-echo "-------------------------------------------------------------------------"
-node -v
-npm -v
 
 if [ $? -eq 0 ] ; then
   echo "Installing missing or upgraded node modules"

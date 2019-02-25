@@ -3,20 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.1-jessie
-    filters:
-      branches:
-        only:
-          - integrate
     steps:
       - checkout
       - run: sudo chmod a+x .run-build.sh
-      - run: sudo ./.run-build.sh
-  test:
-    docker:
-      - image: circleci/node:10.15.1-jessie
-    steps:
-      - checkout
       - run: sudo chmod a+x .run-test.sh
+      - run: sudo ./.run-build.sh
       - run: sudo ./.run-test.sh
   page_speed:
     docker:
@@ -40,36 +31,52 @@ jobs:
               "Authorization: token ${GITHUB_TOKEN}" \
               --request POST ${POST_TO} \
               --data '{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "base":"master","head":"'${CIRCLE_BRANCH}'"}'
-  tag:
+  merge:
     docker:
       - image: circleci/node:10.15.1-jessie
     steps:
       - checkout
       - run:
-          name: "Tag build"
+          name: "Merge pull request on GitHub"
           command: |
             VERSION="v1.${CIRCLE_BUILD_NUM}"
-            POST_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/tags"
+            PUT_TO="https://api.github.com/repos/cbillowes/curious-programmer-helium/pulls/'${CIRCLE_BUILD_NUM}'/merge"
             curl -H \
               "Authorization: token ${GITHUB_TOKEN}" \
-              --request PUT ${POST_TO} \
-              --data '{"tag":"'${VERSION}'", "message":"Automated release \uD83D\uDC4F '${VERSION}'", "object":"'${CIRCLE_SHA1}'","type":"commit"}'
+              --request PUT ${PUT_TO} \
+              --data '{"commit_title":"Automated release \uD83D\uDC4F '${VERSION}'", "sha":"'${CIRCLE_SHA1}'","merge_method":"squash"}'
 workflows:
   version: 2
   integration:
     jobs:
       - build
-      - test:
-          requires:
-            - build
       - page_speed:
+          filters:
+            branches:
+              ignore:
+              - integrate
+              - master
           requires:
             - build
       - release:
+          filters:
+            branches:
+              only:
+              - integrate
           requires:
-            - test
+            - page_speed
+      - merge:
+          filters:
+            branches:
+              ignore:
+                - integrate
+                - master
+          requires:
             - page_speed
       - tag:
+          filters:
+            branches:
+              only:
+              - master
           requires:
-            - test
             - page_speed

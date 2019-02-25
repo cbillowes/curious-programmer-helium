@@ -1,0 +1,56 @@
+image: node:10.15.1-alpine
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - apt-get update -qq && apt-get install -y curl
+  - nodejs -v
+  - npm -v
+
+stages:
+  - build
+  - test
+  - staging
+  - production
+
+Build:
+  stage: build
+  before_script:
+    - npm install -g gatsby-cli
+    - npm install
+    - chmod a+x .run-build.sh
+  script:
+    - ./.run-build.sh
+
+Test:
+  stage: test
+  before_script:
+    - npm install -g jest-cli
+    - npm install
+    - chmod a+x .run-test.sh
+  script:
+    - ./.run-test.sh
+
+Integrate:
+  stage: staging:integrate
+  before_script:
+    - chmod a+x .run-pull-request.sh
+  script:
+    - ./.run-pull-request.sh
+
+Verify:
+  stage: staging:verify
+  script:
+    - echo "Run page speed logic on netlify branch"
+
+Release:
+  stage: production:release
+  script:
+    - echo "Merge pull request"
+
+Tag:
+  stage: production:tags
+  script:
+    - echo "Tag production build"
