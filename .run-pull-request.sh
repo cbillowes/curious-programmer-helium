@@ -10,3 +10,14 @@ echo ""
 echo "-------------------------------------------------------------------------"
 echo "🎵 Pulling wires by request is what I simply do best"
 echo "-------------------------------------------------------------------------"
+
+export TOKEN="${GITHUB_TOKEN}"
+export URL="${GITHUB_API}/pulls"
+export VERSION="${CI_PIPELINE_ID}"
+export SOURCE_BRANCH="${CI_COMMIT_REF_NAME}"
+export TARGET_BRANCH="${TARGET_BRANCH}"
+
+curl -H \
+  "Authorization: token ${TOKEN}" \
+  --request POST ${URL} \
+  --data '{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}'
