@@ -19,7 +19,10 @@ steps:
       content: |-
         FROM node:10.15.1-jessie AS builder
 
-        # Creating tar of productions dependencies
+        RUN pwd
+        RUN ls
+        RUN cd ${REPO_NAME}
+
         RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
 
         # Installing all dependencies
