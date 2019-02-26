@@ -3,10 +3,11 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cbillowes/curious-programmer-oxygen/blob/master/LICENSE)
 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" width="" height="20px" alt="CC BY-SA 4.0" /></a>
-[![pipeline status](https://gitlab.com/cbillowes/curious-programmer-helium/badges/master/pipeline.svg)](https://gitlab.com/cbillowes/curious-programmer-helium/commits/master)
+[![Codefresh build status](https://g.codefresh.io/api/badges/pipeline/cbillowes/cbillowes%2Fcurious-programmer-helium%2Fbuild?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWM3NDhhZTI2ZWMzYTM4YWZmYmYyNjg2.AIafc3AcklL1QkWVL_ySpuxHW7Gs_C0hC6WnikOBwIM)](https://g.codefresh.io/pipelines/helium-pipeline/builds?repoOwner=cbillowes&repoName=curious-programmer-helium&serviceName=cbillowes%2Fcurious-programmer-helium&filter=trigger:build~Build;branch:master;pipeline:5c748ce50bc7647f075e87a0~helium-pipeline)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d2bffdb911f485183f59559461fdb08)](https://app.codacy.com/app/cbillowes/curious-programmer-helium?utm_source=github.com&utm_medium=referral&utm_content=cbillowes/curious-programmer-helium&utm_campaign=Badge_Grade_Dashboard)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e5ea530e2243393ab460/maintainability)](https://codeclimate.com/github/cbillowes/curious-programmer-helium/maintainability)
 [![Twitter Follow](https://img.shields.io/twitter/follow/cbillowes.svg?style=social)](https://twitter.com/cbillowes)
+
 </div>
 
 ## History
