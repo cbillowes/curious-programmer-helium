@@ -19,7 +19,7 @@ steps:
         FROM node:10.15.1-jessie AS builder
 
         # Work with Git
-        RUN git clone --single-branch --branch ${CF_BRANCH} https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
+        RUN git clone --single-branch --branch ${{CF_BRANCH}} https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
         RUN git branch
         RUN git status
 
