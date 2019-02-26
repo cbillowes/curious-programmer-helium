@@ -18,8 +18,6 @@ steps:
       content: |-
         FROM node:10.15.1-jessie AS builder
 
-        RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
-
         # Installing all dependencies
         RUN npm install
         RUN npm install -g gatsby-cli
