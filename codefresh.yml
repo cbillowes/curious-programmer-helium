@@ -3,11 +3,9 @@ version: '1.0'
 stages:
 - environment
 - build
-- test
 - stage
 - verify
 - release
-- tag
 
 steps:
   clone:
@@ -25,9 +23,6 @@ steps:
     dockerfile:
       content: |-
         FROM node:10.15.1-jessie AS builder
-
-        # Grabbing some vital code from GitHub
-        https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git
 
         # Creating tar of productions dependencies
         RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
@@ -47,7 +42,7 @@ steps:
 
   tests:
     title: Testing the validity of the code that was written by elves and gnomes
-    stage: test
+    stage: build
     image: ${{docker}}
     commands:
     - chmod a+x .run-test.sh
@@ -79,7 +74,7 @@ steps:
 
   tag:
     title: Tagging build with latest version number
-    stage: tag
+    stage: release
     image: ${{docker}}
     commands:
     - echo "Tag"
