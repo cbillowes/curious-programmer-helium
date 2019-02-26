@@ -8,17 +8,6 @@ stages:
 - release
 
 steps:
-  clone:
-    type: git-clone
-    image: codefreshio/git-image:latest
-    description: Grabbing some vital code from GitHub
-    working_directory: ${{main_clone}}
-    commands:
-      - bash -c 'rm -rf /codefresh/volume/${{REPO_NAME}}/'
-      - git clone https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
-      - bash -c 'cd /codefresh/volume/${{REPO_NAME}}/ && git checkout ${{BRANCH_NAME}} && git branch && git status'
-      - ls -l /codefresh/volume/${{REPO_NAME}}
-
   environment:
     title: Building a docker station for the build
     type: build
