@@ -7,16 +7,21 @@ stages:
 - release
 
 steps:
-  environment:
+  docker:
     title: Building a docker station for the build
     type: build
     stage: build
     image_name: curious-programmer-helium
-    working_directory: ${{main_clone}}
+    working_directory: ${{REPO_NAME}}
     tag: ${{CF_BRANCH_TAG_NORMALIZED}}
     dockerfile:
       content: |-
         FROM node:10.15.1-jessie AS builder
+
+        # Work with Git
+        RUN git clone --single-branch --branch ${BRANCH_NAME} https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
+        RUN git branch
+        RUN git status
 
         # Installing all dependencies
         RUN npm install
