@@ -1,0 +1,85 @@
+version: '1.0'
+
+stages:
+- environment
+- build
+- test
+- stage
+- verify
+- release
+- tag
+
+steps:
+  clone:
+    type: git-clone
+    description: Grabbing some vital code from GitHub
+    repo: https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
+
+  environment:
+    title: Building a docker station for the build
+    type: build
+    stage: build
+    image_name: curious-programmer-helium
+    working_directory: ./
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}
+    dockerfile:
+      content: |-
+        FROM node:10.15.1-jessie AS builder
+
+        # Grabbing some vital code from GitHub
+        https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git
+
+        # Creating tar of productions dependencies
+        RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
+
+        # Installing all dependencies
+        RUN npm install
+        RUN npm install -g gatsby-cli
+        RUN npm install -g jest-cli
+
+  build:
+    title: Building butterflies, rainbows and unicorns
+    stage: build
+    image: ${{docker}}
+    commands:
+      - chmod a+x ./.run-build.sh
+      - ./.run-build.sh
+
+  tests:
+    title: Testing the validity of the code that was written by elves and gnomes
+    stage: test
+    image: ${{docker}}
+    commands:
+    - chmod a+x .run-test.sh
+    - ./.run-test.sh
+
+  stage:
+    title: Creating a special gift wrapped pull request
+    stage: stage
+    image: ${{docker}}
+    commands:
+    - chmod a+x .run-pull-request.sh
+    - ./.run-pull-request.sh
+
+  verify:
+    title: Verifying that the elves and gnomes knew what they were doing
+    stage: verify
+    image: ${{docker}}
+    commands:
+    - echo "Deploy PR to netlify"
+    - echo "Page speed test executed on the deployed PR"
+    - echo "Any other verification test?"
+
+  release:
+    title: Squashing PR onto master
+    stage: release
+    image: ${{docker}}
+    commands:
+    - echo "Squash"
+
+  tag:
+    title: Tagging build with latest version number
+    stage: tag
+    image: ${{docker}}
+    commands:
+    - echo "Tag"
