@@ -12,7 +12,7 @@ steps:
     type: build
     stage: build
     image_name: curious-programmer-helium
-    working_directory: /home/root/
+    working_directory: /home/
     tag: ${{CF_BRANCH_TAG_NORMALIZED}}
     dockerfile:
       content: |-
@@ -21,7 +21,7 @@ steps:
         # Work with Git
         RUN ls
         RUN git clone --single-branch --branch ${{CF_BRANCH}} https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
-        RUN cd /home/root/${{REPO_NAME}}
+        RUN cd /home/${{REPO_NAME}}
         RUN ls
         RUN git branch
         RUN git status
