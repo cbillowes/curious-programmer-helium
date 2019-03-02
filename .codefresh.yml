@@ -17,20 +17,14 @@ steps:
     dockerfile:
       content: |-
         FROM node:10.15.1-jessie AS builder
-        RUN ls
 
-        # # Work with Git
-        # RUN ls
-        # RUN git clone --single-branch --branch ${{CF_BRANCH}} https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
-        # RUN cd /${{REPO_NAME}}
-        # RUN ls
-        # RUN git branch
-        # RUN git status
+        RUN git branch
+        RUN git status
 
-        # # Installing all dependencies
-        # RUN npm install
-        # RUN npm install -g gatsby-cli
-        # RUN npm install -g jest-cli
+        # Installing all dependencies
+        RUN npm install
+        RUN npm install -g gatsby-cli
+        RUN npm install -g jest-cli
 
   build:
     title: Building butterflies, rainbows and unicorns
