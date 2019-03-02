@@ -7,13 +7,19 @@ stages:
 - release
 
 steps:
+
   docker:
+  clone_a_repo:
+    title: "Grabbing vital code from GitHub"
+    type: git-clone
+    repo: https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
+
     title: Building a docker station for the build
     type: build
     stage: build
     image_name: curious-programmer-helium
-    working_directory: /
-    tag: ${{CF_BRANCH_TAG_NORMALIZED}}
+    working-directory: ${{clone_a_repo}}
+    tag: ${{CF_BRANCH}}
     dockerfile:
       content: |-
         FROM node:10.15.1-jessie AS builder
