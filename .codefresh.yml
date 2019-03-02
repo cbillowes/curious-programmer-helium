@@ -7,13 +7,12 @@ stages:
 - release
 
 steps:
-
-  docker:
   clone_a_repo:
     title: "Grabbing vital code from GitHub"
     type: git-clone
     repo: https://${{GIT_TOKEN}}@github.com/${{REPO_OWNER}}/${{REPO_NAME}}.git --depth=20
 
+  docker:
     title: Building a docker station for the build
     type: build
     stage: build
