@@ -12,7 +12,7 @@ steps:
     type: build
     stage: build
     image_name: curious-programmer-helium
-    working-directory: ${{git-clone}}
+    working-directory: ${CF_BRANCH}}
     tag: ${{CF_BRANCH}}
     dockerfile:
       content: |-
