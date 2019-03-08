@@ -13,9 +13,9 @@ echo "-------------------------------------------------------------------------"
 
 export TOKEN="${GITHUB_TOKEN}"
 export URL="${GITHUB_API}/pulls"
-export VERSION="${CI_PIPELINE_ID}"
-export SOURCE_BRANCH="${CI_COMMIT_REF_NAME}"
-export TARGET_BRANCH="${TARGET_BRANCH}"
+export VERSION="${CF_REVISION}"
+export SOURCE_BRANCH="${CF_BRANCH}"
+export TARGET_BRANCH="master"
 
 curl -H \
   "Authorization: token ${TOKEN}" \
