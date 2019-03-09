@@ -13,15 +13,17 @@ echo "-------------------------------------------------------------------------"
 
 export TOKEN="${GITHUB_TOKEN}"
 export URL="${GITHUB_API}/pulls"
-export VERSION="${CF_REVISION}"
+export DESCRIPTION="Build from revision ${CF_REVISION}"
+export VERSION="${CF_BUILD_ID}"
 export SOURCE_BRANCH="${CF_BRANCH}"
 export TARGET_BRANCH="master"
+export DATA='{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "body": '${DESCRIPTION}', "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}'
 
 echo "About to create a pull request posting " \
-     '{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}' \
+     ${DATA}
      "to ${URL}"
 
 curl -H \
   "Authorization: token ${TOKEN}" \
   --request POST ${URL} \
-  --data '{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}'
+  --data ${DATA}
