@@ -17,6 +17,10 @@ export VERSION="${CF_REVISION}"
 export SOURCE_BRANCH="${CF_BRANCH}"
 export TARGET_BRANCH="master"
 
+echo "About to create a pull request posting " \
+     '{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}' \
+     "to ${URL}"
+
 curl -H \
   "Authorization: token ${TOKEN}" \
   --request POST ${URL} \
