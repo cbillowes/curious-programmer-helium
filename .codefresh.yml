@@ -2,7 +2,7 @@ version: "1.0"
 
 stages:
   - build
-  #- test
+  - test
   - stage
   - verify
   - release
@@ -26,33 +26,33 @@ steps:
         	apt-get -y upgrade && \
         	apt-get -y install sudo
 
-  # prepare:
-  #   title: Verifying git status...
-  #   stage: build
-  #   image: ${{docker}}
-  #   commands:
-  #     - git checkout ${{CF_BRANCH}}
-  #     - git fetch
-  #     - git branch
-  #     - git status
+  prepare:
+    title: Verifying git status...
+    stage: build
+    image: ${{docker}}
+    commands:
+      - git checkout ${{CF_BRANCH}}
+      - git fetch
+      - git branch
+      - git status
 
-  # build:
-  #   title: Building app...
-  #   stage: build
-  #   image: ${{docker}}
-  #   commands:
-  #     - npm install -g gatsby-cli
-  #     - chmod a+x ./.run-build.sh
-  #     - ./.run-build.sh
+  build:
+    title: Building app...
+    stage: build
+    image: ${{docker}}
+    commands:
+      - npm install -g gatsby-cli
+      - chmod a+x ./.run-build.sh
+      - ./.run-build.sh
 
-  # tests:
-  #   title: Testing app...
-  #   stage: build
-  #   image: ${{docker}}
-  #   commands:
-  #     - npm install -g jest-cli
-  #     - chmod a+x .run-test.sh
-  #     - ./.run-test.sh
+  tests:
+    title: Testing app...
+    stage: build
+    image: ${{docker}}
+    commands:
+      - npm install -g jest-cli
+      - chmod a+x .run-test.sh
+      - ./.run-test.sh
 
   stage:
     title: Creating pull request...
