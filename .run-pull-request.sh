@@ -16,7 +16,7 @@ export URL="${GITHUB_API}/pulls"
 export DESCRIPTION="Build from revision ${CF_REVISION}"
 export VERSION="${CF_PULL_REQUEST_NUMBER}"
 export SOURCE_BRANCH="${CF_BRANCH}"
-export TARGET_BRANCH="${CF_BASE_BRANCH}"
+export TARGET_BRANCH="master"
 export DATA='{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "body":"'${DESCRIPTION}'", "base":"'${TARGET_BRANCH}'","head":"'${SOURCE_BRANCH}'"}'
 
 echo "About to create a pull request posting " \
