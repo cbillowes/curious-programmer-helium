@@ -28,7 +28,8 @@ export DATA='{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "body":"'${
 #      ${DATA} \
 #      "to ${URL}"
 
-curl -X GET "${URL}"  -H "Authorization: token ${TOKEN}" --data '{"state":"open", "base":"'${SOURCE_BRANCH}'", "sort":"created", "direction":"desc"}' | grep "url" 2> /dev/null
+HTTP_RESPONSE=curl -X GET "${URL}"  -H "Authorization: token ${TOKEN}" --data '{"state":"open", "base":"'${SOURCE_BRANCH}'", "sort":"created", "direction":"desc"}' | grep "url" 2> /dev/null
+echo $HTTP_RESPONSE
 
 # HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST $URL -H "Authorization: token ${TOKEN}" --data "${DATA}")
 # HTTP_BODY=$(echo "$HTTP_RESPONSE" | sed -e 's/HTTPSTATUS\:.*//g')
