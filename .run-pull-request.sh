@@ -28,7 +28,7 @@ export DATA='{"title":"Automated release \uD83D\uDC4F '${VERSION}'", "body":"'${
 #      ${DATA} \
 #      "to ${URL}"
 
-HTTP_RESPONSE=$(curl -X GET "${URL}"  -H "Authorization: token ${TOKEN}" --data '{"state":"open", "base":"'${SOURCE_BRANCH}'", "sort":"created", "direction":"desc"}')
+HTTP_RESPONSE=$(curl -X GET "${URL}"  -H "Authorization: 'token ${TOKEN}'" --data '{"state":"open", "base":"'${SOURCE_BRANCH}'", "sort":"created", "direction":"desc"}')
 echo $HTTP_RESPONSE
 
 # HTTP_RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" -X POST $URL -H "Authorization: token ${TOKEN}" --data "${DATA}")
