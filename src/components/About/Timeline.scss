@@ -320,3 +320,99 @@ $community: #52a2f5;
         }
     }
 }
+
+@media print {
+    .legend {
+        display: none;
+    }
+
+    .items .timeline {
+        padding: 0;
+    }
+
+    .it-em {
+        page-break-before: always;
+    }
+
+    .about-container > .timeline::before {
+        content: "Career:";
+        padding-top: 1em;
+        display: block;
+        border-top: solid 1px gray;
+        font-weight: bold;
+    }
+
+    .timeline .item .meta {
+        text-align: left;
+        font-size: 1em;
+
+        h2 {
+            display: inline-block;
+        }
+
+        span {
+            display: inline-block;
+            margin-left: 1em;
+        }
+    }
+
+    .timeline .work .meta h1,
+    .timeline .work .meta h2,
+    .timeline .work .meta a {
+        text-decoration: none;
+    }
+
+    .timeline .work .meta h1, .timeline .work .meta h2, .timeline .work .meta a {
+        color: #303030;
+    }
+
+    .timeline .work .description h3, .timeline .work .description a {
+        color: #505050;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.78em;
+        margin: 0;
+    }
+
+    .timeline .work .description p {
+        font-size: 0.7em;
+    }
+
+    .timeline .work .description .tag {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+    }
+
+    .timeline .item .icon {
+        margin: 0 1em 0 0;
+        float: left;
+    }
+
+    .timeline .icon span {
+        background-color: white;
+        margin-top: -15px;
+    }
+
+    .timeline .item.work .icon span {
+        margin-top: 10px;
+        border: solid 3px #303030;
+        color: #303030;
+    }
+
+    .timeline .item.work .icon span {
+        border: solid 3px gray;
+        color: gray;
+    }
+
+    .timeline .icon span::before {
+        top: 20%;
+        left: 30%;
+    }
+
+    .timeline .work .meta > h2 {
+        margin: 0;
+    }
+
+    .timeline .item .description {
+        display: block;
+    }
+}

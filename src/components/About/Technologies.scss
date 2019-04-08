@@ -10,6 +10,7 @@
 
     .tag {
         @include button;
+
         margin: 0.5em;
 
         .xp {
@@ -23,6 +24,14 @@
         &:hover {
             cursor: default;
             background-color: $primary;
+        }
+    }
+
+    .brands {
+        text-align: center;
+
+        img {
+            width: 80px;
         }
     }
 
@@ -42,6 +51,43 @@
 
         .tag {
             background-color: $foreground;
+        }
+    }
+}
+
+@media print {
+    .technologies {
+        &::before {
+            content: "Technologies:";
+            border-top: solid 1px lightgray;
+            font-weight: bold;
+            padding-top: 1em;
+            display: block;
+        }
+
+        &::after {
+            border-top: solid 1px lightgray;
+            font-weight: bold;
+            padding-top: 1em;
+            display: block;
+        }
+
+        text-align: left;
+
+        .tag {
+            font-size: 1em;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: white;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        .button {
+            display: none;
+        }
+
+        .elaborate {
+            display: block;
         }
     }
 }

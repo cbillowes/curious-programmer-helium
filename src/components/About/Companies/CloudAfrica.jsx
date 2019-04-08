@@ -8,6 +8,16 @@ class CloudAfrica extends Component {
       <ul className="timeline">
         <TimelineItem
           type="community"
+          company="DevConf 2019"
+          duration="March 2019"
+          title="Unpanelist"
+        >
+        <p>
+            An unpanel facilitator hosting the morning Lean Coffee and fishbowl.
+        </p>
+        </TimelineItem>
+        <TimelineItem
+          type="community"
           company="Agile Africa 2018"
           duration="Jan - Oct 2018"
           title="Organizer"
@@ -53,6 +63,8 @@ class CloudAfrica extends Component {
             {" "}
             <span className="tag">DevOps</span> powered virtualization
             environment.
+            I develop software across the stack from web to infrastructure using
+            <span className="tag">Linux</span>
           </p>
         </TimelineItem>
         <TimelineItem

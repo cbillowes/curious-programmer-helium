@@ -7,7 +7,7 @@ import "./Footer.scss"
 class Footer extends Component {
   render() {
     return (
-      <div className="footer-container not-for-print">
+      <div className="footer-container web">
         <footer className="footer">
           <SocialLinks />
           <Copyright />

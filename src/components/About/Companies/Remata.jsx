@@ -4,7 +4,7 @@ import TimelineItem from "../TimelineItem"
 class Remata extends Component {
   render() {
     return (
-      <ul className="timeline">
+      <ul className="timeline remata">
         <TimelineItem
           type="work"
           company="Remata Communications"

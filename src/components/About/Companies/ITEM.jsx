@@ -5,7 +5,7 @@ import External from "../../Link/ExternalLink"
 class ITEM extends Component {
   render() {
     return (
-      <ul className="timeline">
+      <ul className="timeline it-em">
         <TimelineItem
           type="work"
           company="IT Event Management"

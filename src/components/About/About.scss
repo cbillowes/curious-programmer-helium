@@ -28,6 +28,13 @@ $profile-size: 300px;
             margin-left: 4em;
         }
 
+        .print {
+            display: none;
+        }
+
+        .web {
+            display: block;
+        }
 
         h1 {
             font-size: $font-size-lg-h1 + 1;
@@ -103,18 +110,54 @@ $profile-size: 300px;
 }
 
 @media print {
+
+    body {
+        font-size: 16pt;
+        line-height: 2em;
+        color: #303030;
+    }
+
     .about {
+        font-size: 1em;
+
+        .elaborate.print {
+            display: block;
+            text-align: left !important;
+        }
+
+        .web.button {
+            display: none;
+        }
+
         .profile {
             text-align: left;
+            margin: 0;
 
             h1 {
                 font-size: 2.5em;
             }
 
+            h3 a {
+                text-decoration: none;
+                color: gray;
+            }
+
             .photo {
+                display: none;
+            }
+
+            img {
+                border-radius: 50%;
+                width: 250px;
                 float: right;
-                width: 200px;
-                height: 200px;
+            }
+
+            .print {
+                display: block;
+            }
+
+            .web {
+                display: none;
             }
         }
     }
