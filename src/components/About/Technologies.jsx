@@ -79,15 +79,15 @@ class Technologies extends Component {
           ))}
         </div>
         <div class="brands">
-            <img src="images/technologies/clojure.png" />
-            <img src="images/technologies/datomic.png" />
-            <img src="images/technologies/linux.png" />
-            <img src="images/technologies/intellij.png" />
-            <img src="images/technologies/csharp.png" />
-            <img src="images/technologies/sql.png" />
-            <img src="images/technologies/html.png" />
-            <img src="images/technologies/css.png" />
-            <img src="images/technologies/javascript.png" />
+            <img src="/images/technologies/clojure.png" />
+            <img src="/images/technologies/datomic.png" />
+            <img src="/images/technologies/linux.png" />
+            <img src="/images/technologies/intellij.png" />
+            <img src="/images/technologies/csharp.png" />
+            <img src="/images/technologies/sql.png" />
+            <img src="/images/technologies/html.png" />
+            <img src="/images/technologies/css.png" />
+            <img src="/images/technologies/javascript.png" />
         </div>
       </div>
     )

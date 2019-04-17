@@ -89,6 +89,15 @@ class CreditsPage extends Component {
           <section>
             <h2>Icons</h2>
 
+            <h3>Technology brands on About page</h3>
+
+            <Credit
+              to="https://www.brandeps.com"
+              title="BrandEPS"
+            >
+              Database of brand logos and icons.
+            </Credit>
+
             <h3>Menu bar</h3>
 
             <Credit
