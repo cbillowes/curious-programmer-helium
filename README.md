@@ -51,6 +51,15 @@ npm install # or yarn install
 npm run develop # or gatsby develop
 ```
 
+## Tests
+```
+# Run once off
+npm run tests
+
+# Run and watch tests
+npm run test:watch
+```
+
 ## Configuration
 
 Edit the export object in `data/SiteConfig` and the `robots.txt`.
