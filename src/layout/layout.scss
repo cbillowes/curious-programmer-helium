@@ -41,6 +41,7 @@
 
     html {
         height: 100%;
+        background-color: $background !important;
     }
 
     body {
@@ -143,7 +144,6 @@
             font-size: $font-size-small - 0.5;
         }
     }
-
 
     a {
         color: $primary;
