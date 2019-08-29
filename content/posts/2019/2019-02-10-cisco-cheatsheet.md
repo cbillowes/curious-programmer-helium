@@ -3,7 +3,6 @@ title: "Cisco ASA cheat sheet"
 date:   2019-02-10 15:30:00 +0200
 tags:
     - Technical
-    - Networking
     - Terminal
     - Cisco
     - Cheat sheet
@@ -26,7 +25,7 @@ and configure the device.
 `ciscoasa` is the default hostname for the default ASA state. You will
 see that you are in EXEC mode with the `ciscoasa>` prompt.
 
-Type `enable` to access privilege EXEC mode. The password is **blank**.
+Type `enable` to access privilege EXEC mode. The default password is **blank**.
 The prompt changes to `ciscoasa#`
 
 ## Lockdown access to ASA
@@ -37,7 +36,8 @@ enable password <PASSWORD>
 show running-config enable
 ```
 
-To verify the password works, we need to `exit` the modes. `exit` config mode and then privilege EXEC.
+To verify the password works, we need to `exit` the modes.
+`exit` config mode and then privilege EXEC.
 
 ## Create a local user account
 
