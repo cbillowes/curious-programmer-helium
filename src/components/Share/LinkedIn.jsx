@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import {
   LinkedinShareButton,
-  LinkedinShareCount,
   LinkedinIcon
 } from "react-share"
 
@@ -21,9 +20,6 @@ class LinkedIn extends Component {
           description={description}
         >
           <LinkedinIcon round size={size} />
-          <LinkedinShareCount url={url}>
-            {count => renderShareCount(count)}
-          </LinkedinShareCount>
         </LinkedinShareButton>
       </div>
     )

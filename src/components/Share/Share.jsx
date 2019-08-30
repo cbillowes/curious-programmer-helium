@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Facebook from "./Facebook"
 import Twitter from "./Twitter"
 import Reddit from "./Reddit"
-import GooglePlus from "./GooglePlus"
 import LinkedIn from "./LinkedIn"
 import Telegram from "./Telegram"
 import WhatsApp from "./WhatsApp"
@@ -20,7 +19,6 @@ class SocialLinks extends Component {
         <Facebook url={url} title={title} description={description} size={size} />
         <Twitter url={url} title={title} size={size} />
         <Reddit url={url} title={title} size={size} />
-        <GooglePlus url={url} title={title} size={size} />
         <LinkedIn url={url} title={title} description={description} size={size} />
         <Telegram url={url} size={size} />
         <WhatsApp url={url} title={title} size={size} />
