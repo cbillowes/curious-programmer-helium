@@ -4,7 +4,7 @@ date:   2019-08-29 05:10:00 +0200
 tags:
     - Technical
     - Terminal
-    - Gem
+    - Gems
 ---
 
 The `ack` utility was designed to replace 99% of the uses of grep.
