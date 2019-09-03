@@ -3,6 +3,7 @@ title: "Look, I have a MacBook Pro now"
 date:   2019-08-30 03:00:00 +0200
 tags:
     - Technical
+    - Mac
 ---
 
 Hooray, I now have a new MacBook Pro! I never thought the day would come where that would happen.

@@ -3,6 +3,7 @@ title: "Setup macOS development environment"
 date:   2019-08-31 03:00:00 +0200
 tags:
     - Technical
+    - Mac
 ---
 
 > **Note:** I am running macOS Mojave on a 2.8 GHz Intel Core i7 with 16 GB 2133 MHz LPDDR3 RAM.
