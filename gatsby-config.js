@@ -113,65 +113,77 @@ module.exports = {
     {
       resolve: "gatsby-plugin-feed",
       options: {
+        setup(ref) {
+          const ret = ref.query.site.siteMetadata.rssMetadata
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark
+          ret.generator = "Curious Programmer"
+          return ret
+        },
         query: `
-          {
-            site {
-              siteMetadata {
+        {
+          site {
+            siteMetadata {
+              rssMetadata {
+                site_url
+                feed_url
                 title
                 description
-                siteUrl
-                site_url: siteUrl
+                image_url
+                author
               }
             }
           }
-        `,
+        }
+      `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                });
-              });
+            serialize(ctx) {
+              const { rssMetadata } = ctx.query.site.siteMetadata
+              return ctx.query.allMarkdownRemark.edges.map(edge => ({
+                categories: edge.node.frontmatter.tags,
+                date: edge.node.fields.date,
+                title: edge.node.frontmatter.title,
+                description: edge.node.excerpt,
+                author: rssMetadata.author,
+                url: rssMetadata.site_url + edge.node.fields.slug,
+                guid: rssMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{ "content:encoded": edge.node.html }]
+              }))
             },
             query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [fields___date] },
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    timeToRead
+                    fields {
+                      slug
+                      date
+                    }
+                    frontmatter {
+                      title
+                      cover
+                      date
+                      tags
                     }
                   }
                 }
               }
-            `,
-            output: "/rss.xml",
-            title: config.siteTitle,
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
-          },
-        ],
-      },
+            }
+          `,
+            output: config.siteRss
+          }
+        ]
+      }
     },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        title: config.siteTitle,
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
