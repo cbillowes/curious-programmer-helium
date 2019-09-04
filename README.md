@@ -2,19 +2,12 @@
     <img src="codename.png" alt="Curious Programmer blog code named Helium" style="height: 100px; display:block; margin-bottom: 2.5em;" />
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cbillowes/curious-programmer-oxygen/blob/master/LICENSE)
-
 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" width="" height="20px" alt="CC BY-SA 4.0" /></a>
-
 [![pipeline status](https://gitlab.com/cbillowes/curious-programmer-helium/badges/master/pipeline.svg)](https://gitlab.com/cbillowes/curious-programmer-helium/commits/master)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d2bffdb911f485183f59559461fdb08)](https://app.codacy.com/app/cbillowes/curious-programmer-helium?utm_source=github.com&utm_medium=referral&utm_content=cbillowes/curious-programmer-helium&utm_campaign=Badge_Grade_Dashboard)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/e5ea530e2243393ab460/maintainability)](https://codeclimate.com/github/cbillowes/curious-programmer-helium/maintainability)
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/84ff184c-60d8-4df7-85d0-d18874cf7a6f/deploy-status)](https://app.netlify.com/sites/gallant-cray-096f77/deploys)
-
 [![Twitter Follow](https://img.shields.io/twitter/follow/cbillowes.svg?style=social)](https://twitter.com/cbillowes)
-
 </div>
 
 ## History
