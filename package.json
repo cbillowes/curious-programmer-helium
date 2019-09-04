@@ -12,7 +12,7 @@
     "gatsby-plugin-feed": "2.0.9",
     "gatsby-plugin-google-analytics": "2.1.12",
     "gatsby-plugin-lodash": "3.1.5",
-    "gatsby-plugin-manifest": "2.2.0",
+    "gatsby-plugin-manifest": "2.2.13",
     "gatsby-plugin-netlify": "^2.1.10",
     "gatsby-plugin-nprogress": "2.1.4",
     "gatsby-plugin-offline": "2.2.9",
@@ -83,7 +83,7 @@
   "scripts": {
     "clean": "rm -rf public && rm -rf .cache",
     "clean:hardcore": "rm -rf node-modules && rm -f packages.json.lock && rm -rf public && rm -rf .cache",
-    "build": "gatsby build",
+    "build": "mkdir -p public/images/logos && gatsby build",
     "develop": "npm run build && gatsby develop --verbose --port 8000 --host localhost",
     "serve": "npm run clean && npm run build && gatsby serve",
     "build:pp": "gatsby build --prefix-paths",
